@@ -105,7 +105,7 @@ const PortfolioPage = () => {
                   voluptatem quia voluptas sit aspernatur aut odit aut fugit
               </div>
               <div className="flex space-x-2">
-                  <a href='https://www.lan-digital.com' target='_blank' className="bg-blue-500 dark:bg-primary-dark dark:hover:bg-primary-darker hover:bg-blue-900 text-white px-3 py-2 text-lg rounded">Poseti Sajt</a>
+                  <a href='https://www.lan-digital.com' target='_blank' rel="noreferrer" className="bg-blue-500 dark:bg-primary-dark dark:hover:bg-primary-darker hover:bg-blue-900 text-white px-3 py-2 text-lg rounded">Poseti Sajt</a>
                   <a href='#' className="border-2 border-black dark:border-gray-50 dark:hover:bg-primary-dark-light dark:text-gray-50 hover:bg-blue-300 text-black px-3 py-2 text-lg rounded">GitHub</a>
               </div>
             </div>
