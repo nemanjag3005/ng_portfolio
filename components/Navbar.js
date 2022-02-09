@@ -7,18 +7,18 @@ const Navbar = ({ toggle, isOpen }) => {
   return (
     <nav className="bg-white border-b border-w-4xl px-4 py-4 md:py-6 rounded dark:bg-gray-800 transition duration-500">
       <div className="container flex flex-wrap justify-between items-center mx-auto max-w-6xl">
-        <Link
-          href="/"
-          className={` hover:bg-gray-100 dark:hover:bg-gray-700 rounded flex`}
-        >
-          <span
-            className={`self-center text-xl font-semibold whitespace-nowrap dark:text-white text-zinc-800`}
+      <Link
+            href="/"
           >
-            <span className="dark:text-primary-dark text-blue-500">N</span>
-            EMANJA{" "}
-            <span className="dark:text-primary-dark text-blue-500">G</span>RUJIĆ
-          </span>
-        </Link>
+            <span
+              className={`self-center cursor-pointer text-xl font-semibold whitespace-nowrap dark:text-white text-zinc-800`}
+            >
+              <span className="dark:text-primary-dark text-blue-500">N</span>
+              EMANJA{" "}
+              <span className="dark:text-primary-dark text-blue-500">G</span>
+              RUJIĆ
+            </span>
+          </Link>
         <button
           className="inline-flex mr-1 items-center ml-auto md:hidden text-sm text-zinc-800 rounded-lg  focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-200  dark:focus:ring-gray-600"
           onClick={() => setTheme(colorTheme)}
@@ -93,26 +93,33 @@ const Navbar = ({ toggle, isOpen }) => {
           <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
             <li>
               <Link
-                href="/about"
-                className="block py-2 pr-4 pl-3 text-zinc-800 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 dark:text-gray-200 md:dark:hover:text-pink-600 dark:hover:bg-gray-500 dark:hover:text-pink-600 md:dark:hover:bg-transparent dark:border-gray-500 text-lg"
+                href="/about">
+                  <span
+                className="block py-2 cursor-pointer pr-4 pl-3 text-zinc-800 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 dark:text-gray-200 md:dark:hover:text-pink-600 dark:hover:bg-gray-500 dark:hover:text-pink-600 md:dark:hover:bg-transparent dark:border-gray-500 text-lg"
               >
                 O Meni
+                </span>
               </Link>
             </li>
             <li>
               <Link
-                href="/portfolio"
-                className="block py-2 pr-4 pl-3 text-zinc-800 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 dark:text-gray-200 md:dark:hover:text-pink-600 dark:hover:bg-zinc-800 dark:hover:text-pink-600 md:dark:hover:bg-transparent dark:border-zinc-800 text-lg"
+                href="/portfolio">
+                <span
+                className="block py-2 cursor-pointer pr-4 pl-3 text-zinc-800 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 dark:text-gray-200 md:dark:hover:text-pink-600 dark:hover:bg-gray-500 dark:hover:text-pink-600 md:dark:hover:bg-transparent dark:border-gray-500 text-lg"
               >
                 Portfolio
+                </span>
               </Link>
             </li>
             <li>
               <Link
                 href="/cv"
-                className="block py-2 pr-4 pl-3 text-zinc-800 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 dark:text-gray-200 md:dark:hover:text-pink-600 dark:hover:bg-zinc-800 dark:hover:text-pink-600 md:dark:hover:bg-transparent dark:border-gray-700 text-lg"
+                >
+                <span
+                className="block py-2 cursor-pointer pr-4 pl-3 text-zinc-800 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 dark:text-gray-200 md:dark:hover:text-pink-600 dark:hover:bg-gray-500 dark:hover:text-pink-600 md:dark:hover:bg-transparent dark:border-gray-500 text-lg"
               >
                 Curriculum Vitae
+                </span>
               </Link>
             </li>
             <li>

@@ -22,17 +22,15 @@ const Hero = () => {
                 </p>
                 <div className="grid grid-cols-1 gap-2 md:flex md:space-x-3 items-center w-full">
                   <div className="flex w-full items-center space-x-2">
-                    <Link
-                      className="w-full text-center dark:bg-primary-darker dark:hover:bg-primary-dark dark:text-primary-dark-light shadow bg-blue-900 hover:bg-blue-500 hover:text-white hover:shadow-lg px-3 py-2 text-blue-300 rounded text-lg md:text-2xl"
-                      href="/portfolio"
-                    >
-                      Portfolio
+                    <Link href="/portfolio">
+                      <button className="w-full text-center dark:bg-primary-darker dark:hover:bg-primary-dark dark:text-primary-dark-light shadow bg-blue-900 hover:bg-blue-500 hover:text-white hover:shadow-lg px-3 py-2 text-blue-300 rounded text-lg md:text-2xl">
+                        Portfolio
+                      </button>
                     </Link>
-                    <Link
-                      className="w-full text-center shadow dark:border-primary-darker dark:bg-primary-dark-light dark:text-primary-darker border-2 border-blue-900 bg-blue-300 hover:shadow-lg px-3 py-2 text-blue-900 rounded text-lg md:text-2xl"
-                      href="/about"
-                    >
-                      O Meni
+                    <Link href="/about">
+                      <button className="w-full text-center shadow dark:border-primary-darker dark:bg-primary-dark-light dark:text-primary-darker border-2 border-blue-900 bg-blue-300 hover:shadow-lg px-3 py-2 text-blue-900 rounded text-lg md:text-2xl">
+                        O Meni
+                      </button>
                     </Link>
                   </div>
                   <div className="flex w-full items-center space-x-2 justify-center md:justify-start">
