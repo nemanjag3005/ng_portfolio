@@ -4,8 +4,8 @@ import React from "react";
 const Sidebar = ({ isOpen, toggle }) => {
   return (
     <div
-      className={`h-full w-4/5 bg-gray-200 dark:bg-gray-700 z-40 fixed top-0 left-0 shadow-xl transition ease-in duration-500 ${
-        isOpen == true ? "block" : "hidden"
+      className={`h-full w-4/5 bg-gray-200 dark:bg-gray-700 z-40 fixed top-0 left-0 shadow-xl transition-all ease-in-out transform duration-300 ${
+        isOpen == true ? "block translate-x-0" : "hidden -translate-x-full"
       }`}
     >
       <nav className="bg-white border-b border-w-4xl px-4 py-4 md:py-6 dark:border-primary-dark dark:bg-gray-800 transition duration-500">
@@ -49,7 +49,7 @@ const Sidebar = ({ isOpen, toggle }) => {
         </div>
       </nav>
       <div className="justify-center flex flex-col mt-32">
-        <ul>
+        <ul className="space-y-2">
           <li>
             <Link
               href="/about"

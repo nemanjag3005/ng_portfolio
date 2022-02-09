@@ -6,13 +6,18 @@ const Hero = () => {
     <div className="dark:bg-gray-800 transition duration-500">
       <div className="mx-4 ">
         <div className="max-w-6xl mx-auto py-6 overflow-hidden">
-          <div className="w-full bg-blue-300 dark:bg-primary-dark-light mt-16 md:mt-0 lg:mt-12 text-blue-900 dark:text-primary-darker p-6 md:p-12 rounded-xl relative z-10">
+          <div className="w-full bg-blue-300 dark:bg-primary-dark-light mt-16 md:mt-0 lg:mt-12 text-blue-900 dark:text-primary-darker p-6 md:p-12 rounded-xl relative z-10 shadow-xl">
             <div className="grid md:grid-cols-5 w-full">
               <div className="flex flex-col space-y-5 justify-center md:col-span-3">
                 <div className="flex items-center">
                   <h1 className="text-2xl sm:text-4xl md:text-6xl font-bold mr-2">
                     Nemanja Grujić
                   </h1>
+                  <div className="absolute xs:-top-16 right-0 -top-10 shadow-xl rounded-full">
+                    <img src='/IMG_1281-modified.png' className="md:hidden w-28 h-28 xs:w-36 xs:h-36">
+
+                    </img>
+                  </div>
                 </div>
                 <p className="text-xl md:text-2xl">
                   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -28,7 +33,7 @@ const Hero = () => {
                       </button>
                     </Link>
                     <Link href="/about">
-                      <button className="w-full text-center shadow dark:border-primary-darker dark:bg-primary-dark-light dark:text-primary-darker border-2 border-blue-900 bg-blue-300 hover:shadow-lg px-3 py-2 text-blue-900 rounded text-lg md:text-2xl">
+                      <button className="w-full whitespace-nowrap text-center shadow dark:border-primary-darker dark:bg-primary-dark-light dark:text-primary-darker border-2 border-blue-900 bg-blue-300 hover:shadow-lg px-3 py-2 text-blue-900 rounded text-lg md:text-2xl">
                         O Meni
                       </button>
                     </Link>
@@ -77,7 +82,7 @@ const Hero = () => {
           <h2 className="text-2xl md:text-3xl font-bold my-3 mt-8 text-zinc-800 dark:text-gray-50">
             Poslednji Projekti
           </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 text-zinc-800 dark:text-gray-50 mb-36">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 text-zinc-800 dark:text-gray-50 mb-12 md:mb-36">
             <a className="group relative" href="#">
               <div className="absolute top-0 left-0 w-full h-full p-5 hidden group-hover:flex flex-col z-20">
                 <p className=" font-bold text-xl">LAN Digital</p>

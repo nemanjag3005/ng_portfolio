@@ -14,6 +14,9 @@ module.exports = {
          'primary-dark-light': '#ed94bc',
          'primary-darker': '#70133c'
       },
+      screens: {
+        'xs': '23em'
+      }
       
     },
   },

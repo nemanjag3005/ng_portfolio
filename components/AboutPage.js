@@ -10,7 +10,7 @@ const AboutPage = () => {
           <div className="text-zinc-800 dark:text-gray-50 w-full relative rounded pb-8 grid grid-cols-1 md:grid-cols-2 mb-24 md:mb-0">
             <div className="bg-blue-200 dark:bg-slate-700 rounded h-full w-full absolute top-0 left-0"></div>
             <div className="mx-5 relative flex items-center justify-center w-full h-full">
-              <h3 className="text-xl md:text-4xl font-bold">Nemanja Grujić</h3>
+              <h3 className="text-xl md:text-4xl font-bold mt-4">Nemanja Grujić</h3>
             </div>
             <div className="relative w-full h-64 -mb-16">
               <div className="bg-blue-600 dark:bg-primary-dark m-5 rounded h-56 w-56 absolute bottom-0 right-0">
@@ -150,9 +150,9 @@ const AboutPage = () => {
             <p className="text-base block md:hidden dark:text-gray-50">Duže</p>
           </div>
           <div className="flex-1 w-full max-w-4xl pt-8 mx-auto transition duration-500 dark:text-gray-50 text-zinc-800">
-            <p className="md:text-justify text-lg md:text-3xl font-semibold text-default">
+            <p className="md:text-justify text-lg md:text-3xl font-semibold text-left mb-8 px-4">
               {length == 0 ? (
-                <span className='text-center'>
+                <span>
                   Nemanja je frontend developer. Voli svoju profesiju.
                 </span>
               ) : length == 1 ? (
@@ -200,7 +200,7 @@ const AboutPage = () => {
         <div className="flex-1 w-full max-w-4xl mx-auto pb-8">
           <div className="w-full bg-blue-200 dark:bg-slate-700 dark:text-gray-50 text-zinc-800 rounded p-4">
             <p>
-              Moje Brojke
+              Moje <span className='text-blue-500 dark:text-primary-dark'>Brojke</span>
             </p>
             <p className="text-lg md:text-3xl font-semibold">
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
