@@ -1,25 +1,60 @@
-import React, {useEffect} from "react";
+import Link from "next/link";
+import React, { useEffect } from "react";
 import useDarkMode from "../hooks/useDarkMode";
-import Sidebar from "./Sidebar";
 
-const Navbar = ({toggle, isOpen}) => {
+const Navbar = ({ toggle, isOpen }) => {
   const [colorTheme, setTheme] = useDarkMode();
   return (
     <nav className="bg-white border-b border-w-4xl px-4 py-4 md:py-6 rounded dark:bg-gray-800 transition duration-500">
       <div className="container flex flex-wrap justify-between items-center mx-auto max-w-6xl">
-        <a href="/" className={` hover:bg-gray-100 dark:hover:bg-gray-700 rounded flex`}>
-          <span className={`self-center text-xl font-semibold whitespace-nowrap dark:text-white text-zinc-800`}>
-            <span className="dark:text-primary-dark text-blue-500">N</span>EMANJA <span className="dark:text-primary-dark text-blue-500">G</span>RUJIĆ
+        <Link
+          href="/"
+          className={` hover:bg-gray-100 dark:hover:bg-gray-700 rounded flex`}
+        >
+          <span
+            className={`self-center text-xl font-semibold whitespace-nowrap dark:text-white text-zinc-800`}
+          >
+            <span className="dark:text-primary-dark text-blue-500">N</span>
+            EMANJA{" "}
+            <span className="dark:text-primary-dark text-blue-500">G</span>RUJIĆ
           </span>
-        </a>
-        <button className="inline-flex mr-1 items-center ml-auto md:hidden text-sm text-zinc-800 rounded-lg  focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-200  dark:focus:ring-gray-600" onClick={() => setTheme(colorTheme)}>
-              {colorTheme == 'light' ? <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hover:stroke-primary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor ">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-</svg> : <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hover:stroke-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor ">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-</svg>}
-            
-            </button>
+        </Link>
+        <button
+          className="inline-flex mr-1 items-center ml-auto md:hidden text-sm text-zinc-800 rounded-lg  focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-200  dark:focus:ring-gray-600"
+          onClick={() => setTheme(colorTheme)}
+        >
+          {colorTheme == "light" ? (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6 hover:stroke-primary-dark"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor "
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+              />
+            </svg>
+          ) : (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6 hover:stroke-blue-500"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor "
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+              />
+            </svg>
+          )}
+        </button>
         <button
           data-collapse-toggle="mobile-menu"
           type="button"
@@ -36,9 +71,9 @@ const Navbar = ({toggle, isOpen}) => {
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              fill-rule="evenodd"
+              fillRule="evenodd"
               d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-              clip-rule="evenodd"
+              clipRule="evenodd"
             ></path>
           </svg>
           <svg
@@ -48,54 +83,79 @@ const Navbar = ({toggle, isOpen}) => {
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              fill-rule="evenodd"
+              fillRule="evenodd"
               d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-              clip-rule="evenodd"
+              clipRule="evenodd"
             ></path>
           </svg>
         </button>
         <div className="hidden w-full md:block md:w-auto" id="mobile-menu">
           <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
-            
             <li>
-              <a
+              <Link
                 href="/about"
                 className="block py-2 pr-4 pl-3 text-zinc-800 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 dark:text-gray-200 md:dark:hover:text-pink-600 dark:hover:bg-gray-500 dark:hover:text-pink-600 md:dark:hover:bg-transparent dark:border-gray-500 text-lg"
               >
                 O Meni
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/portfolio"
                 className="block py-2 pr-4 pl-3 text-zinc-800 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 dark:text-gray-200 md:dark:hover:text-pink-600 dark:hover:bg-zinc-800 dark:hover:text-pink-600 md:dark:hover:bg-transparent dark:border-zinc-800 text-lg"
               >
                 Portfolio
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/cv"
                 className="block py-2 pr-4 pl-3 text-zinc-800 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 dark:text-gray-200 md:dark:hover:text-pink-600 dark:hover:bg-zinc-800 dark:hover:text-pink-600 md:dark:hover:bg-transparent dark:border-gray-700 text-lg"
               >
                 Curriculum Vitae
-              </a>
+              </Link>
             </li>
             <li>
-            <button className="inline-flex items-center text-sm text-zinc-800 rounded-lg  focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-200  dark:focus:ring-gray-600" onClick={() => setTheme(colorTheme)}>
-              {colorTheme == 'light' ? <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hover:stroke-primary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor ">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-</svg> : <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hover:stroke-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor ">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-</svg>}
-            
-            </button>
+              <button
+                className="inline-flex items-center text-sm text-zinc-800 rounded-lg  focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-200  dark:focus:ring-gray-600"
+                onClick={() => setTheme(colorTheme)}
+              >
+                {colorTheme == "light" ? (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 hover:stroke-primary-dark"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor "
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                    />
+                  </svg>
+                ) : (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 hover:stroke-blue-500"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor "
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                    />
+                  </svg>
+                )}
+              </button>
             </li>
           </ul>
-          
         </div>
-        </div>
-      
+      </div>
     </nav>
   );
 };
