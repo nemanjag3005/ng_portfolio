@@ -20,15 +20,15 @@ const Navbar = ({ toggle, isOpen }) => {
         <button className="inline-flex hover:bg-gray-100 dark:hover:bg-gray-700 p-1 xxs:p-2 items-center ml-auto md:hidden text-sm text-zinc-800 rounded-lg  focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-200  dark:focus:ring-gray-600">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6"
+            className="h-6 w-6"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
           >
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"
             />
           </svg>
@@ -136,9 +136,9 @@ const Navbar = ({ toggle, isOpen }) => {
                   stroke="currentColor"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"
                   />
                 </svg>
