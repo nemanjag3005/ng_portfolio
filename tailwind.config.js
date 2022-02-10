@@ -6,6 +6,10 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      minHeight: {
+        '4/5' : '80vh',
+        'subnav' : '73.5vh'
+      },
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'],
       },
@@ -15,7 +19,8 @@ module.exports = {
          'primary-darker': '#70133c'
       },
       screens: {
-        'xs': '23em'
+        'xs': '23em',
+        'xxs': '20em'
       }
       
     },

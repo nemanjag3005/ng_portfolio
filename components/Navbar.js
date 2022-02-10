@@ -6,7 +6,7 @@ const Navbar = ({ toggle, isOpen }) => {
   const [colorTheme, setTheme] = useDarkMode();
   return (
     <nav className="bg-white border-b border-w-4xl px-4 py-4 md:py-6 rounded dark:bg-gray-800 transition duration-500">
-      <div className="container flex flex-wrap justify-between items-center mx-auto max-w-6xl">
+      <div className="container flex flex-nowrap xs:flex-wrap justify-between items-center mx-auto max-w-6xl">
         <Link href="/">
           <span
             className={`self-center cursor-pointer text-xl font-semibold whitespace-nowrap dark:text-white text-zinc-800`}
@@ -17,8 +17,24 @@ const Navbar = ({ toggle, isOpen }) => {
             RUJIĆ
           </span>
         </Link>
+        <button className="inline-flex hover:bg-gray-100 dark:hover:bg-gray-700 p-1 xxs:p-2 items-center ml-auto md:hidden text-sm text-zinc-800 rounded-lg  focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-200  dark:focus:ring-gray-600">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"
+            />
+          </svg>
+        </button>
         <button
-          className="inline-flex hover:bg-gray-100 dark:hover:bg-gray-700 p-2 items-center ml-auto md:hidden text-sm text-zinc-800 rounded-lg  focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-200  dark:focus:ring-gray-600"
+          className="inline-flex hover:bg-gray-100 dark:hover:bg-gray-700 xxs:p-2 p-1 items-center  md:hidden text-sm text-zinc-800 rounded-lg  focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-200  dark:focus:ring-gray-600"
           onClick={() => setTheme(colorTheme)}
         >
           {colorTheme == "light" ? (
@@ -57,13 +73,13 @@ const Navbar = ({ toggle, isOpen }) => {
           data-collapse-toggle="mobile-menu"
           type="button"
           onClick={toggle}
-          className="inline-flex items-center p-2 text-sm text-zinc-800 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-200 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          className="inline-flex items-center xxs:p-2 p-1 text-sm text-zinc-800 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-200 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
           aria-controls="mobile-menu-2"
           aria-expanded="false"
         >
           <span className="sr-only">Open main menu</span>
           <svg
-            className="w-8 h-8"
+            className="xxs:w-8 xxs:h-8 w-6 h-6"
             fill="currentColor"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
@@ -109,6 +125,24 @@ const Navbar = ({ toggle, isOpen }) => {
                   Curriculum Vitae
                 </span>
               </Link>
+            </li>
+            <li>
+              <button className="md:inline-flex items-center hidden text-sm text-zinc-800 rounded-lg  focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-200  dark:focus:ring-gray-600">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6 dark:hover:stroke-primary-dark hover:stroke-blue-500"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"
+                  />
+                </svg>
+              </button>
             </li>
             <li>
               <button

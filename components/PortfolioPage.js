@@ -106,12 +106,36 @@ const PortfolioPage = () => {
               </div>
               <div className="flex space-x-2">
                   <a href='https://www.lan-digital.com' target='_blank' rel="noreferrer" className="bg-blue-500 dark:bg-primary-dark dark:hover:bg-primary-darker hover:bg-blue-900 text-white px-3 py-2 text-lg rounded">Poseti Sajt</a>
-                  <a href='#' className="border-2 border-black dark:border-gray-50 dark:hover:bg-primary-dark-light dark:text-gray-50 hover:bg-blue-300 text-black px-3 py-2 text-lg rounded">GitHub</a>
+                  <a href='https://github.com/nemanjag3005/landigital' target='_blank' rel="noreferrer" className="border-2 border-black dark:border-gray-50 dark:hover:bg-primary-dark-light dark:text-gray-50 hover:bg-blue-300 text-black px-3 py-2 text-lg rounded">GitHub</a>
               </div>
             </div>
           </div>
         </div>
         <div className="grid gap-2 md:grid-cols-2 lg:-mx-12 xl:-mx-32 md:py-12 mt-12 md:mt-0">
+        <div className="md:hidden">
+              <div className="flex flex-col space-y-4">
+                <div className="w-full h-72">
+                  <img
+                    src="/lan.png"
+                    className="object-cover w-full h-full rounded shadow-lg"
+                  ></img>
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="flex-shrink">
+                    <img
+                      src="/lan.png"
+                      className="object-cover w-full h-32 rounded shadow-lg"
+                    ></img>
+                  </div>
+                  <div className="flex-shrink">
+                    <img
+                      src="/lan.png"
+                      className="object-cover w-full h-32 rounded shadow-lg"
+                    ></img>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div className="w-full h-full flex flex-col justify-center p-4 lg:p-6 rounded shadow-md bg-blue-100 dark:bg-slate-700">
             <h2 className="text-3xl lg:text-5xl font-bold mb-2">
                 Flex Team
@@ -131,28 +155,28 @@ const PortfolioPage = () => {
                   voluptatem quia voluptas sit aspernatur aut odit aut fugit
               </div>
               <div className="flex space-x-2">
-                  <a href='#' className="bg-blue-500 dark:bg-primary-dark dark:hover:bg-primary-darker hover:bg-blue-900 text-white px-3 py-2 text-lg rounded">Poseti Sajt</a>
-                  <a href='#' className="border-2 border-black hover:bg-blue-300 dark:border-gray-50 dark:hover:bg-primary-dark-light dark:text-gray-50 text-black px-3 py-2 text-lg rounded">GitHub</a>
+                  <a href='#' target='_blank' rel="noreferrer" className="bg-blue-500 dark:bg-primary-dark dark:hover:bg-primary-darker hover:bg-blue-900 text-white px-3 py-2 text-lg rounded">Poseti Sajt</a>
+                  <a href='#' target='_blank' rel="noreferrer" className="border-2 border-black hover:bg-blue-300 dark:border-gray-50 dark:hover:bg-primary-dark-light dark:text-gray-50 text-black px-3 py-2 text-lg rounded">GitHub</a>
               </div>
             </div>
-            <div>
+            <div className="hidden md:block">
               <div className="flex flex-col space-y-4">
                 <div className="w-full h-72">
                   <img
-                    src="/ng.jpeg"
+                    src="/lan.png"
                     className="object-cover w-full h-full rounded shadow-lg"
                   ></img>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="flex-shrink">
                     <img
-                      src="/ng.jpeg"
+                      src="/lan.png"
                       className="object-cover w-full h-32 rounded shadow-lg"
                     ></img>
                   </div>
                   <div className="flex-shrink">
                     <img
-                      src="/ng.jpeg"
+                      src="/lan.png"
                       className="object-cover w-full h-32 rounded shadow-lg"
                     ></img>
                   </div>

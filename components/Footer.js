@@ -18,7 +18,7 @@ const Footer = () => {
                     sed do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua.
                   </p>
-                  <Link href="/about">
+                  <Link href="/siteinfo">
                     <button className="bg-blue-500 dark:bg-primary-dark text-white rounded px-3 py-2">
                       O Sajtu
                     </button>
@@ -27,7 +27,7 @@ const Footer = () => {
                 <div className="px-2 my-4 w-full sm:w-auto">
                   <h4 className="text-xl mb-1 font-bold">Kontakt</h4>
                   <div className="flex space-x-2 my-2 items-center text-zinc-800 dark:text-gray-50">
-                    <a href="#">
+                    <a href="https://twitter.com/nemke1031" target='_blank' rel="noopener noreferrer" >
                       <svg
                         viewBox="0 0 24 24"
                         className="fill-current h-6 w-6 hover:text-blue-500 dark:hover:text-primary-dark"
@@ -37,7 +37,7 @@ const Footer = () => {
                         </g>
                       </svg>
                     </a>
-                    <a href="#">
+                    <a href="https://www.linkedin.com/in/nemanja-grujic-5828a1213/" rel="noopener noreferrer" target='_blank'>
                       <svg
                         viewBox="0 0 34 34"
                         className="fill-current h-6 w-6 hover:text-blue-500 dark:hover:text-primary-dark"
@@ -52,7 +52,7 @@ const Footer = () => {
                     </a>
                   </div>
                   <a
-                    href="#"
+                    href="mailto:nemanjag3005@gmail.com"
                     className="text-sm hover:text-blue-500 dark:hover:text-primary-dark"
                   >
                     nemanjag3005@gmail.com

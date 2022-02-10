@@ -6,7 +6,7 @@ const Hero = () => {
     <div className="dark:bg-gray-800 transition duration-500">
       <div className="mx-4 ">
         <div className="max-w-6xl mx-auto py-6 overflow-hidden">
-          <div className="w-full bg-blue-300 dark:bg-primary-dark-light mt-16 md:mt-0 lg:mt-12 text-blue-900 dark:text-primary-darker p-6 md:p-12 rounded-xl relative z-10 shadow-xl">
+          <div className="w-full bg-blue-300 dark:bg-primary-dark-light mt-16 md:mt-0 lg:mt-12 text-blue-900 dark:text-primary-darker p-6 md:p-12 rounded-xl relative z-10 ">
             <div className="grid md:grid-cols-5 w-full">
               <div className="flex flex-col space-y-5 justify-center md:col-span-3">
                 <div className="flex items-center">
@@ -14,9 +14,10 @@ const Hero = () => {
                     Nemanja Grujić
                   </h1>
                   <div className="absolute xs:-top-16 right-0 -top-10 shadow-xl rounded-full">
-                    <img src='/IMG_1281-modified.png' className="md:hidden w-28 h-28 xs:w-36 xs:h-36">
-
-                    </img>
+                    <img
+                      src="/IMG_1281-modified.png"
+                      className="md:hidden w-28 h-28 xs:w-36 xs:h-36"
+                    ></img>
                   </div>
                 </div>
                 <p className="text-xl md:text-2xl">
@@ -39,7 +40,7 @@ const Hero = () => {
                     </Link>
                   </div>
                   <div className="flex w-full items-center space-x-2 justify-center md:justify-start">
-                    <a target="_blank" rel="noopener noreferrer" href="#">
+                    <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/nemke1031">
                       <svg
                         viewBox="0 0 24 24"
                         className="fill-current h-7 w-7 md:h-9 md:w-9 hover:fill-blue-500 dark:hover:fill-primary-dark"
@@ -49,7 +50,7 @@ const Hero = () => {
                         </g>
                       </svg>
                     </a>
-                    <a target="_blank" rel="noopener noreferrer" href="#">
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/nemanja-grujic-5828a1213/">
                       <svg
                         viewBox="0 0 34 34"
                         className="fill-current h-7 w-7 md:h-9 md:w-9 hover:fill-blue-500 dark:hover:fill-primary-dark"
@@ -59,7 +60,7 @@ const Hero = () => {
                         </g>
                       </svg>
                     </a>
-                    <a target="_blank" rel="noopener noreferrer" href="#">
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/nemanjag3005">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
@@ -79,6 +80,57 @@ const Hero = () => {
               </div>
             </div>
           </div>
+          <svg
+            width="100%"
+            height="100%"
+            viewBox="0 0 900 238"
+            version="1.1"
+            // style={{"transform:scaleY(-1)"}}
+            className="w-full md:-mt-10 -mt-2 relative z-0"
+          >
+            <defs>
+              <filter id="shadow">
+                <feDropShadow
+                  dx="0"
+                  dy="-5"
+                  stdDeviation="4"
+                  flood-color="#333333"
+                  flood-opacity="0.5"
+                ></feDropShadow>
+              </filter>
+            </defs>
+            <g
+              id="Page-1"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+            >
+              <path
+                d="M0,123 L21.5,116.2 C43,109.3 86,95.7 128.8,89.3 C171.7,83 214.3,84 257.2,91.2 C300,98.3 343,111.7 385.8,117.5 C428.7,123.3 471.3,121.7 514.2,116 C557,110.3 600,100.7 642.8,96.3 C685.7,92 728.3,93 771.2,93.3 C814,93.7 857,93.3 878.5,93.2 L900,93 L900,238 L878.5,238 C857,238 814,238 771.2,238 C728.3,238 685.7,238 642.8,238 C600,238 557,238 514.2,238 C471.3,238 428.7,238 385.8,238 C343,238 300,238 257.2,238 C214.3,238 171.7,238 128.8,238 C86,238 43,238 21.5,238 L0,238 L0,123 Z"
+                id="Path"
+                fill="var(--color-primary-dark)"
+                className="dark:fill-primary-darker fill-blue-900 origin-center rotate-180 "
+                transformOrigin="450px 161.56462860107422px"
+                
+              ></path>
+              <path
+                d="M0,147 L21.5,143.5 C43,140 86,133 128.8,135.7 C171.7,138.3 214.3,150.7 257.2,154.8 C300,159 343,155 385.8,151.3 C428.7,147.7 471.3,144.3 514.2,142.8 C557,141.3 600,141.7 642.8,146.3 C685.7,151 728.3,160 771.2,160.3 C814,160.7 857,152.3 878.5,148.2 L900,144 L900,238 L878.5,238 C857,238 814,238 771.2,238 C728.3,238 685.7,238 642.8,238 C600,238 557,238 514.2,238 C471.3,238 428.7,238 385.8,238 C343,238 300,238 257.2,238 C214.3,238 171.7,238 128.8,238 C86,238 43,238 21.5,238 L0,238 L0,147 Z"
+                id="Path"
+                fill="var(--color-primary)"
+                className="dark:fill-primary-dark fill-blue-500 origin-center rotate-180 "
+                
+                transform-origin="450px 186.54723739624023px"
+              ></path>
+              <path
+                d="M0,198 L21.5,198.8 C43,199.7 86,201.3 128.8,199.5 C171.7,197.7 214.3,192.3 257.2,189.5 C300,186.7 343,186.3 385.8,184.3 C428.7,182.3 471.3,178.7 514.2,180 C557,181.3 600,187.7 642.8,189.5 C685.7,191.3 728.3,188.7 771.2,189 C814,189.3 857,192.7 878.5,194.3 L900,196 L900,238 L878.5,238 C857,238 814,238 771.2,238 C728.3,238 685.7,238 642.8,238 C600,238 557,238 514.2,238 C471.3,238 428.7,238 385.8,238 C343,238 300,238 257.2,238 C214.3,238 171.7,238 128.8,238 C86,238 43,238 21.5,238 L0,238 L0,198 Z"
+                id="Path"
+                className="dark:fill-primary-dark-light fill-blue-300 origin-center rotate-180"
+                fill="var(--color-primary-light)"
+                
+              ></path>
+            </g>
+          </svg>
           <h2 className="text-2xl md:text-3xl font-bold my-3 mt-8 text-zinc-800 dark:text-gray-50">
             Poslednji Projekti
           </h2>

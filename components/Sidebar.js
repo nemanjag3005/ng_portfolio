@@ -9,7 +9,7 @@ const Sidebar = ({ isOpen, toggle }) => {
       }`}
     >
       <nav className="bg-white border-b border-w-4xl px-4 py-4 md:py-6 dark:border-primary-dark dark:bg-gray-800 transition duration-500">
-        <div className="container flex flex-wrap justify-between items-center mx-auto max-w-6xl">
+        <div className="container flex xs:flex-wrap flex-nowrap justify-between items-center mx-auto max-w-6xl">
           <Link
             href="/"
           >
@@ -30,10 +30,10 @@ const Sidebar = ({ isOpen, toggle }) => {
             aria-controls="mobile-menu-2"
             aria-expanded="false"
           >
-            <span className="sr-only">Open main menu</span>
+            <span className="sr-only">Close main menu</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-8 w-8"
+              className="xs:h-8 xs:w-8 h-6 w-6"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"

@@ -3,20 +3,20 @@ import React, { useState } from "react";
 const AboutPage = () => {
   const [length, setLength] = useState(1);
   return (
-    <div className="dark:bg-gray-800">
-    <div className="max-w-7xl px-2 mx-auto py-6 md:py-12 overflow-x-hidden lg:px-16 lg:overflow-x-visible space-y-6">
+    <div className="dark:bg-gray-800 px-4 min-h-subnav">
+    <div className="max-w-7xl mx-auto px-2 py-6 md:py-12 overflow-x-hidden lg:px-16 lg:overflow-x-visible space-y-6">
       <section>
         <div className="flex-1 w-full max-w-4xl mx-auto space-y-4">
-          <div className="text-zinc-800 dark:text-gray-50 w-full relative rounded pb-8 grid grid-cols-1 md:grid-cols-2 mb-24 md:mb-0">
+          <div className="text-zinc-800 dark:text-gray-50 w-full relative rounded pb-8 grid grid-cols-1 sm:grid-cols-2 mb-24 md:mb-0">
             <div className="bg-blue-200 dark:bg-slate-700 rounded h-full w-full absolute top-0 left-0"></div>
-            <div className="mx-5 relative flex items-center justify-center w-full h-full">
+            <div className="xs:mx-5 xs:-mb-0 -mb-4 relative flex items-center justify-center w-full h-full">
               <h3 className="text-xl md:text-4xl font-bold mt-4">Nemanja Grujić</h3>
             </div>
             <div className="relative w-full h-64 -mb-16">
-              <div className="bg-blue-600 dark:bg-primary-dark m-5 rounded h-56 w-56 absolute bottom-0 right-0">
+              <div className="bg-blue-600 dark:bg-primary-dark m-5 rounded h-48 w-48 xs:h-56 xs:w-56 absolute bottom-0 right-0">
                 <div className="w-full h-full relative">
-                <div className="h-64 w-64  rounded absolute left-4 top-4">
-                    <img src='/IMG_1265.jpeg' className="object-cover h-64 w-64 rounded">
+                <div className="xs:h-64 xs:w-64 h-44 w-44 rounded absolute xs:left-4 xs:top-4 left-6 top-6">
+                    <img src='/IMG_1265.jpeg' className="object-cover xs:h-64 xs:w-64 h-48 w-48 rounded">
 
                     </img>
                   </div>
@@ -150,7 +150,7 @@ const AboutPage = () => {
             <p className="text-base block md:hidden dark:text-gray-50">Duže</p>
           </div>
           <div className="flex-1 w-full max-w-4xl pt-8 mx-auto transition duration-500 dark:text-gray-50 text-zinc-800">
-            <p className="md:text-justify text-lg md:text-3xl font-semibold text-left mb-8 px-4">
+            <p className={`text-lg md:text-3xl font-semibold mb-8 ${length == 0 ? 'text-center' : 'text-left'}`}>
               {length == 0 ? (
                 <span>
                   Nemanja je frontend developer. Voli svoju profesiju.
@@ -197,8 +197,8 @@ const AboutPage = () => {
         </div>
       </section>
       <section>
-        <div className="flex-1 w-full max-w-4xl mx-auto pb-8">
-          <div className="w-full bg-blue-200 dark:bg-slate-700 dark:text-gray-50 text-zinc-800 rounded p-4">
+        <div className="flex-1 w-full max-w-4xl mx-auto pb-8 ">
+          <div className={`w-full bg-blue-200 dark:bg-slate-700 dark:text-gray-50 text-zinc-800 rounded p-4 `}>
             <p>
               Moje <span className='text-blue-500 dark:text-primary-dark'>Brojke</span>
             </p>
