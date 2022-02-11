@@ -2,7 +2,7 @@ import React from "react";
 
 const PortfolioPage = () => {
   return (
-    <div className="dark:bg-gray-800">
+    <div className="dark:bg-slate-800">
     <div className="mx-4 relative transition-colors duration-100 text-zinc-800 dark:text-gray-50">
       <div className="max-w-4xl mx-auto py-6 md:py-12 overflow-x-hidden lg:overflow-x-visible">
         <div className="w-full space-y-4 mt-20">

@@ -2,7 +2,7 @@ import React from "react";
 
 const CvPage = () => {
   return (
-    <div className="bg-slate-100 dark:bg-gray-800">
+    <div className="bg-slate-100 dark:bg-slate-800">
       <div className="mx-4 relative h-full">
         <div className="w-full text-center">
           <button className="bg-blue-500 my-8 rounded py-2 px-4 text-white hover:bg-blue-800 dark:bg-primary-dark dark:hover:bg-primary-darker">

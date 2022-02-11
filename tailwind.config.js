@@ -14,9 +14,9 @@ module.exports = {
         roboto: ['Roboto', 'sans-serif'],
       },
       colors: {
-        'primary-dark': '#db2777',
-         'primary-dark-light': '#ed94bc',
-         'primary-darker': '#70133c'
+        'primary-dark': '#0C3BAA',
+         'primary-dark-light': '#1973D1',
+         'primary-darker': '#010280'
       },
       screens: {
         'xs': '23em',

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const AboutPage = () => {
   const [length, setLength] = useState(1);
   return (
-    <div className="dark:bg-gray-800 px-4 min-h-subnav">
+    <div className="dark:bg-slate-800 px-4 min-h-subnav">
     <div className="max-w-7xl mx-auto px-2 py-6 md:py-12 overflow-x-hidden lg:px-16 lg:overflow-x-visible space-y-6">
       <section>
         <div className="flex-1 w-full max-w-4xl mx-auto space-y-4">

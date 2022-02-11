@@ -4,11 +4,11 @@ import React from "react";
 const Sidebar = ({ isOpen, toggle }) => {
   return (
     <div
-      className={`h-full w-4/5 bg-gray-200 dark:bg-gray-700 z-40 fixed top-0 left-0 shadow-xl transition-all ease-in-out transform duration-300 ${
+      className={`h-full w-4/5 bg-gray-200 dark:bg-slate-700 z-40 fixed top-0 left-0 shadow-xl transition-all ease-in-out transform duration-300 ${
         isOpen == true ? "block translate-x-0" : "hidden -translate-x-full"
       }`}
     >
-      <nav className="bg-white border-b border-w-4xl px-4 py-4 md:py-6 dark:border-primary-dark dark:bg-gray-800 transition duration-500">
+      <nav className="bg-white border-b border-w-4xl px-4 py-4 md:py-6 dark:border-primary-dark dark:bg-slate-800 transition duration-500">
         <div className="container flex xs:flex-wrap flex-nowrap justify-between items-center mx-auto max-w-6xl">
           <Link
             href="/"
@@ -55,7 +55,7 @@ const Sidebar = ({ isOpen, toggle }) => {
               href="/about"
       
             >
-              <span className="flex py-2 cursor-pointer pr-4 pl-3 text-zinc-800  border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 hover:text-blue-500 md:p-0 dark:text-gray-200 md:dark:hover:text-pink-600 dark:hover:bg-gray-500 dark:hover:text-pink-600 md:dark:hover:bg-transparent dark:border-gray-500 text-lg">
+              <span className="flex py-2 cursor-pointer pr-4 pl-3 text-zinc-800  border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 hover:text-blue-500 md:p-0 dark:text-gray-200 md:dark:hover:text-primary-dark dark:hover:bg-gray-500 dark:hover:text-primary-dark md:dark:hover:bg-transparent dark:border-gray-500 text-lg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6 mr-3 "
@@ -78,7 +78,7 @@ const Sidebar = ({ isOpen, toggle }) => {
             <Link
               href="/portfolio"
             >
-              <span className="flex py-2 cursor-pointer pr-4 pl-3 text-zinc-800  border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 hover:text-blue-500 md:p-0 dark:text-gray-200 md:dark:hover:text-pink-600 dark:hover:bg-gray-500 dark:hover:text-pink-600 md:dark:hover:bg-transparent dark:border-gray-500 text-lg">
+              <span className="flex py-2 cursor-pointer pr-4 pl-3 text-zinc-800  border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 hover:text-blue-500 md:p-0 dark:text-gray-200 md:dark:hover:text-primary-dark dark:hover:bg-gray-500 dark:hover:text-primary-dark md:dark:hover:bg-transparent dark:border-gray-500 text-lg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6 mr-3 "
@@ -102,7 +102,7 @@ const Sidebar = ({ isOpen, toggle }) => {
               href="/cv"
               
             >
-              <span className="flex py-2 cursor-pointer pr-4 pl-3 text-zinc-800  border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 hover:text-blue-500 md:p-0 dark:text-gray-200 md:dark:hover:text-pink-600 dark:hover:bg-gray-500 dark:hover:text-pink-600 md:dark:hover:bg-transparent dark:border-gray-500 text-lg">
+              <span className="flex py-2 cursor-pointer pr-4 pl-3 text-zinc-800  border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 hover:text-blue-500 md:p-0 dark:text-gray-200 md:dark:hover:text-primary-dark dark:hover:bg-gray-500 dark:hover:text-primary-dark md:dark:hover:bg-transparent dark:border-gray-500 text-lg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6 mr-3 "

@@ -5,8 +5,8 @@ import useDarkMode from "../hooks/useDarkMode";
 const Navbar = ({ toggle, isOpen }) => {
   const [colorTheme, setTheme] = useDarkMode();
   return (
-    <nav className="bg-white border-b border-w-4xl px-4 py-4 md:py-6 rounded dark:bg-gray-800 transition duration-500">
-      <div className="container flex flex-nowrap xs:flex-wrap justify-between items-center mx-auto max-w-6xl">
+    <nav className="bg-white  dark:bg-slate-800 transition duration-500">
+      <div className="container px-4 py-4 md:py-6 flex flex-nowrap xs:flex-wrap justify-between border-b items-center mx-auto max-w-6xl">
         <Link href="/">
           <span
             className={`self-center cursor-pointer text-xl font-semibold whitespace-nowrap dark:text-white text-zinc-800`}
@@ -17,7 +17,7 @@ const Navbar = ({ toggle, isOpen }) => {
             RUJIĆ
           </span>
         </Link>
-        <button className="inline-flex hover:bg-gray-100 dark:hover:bg-gray-700 p-1 xxs:p-2 items-center ml-auto md:hidden text-sm text-zinc-800 rounded-lg  focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-200  dark:focus:ring-gray-600">
+        <button className="inline-flex hover:bg-gray-100 dark:hover:bg-slate-700 p-1 xxs:p-2 items-center ml-auto md:hidden text-sm text-zinc-800 rounded-lg  focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-200  dark:focus:ring-gray-600">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6"
@@ -34,7 +34,7 @@ const Navbar = ({ toggle, isOpen }) => {
           </svg>
         </button>
         <button
-          className="inline-flex hover:bg-gray-100 dark:hover:bg-gray-700 xxs:p-2 p-1 items-center  md:hidden text-sm text-zinc-800 rounded-lg  focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-200  dark:focus:ring-gray-600"
+          className="inline-flex hover:bg-gray-100 dark:hover:bg-slate-700 xxs:p-2 p-1 items-center  md:hidden text-sm text-zinc-800 rounded-lg  focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-200  dark:focus:ring-gray-600"
           onClick={() => setTheme(colorTheme)}
         >
           {colorTheme == "light" ? (
@@ -107,21 +107,21 @@ const Navbar = ({ toggle, isOpen }) => {
           <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
             <li>
               <Link href="/about">
-                <span className="block py-2 cursor-pointer pr-4 pl-3 text-zinc-800 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 dark:text-gray-200 md:dark:hover:text-pink-600 dark:hover:bg-gray-500 dark:hover:text-pink-600 md:dark:hover:bg-transparent dark:border-gray-500 text-lg">
+                <span className="block py-2 cursor-pointer pr-4 pl-3 text-zinc-800 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 dark:text-gray-200 md:dark:hover:primary-dark dark:hover:bg-slate-500 dark:hover:primary-dark md:dark:hover:bg-transparent dark:border-slate-500 text-lg">
                   O Meni
                 </span>
               </Link>
             </li>
             <li>
               <Link href="/portfolio">
-                <span className="block py-2 cursor-pointer pr-4 pl-3 text-zinc-800 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 dark:text-gray-200 md:dark:hover:text-pink-600 dark:hover:bg-gray-500 dark:hover:text-pink-600 md:dark:hover:bg-transparent dark:border-gray-500 text-lg">
+                <span className="block py-2 cursor-pointer pr-4 pl-3 text-zinc-800 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 dark:text-gray-200 md:dark:hover:primary-dark dark:hover:bg-slate-500 dark:hover:primary-dark md:dark:hover:bg-transparent dark:border-slate-500 text-lg">
                   Portfolio
                 </span>
               </Link>
             </li>
             <li>
               <Link href="/cv">
-                <span className="block py-2 cursor-pointer pr-4 pl-3 text-zinc-800 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 dark:text-gray-200 md:dark:hover:text-pink-600 dark:hover:bg-gray-500 dark:hover:text-pink-600 md:dark:hover:bg-transparent dark:border-gray-500 text-lg">
+                <span className="block py-2 cursor-pointer pr-4 pl-3 text-zinc-800 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 dark:text-gray-200 md:dark:hover:primary-dark dark:hover:bg-slate-500 dark:hover:primary-dark md:dark:hover:bg-transparent dark:border-slate-500 text-lg">
                   Curriculum Vitae
                 </span>
               </Link>

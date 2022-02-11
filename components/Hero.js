@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <div className="dark:bg-gray-800 transition duration-500">
+    <div className="dark:bg-slate-800 transition duration-500">
       <div className="mx-4 ">
         <div className="max-w-6xl mx-auto py-6 overflow-hidden">
           <div className="w-full bg-blue-300 dark:bg-primary-dark-light mt-16 md:mt-0 lg:mt-12 text-blue-900 dark:text-primary-darker p-6 md:p-12 rounded-xl relative z-10 ">
