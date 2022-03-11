@@ -14,12 +14,12 @@ const Navbar = ({ toggle, isOpen }) => {
       <div className="container px-4 py-4 md:py-6 flex flex-nowrap xs:flex-wrap justify-between border-b items-center mx-auto max-w-6xl">
         <Link href="/">
           <span
-            className={`self-center cursor-pointer text-xl font-semibold whitespace-nowrap dark:text-white text-zinc-800`}
+            className={`self-center nav dark:nav-dark cursor-pointer text-xl font-semibold whitespace-nowrap dark:text-white text-zinc-800`}
           >
-            <span className="dark:text-primary-dark text-blue-500">N</span>
-            EMANJA{" "}
-            <span className="dark:text-primary-dark text-blue-500">G</span>
-            RUJIĆ
+            
+            NEMANJA{" "}
+            
+            GRUJIĆ
           </span>
         </Link>
         <Link href={router.asPath} locale={lang == 'eng' ? 'sr-RS' : lang == 'srb' ? 'en-US' : 'en-US'}>
@@ -114,21 +114,21 @@ const Navbar = ({ toggle, isOpen }) => {
           <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
             <li>
               <Link href="/about">
-                <span className="block py-2 cursor-pointer pr-4 pl-3 text-zinc-800 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 dark:text-gray-200 md:dark:hover:primary-dark dark:hover:bg-slate-500 dark:hover:primary-dark md:dark:hover:bg-transparent dark:border-slate-500 text-lg">
+                <span className="block py-2 cursor-pointer nav dark:nav-dark pr-4 pl-3 text-zinc-800 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 dark:text-gray-200 md:dark:hover:primary-dark dark:hover:bg-slate-500 dark:hover:primary-dark md:dark:hover:bg-transparent dark:border-slate-500 text-lg">
                   {t("common:nav1")}
                 </span>
               </Link>
             </li>
             <li>
               <Link href="/portfolio">
-                <span className="block py-2 cursor-pointer pr-4 pl-3 text-zinc-800 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 dark:text-gray-200 md:dark:hover:primary-dark dark:hover:bg-slate-500 dark:hover:primary-dark md:dark:hover:bg-transparent dark:border-slate-500 text-lg">
+                <span className="block py-2 cursor-pointer nav dark:nav-dark pr-4 pl-3 text-zinc-800 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 dark:text-gray-200 md:dark:hover:primary-dark dark:hover:bg-slate-500 dark:hover:primary-dark md:dark:hover:bg-transparent dark:border-slate-500 text-lg">
                   Portfolio
                 </span>
               </Link>
             </li>
             <li>
               <Link href="/cv">
-                <span className="block py-2 cursor-pointer pr-4 pl-3 text-zinc-800 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 dark:text-gray-200 md:dark:hover:primary-dark dark:hover:bg-slate-500 dark:hover:primary-dark md:dark:hover:bg-transparent dark:border-slate-500 text-lg">
+                <span className="block py-2 cursor-pointer nav dark:nav-dark pr-4 pl-3 text-zinc-800 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 dark:text-gray-200 md:dark:hover:primary-dark dark:hover:bg-slate-500 dark:hover:primary-dark md:dark:hover:bg-transparent dark:border-slate-500 text-lg">
                   Curriculum Vitae
                 </span>
               </Link>

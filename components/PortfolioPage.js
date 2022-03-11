@@ -1,6 +1,8 @@
 import React from "react";
+import useTranslation from 'next-translate/useTranslation';
 
 const PortfolioPage = () => {
+  let {t} = useTranslation();
   return (
     <div className="dark:bg-slate-800">
     <div className="mx-4 relative transition-colors duration-100 text-zinc-800 dark:text-gray-50">
@@ -9,11 +11,10 @@ const PortfolioPage = () => {
           <div className="flex justify-between items-end">
             <div className="flex flex-col space-x-1">
               <h1 className="text-4xl md:text-6xl font-bold">
-                Moj <span className="text-blue-500 dark:text-primary-dark">Portfolio.</span>
+              {t("portfolio:my")} <span className="text-blue-500 dark:text-primary-dark">Portfolio.</span>
               </h1>
               <p>
-                Projekti na kojima sam individualno radio, kao i timski
-                projekti.
+              {t("portfolio:desc")}
               </p>
             </div>
           </div>
@@ -92,20 +93,13 @@ const PortfolioPage = () => {
               </h2>
               <div className="w-full mb-4">
                 <p>
-                  "Sed ut perspiciatis unde omnis iste natus error sit
-                  voluptatem accusantium doloremque laudantium, totam rem
-                  aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-                  architecto beatae vitae dicta sunt explicabo.
+                {t("portfolio:p1")}
                 </p>
                 <br />
-                  "Sed ut perspiciatis unde omnis iste natus error sit
-                  voluptatem accusantium doloremque laudantium, totam rem
-                  aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-                  architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-                  voluptatem quia voluptas sit aspernatur aut odit aut fugit
+                {t("portfolio:p1-2")}
               </div>
               <div className="flex space-x-2">
-                  <a href='https://www.lan-digital.com' target='_blank' rel="noreferrer" className="bg-blue-500 dark:bg-primary-dark dark:hover:bg-primary-darker hover:bg-blue-900 text-white px-3 py-2 text-lg rounded">Poseti Sajt</a>
+                  <a href='https://www.lan-digital.com' target='_blank' rel="noreferrer" className="bg-blue-500 dark:bg-primary-dark dark:hover:bg-primary-darker hover:bg-blue-900 text-white px-3 py-2 text-lg rounded">{t("portfolio:button")}</a>
                   <a href='https://github.com/nemanjag3005/landigital' target='_blank' rel="noreferrer" className="border-2 border-black dark:border-gray-50 dark:hover:bg-primary-dark-light dark:text-gray-50 hover:bg-blue-300 text-black px-3 py-2 text-lg rounded">GitHub</a>
               </div>
             </div>
@@ -138,24 +132,17 @@ const PortfolioPage = () => {
             </div>
             <div className="w-full h-full flex flex-col justify-center p-4 lg:p-6 rounded shadow-md bg-blue-100 dark:bg-slate-700">
             <h2 className="text-3xl lg:text-5xl font-bold mb-2">
-                Flex Team
+                Time to Decide
               </h2>
               <div className="w-full mb-4">
                 <p>
-                  "Sed ut perspiciatis unde omnis iste natus error sit
-                  voluptatem accusantium doloremque laudantium, totam rem
-                  aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-                  architecto beatae vitae dicta sunt explicabo.
+                {t("portfolio:p2")}
                 </p>
                 <br />
-                  "Sed ut perspiciatis unde omnis iste natus error sit
-                  voluptatem accusantium doloremque laudantium, totam rem
-                  aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-                  architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-                  voluptatem quia voluptas sit aspernatur aut odit aut fugit
+                {t("portfolio:p2-2")}
               </div>
               <div className="flex space-x-2">
-                  <a href='#' target='_blank' rel="noreferrer" className="bg-blue-500 dark:bg-primary-dark dark:hover:bg-primary-darker hover:bg-blue-900 text-white px-3 py-2 text-lg rounded">Poseti Sajt</a>
+                  <a href='#' target='_blank' rel="noreferrer" className="bg-blue-500 dark:bg-primary-dark dark:hover:bg-primary-darker hover:bg-blue-900 text-white px-3 py-2 text-lg rounded">{t("portfolio:button")}</a>
                   <a href='#' target='_blank' rel="noreferrer" className="border-2 border-black hover:bg-blue-300 dark:border-gray-50 dark:hover:bg-primary-dark-light dark:text-gray-50 text-black px-3 py-2 text-lg rounded">GitHub</a>
               </div>
             </div>

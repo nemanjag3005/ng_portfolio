@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import useTranslation from 'next-translate/useTranslation';
 
 const AboutPage = () => {
+  let {t} = useTranslation();
   const [length, setLength] = useState(1);
   return (
     <div className="dark:bg-slate-800 px-4 min-h-subnav">
@@ -60,12 +62,12 @@ const AboutPage = () => {
               </div>
             </div>
           </div>
-          <p className="text-sm text-center font-semibold mb-3 opacity-75 dark:text-gray-50">
-            DUŽINA BIOGRAFIJE
+          <p className="text-sm text-center uppercase font-semibold mb-3 opacity-75 dark:text-gray-50">
+          {t("about:biolength")}
           </p>
           <div className="w-full flex space-x-2 flex-wrap items-center justify-center">
-            <p className="text-xl hidden md:block dark:text-gray-50">Najkraće</p>
-            <p className="text-base block md:hidden dark:text-gray-50">Kraće</p>
+            <p className="text-xl hidden md:block dark:text-gray-50">{t("about:shortest")}</p>
+            <p className="text-base block md:hidden dark:text-gray-50">{t("about:short")}</p>
             <button
               className="bg-blue-600 dark:bg-primary-dark text-white p-1 h-8 md:h-10 w-8 md:w-10 rounded-full transition duration-150"
               onClick={() => setLength(0)}
@@ -146,50 +148,32 @@ const AboutPage = () => {
                 </svg>
               )}
             </button>
-            <p className="text-xl hidden md:block dark:text-gray-50">Najduže</p>
-            <p className="text-base block md:hidden dark:text-gray-50">Duže</p>
+            <p className="text-xl hidden md:block dark:text-gray-50">{t("about:longest")}</p>
+            <p className="text-base block md:hidden dark:text-gray-50">{t("about:long")}</p>
           </div>
           <div className="flex-1 w-full max-w-4xl pt-8 mx-auto transition duration-500 dark:text-gray-50 text-zinc-800">
             <p className={`text-lg md:text-3xl font-semibold mb-8 ${length == 0 ? 'text-center' : 'text-left'}`}>
               {length == 0 ? (
                 <span>
-                  Nemanja je frontend developer. Voli svoju profesiju.
+                  {t("about:bio0")}
                 </span>
               ) : length == 1 ? (
                 <span>
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
+                  {t("about:bio1")}
                 </span>
               ) : length == 2 ? (
                 <span>
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum."
+                  {t("about:bio2")}
                 </span>
               ) : (
                 <span>
-                  "Sed ut perspiciatis unde omnis iste natus error sit
-                  voluptatem accusantium doloremque laudantium, totam rem
-                  aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-                  architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-                  voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-                  sed quia consequuntur magni dolores eos qui ratione voluptatem
-                  sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
-                  quia dolor sit amet, consectetur, adipisci velit, sed quia non
-                  numquam eius modi tempora incidunt ut labore et dolore magnam
-                  aliquam quaerat voluptatem. Ut enim ad minima veniam, quis
-                  nostrum exercitationem ullam corporis suscipit laboriosam,
-                  nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum
-                  iure reprehenderit qui in ea voluptate velit esse quam nihil
-                  molestiae consequatur, vel illum qui dolorem eum fugiat quo
-                  voluptas nulla pariatur?"
+                  {t("about:bio3")}
+                  <br />
+                  <br />
+                  {t("about:bio3-2")}
+                  <br />
+                  <br />
+                  {t("about:bio3-3")}
                 </span>
               )}
             </p>
@@ -199,14 +183,11 @@ const AboutPage = () => {
       <section>
         <div className="flex-1 w-full max-w-4xl mx-auto pb-8 ">
           <div className={`w-full bg-blue-200 dark:bg-slate-700 dark:text-gray-50 text-zinc-800 rounded p-4 `}>
-            <p>
-              Moje <span className='text-blue-500 dark:text-primary-dark'>Brojke</span>
+            <p className="uppercase">
+            {t("about:the")} <span className='text-blue-500 dark:text-primary-dark'>{t("about:numbers")}</span>
             </p>
             <p className="text-lg md:text-3xl font-semibold">
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
+            {t("about:numbers-desc")}
             </p>
           </div>
         </div>
