@@ -1,0 +1,12 @@
+{
+    "locales": ["en-US", "sr-RS"],
+    "defaultLocale": "sr-RS",
+    "pages": {
+        "*": ["common"],
+        "/": ["home"],
+        "/about": ["about"],
+        "/portfolio": ["portfolio"],
+        "/siteinfo": ["siteinfo"],
+        "/cv": ["cv"]
+    }
+  }

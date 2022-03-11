@@ -1,7 +1,9 @@
 import React from "react";
 import Link from "next/link";
+import useTranslation from 'next-translate/useTranslation';
 
 const Hero = () => {
+  let {t} = useTranslation();
   return (
     <div className="dark:bg-slate-800 transition duration-500">
       <div className="mx-4 ">
@@ -21,10 +23,7 @@ const Hero = () => {
                   </div>
                 </div>
                 <p className="text-xl md:text-2xl">
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
+                {t("home:desc")}
                 </p>
                 <div className="grid grid-cols-1 gap-2 md:flex md:space-x-3 items-center w-full">
                   <div className="flex w-full items-center space-x-2">

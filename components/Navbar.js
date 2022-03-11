@@ -1,8 +1,13 @@
 import Link from "next/link";
 import React, { useEffect } from "react";
 import useDarkMode from "../hooks/useDarkMode";
+import { useRouter } from 'next/router'
+import useTranslation from 'next-translate/useTranslation';
 
 const Navbar = ({ toggle, isOpen }) => {
+  let router = useRouter();
+  let {t} = useTranslation();
+  const lang = router.locale === 'en-US' ? 'eng' : router.locale === 'sr-RS' ? 'srb' : "";
   const [colorTheme, setTheme] = useDarkMode();
   return (
     <nav className="bg-white  dark:bg-slate-800 transition duration-500">
@@ -17,6 +22,7 @@ const Navbar = ({ toggle, isOpen }) => {
             RUJIĆ
           </span>
         </Link>
+        <Link href={router.asPath} locale={lang == 'eng' ? 'sr-RS' : lang == 'srb' ? 'en-US' : 'en-US'}>
         <button className="inline-flex hover:bg-gray-100 dark:hover:bg-slate-700 p-1 xxs:p-2 items-center ml-auto md:hidden text-sm text-zinc-800 rounded-lg  focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-200  dark:focus:ring-gray-600">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -33,6 +39,7 @@ const Navbar = ({ toggle, isOpen }) => {
             />
           </svg>
         </button>
+        </Link>
         <button
           className="inline-flex hover:bg-gray-100 dark:hover:bg-slate-700 xxs:p-2 p-1 items-center  md:hidden text-sm text-zinc-800 rounded-lg  focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-200  dark:focus:ring-gray-600"
           onClick={() => setTheme(colorTheme)}
@@ -108,7 +115,7 @@ const Navbar = ({ toggle, isOpen }) => {
             <li>
               <Link href="/about">
                 <span className="block py-2 cursor-pointer pr-4 pl-3 text-zinc-800 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 dark:text-gray-200 md:dark:hover:primary-dark dark:hover:bg-slate-500 dark:hover:primary-dark md:dark:hover:bg-transparent dark:border-slate-500 text-lg">
-                  O Meni
+                  {t("common:nav1")}
                 </span>
               </Link>
             </li>
@@ -127,6 +134,7 @@ const Navbar = ({ toggle, isOpen }) => {
               </Link>
             </li>
             <li>
+              <Link href={router.asPath} locale={lang == 'eng' ? 'sr-RS' : lang == 'srb' ? 'en-US' : 'en-US'}>
               <button className="md:inline-flex items-center hidden text-sm text-zinc-800 rounded-lg  focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-200  dark:focus:ring-gray-600">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -143,6 +151,7 @@ const Navbar = ({ toggle, isOpen }) => {
                   />
                 </svg>
               </button>
+              </Link>
             </li>
             <li>
               <button
