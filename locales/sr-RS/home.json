@@ -1,3 +1,8 @@
 {
-    "desc": "Ja sam Nemanja, student Bioinformatike i bavim se front end developmentom u slobodno vreme."
+    "desc": "Ja sam Nemanja, studiram Bioinformatiku i Informacione Tehnologije. Bavim se Front End developmentom u slobodno vreme.",
+    "aboutButton": "O Meni",
+    "projects": "Istaknuti Projekti",
+    "p1": "Zvanična stranica mog start-up-a koji se bavi Digitalnim Marketingom.",
+    "p2": "Sajt napravljen za tipstersku organizaciju Flex Team.",
+    "p3": "Aplikacija koja omogućava grupi prijatelja da lakše odluče gde će da izađu."
 }

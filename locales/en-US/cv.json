@@ -1,3 +1,8 @@
 {
-    "nav1": "O Meni"
+    "button": "Download CV",
+    "intro": "A front-end developer with two years experience using ReactJS and Next to build performant, beautiful and accessible applications. Looking for the next challenge to learn, improve myself and create a better user experience on the web.",
+    "skills": "technical skills",
+    "experience": "experience",
+    "education": "education",
+    "interests": "interests"
 }

@@ -1,3 +1,16 @@
 {
-    "nav1": "O Meni"
+  "biolength": "Bio Length",
+  "shortest": "Shortest",
+  "short": "Short",
+  "longest": "Longest",
+  "long": "Long",
+  "bio0": "Nemanja is a Front End developer and student.\n He loves what he does.",
+  "bio1": "Nemanja is an undergraduate Bioinformatics and Computer Science student at the University of Calgary. He is a self taught Front End Developer and is adamant in creating a web that is both efficient and beautiful.",
+  "bio2": "Nemanja is a second-year student pursuing a degree in Bioinformatics and Computer Sceince at the University of Calgary. He has a digital marketing start-up where he is focused on creating beautiful and perfomant websites and applications. Nemanja is most at home coding in React, Javascript, HTML/CSS, GraphQL & NextJS but is always open to learning something new. When coding he likes to ensure his code is accessible and efficient.",
+  "bio3": "Nemanja Grujić is currently a second-year student pursuing a major in Bioinformatics and a minor in Computer Science at the University of Calgary. He is a Front End Lead at the University's entreprenurial Tech Start Club, where he uses his experience to solve problems and create interesting projects with his team, using professional development tools and methodologies. \n Nemanja is also VP Marketing at the University's Bioinformatics Club, where he strives to use his digital marketing skills to create an interactive and beautiful presence for the Club on the Web and Social Media.",
+  "bio3-2": "His passion for the web started in 2020, when he decided to teach himself how to code and create websites using HTML/CSS and Javascript. He quickly got into learning about JS Frameworks and focused on learning React. Since then, his passion has only grown as he has created multiple projects as a hobby or for clients. \n In 2021, he and two of his friends who are also passionate about the digital craft decided to create a digital marketing agency. Thus, LAN Digital was born, a start-up where Nemanja and his friends would put their skills to use to create a better web representation for Serbian businesses.",
+  "bio3-3": "When coding, he likes to ensure his code is accessible and perfomant. During his time at Tech Start, Nemanja has gained a lot of experience in working on software projects as part of a team and utilizing industry-standard coding practices. He enjoys leading and working together with people and is always looking for new challenges to gain experience and improve himself. His other hobbies include playing guitar, going to the gym and motorsport. He also has a plethora of interests, most notable of which is a deep interest in sport cars, rocket technology and the cosmos.",
+  "the": "the",
+  "numbers": "numbers",
+  "numbers-desc": "Since the start of the year Nemanja has contributed 87 times to 4 different projects. He has worked on large as well as small projects."
 }

@@ -1,3 +1,8 @@
 {
-    "desc": "I am Nemanja, a Bioinformatics undergraduate student and a front end developer in my free time."
+    "desc": "I am Nemanja, an undergraduate student pursuing a degree in Bioinformatics as well as Computer Science. I am also a self-taught Front End developer in my free time.",
+    "aboutButton": "About Me",
+    "projects": "Featured Work",
+    "p1": "The official site of my digital marketing start-up.",
+    "p2": "A promotional site for the Flex Team betting organization.",
+    "p3": "An app that makes deciding where to go with a group of friends a little easier."
 }

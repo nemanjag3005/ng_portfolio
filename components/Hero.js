@@ -34,7 +34,7 @@ const Hero = () => {
                     </Link>
                     <Link href="/about">
                       <button className="w-full whitespace-nowrap text-center shadow dark:border-primary-darker dark:bg-primary-dark-light dark:text-primary-darker border-2 border-blue-900 bg-blue-300 hover:shadow-lg px-3 py-2 text-blue-900 rounded text-lg md:text-2xl">
-                        O Meni
+                        {t("home:aboutButton")}
                       </button>
                     </Link>
                   </div>
@@ -131,13 +131,13 @@ const Hero = () => {
             </g>
           </svg>
           <h2 className="text-2xl md:text-3xl font-bold my-3 mt-8 text-zinc-800 dark:text-gray-50">
-            Poslednji Projekti
+          {t("home:projects")}
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 text-zinc-800 dark:text-gray-50 mb-12 md:mb-36">
             <a className="group relative" href="#">
               <div className="absolute top-0 left-0 w-full h-full p-5 hidden group-hover:flex flex-col z-20">
                 <p className=" font-bold text-xl">LAN Digital</p>
-                <p>Zvanicni sajt LAN Digital-a.</p>
+                <p>{t("home:p1")}</p>
               </div>
               <img
                 src="/lan.png"
@@ -147,17 +147,17 @@ const Hero = () => {
             <a className="group relative" href="#">
               <div className="absolute top-0 left-0 w-full h-full p-5 hidden group-hover:flex flex-col z-20">
                 <p className=" font-bold text-xl">Flex Team</p>
-                <p>Zvanicni sajt LAN Digital-a.</p>
+                <p>{t("home:p2")}</p>
               </div>
               <img
-                src="/lan.png"
+                src="/flex.png"
                 className="rounded h-48 w-full object-cover group-hover:opacity-25"
               ></img>
             </a>
             <a className="group relative" href="#">
               <div className="absolute top-0 left-0 w-full h-full p-5 hidden group-hover:flex flex-col z-20">
                 <p className=" font-bold text-xl">Time to Decide</p>
-                <p>Zvanicni sajt LAN Digital-a.</p>
+                <p>{t("home:p3")}</p>
               </div>
               <img
                 src="/lan.png"
