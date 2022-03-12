@@ -1,10 +1,13 @@
 import Link from "next/link";
 import React from "react";
+import useTranslation from 'next-translate/useTranslation';
+import 'animate.css';
 
 const Sidebar = ({ isOpen, toggle }) => {
+  let {t} = useTranslation();
   return (
     <div
-      className={`h-full w-4/5 bg-gray-200 dark:bg-slate-700 z-40 fixed top-0 left-0 shadow-xl transition-all ease-in-out transform duration-300 ${
+      className={`h-full w-4/5 bg-gray-200 animate__animated animate__fadeInLeft animate__faster dark:bg-slate-700 z-40 fixed top-0 left-0 shadow-xl transition-all ease-in-out transform duration-300 ${
         isOpen == true ? "block translate-x-0" : "hidden -translate-x-full"
       }`}
     >
@@ -16,10 +19,10 @@ const Sidebar = ({ isOpen, toggle }) => {
             <span
               className={`self-center cursor-pointer text-xl font-semibold whitespace-nowrap dark:text-white text-zinc-800`}
             >
-              <span className="dark:text-primary-dark text-blue-500">N</span>
-              EMANJA{" "}
-              <span className="dark:text-primary-dark text-blue-500">G</span>
-              RUJIĆ
+              
+              NEMANJA{" "}
+              
+              GRUJIĆ
             </span>
           </Link>
           <button
@@ -70,7 +73,7 @@ const Sidebar = ({ isOpen, toggle }) => {
                   d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                 />
               </svg>
-              About
+              {t("common:nav1")}
               </span>
             </Link>
           </li>

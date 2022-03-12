@@ -1,11 +1,11 @@
 {
   "my": "Moj",
   "desc": "Projekti na kojima sam individualno radio, kao i timski projekti.",
-  "p1": "",
-  "p1-2": "",
+  "p1": "LAN Digital je agencija za digitalni marketing koju sam osnovao zajedno sa svoja dva najbolja prijatelja, Aleksom i Lukom.",
+  "p1-2": "Budući da je ovo moje preduzeće, mnogo vremena i truda sam uložio u pravljenje stranice za našu agenciju. Stranica je većinom statična, napravio sam je koristeći React NextJS i styled-components za CSS. Stranica sadrži kontakt formu koja koristi nodemailer za slanje upita, kao i blog sekciju koja grabi podatke sa GraphCMS-a.",
   "button": "Poseti Sajt",
-  "p2": "",
-  "p2-2": "",
+  "p2": "Da li vam je ikada dojadila količina vremena koja je neki put potrebna za planiranje mesta izlaska sa grupom prijatelja?",
+  "p2-2": "Time to Decide je onlajn aplikacija uz pomoć koje možete smanjiti vreme potrebno za planiranje tako što ćete se lakše odlučiti za mesto izlaska. Aplikacija funkcioniše tako što vašoj grupi predlaže razne lokale na osnovu unetih interesovanja, budžeta i lokacije. Vaši prijatelji onda jednostavno treba da glasaju za njihov omiljeni lokal i odluka će biti laka. Aplikacija je napravljena koristeći NextJS, ChakraUI i MongoDB. Google Places API je korišćen za preuzimanje predloženih lokacija.",
   "p3": "",
   "p3-2": ""
 }

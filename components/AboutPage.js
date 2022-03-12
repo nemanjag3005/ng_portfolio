@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import useTranslation from 'next-translate/useTranslation';
+import 'animate.css';
 
 const AboutPage = () => {
   let {t} = useTranslation();
@@ -18,11 +19,11 @@ const AboutPage = () => {
               <div className="bg-blue-600 dark:bg-primary-dark m-5 rounded h-48 w-48 xs:h-56 xs:w-56 absolute bottom-0 right-0">
                 <div className="w-full h-full relative">
                 <div className="xs:h-64 xs:w-64 h-44 w-44 rounded absolute xs:left-4 xs:top-4 left-6 top-6">
-                    <img src='/IMG_1265.jpeg' className="object-cover xs:h-64 xs:w-64 h-48 w-48 rounded">
+                    <img src='/IMG_1265.jpeg' className="object-cover animate__animated animate__fadeInUp xs:h-64 xs:w-64 h-48 w-48 rounded">
 
                     </img>
                   </div>
-                  <div className="absolute top-0 left-0 w-12 h-12 mt-12 -ml-10 md:-ml-20">
+                  <div className="absolute animate__animated animate__fadeInUp top-0 left-0 w-12 h-12 mt-12 -ml-10 md:-ml-20">
                     <svg
                       version="1.1"
                       id="Capa_1"
@@ -52,7 +53,7 @@ const AboutPage = () => {
                       </g>
                     </svg>
                   </div>
-                  <div className="absolute top-0 left-0 mt-4 -ml-24 md:-ml-32 transform">
+                  <div className="absolute animate__animated animate__fadeInUp top-0 left-0 mt-4 -ml-24 md:-ml-32 transform">
                     <p className="text-2xl transform font-semibold -rotate-45">
                       Web Dev
                     </p>
@@ -151,7 +152,7 @@ const AboutPage = () => {
             <p className="text-xl hidden md:block dark:text-gray-50">{t("about:longest")}</p>
             <p className="text-base block md:hidden dark:text-gray-50">{t("about:long")}</p>
           </div>
-          <div className="flex-1 w-full max-w-4xl pt-8 mx-auto transition duration-500 dark:text-gray-50 text-zinc-800">
+          <div className="flex-1 w-full max-w-4xl pt-8 mx-auto transition duration-500 dark:text-gray-50 text-zinc-700">
             <p className={`text-lg md:text-3xl font-semibold mb-8 ${length == 0 ? 'text-center' : 'text-left'}`}>
               {length == 0 ? (
                 <span>
@@ -182,9 +183,9 @@ const AboutPage = () => {
       </section>
       <section>
         <div className="flex-1 w-full max-w-4xl mx-auto pb-8 ">
-          <div className={`w-full bg-blue-200 dark:bg-slate-700 dark:text-gray-50 text-zinc-800 rounded p-4 `}>
+          <div className={`w-full bg-blue-200 dark:bg-slate-700 dark:text-gray-50 text-zinc-700 rounded p-4 `}>
             <p className="uppercase">
-            {t("about:the")} <span className='text-blue-500 dark:text-primary-dark'>{t("about:numbers")}</span>
+            {t("about:the")} <span className='text-blue-500 dark:text-primary-dark-light'>{t("about:numbers")}</span>
             </p>
             <p className="text-lg md:text-3xl font-semibold">
             {t("about:numbers-desc")}

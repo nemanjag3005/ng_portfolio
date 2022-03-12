@@ -1,7 +1,9 @@
 import React from "react";
 import Link from "next/link";
+import useTranslation from 'next-translate/useTranslation';
 
 const Footer = () => {
+  let {t} = useTranslation();
   return (
     <div className="mx-0 relative z-20 bg-white dark:bg-slate-800 transition duration-500">
       <div className="mx-4">
@@ -11,21 +13,19 @@ const Footer = () => {
               <div className="-mx-4 flex flex-wrap justify-between">
                 <div className="px-2 my-4 w-full sm:w-auto max-w-md">
                   <h1 className="text-xl mb-3 font-bold">
-                    Ja sam Nemanja Grujić.
+                  {t("common:footer-heading")}
                   </h1>
                   <p className="text-sm mb-3">
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
+                  {t("common:footer-desc")}
                   </p>
                   <Link href="/siteinfo">
                     <button className="bg-blue-500 dark:bg-primary-dark text-white rounded px-3 py-2">
-                      O Sajtu
+                    {t("common:footer-button")}
                     </button>
                   </Link>
                 </div>
                 <div className="px-2 my-4 w-full sm:w-auto">
-                  <h4 className="text-xl mb-1 font-bold">Kontakt</h4>
+                  <h4 className="text-xl mb-1 font-bold">{t("common:footer-contact")}</h4>
                   <div className="flex space-x-2 my-2 items-center text-zinc-800 dark:text-gray-50">
                     <a href="https://twitter.com/nemke1031" target='_blank' rel="noopener noreferrer" >
                       <svg

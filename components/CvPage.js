@@ -1,14 +1,14 @@
 import React from "react";
-import useTranslation from 'next-translate/useTranslation';
+import useTranslation from "next-translate/useTranslation";
 
 const CvPage = () => {
-  let {t} = useTranslation();
+  let { t } = useTranslation();
   return (
     <div className="bg-slate-100 dark:bg-slate-800">
       <div className="mx-4 relative h-full">
         <div className="w-full text-center">
           <button className="bg-blue-500 my-8 rounded py-2 px-4 text-white hover:bg-blue-800 dark:bg-primary-dark dark:hover:bg-primary-darker">
-          {t("cv:button")}
+            {t("cv:button")}
           </button>
         </div>
         <div className="block md:hidden bg-white text-black p-2 mx-2 mb-12">
@@ -18,14 +18,11 @@ const CvPage = () => {
               www.nemanja-grujic.rs | nemanjag3005@gmail.com
             </h3>
             <p className="text-xs border-light-grey border-b-2 pb-3 mb-3">
-              Creative, collaborative and courageous developer with extensive
-              experience in web based technologies and UX design. Looking for
-              the next challenge to improve customer experience and deepen
-              engagement.
+              {t("cv:intro-mobile")}
             </p>
             <div className="grid grid-cols-4 gap-4">
               <div className="col-span-4 border-light-grey border-b-2 pb-3 mb-0">
-                <h5 className="flex items-center text-xs mb-1 text-blue font-semibold">
+                <h5 className="flex uppercase items-center text-xs mb-1 text-blue font-semibold">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
@@ -36,191 +33,78 @@ const CvPage = () => {
                     <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
                     <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
                   </svg>
-                  {t("about:experience")}
+                  {t("cv:experience")}
                 </h5>
                 <div className="m1-b   ">
-                  <h3 className="text-sm font-bold">
-                    Senior Front-End Developer
-                  </h3>
+                  <h3 className="text-sm font-bold">{t("cv:exp1-header")}</h3>
                   <h5 className="text-xs my-1 font-semibold">
-                    Zone Digital, London | 2021 - Present
+                    TechStart UCalgary, Calgary | 2021 - {t("cv:present")}
                   </h5>
                   <div className="text-xs flex">
                     <p className="mr-1">-</p>
-                    <p className="m-0">
-                      Building a global real world data analytics platform for
-                      the life sciences and healthcare industries.
-                    </p>
+                    <p className="m-0">{t("cv:exp1-1")}</p>
                   </div>
                   <div className="text-xs flex">
                     <p className="mr-1">-</p>
-                    <p className="m-0">
-                      Building custom UI libraries for clients.
-                    </p>
+                    <p className="m-0">{t("cv:exp1-2")}</p>
                   </div>
                   <div className="text-xs flex">
                     <p className="mr-1">-</p>
-                    <p className="m-0">
-                      Presenting new technologies to my engineering colleagues
-                      at 'Breakout Zone.'
-                    </p>
+                    <p className="m-0">{t("cv:exp1-3")}</p>
                   </div>
                   <p className="text-xs mt-1 ml-2 text-blue font-semibold">
-                    Engineering Management, Design Agency, JS, ReactJS, Jest,
-                    TypeScript, NextJS
+                    {t("cv:exp1-skills")}
                   </p>
                 </div>
                 <div className="m1-b  border-light-grey border-t-2 mt-2 pt-2 ">
-                  <h3 className="text-sm font-bold">
-                    UX Engineer &amp; Product Manager
-                  </h3>
+                  <h3 className="text-sm font-bold">{t("cv:exp2-header")}</h3>
                   <h5 className="text-xs my-1 font-semibold">
-                    Behaviour Lab, London | 2021
+                    LAN Digital, Belgrade | 2021 - Present
                   </h5>
                   <div className="text-xs flex">
                     <p className="mr-1">-</p>
-                    <p className="m-0">
-                      Responsible for leading UI development of Behaviour Lab's
-                      SaaS product targeted at asset managers, private equity
-                      firms, insurance companies and executive boards.
-                    </p>
+                    <p className="m-0">{t("cv:exp2-1")}</p>
                   </div>
                   <div className="text-xs flex">
                     <p className="mr-1">-</p>
-                    <p className="m-0">
-                      Built the company's component library, testing frameworks
-                      and setup CI/CD pipelines.
-                    </p>
+                    <p className="m-0">{t("cv:exp2-2")}</p>
                   </div>
                   <div className="text-xs flex">
                     <p className="mr-1">-</p>
-                    <p className="m-0">
-                      Product managed the company's first commercial product.
-                      Planning its features with stake holders, highlighting
-                      cross functional dependencies and running agile ceremonies
-                    </p>
+                    <p className="m-0">{t("cv:exp2-3")}</p>
+                  </div>
+                  <div className="text-xs flex">
+                    <p className="mr-1">-</p>
+                    <p className="m-0">{t("cv:exp2-4")}</p>
                   </div>
                   <p className="text-xs mt-1 ml-2 text-blue font-semibold">
-                    Product Management, JS, ReactJS, Jest, TypeScript, GatsbyJS,
-                    NextJS, TailwindCSS
+                    {t("cv:exp2-skills")}
                   </p>
                 </div>
                 <div className="m1-b  border-light-grey border-t-2 mt-2 pt-2 ">
-                  <h3 className="text-sm font-bold">Front-End Engineer</h3>
+                  <h3 className="text-sm font-bold">{t("cv:exp3-header")}</h3>
                   <h5 className="text-xs my-1 font-semibold">
-                    American Express, London | 2020 - 2021
+                    XYZ Communications, Belgrade | 2019
                   </h5>
                   <div className="text-xs flex">
                     <p className="mr-1">-</p>
-                    <p className="m-0">
-                      Responsible for creating and maintaining performant,
-                      acessible ReactJS and JS components used across the
-                      organisation's online presence.
-                    </p>
+                    <p className="m-0">{t("cv:exp3-1")}</p>
                   </div>
                   <div className="text-xs flex">
                     <p className="mr-1">-</p>
-                    <p className="m-0">
-                      Created tools that allow us to measure how our components
-                      are being used. Versions, bundle size, accessiblity, best
-                      practices and SEO impacts are tracked automatically.
-                    </p>
+                    <p className="m-0">{t("cv:exp3-2")}</p>
+                  </div>
+                  <div className="text-xs flex">
+                    <p className="mr-1">-</p>
+                    <p className="m-0">{t("cv:exp3-3")}</p>
                   </div>
                   <p className="text-xs mt-1 ml-2 text-blue font-semibold">
-                    JS, ReactJS, Jest, Redux, GatsbyJS, Emotion, Styled
-                    Components, Sketch, Invision
-                  </p>
-                </div>
-                <div className="m1-b  border-light-grey border-t-2 mt-2 pt-2 ">
-                  <h3 className="text-sm font-bold">UX Engineer</h3>
-                  <h5 className="text-xs my-1 font-semibold">
-                    American Express, London | 2019 - 2020
-                  </h5>
-                  <div className="text-xs flex">
-                    <p className="mr-1">-</p>
-                    <p className="m-0">
-                      Developed a new referral experience that features enhanced
-                      referral rewards for platinum and gold card members. It
-                      has engaged with 600,000 customers to date.
-                    </p>
-                  </div>
-                  <div className="text-xs flex">
-                    <p className="mr-1">-</p>
-                    <p className="m-0">
-                      Created a self-service automation tool for assesing a
-                      webpage's performance, accessibilty and generating
-                      screenshots of the page for multiple view ports. This has
-                      increased the ability for markets to self service,
-                      reducing the need to engage engineers to acquire this
-                      information.
-                    </p>
-                  </div>
-                  <div className="text-xs flex">
-                    <p className="mr-1">-</p>
-                    <p className="m-0">
-                      Facilitated design sprints and lightening decision jams to
-                      help the team ideate.
-                    </p>
-                  </div>
-                  <div className="text-xs flex">
-                    <p className="mr-1">-</p>
-                    <p className="m-0">
-                      Built web-ready animations, onboarding experiences, faster
-                      sites in newer frameworks and chat bots.
-                    </p>
-                  </div>
-                  <p className="text-xs mt-1 ml-2 text-blue font-semibold">
-                    User Experience, JS, Typescript, ReactJS, Redux, GatsbyJS,
-                    GraphQL, Node, Electron
-                  </p>
-                </div>
-                <div className="m1-b  border-light-grey border-t-2 mt-2 pt-2 ">
-                  <h3 className="text-sm font-bold">Graduate UX Engineer</h3>
-                  <h5 className="text-xs my-1 font-semibold">
-                    American Express, Burgess Hill | 2018 - 2019
-                  </h5>
-                  <div className="text-xs flex">
-                    <p className="mr-1">-</p>
-                    <p className="m-0">
-                      Designed and built GRAD, a hub for technology onboarding.
-                      The collection initially intended for graduates, is being
-                      used campus-wide and receives over 250 unique vistors a
-                      month and has accumulated over 20,000 views.
-                    </p>
-                  </div>
-                  <div className="text-xs flex">
-                    <p className="mr-1">-</p>
-                    <p className="m-0">
-                      Conducted research into how we could improve elements of
-                      the referral hub. This included competitor analysis,
-                      analysis of existing site, creation of personas,
-                      wireframes and mockups.
-                    </p>
-                  </div>
-                  <div className="text-xs flex">
-                    <p className="mr-1">-</p>
-                    <p className="m-0">
-                      Built a prototype for a research archive that summarises,
-                      tags, intelligently links and prioritises research for
-                      better design decisions.
-                    </p>
-                  </div>
-                  <div className="text-xs flex">
-                    <p className="mr-1">-</p>
-                    <p className="m-0">
-                      Was the only graduate in my cohort to formally manage
-                      interns and have gone on to be the youngest engineer to
-                      manage graduates
-                    </p>
-                  </div>
-                  <p className="text-xs mt-1 ml-2 text-blue font-semibold">
-                    User Experience, User Research, User Testing, JS, ReactJS,
-                    Sketch, Invision, Python
+                    {t("cv:exp3-skills")}
                   </p>
                 </div>
               </div>
               <div className="col-span-4">
-                <h5 className=" mt-0  flex items-center text-xs mb-1 text-blue font-semibold">
+                <h5 className=" mt-0 uppercase flex items-center text-xs mb-1 text-blue font-semibold">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
@@ -234,7 +118,7 @@ const CvPage = () => {
                       clipRule="evenodd"
                     ></path>
                   </svg>
-                  TECHNICAL SKILLS
+                  {t("cv:technical-skills")}
                 </h5>
                 <div className="grid grid-cols-2 gap-1">
                   <div className="pad-0">
@@ -244,31 +128,19 @@ const CvPage = () => {
                     <p className="text-xs">HTML</p>
                   </div>
                   <div className="pad-0">
+                    <p className="text-xs">CSS</p>
+                  </div>
+                  <div className="pad-0">
                     <p className="text-xs">Node</p>
                   </div>
                   <div className="pad-0">
                     <p className="text-xs">ReactJS</p>
                   </div>
                   <div className="pad-0">
-                    <p className="text-xs">Electron</p>
-                  </div>
-                  <div className="pad-0">
-                    <p className="text-xs">Websockets</p>
-                  </div>
-                  <div className="pad-0">
                     <p className="text-xs">Redux</p>
                   </div>
                   <div className="pad-0">
-                    <p className="text-xs">React Native</p>
-                  </div>
-                  <div className="pad-0">
-                    <p className="text-xs">GatsbyJS</p>
-                  </div>
-                  <div className="pad-0">
                     <p className="text-xs">NextJS</p>
-                  </div>
-                  <div className="pad-0">
-                    <p className="text-xs">Express</p>
                   </div>
                   <div className="pad-0">
                     <p className="text-xs">GraphQL</p>
@@ -277,18 +149,21 @@ const CvPage = () => {
                     <p className="text-xs">Typescript</p>
                   </div>
                   <div className="pad-0">
-                    <p className="text-xs">Jenkins</p>
+                    <p className="text-xs">Java</p>
                   </div>
                   <div className="pad-0">
-                    <p className="text-xs">Jest</p>
+                    <p className="text-xs">TailwindCSS</p>
                   </div>
                   <div className="pad-0">
                     <p className="text-xs">Python</p>
                   </div>
+                  <div className="pad-0">
+                    <p className="text-xs">R</p>
+                  </div>
                 </div>
               </div>
               <div className="col-span-2">
-                <h5 className="border-light-grey border-t-2  mt-2 pt-2  flex items-center text-xs mb-1 text-blue font-semibold">
+                <h5 className="border-light-grey uppercase border-t-2  mt-2 pt-2  flex items-center text-xs mb-1 text-blue font-semibold">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
@@ -298,69 +173,67 @@ const CvPage = () => {
                   >
                     <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"></path>
                   </svg>
-                  DESIGN EXPERTISE
+                  {t("cv:skills")}
                 </h5>
                 <div className="grid grid-cols-1 gap-1">
                   <div className="pad-0">
-                    <p className="text-xs">User Research</p>
+                    <p className="text-xs">{t("cv:skill1")}</p>
                   </div>
                   <div className="pad-0">
-                    <p className="text-xs">Usability Testing</p>
+                    <p className="text-xs">{t("cv:skill2")}</p>
                   </div>
                   <div className="pad-0">
-                    <p className="text-xs">Visual Design</p>
+                    <p className="text-xs">{t("cv:skill3")}</p>
                   </div>
                   <div className="pad-0">
-                    <p className="text-xs">Design Sprints</p>
+                    <p className="text-xs">{t("cv:skill4")}</p>
+                  </div>
+                  <div className="pad-0">
+                    <p className="text-xs">{t("cv:skill5")}</p>
                   </div>
                 </div>
               </div>
               <div className="col-span-2">
-                <h5 className="border-light-grey border-t-2  mt-2 pt-2  flex items-center text-xs mb-1 text-blue font-semibold">
+                <h5 className="border-light-grey uppercase border-t-2  mt-2 pt-2  flex items-center text-xs mb-1 text-blue font-semibold">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    aria-hidden="true"
-                    className="mr-1 h-3"
+                    className="h-3 mr-1"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
                   >
                     <path
-                      fillRule="evenodd"
-                      d="M7 2a1 1 0 00-.707 1.707L7 4.414v3.758a1 1 0 01-.293.707l-4 4C.817 14.769 2.156 18 4.828 18h10.343c2.673 0 4.012-3.231 2.122-5.121l-4-4A1 1 0 0113 8.172V4.414l.707-.707A1 1 0 0013 2H7zm2 6.172V4h2v4.172a3 3 0 00.879 2.12l1.027 1.028a4 4 0 00-2.171.102l-.47.156a4 4 0 01-2.53 0l-.563-.187a1.993 1.993 0 00-.114-.035l1.063-1.063A3 3 0 009 8.172z"
-                      clipRule="evenodd"
-                    ></path>
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"
+                    />
                   </svg>
-                  DESIGN TOOLS
+                  {t("cv:languages")}
                 </h5>
                 <div className="grid grid-cols-2 gap-1">
                   <div className="pad-0">
-                    <p className="text-xs">Sketch</p>
+                    <p className="text-xs">{t("cv:lang1")}</p>
                   </div>
                   <div className="pad-0">
-                    <p className="text-xs">Invision</p>
+                    <p className="text-xs">C1 Advanced (CAE)</p>
                   </div>
                   <div className="pad-0">
-                    <p className="text-xs">Figma</p>
+                    <p className="text-xs">{t("cv:lang2")}</p>
                   </div>
                   <div className="pad-0">
-                    <p className="text-xs">After Effects</p>
+                    <p className="text-xs">B2</p>
                   </div>
                   <div className="pad-0">
-                    <p className="text-xs">Illustrator</p>
+                    <p className="text-xs">{t("cv:lang3")}</p>
                   </div>
                   <div className="pad-0">
-                    <p className="text-xs">Photoshop</p>
-                  </div>
-                  <div className="pad-0">
-                    <p className="text-xs">Premiere</p>
-                  </div>
-                  <div className="pad-0">
-                    <p className="text-xs">AdobeXD</p>
+                    <p className="text-xs">{t("cv:native")}</p>
                   </div>
                 </div>
               </div>
               <div className="col-span-4">
-                <h5 className="border-light-grey border-t-2  mt-2 pt-2 flex items-center text-xs mb-1 text-blue font-semibold">
+                <h5 className="border-light-grey uppercase border-t-2  mt-2 pt-2 flex items-center text-xs mb-1 text-blue font-semibold">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
@@ -370,19 +243,22 @@ const CvPage = () => {
                   >
                     <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z"></path>
                   </svg>
-                  EDUCATION
+                  {t("cv:education")}
                 </h5>
                 <div className="">
                   <h4 className="text-xs font-bold">
-                    Computer Science with Artificial Intelligence BSc - King's
-                    College London University
+                    BHSC Honors - Bioinformatics major, Computer Science Minor -
+                    University of Calgary
                   </h4>
-                  <p className="text-xs">
-                    Dissertation on using visual search engines to combat fake
-                    news.
-                  </p>
+                  <p className="text-xs">2020-2024</p>
+                  <p className="text-xs">- Dean's List Year One</p>
                 </div>
-                <h5 className="border-light-grey border-t-2  mt-2 pt-2 flex items-center text-xs mb-1 text-blue font-semibold">
+                <div className="mt-1">
+                  <h4 className="text-xs font-bold">{t("cv:high-school")}</h4>
+                  <p className="text-xs">2016-2020</p>
+                  
+                </div>
+                {/* <h5 className="border-light-grey border-t-2  mt-2 pt-2 flex items-center text-xs mb-1 text-blue font-semibold">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
@@ -409,9 +285,9 @@ const CvPage = () => {
                   Attended 30+ hacks as an attendee, mentor or sponsor. I enjoy
                   teaching the next generation to code and have a bit of a
                   reputation for staying up all night.
-                </p>
+                </p> */}
                 <p className="text-xs font-semibold text-blue mt-2">
-                  This CV was coded in ReactJS.
+                  {t("cv:codedin")}
                 </p>
               </div>
             </div>
@@ -425,15 +301,12 @@ const CvPage = () => {
                 www.nemanja-grujic.rs | nemanjag3005@gmail.com
               </h3>
               <p className="text-xs border-light-grey border-b-2 pb-3 mb-3">
-                A front-end developer with five years experience using ReactJS
-                and static-site generators to build performant and accessible
-                applications. Looking for the next challenge to improve customer
-                experience and deepen engagement.
+                {t("cv:intro")}
               </p>
               <div className="grid grid-cols-4 gap-4">
                 <div className="col-span-1">
                   <div className="col-span-1">
-                    <h5 className=" mt-0  flex items-center text-xs mb-1 text-blue font-semibold">
+                    <h5 className=" mt-0 uppercase flex items-center text-xs mb-1 text-blue font-semibold">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 20 20"
@@ -447,7 +320,7 @@ const CvPage = () => {
                           clipRule="evenodd"
                         ></path>
                       </svg>
-                      TECHNICAL SKILLS
+                      {t("cv:technical-skills")}
                     </h5>
                     <div className="grid grid-cols-2 gap-1">
                       <div className="pad-0">
@@ -457,31 +330,19 @@ const CvPage = () => {
                         <p className="text-xs">HTML</p>
                       </div>
                       <div className="pad-0">
+                        <p className="text-xs">CSS</p>
+                      </div>
+                      <div className="pad-0">
                         <p className="text-xs">Node</p>
                       </div>
                       <div className="pad-0">
                         <p className="text-xs">ReactJS</p>
                       </div>
                       <div className="pad-0">
-                        <p className="text-xs">Electron</p>
-                      </div>
-                      <div className="pad-0">
-                        <p className="text-xs">Websockets</p>
-                      </div>
-                      <div className="pad-0">
                         <p className="text-xs">Redux</p>
                       </div>
                       <div className="pad-0">
-                        <p className="text-xs">React Native</p>
-                      </div>
-                      <div className="pad-0">
-                        <p className="text-xs">GatsbyJS</p>
-                      </div>
-                      <div className="pad-0">
                         <p className="text-xs">NextJS</p>
-                      </div>
-                      <div className="pad-0">
-                        <p className="text-xs">Express</p>
                       </div>
                       <div className="pad-0">
                         <p className="text-xs">GraphQL</p>
@@ -490,16 +351,19 @@ const CvPage = () => {
                         <p className="text-xs">Typescript</p>
                       </div>
                       <div className="pad-0">
-                        <p className="text-xs">Jenkins</p>
+                        <p className="text-xs">Java</p>
                       </div>
                       <div className="pad-0">
-                        <p className="text-xs">Jest</p>
+                        <p className="text-xs">TailwindCSS</p>
                       </div>
                       <div className="pad-0">
                         <p className="text-xs">Python</p>
                       </div>
+                      <div className="pad-0">
+                        <p className="text-xs">R</p>
+                      </div>
                     </div>
-                    <h5 className="border-light-grey border-t-2  mt-2 pt-2  flex items-center text-xs mb-1 text-blue font-semibold">
+                    <h5 className="border-light-grey uppercase border-t-2  mt-2 pt-2  flex items-center text-xs mb-1 text-blue font-semibold">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 20 20"
@@ -509,65 +373,63 @@ const CvPage = () => {
                       >
                         <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"></path>
                       </svg>
-                      DESIGN EXPERTISE
+                      {t("cv:skills")}
                     </h5>
                     <div className="grid grid-cols-1 gap-1">
                       <div className="pad-0">
-                        <p className="text-xs">User Research</p>
+                        <p className="text-xs">{t("cv:skill1")}</p>
                       </div>
                       <div className="pad-0">
-                        <p className="text-xs">Usability Testing</p>
+                        <p className="text-xs">{t("cv:skill2")}</p>
                       </div>
                       <div className="pad-0">
-                        <p className="text-xs">Visual Design</p>
+                        <p className="text-xs">{t("cv:skill3")}</p>
                       </div>
                       <div className="pad-0">
-                        <p className="text-xs">Design Sprints</p>
+                        <p className="text-xs">{t("cv:skill4")}</p>
+                      </div>
+                      <div className="pad-0">
+                        <p className="text-xs">{t("cv:skill5")}</p>
                       </div>
                     </div>
-                    <h5 className="border-light-grey border-t-2  mt-2 pt-2  flex items-center text-xs mb-1 text-blue font-semibold">
+                    <h5 className="border-light-grey uppercase border-t-2  mt-2 pt-2  flex items-center text-xs mb-1 text-blue font-semibold">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        aria-hidden="true"
-                        className="mr-1 h-3"
+                        className="h-3 mr-1"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
                       >
                         <path
-                          fillRule="evenodd"
-                          d="M7 2a1 1 0 00-.707 1.707L7 4.414v3.758a1 1 0 01-.293.707l-4 4C.817 14.769 2.156 18 4.828 18h10.343c2.673 0 4.012-3.231 2.122-5.121l-4-4A1 1 0 0113 8.172V4.414l.707-.707A1 1 0 0013 2H7zm2 6.172V4h2v4.172a3 3 0 00.879 2.12l1.027 1.028a4 4 0 00-2.171.102l-.47.156a4 4 0 01-2.53 0l-.563-.187a1.993 1.993 0 00-.114-.035l1.063-1.063A3 3 0 009 8.172z"
-                          clipRule="evenodd"
-                        ></path>
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"
+                        />
                       </svg>
-                      DESIGN TOOLS
+                      {t("cv:languages")}
                     </h5>
                     <div className="grid grid-cols-2 gap-1">
                       <div className="pad-0">
-                        <p className="text-xs">Sketch</p>
+                        <p className="text-xs">{t("cv:lang1")}</p>
                       </div>
                       <div className="pad-0">
-                        <p className="text-xs">Invision</p>
+                        <p className="text-xs">C1 Advanced</p>
                       </div>
                       <div className="pad-0">
-                        <p className="text-xs">Figma</p>
+                        <p className="text-xs">{t("cv:lang2")}</p>
                       </div>
                       <div className="pad-0">
-                        <p className="text-xs">After Effects</p>
+                        <p className="text-xs">B2</p>
                       </div>
                       <div className="pad-0">
-                        <p className="text-xs">Illustrator</p>
+                        <p className="text-xs">{t("cv:lang3")}</p>
                       </div>
                       <div className="pad-0">
-                        <p className="text-xs">Photoshop</p>
-                      </div>
-                      <div className="pad-0">
-                        <p className="text-xs">Premiere</p>
-                      </div>
-                      <div className="pad-0">
-                        <p className="text-xs">AdobeXD</p>
+                        <p className="text-xs">{t("cv:native")}</p>
                       </div>
                     </div>
-                    <h5 className="border-light-grey border-t-2  mt-2 pt-2 flex items-center text-xs mb-1 text-blue font-semibold">
+                    <h5 className="border-light-grey uppercase border-t-2  mt-2 pt-2 flex items-center text-xs mb-1 text-blue font-semibold">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 20 20"
@@ -577,19 +439,24 @@ const CvPage = () => {
                       >
                         <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z"></path>
                       </svg>
-                      EDUCATION
+                      {t("cv:education")}
                     </h5>
                     <div className="">
                       <h4 className="text-xs font-bold">
-                        Computer Science with Artificial Intelligence BSc -
-                        King's College London University
+                        BHSC Honors - Bioinformatics Major, Computer Science
+                        Minor - University of Calgary
                       </h4>
-                      <p className="text-xs">
-                        Dissertation on using visual search engines to combat
-                        fake news.
-                      </p>
+                      <p className="text-xs">2020-2024</p>
+                      <p className="text-xs">- Dean's List Year One</p>
                     </div>
-                    <h5 className="border-light-grey border-t-2  mt-2 pt-2 flex items-center text-xs mb-1 text-blue font-semibold">
+                    <div className="mt-1">
+                      <h4 className="text-xs font-bold">
+                        {t("cv:high-school")}
+                      </h4>
+                      <p className="text-xs">2016-2020</p>
+                      
+                    </div>
+                    {/* <h5 className="border-light-grey border-t-2  mt-2 pt-2 flex items-center text-xs mb-1 text-blue font-semibold">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 20 20"
@@ -617,14 +484,14 @@ const CvPage = () => {
                       Attended 30+ hacks as an attendee, mentor or sponsor. I
                       enjoy teaching the next generation to code and have a bit
                       of a reputation for staying up all night.
-                    </p>
-                    <p className="text-xs font-semibold text-blue mt-2">
-                      This CV was coded in ReactJS.
+                    </p> */}
+                    <p className="text-xs font-semibold text-blue mt-6">
+                      {t("cv:codedin")}
                     </p>
                   </div>
                 </div>
                 <div className="col-span-3">
-                  <h5 className="flex items-center text-xs mb-1 text-blue font-semibold">
+                  <h5 className="flex items-center uppercase text-xs mb-1 text-blue font-semibold">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
@@ -635,191 +502,77 @@ const CvPage = () => {
                       <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
                       <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
                     </svg>
-                    EXPERIENCE
+                    {t("cv:experience")}
                   </h5>
-                  <div className="m1-b   ">
-                    <h3 className="text-sm font-bold">
-                      Senior Front-End Developer
-                    </h3>
+                  
+                  <div className="mb-1">
+                    <h3 className="text-sm font-bold">{t("cv:exp1-header")}</h3>
                     <h5 className="text-xs my-1 font-semibold">
-                      Zone Digital, London | 2021 - Present
+                      TechStart UCalgary, Calgary | 2021 - {t("cv:present")}
                     </h5>
                     <div className="text-xs flex">
                       <p className="mr-1">-</p>
-                      <p className="m-0">
-                        Building a global real world data analytics platform for
-                        the life sciences and healthcare industries.
-                      </p>
+                      <p className="m-0">{t("cv:exp1-1")}</p>
                     </div>
                     <div className="text-xs flex">
                       <p className="mr-1">-</p>
-                      <p className="m-0">
-                        Building custom UI libraries for clients.
-                      </p>
+                      <p className="m-0">{t("cv:exp1-2")}</p>
                     </div>
                     <div className="text-xs flex">
                       <p className="mr-1">-</p>
-                      <p className="m-0">
-                        Presenting new technologies to my engineering colleagues
-                        at 'Breakout Zone.'
-                      </p>
+                      <p className="m-0">{t("cv:exp1-3")}</p>
                     </div>
                     <p className="text-xs mt-1 ml-2 text-blue font-semibold">
-                      Engineering Management, Design Agency, JS, ReactJS, Jest,
-                      TypeScript, NextJS
+                      {t("cv:exp1-skills")}
                     </p>
                   </div>
-                  <div className="m1-b  border-light-grey border-t-2 mt-2 pt-2 ">
-                    <h3 className="text-sm font-bold">
-                      UX Engineer &amp; Product Manager
-                    </h3>
+                  <div className="mb-1  border-light-grey border-t-2 mt-2 pt-2 ">
+                    <h3 className="text-sm font-bold">{t("cv:exp2-header")}</h3>
                     <h5 className="text-xs my-1 font-semibold">
-                      Behaviour Lab, London | 2021
+                      LAN Digital, Belgrade | 2021 - {t("cv:present")}
                     </h5>
                     <div className="text-xs flex">
                       <p className="mr-1">-</p>
-                      <p className="m-0">
-                        Responsible for leading UI development of Behaviour
-                        Lab's SaaS product targeted at asset managers, private
-                        equity firms, insurance companies and executive boards.
-                      </p>
+                      <p className="m-0">{t("cv:exp2-1")}</p>
                     </div>
                     <div className="text-xs flex">
                       <p className="mr-1">-</p>
-                      <p className="m-0">
-                        Built the company's component library, testing
-                        frameworks and setup CI/CD pipelines.
-                      </p>
+                      <p className="m-0">{t("cv:exp2-2")}</p>
                     </div>
                     <div className="text-xs flex">
                       <p className="mr-1">-</p>
-                      <p className="m-0">
-                        Product managed the company's first commercial product.
-                        Planning its features with stake holders, highlighting
-                        cross functional dependencies and running agile
-                        ceremonies
-                      </p>
+                      <p className="m-0">{t("cv:exp2-3")}</p>
+                    </div>
+                    <div className="text-xs flex">
+                      <p className="mr-1">-</p>
+                      <p className="m-0">{t("cv:exp2-4")}</p>
                     </div>
                     <p className="text-xs mt-1 ml-2 text-blue font-semibold">
-                      Product Management, JS, ReactJS, Jest, TypeScript,
-                      GatsbyJS, NextJS, TailwindCSS
+                      {t("cv:exp2-skills")}
                     </p>
                   </div>
-                  <div className="m1-b  border-light-grey border-t-2 mt-2 pt-2 ">
-                    <h3 className="text-sm font-bold">Front-End Engineer</h3>
+                  <div className="mb-1  border-light-grey border-t-2 mt-2 pt-2 ">
+                    <h3 className="text-sm font-bold">{t("cv:exp3-header")}</h3>
                     <h5 className="text-xs my-1 font-semibold">
-                      American Express, London | 2020 - 2021
+                      XYZ Communications, Belgrade | 2019
                     </h5>
                     <div className="text-xs flex">
                       <p className="mr-1">-</p>
-                      <p className="m-0">
-                        Responsible for creating and maintaining performant,
-                        acessible ReactJS and JS components used across the
-                        organisation's online presence.
-                      </p>
+                      <p className="m-0">{t("cv:exp3-1")}</p>
                     </div>
                     <div className="text-xs flex">
                       <p className="mr-1">-</p>
-                      <p className="m-0">
-                        Created tools that allow us to measure how our
-                        components are being used. Versions, bundle size,
-                        accessiblity, best practices and SEO impacts are tracked
-                        automatically.
-                      </p>
+                      <p className="m-0">{t("cv:exp3-2")}</p>
+                    </div>
+                    <div className="text-xs flex">
+                      <p className="mr-1">-</p>
+                      <p className="m-0">{t("cv:exp3-3")}</p>
                     </div>
                     <p className="text-xs mt-1 ml-2 text-blue font-semibold">
-                      JS, ReactJS, Jest, Redux, GatsbyJS, Emotion, Styled
-                      Components, Sketch, Invision
+                      {t("cv:exp3-skills")}
                     </p>
                   </div>
-                  <div className="m1-b  border-light-grey border-t-2 mt-2 pt-2 ">
-                    <h3 className="text-sm font-bold">UX Engineer</h3>
-                    <h5 className="text-xs my-1 font-semibold">
-                      American Express, London | 2019 - 2020
-                    </h5>
-                    <div className="text-xs flex">
-                      <p className="mr-1">-</p>
-                      <p className="m-0">
-                        Developed a new referral experience that features
-                        enhanced referral rewards for platinum and gold card
-                        members. It has engaged with 600,000 customers to date.
-                      </p>
-                    </div>
-                    <div className="text-xs flex">
-                      <p className="mr-1">-</p>
-                      <p className="m-0">
-                        Created a self-service automation tool for assesing a
-                        webpage's performance, accessibilty and generating
-                        screenshots of the page for multiple view ports. This
-                        has increased the ability for markets to self service,
-                        reducing the need to engage engineers to acquire this
-                        information.
-                      </p>
-                    </div>
-                    <div className="text-xs flex">
-                      <p className="mr-1">-</p>
-                      <p className="m-0">
-                        Facilitated design sprints and lightening decision jams
-                        to help the team ideate.
-                      </p>
-                    </div>
-                    <div className="text-xs flex">
-                      <p className="mr-1">-</p>
-                      <p className="m-0">
-                        Built web-ready animations, onboarding experiences,
-                        faster sites in newer frameworks and chat bots.
-                      </p>
-                    </div>
-                    <p className="text-xs mt-1 ml-2 text-blue font-semibold">
-                      User Experience, JS, Typescript, ReactJS, Redux, GatsbyJS,
-                      GraphQL, Node, Electron
-                    </p>
-                  </div>
-                  <div className="m1-b  border-light-grey border-t-2 mt-2 pt-2 ">
-                    <h3 className="text-sm font-bold">Graduate UX Engineer</h3>
-                    <h5 className="text-xs my-1 font-semibold">
-                      American Express, Burgess Hill | 2018 - 2019
-                    </h5>
-                    <div className="text-xs flex">
-                      <p className="mr-1">-</p>
-                      <p className="m-0">
-                        Designed and built GRAD, a hub for technology
-                        onboarding. The collection initially intended for
-                        graduates, is being used campus-wide and receives over
-                        250 unique vistors a month and has accumulated over
-                        20,000 views.
-                      </p>
-                    </div>
-                    <div className="text-xs flex">
-                      <p className="mr-1">-</p>
-                      <p className="m-0">
-                        Conducted research into how we could improve elements of
-                        the referral hub. This included competitor analysis,
-                        analysis of existing site, creation of personas,
-                        wireframes and mockups.
-                      </p>
-                    </div>
-                    <div className="text-xs flex">
-                      <p className="mr-1">-</p>
-                      <p className="m-0">
-                        Built a prototype for a research archive that
-                        summarises, tags, intelligently links and prioritises
-                        research for better design decisions.
-                      </p>
-                    </div>
-                    <div className="text-xs flex">
-                      <p className="mr-1">-</p>
-                      <p className="m-0">
-                        Was the only graduate in my cohort to formally manage
-                        interns and have gone on to be the youngest engineer to
-                        manage graduates
-                      </p>
-                    </div>
-                    <p className="text-xs mt-1 ml-2 text-blue font-semibold">
-                      User Experience, User Research, User Testing, JS, ReactJS,
-                      Sketch, Invision, Python
-                    </p>
-                  </div>
+                  
                 </div>
               </div>
             </div>

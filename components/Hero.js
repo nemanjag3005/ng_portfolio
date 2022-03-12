@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import useTranslation from 'next-translate/useTranslation';
+import 'animate.css';
 
 const Hero = () => {
   let {t} = useTranslation();
@@ -12,7 +13,7 @@ const Hero = () => {
             <div className="grid md:grid-cols-5 w-full">
               <div className="flex flex-col space-y-5 justify-center md:col-span-3">
                 <div className="flex items-center">
-                  <h1 className="text-2xl sm:text-4xl md:text-6xl font-bold mr-2">
+                  <h1 className="text-2xl animate__animated animate__fadeInUp sm:text-4xl md:text-6xl font-bold mr-2">
                     Nemanja Grujić
                   </h1>
                   <div className="absolute xs:-top-16 right-0 -top-10 shadow-xl rounded-full">
@@ -134,7 +135,7 @@ const Hero = () => {
           {t("home:projects")}
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 text-zinc-800 dark:text-gray-50 mb-12 md:mb-36">
-            <a className="group relative" href="#">
+            <a className="group relative" target="_blank" rel="noopener noreferrer" href="https://www.lan-digital.com">
               <div className="absolute top-0 left-0 w-full h-full p-5 hidden group-hover:flex flex-col z-20">
                 <p className=" font-bold text-xl">LAN Digital</p>
                 <p>{t("home:p1")}</p>
@@ -144,7 +145,7 @@ const Hero = () => {
                 className="rounded h-48 w-full object-cover group-hover:opacity-25"
               ></img>
             </a>
-            <a className="group relative" href="#">
+            <a className="group relative" target="_blank" rel="noopener noreferrer" href="https://flexteamv2.vercel.app">
               <div className="absolute top-0 left-0 w-full h-full p-5 hidden group-hover:flex flex-col z-20">
                 <p className=" font-bold text-xl">Flex Team</p>
                 <p>{t("home:p2")}</p>
@@ -154,7 +155,7 @@ const Hero = () => {
                 className="rounded h-48 w-full object-cover group-hover:opacity-25"
               ></img>
             </a>
-            <a className="group relative" href="#">
+            <a className="group relative" target="_blank" rel="noopener noreferrer" href="#">
               <div className="absolute top-0 left-0 w-full h-full p-5 hidden group-hover:flex flex-col z-20">
                 <p className=" font-bold text-xl">Time to Decide</p>
                 <p>{t("home:p3")}</p>

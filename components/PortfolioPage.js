@@ -1,5 +1,6 @@
 import React from "react";
 import useTranslation from 'next-translate/useTranslation';
+import 'animate.css';
 
 const PortfolioPage = () => {
   let {t} = useTranslation();
@@ -9,7 +10,7 @@ const PortfolioPage = () => {
       <div className="max-w-4xl mx-auto py-6 md:py-12 overflow-x-hidden lg:overflow-x-visible">
         <div className="w-full space-y-4 mt-20">
           <div className="flex justify-between items-end">
-            <div className="flex flex-col space-x-1">
+            <div className="flex flex-col animate__animated animate__fadeInUp space-x-1">
               <h1 className="text-4xl md:text-6xl font-bold">
               {t("portfolio:my")} <span className="text-blue-500 dark:text-primary-dark">Portfolio.</span>
               </h1>
@@ -143,7 +144,7 @@ const PortfolioPage = () => {
               </div>
               <div className="flex space-x-2">
                   <a href='#' target='_blank' rel="noreferrer" className="bg-blue-500 dark:bg-primary-dark dark:hover:bg-primary-darker hover:bg-blue-900 text-white px-3 py-2 text-lg rounded">{t("portfolio:button")}</a>
-                  <a href='#' target='_blank' rel="noreferrer" className="border-2 border-black hover:bg-blue-300 dark:border-gray-50 dark:hover:bg-primary-dark-light dark:text-gray-50 text-black px-3 py-2 text-lg rounded">GitHub</a>
+                  <a href='https://github.com/Tech-Start-UCalgary/decision-frontend' target='_blank' rel="noreferrer" className="border-2 border-black hover:bg-blue-300 dark:border-gray-50 dark:hover:bg-primary-dark-light dark:text-gray-50 text-black px-3 py-2 text-lg rounded">GitHub</a>
               </div>
             </div>
             <div className="hidden md:block">
