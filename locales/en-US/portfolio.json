@@ -5,7 +5,7 @@
     "p1-2": "Since this is my start-up, I put a lot of effort into crafting the website for our agency. It is a primarily static site, which I have made using React NextJS and styled-components for the CSS. The site features a Contact Form which uses nodemailer, and a blog section which uses data from a headless CMS - GraphCMS.",
     "button": "Visit Site",
     "p2": "Have you ever been tired of the amount of time it sometimes takes you and your group of friends to plan where to go on a friday evening?",
-    "p2-2": "Time to Decide is a web-based app that aims to reduce the time it takes to plan where to go by making it easier to decide. The app works by suggesting locations and places to the friend group based on their preffered budget, interests and location. The members of the group are then promted to vote on their top pick, with the place with the most votes winning. The app was created using NextJS, ChakraUI and MongoDB. The Google Places API was used to get suggested locations.",
+    "p2-2": "Time to Decide aims to reduce the time it takes to plan where to go by making it easier to decide. The app works by suggesting locations and places to the friend group based on their preffered budget, interests and location. The members of the group are then promted to vote on their top pick, with the place with the most votes winning. The app was created using NextJS, ChakraUI and MongoDB. The Google Places API was used to get suggested locations.",
     "p3": "",
     "p3-2": ""
 }

@@ -1,10 +1,14 @@
 import Link from "next/link";
 import React from "react";
+import useDarkMode from "../hooks/useDarkMode";
 import useTranslation from 'next-translate/useTranslation';
+import Image from "next/image";
+
 import 'animate.css';
 
 const Sidebar = ({ isOpen, toggle }) => {
   let {t} = useTranslation();
+  const [colorTheme, setTheme] = useDarkMode();
   return (
     <div
       className={`h-full w-4/5 bg-gray-200 animate__animated animate__fadeInLeft animate__faster dark:bg-slate-700 z-40 fixed top-0 left-0 shadow-xl transition-all ease-in-out transform duration-300 ${
@@ -13,18 +17,29 @@ const Sidebar = ({ isOpen, toggle }) => {
     >
       <nav className="bg-white border-b border-w-4xl px-4 py-4 md:py-6 dark:border-primary-dark dark:bg-slate-800 transition duration-500">
         <div className="container flex xs:flex-wrap flex-nowrap justify-between items-center mx-auto max-w-6xl">
-          <Link
-            href="/"
-          >
-            <span
-              className={`self-center cursor-pointer text-xl font-semibold whitespace-nowrap dark:text-white text-zinc-800`}
-            >
-              
-              NEMANJA{" "}
-              
-              GRUJIĆ
-            </span>
-          </Link>
+        <Link href="/">
+          <div className="rounded-lg">
+            <div className="relative group rounded-lg">
+              <button className="relative transform ease-in-out transition duration-300 hover:scale-105 rounded-lg leading-none flex items-center ">
+                {colorTheme == 'light' ? (
+                  <Image
+                    className="rounded-lg"
+                    src="/ng_logo_dark.png"
+                    width="55px"
+                    height="55px"
+                  ></Image>
+                ) : (
+                  <Image
+                    className="rounded-lg"
+                    src="/ng_logo_light.png"
+                    width="55px"
+                    height="55px"
+                  ></Image>
+                )}
+              </button>
+            </div>
+          </div>
+        </Link>
           <button
             data-collapse-toggle="mobile-menu"
             type="button"

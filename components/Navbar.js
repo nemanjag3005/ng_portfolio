@@ -1,44 +1,53 @@
 import Link from "next/link";
 import React, { useEffect } from "react";
 import useDarkMode from "../hooks/useDarkMode";
-import { useRouter } from 'next/router'
-import useTranslation from 'next-translate/useTranslation';
+import { useRouter } from "next/router";
+import useTranslation from "next-translate/useTranslation";
+import Image from "next/image";
 
 const Navbar = ({ toggle, isOpen }) => {
   let router = useRouter();
-  let {t} = useTranslation();
-  const lang = router.locale === 'en-US' ? 'eng' : router.locale === 'sr-RS' ? 'srb' : "";
+  let { t } = useTranslation();
+  const lang =
+    router.locale === "en-US" ? "eng" : router.locale === "sr-RS" ? "srb" : "";
   const [colorTheme, setTheme] = useDarkMode();
   return (
-    <nav className="bg-white  dark:bg-slate-800 transition duration-500">
+    <nav className="bg-gray-50 dark:bg-slate-800 transition duration-500">
       <div className="container px-4 py-4 md:py-6 flex flex-nowrap xs:flex-wrap justify-between border-b items-center mx-auto max-w-6xl">
         <Link href="/">
-          <span
-            className={`self-center nav dark:nav-dark cursor-pointer text-xl font-semibold whitespace-nowrap dark:text-white text-zinc-800`}
-          >
-            
-            NEMANJA{" "}
-            
-            GRUJIĆ
-          </span>
+          <div className="rounded-lg">
+            <div className="relative group rounded-lg">
+              <button className="relative transform ease-in-out transition duration-300 hover:scale-105 rounded-lg leading-none flex items-center ">
+                <Image
+                  className="rounded-lg"
+                  src="/ng_logo_light.png"
+                  width="55px"
+                  height="55px"
+                ></Image>
+              </button>
+            </div>
+          </div>
         </Link>
-        <Link href={router.asPath} locale={lang == 'eng' ? 'sr-RS' : lang == 'srb' ? 'en-US' : 'en-US'}>
-        <button className="inline-flex hover:bg-gray-100 dark:hover:bg-slate-700 p-1 xxs:p-2 items-center ml-auto md:hidden text-sm text-zinc-800 rounded-lg  focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-200  dark:focus:ring-gray-600">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"
-            />
-          </svg>
-        </button>
+        <Link
+          href={router.asPath}
+          locale={lang == "eng" ? "sr-RS" : lang == "srb" ? "en-US" : "en-US"}
+        >
+          <button className="inline-flex hover:bg-gray-100 dark:hover:bg-slate-700 p-1 xxs:p-2 items-center ml-auto md:hidden text-sm text-zinc-800 rounded-lg  focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-200  dark:focus:ring-gray-600">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"
+              />
+            </svg>
+          </button>
         </Link>
         <button
           className="inline-flex hover:bg-gray-100 dark:hover:bg-slate-700 xxs:p-2 p-1 items-center  md:hidden text-sm text-zinc-800 rounded-lg  focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-200  dark:focus:ring-gray-600"
@@ -134,23 +143,28 @@ const Navbar = ({ toggle, isOpen }) => {
               </Link>
             </li>
             <li>
-              <Link href={router.asPath} locale={lang == 'eng' ? 'sr-RS' : lang == 'srb' ? 'en-US' : 'en-US'}>
-              <button className="md:inline-flex items-center hidden text-sm text-zinc-800 rounded-lg  focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-200  dark:focus:ring-gray-600">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 dark:hover:stroke-primary-dark hover:stroke-blue-500"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"
-                  />
-                </svg>
-              </button>
+              <Link
+                href={router.asPath}
+                locale={
+                  lang == "eng" ? "sr-RS" : lang == "srb" ? "en-US" : "en-US"
+                }
+              >
+                <button className="md:inline-flex items-center hidden text-sm text-zinc-800 rounded-lg  focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-200  dark:focus:ring-gray-600">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 dark:hover:stroke-primary-dark hover:stroke-blue-500"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"
+                    />
+                  </svg>
+                </button>
               </Link>
             </li>
             <li>

@@ -6,7 +6,7 @@ const AboutPage = () => {
   let {t} = useTranslation();
   const [length, setLength] = useState(1);
   return (
-    <div className="dark:bg-slate-800 px-4 min-h-subnav">
+    <div className="dark:bg-slate-800 bg-gray-50 px-4 min-h-subnav">
     <div className="max-w-7xl mx-auto px-2 py-6 md:py-12 overflow-x-hidden lg:px-16 lg:overflow-x-visible space-y-6">
       <section>
         <div className="flex-1 w-full max-w-4xl mx-auto space-y-4">
@@ -19,7 +19,7 @@ const AboutPage = () => {
               <div className="bg-blue-600 dark:bg-primary-dark m-5 rounded h-48 w-48 xs:h-56 xs:w-56 absolute bottom-0 right-0">
                 <div className="w-full h-full relative">
                 <div className="xs:h-64 xs:w-64 h-44 w-44 rounded absolute xs:left-4 xs:top-4 left-6 top-6">
-                    <img src='/IMG_1265.jpeg' className="object-cover animate__animated animate__fadeInUp xs:h-64 xs:w-64 h-48 w-48 rounded">
+                    <img src='/IMG_1265.jpeg' className="object-cover xs:h-64 xs:w-64 h-48 w-48 rounded">
 
                     </img>
                   </div>

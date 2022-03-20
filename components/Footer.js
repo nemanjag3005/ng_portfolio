@@ -5,7 +5,7 @@ import useTranslation from 'next-translate/useTranslation';
 const Footer = () => {
   let {t} = useTranslation();
   return (
-    <div className="mx-0 relative z-20 bg-white dark:bg-slate-800 transition duration-500">
+    <div className="mx-0 relative z-20 bg-gray-50 dark:bg-slate-800 transition duration-500">
       <div className="mx-4">
         <footer className="max-w-6xl mx-auto py-2 border-t">
           <div className="py-4 text-zinc-800 dark:text-gray-50">
