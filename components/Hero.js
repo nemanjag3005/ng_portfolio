@@ -6,14 +6,14 @@ import 'animate.css';
 const Hero = () => {
   let {t} = useTranslation();
   return (
-    <div className="dark:bg-slate-800 transition duration-500">
+    <div className="dark:bg-slate-800 bg-gray-50 transition duration-500">
       <div className="mx-4 ">
         <div className="max-w-6xl mx-auto py-6 overflow-hidden">
           <div className="w-full bg-blue-300 dark:bg-primary-dark-light mt-16 md:mt-0 lg:mt-12 text-blue-900 dark:text-primary-darker p-6 md:p-12 rounded-xl relative z-10 ">
-            <div className="grid md:grid-cols-5 w-full">
-              <div className="flex flex-col space-y-5 justify-center md:col-span-3">
+            <div className="grid md:grid-cols-5 w-full ">
+              <div className="flex flex-col space-y-5 animate__animated animate__fadeInUp justify-center md:col-span-3">
                 <div className="flex items-center">
-                  <h1 className="text-2xl animate__animated animate__fadeInUp sm:text-4xl md:text-6xl font-bold mr-2">
+                  <h1 className="text-2xl sm:text-4xl md:text-6xl font-bold mr-2">
                     Nemanja Grujić
                   </h1>
                   <div className="absolute xs:-top-16 right-0 -top-10 shadow-xl rounded-full">
@@ -75,7 +75,7 @@ const Hero = () => {
               <div className="col-span-2 hidden md:flex">
                 <img
                   src="/IMG_1281-modified.png"
-                  className="align-middle rounded-full shadow-xl object-cover"
+                  className="align-middle rounded-full -my-20 shadow-2xl object-cover"
                 ></img>
               </div>
             </div>
@@ -145,7 +145,7 @@ const Hero = () => {
                 className="rounded h-48 w-full object-cover group-hover:opacity-25"
               ></img>
             </a>
-            <a className="group relative" target="_blank" rel="noopener noreferrer" href="https://flexteamv2.vercel.app">
+            <a className="group relative" target="_blank" rel="noopener noreferrer" href="https://flexteam.rs">
               <div className="absolute top-0 left-0 w-full h-full p-5 hidden group-hover:flex flex-col z-20">
                 <p className=" font-bold text-xl">Flex Team</p>
                 <p>{t("home:p2")}</p>
@@ -161,7 +161,7 @@ const Hero = () => {
                 <p>{t("home:p3")}</p>
               </div>
               <img
-                src="/lan.png"
+                src="/decision.png"
                 className="rounded h-48 w-full object-cover group-hover:opacity-25"
               ></img>
             </a>

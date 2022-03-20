@@ -5,7 +5,7 @@ import 'animate.css';
 const PortfolioPage = () => {
   let {t} = useTranslation();
   return (
-    <div className="dark:bg-slate-800">
+    <div className="dark:bg-slate-800 bg-gray-50">
     <div className="mx-4 relative transition-colors duration-100 text-zinc-800 dark:text-gray-50">
       <div className="max-w-4xl mx-auto py-6 md:py-12 overflow-x-hidden lg:overflow-x-visible">
         <div className="w-full space-y-4 mt-20">
@@ -111,7 +111,7 @@ const PortfolioPage = () => {
               <div className="flex flex-col space-y-4">
                 <div className="w-full h-72">
                   <img
-                    src="/lan.png"
+                    src="/decision.png"
                     className="object-cover w-full h-full rounded shadow-lg"
                   ></img>
                 </div>
@@ -151,7 +151,7 @@ const PortfolioPage = () => {
               <div className="flex flex-col space-y-4">
                 <div className="w-full h-72">
                   <img
-                    src="/lan.png"
+                    src="/decision.png"
                     className="object-cover w-full h-full rounded shadow-lg"
                   ></img>
                 </div>
