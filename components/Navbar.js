@@ -17,13 +17,27 @@ const Navbar = ({ toggle, isOpen }) => {
         <Link href="/">
           <div className="rounded-lg">
             <div className="relative group rounded-lg">
-              <button className="relative transform ease-in-out transition duration-300 hover:scale-105 rounded-lg leading-none flex items-center ">
-                <Image
-                  className="rounded-lg"
-                  src="/ng_logo_light.png"
-                  width="55px"
-                  height="55px"
-                ></Image>
+              <button className="relative transform ease-in-out group transition duration-300 hover:scale-105 rounded-lg leading-none flex items-center ">
+                <svg
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlnsXlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 1000 1000"
+                  className="w-8 h-8 fill-zinc-800 dark:fill-gray-200 group-hover:-translate-y-1 group-hover:translate-x-1 transition duration-500 ease-in-out"
+                  enable-background="new 0 0 1000 1000"
+                  xmlSpace="preserve"
+                >
+                  <g>
+                    <g>
+                      <path d="M683.8,71.3L377.5,377.5H193.8L10,622.5c0,0,194.7-54.2,308.2-28.8L10,990l403.8-314c56.3,128.9-36.3,314-36.3,314l245-183.8V622.5l306.3-306.3L990,10L683.8,71.3z" />
+                    </g>
+                  </g>
+                </svg>
+                <span className="font-bold text-zinc-800 dark:text-gray-200">
+                  NG
+                </span>
               </button>
             </div>
           </div>
