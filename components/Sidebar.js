@@ -29,7 +29,7 @@ const Sidebar = ({ isOpen, toggle }) => {
                     y="0px"
                     viewBox="0 0 1000 1000"
                     className="w-8 h-8 fill-zinc-800 dark:fill-gray-200 group-hover:-translate-y-1 group-hover:translate-x-1 transition duration-500 ease-in-out"
-                    enable-background="new 0 0 1000 1000"
+                    enableBackground="new 0 0 1000 1000"
                     xmlSpace="preserve"
                   >
                     <g>
