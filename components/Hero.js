@@ -138,10 +138,11 @@ const Hero = () => {
               ></path>
             </g>
           </svg>
+
           <h2 className="text-2xl md:text-3xl font-bold my-3 mt-8 text-zinc-800 dark:text-gray-50">
             {t("home:projects")}
           </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 text-zinc-800 dark:text-gray-50 mb-12 md:mb-36">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 text-zinc-800 dark:text-gray-50 mb-12 md:mb-16">
             <a
               className="group relative"
               target="_blank"
@@ -179,7 +180,7 @@ const Hero = () => {
               href="#"
             >
               <div className="absolute top-0 left-0 w-full h-full p-5 hidden group-hover:flex flex-col z-20">
-                <p className=" font-bold text-xl">Time to Decide</p>
+                <p className=" font-bold text-xl">Where To?</p>
                 <p>{t("home:p3")}</p>
               </div>
               <img
@@ -188,6 +189,28 @@ const Hero = () => {
               ></img>
             </a>
           </div>
+          <svg
+            viewBox="0 0 1600 342"
+            preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m36.374 255.304 50.377-28.313c50.377-28.313 151.132-84.94 251.887-107.59 100.754-22.65 201.509-11.326 302.264-33.976C741.657 62.775 842.411 6.148 943.166.485c100.754-5.662 201.514 39.639 251.884 62.29l50.38 22.65v169.879H36.374Z"
+              className="dark:fill-primary-darker fill-blue-900"
+            ></path>
+            <path
+              d="m-120.804 83.488 55.583-11.839c55.583-11.84 166.749-35.518 277.915-31.572 111.166 3.947 222.332 35.519 333.498 59.197 111.166 23.679 222.333 39.465 333.499 31.572 111.166-7.893 222.329-39.465 277.919-55.25l55.58-15.787v165.753H-120.804V83.488Z"
+              className="dark:fill-primary-dark fill-blue-500"
+            ></path>
+            <path
+              d="M-147 300.13h79.917c79.916 0 239.75 0 399.583-22.581 159.833-22.58 319.667-67.741 479.5-118.546 159.833-50.806 319.67-107.257 479.5-101.611 159.83 5.645 319.67 73.385 399.58 107.256l79.92 33.87V334H-147v-33.87Z"
+              className="dark:fill-primary-dark-light fill-blue-300"
+            ></path>
+            <path
+              d="m-6.95 69.84 67.169 16.987c67.17 16.988 201.509 50.964 335.849 67.952s268.679 16.988 403.019 28.313c134.339 11.325 268.683 33.976 403.023 28.313 134.34-5.662 268.67-39.638 335.84-56.626l67.17-16.988v203.855H-6.951V69.839Z"
+              className="dark:fill-primary-darker fill-blue-900"
+            ></path>
+          </svg>
         </div>
       </div>
     </div>
