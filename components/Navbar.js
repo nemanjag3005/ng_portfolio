@@ -25,7 +25,7 @@ const Navbar = ({ toggle, isOpen }) => {
                   x="0px"
                   y="0px"
                   viewBox="0 0 1000 1000"
-                  className="w-8 h-8 fill-zinc-800 dark:fill-gray-200 group-hover:-translate-y-1 group-hover:translate-x-1 transition duration-500 ease-in-out"
+                  className="w-8 h-8 fill-blue-600 dark:fill-primary-dark group-hover:-translate-y-1 group-hover:translate-x-1 transition duration-500 ease-in-out"
                   enableBackground="new 0 0 1000 1000"
                   xmlSpace="preserve"
                 >
