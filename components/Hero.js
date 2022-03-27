@@ -1,10 +1,10 @@
 import React from "react";
 import Link from "next/link";
-import useTranslation from 'next-translate/useTranslation';
-import 'animate.css';
+import useTranslation from "next-translate/useTranslation";
+import "animate.css";
 
 const Hero = () => {
-  let {t} = useTranslation();
+  let { t } = useTranslation();
   return (
     <div className="dark:bg-slate-800 bg-gray-50 transition duration-500">
       <div className="mx-4 ">
@@ -23,9 +23,7 @@ const Hero = () => {
                     ></img>
                   </div>
                 </div>
-                <p className="text-xl md:text-2xl">
-                {t("home:desc")}
-                </p>
+                <p className="text-xl md:text-2xl">{t("home:desc")}</p>
                 <div className="grid grid-cols-1 gap-2 md:flex md:space-x-3 items-center w-full">
                   <div className="flex w-full items-center space-x-2">
                     <Link href="/portfolio">
@@ -40,7 +38,11 @@ const Hero = () => {
                     </Link>
                   </div>
                   <div className="flex w-full items-center space-x-2 justify-center md:justify-start">
-                    <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/nemke1031">
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://twitter.com/nemke1031"
+                    >
                       <svg
                         viewBox="0 0 24 24"
                         className="fill-current h-7 w-7 md:h-9 md:w-9 hover:fill-blue-500 dark:hover:fill-primary-dark"
@@ -50,7 +52,11 @@ const Hero = () => {
                         </g>
                       </svg>
                     </a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/nemanja-grujic-5828a1213/">
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://www.linkedin.com/in/nemanja-grujic-5828a1213/"
+                    >
                       <svg
                         viewBox="0 0 34 34"
                         className="fill-current h-7 w-7 md:h-9 md:w-9 hover:fill-blue-500 dark:hover:fill-primary-dark"
@@ -60,7 +66,11 @@ const Hero = () => {
                         </g>
                       </svg>
                     </a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/nemanjag3005">
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://github.com/nemanjag3005"
+                    >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
@@ -111,15 +121,13 @@ const Hero = () => {
                 id="Path"
                 fill="var(--color-primary-dark)"
                 className="dark:fill-primary-darker fill-blue-900 origin-center rotate-180 "
-                transformOrigin="450px 161.56462860107422px"
-                
+                transform-origin="450px 161.56462860107422px"
               ></path>
               <path
                 d="M0,147 L21.5,143.5 C43,140 86,133 128.8,135.7 C171.7,138.3 214.3,150.7 257.2,154.8 C300,159 343,155 385.8,151.3 C428.7,147.7 471.3,144.3 514.2,142.8 C557,141.3 600,141.7 642.8,146.3 C685.7,151 728.3,160 771.2,160.3 C814,160.7 857,152.3 878.5,148.2 L900,144 L900,238 L878.5,238 C857,238 814,238 771.2,238 C728.3,238 685.7,238 642.8,238 C600,238 557,238 514.2,238 C471.3,238 428.7,238 385.8,238 C343,238 300,238 257.2,238 C214.3,238 171.7,238 128.8,238 C86,238 43,238 21.5,238 L0,238 L0,147 Z"
                 id="Path"
                 fill="var(--color-primary)"
                 className="dark:fill-primary-dark fill-blue-500 origin-center rotate-180 "
-                
                 transform-origin="450px 186.54723739624023px"
               ></path>
               <path
@@ -127,15 +135,19 @@ const Hero = () => {
                 id="Path"
                 className="dark:fill-primary-dark-light fill-blue-300 origin-center rotate-180"
                 fill="var(--color-primary-light)"
-                
               ></path>
             </g>
           </svg>
           <h2 className="text-2xl md:text-3xl font-bold my-3 mt-8 text-zinc-800 dark:text-gray-50">
-          {t("home:projects")}
+            {t("home:projects")}
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 text-zinc-800 dark:text-gray-50 mb-12 md:mb-36">
-            <a className="group relative" target="_blank" rel="noopener noreferrer" href="https://www.lan-digital.com">
+            <a
+              className="group relative"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.lan-digital.com"
+            >
               <div className="absolute top-0 left-0 w-full h-full p-5 hidden group-hover:flex flex-col z-20">
                 <p className=" font-bold text-xl">LAN Digital</p>
                 <p>{t("home:p1")}</p>
@@ -145,7 +157,12 @@ const Hero = () => {
                 className="rounded h-48 w-full object-cover group-hover:opacity-25"
               ></img>
             </a>
-            <a className="group relative" target="_blank" rel="noopener noreferrer" href="https://flexteam.rs">
+            <a
+              className="group relative"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://flexteam.rs"
+            >
               <div className="absolute top-0 left-0 w-full h-full p-5 hidden group-hover:flex flex-col z-20">
                 <p className=" font-bold text-xl">Flex Team</p>
                 <p>{t("home:p2")}</p>
@@ -155,7 +172,12 @@ const Hero = () => {
                 className="rounded h-48 w-full object-cover group-hover:opacity-25"
               ></img>
             </a>
-            <a className="group relative" target="_blank" rel="noopener noreferrer" href="#">
+            <a
+              className="group relative"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="#"
+            >
               <div className="absolute top-0 left-0 w-full h-full p-5 hidden group-hover:flex flex-col z-20">
                 <p className=" font-bold text-xl">Time to Decide</p>
                 <p>{t("home:p3")}</p>
