@@ -25,6 +25,9 @@ module.exports = {
         xs: "23em",
         xxs: "20em",
       },
+      backgroundImage: {
+        nem: "linear-gradient(to bottom, rgba(22, 22, 27, 0.5), rgba(41,41,52,0.4)), url('/ng.jpeg')",
+      },
     },
   },
   plugins: [],

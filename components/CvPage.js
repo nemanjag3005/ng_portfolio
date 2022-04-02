@@ -5,16 +5,16 @@ import { saveAs } from "file-saver";
 const CvPage = () => {
   let { t } = useTranslation();
   const saveFile = () => {
-    saveAs(
-      "https://www.nemanja.grujic.rs/cv.pdf",
-      "NemanjaGrujicCV.pdf"
-    );
+    saveAs("https://www.nemanja.grujic.rs/cv.pdf", "NemanjaGrujicCV.pdf");
   };
   return (
     <div className="bg-gray-50 dark:bg-slate-800">
       <div className="mx-4 relative h-full">
         <div className="w-full text-center">
-          <button onClick={saveFile} className="bg-blue-500 my-8 rounded py-2 px-4 text-white hover:bg-blue-800 dark:bg-primary-dark dark:hover:bg-primary-darker">
+          <button
+            onClick={saveFile}
+            className="bg-blue-500 my-8 rounded py-2 px-4 text-white hover:bg-blue-800 dark:bg-primary-dark dark:hover:bg-primary-darker"
+          >
             {t("cv:button")}
           </button>
         </div>
@@ -165,7 +165,10 @@ const CvPage = () => {
                     <p className="text-xs">Python</p>
                   </div>
                   <div className="pad-0">
-                    <p className="text-xs">R</p>
+                    <p className="text-xs">React Native</p>
+                  </div>
+                  <div className="pad-0">
+                    <p className="text-xs">Gatsby</p>
                   </div>
                 </div>
               </div>
@@ -188,9 +191,6 @@ const CvPage = () => {
                   </div>
                   <div className="pad-0">
                     <p className="text-xs">{t("cv:skill2")}</p>
-                  </div>
-                  <div className="pad-0">
-                    <p className="text-xs">{t("cv:skill3")}</p>
                   </div>
                   <div className="pad-0">
                     <p className="text-xs">{t("cv:skill4")}</p>
@@ -263,7 +263,6 @@ const CvPage = () => {
                 <div className="mt-1">
                   <h4 className="text-xs font-bold">{t("cv:high-school")}</h4>
                   <p className="text-xs">2016-2020</p>
-                  
                 </div>
                 {/* <h5 className="border-light-grey border-t-2  mt-2 pt-2 flex items-center text-xs mb-1 text-blue font-semibold">
                   <svg
@@ -367,7 +366,10 @@ const CvPage = () => {
                         <p className="text-xs">Python</p>
                       </div>
                       <div className="pad-0">
-                        <p className="text-xs">R</p>
+                        <p className="text-xs">React Native</p>
+                      </div>
+                      <div className="pad-0">
+                        <p className="text-xs">Gatsby</p>
                       </div>
                     </div>
                     <h5 className="border-light-grey uppercase border-t-2  mt-2 pt-2  flex items-center text-xs mb-1 text-blue font-semibold">
@@ -388,9 +390,6 @@ const CvPage = () => {
                       </div>
                       <div className="pad-0">
                         <p className="text-xs">{t("cv:skill2")}</p>
-                      </div>
-                      <div className="pad-0">
-                        <p className="text-xs">{t("cv:skill3")}</p>
                       </div>
                       <div className="pad-0">
                         <p className="text-xs">{t("cv:skill4")}</p>
@@ -461,7 +460,6 @@ const CvPage = () => {
                         {t("cv:high-school")}
                       </h4>
                       <p className="text-xs">2016-2020</p>
-                      
                     </div>
                     {/* <h5 className="border-light-grey border-t-2  mt-2 pt-2 flex items-center text-xs mb-1 text-blue font-semibold">
                       <svg
@@ -511,7 +509,7 @@ const CvPage = () => {
                     </svg>
                     {t("cv:experience")}
                   </h5>
-                  
+
                   <div className="mb-1">
                     <h3 className="text-sm font-bold">{t("cv:exp1-header")}</h3>
                     <h5 className="text-xs my-1 font-semibold">
@@ -579,7 +577,6 @@ const CvPage = () => {
                       {t("cv:exp3-skills")}
                     </p>
                   </div>
-                  
                 </div>
               </div>
             </div>
