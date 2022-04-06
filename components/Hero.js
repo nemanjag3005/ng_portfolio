@@ -137,7 +137,7 @@ const Hero = () => {
               ></path>
             </g>
           </svg>
-          <div className="relative w-full md:h-96 h-32 bg-left-top bg-blue-300 dark:bg-primary-dark z-10 mb-12">
+          <div className="relative w-full md:h-44 h-32 bg-left-top bg-blue-300 dark:bg-primary-dark z-10 mb-12">
             <svg
               viewBox="0 0 900 238"
               version="1.1"
@@ -219,7 +219,7 @@ const Hero = () => {
               </div>
               <img
                 src="/decision.png"
-                className="rounded h-48 w-full object-cover group-hover:opacity-25"
+                className="rounded h-48 w-full object-cover object-left group-hover:opacity-25"
               ></img>
             </a>
           </div>
