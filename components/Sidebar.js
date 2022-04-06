@@ -11,7 +11,7 @@ const Sidebar = ({ isOpen, toggle }) => {
   const [colorTheme, setTheme] = useDarkMode();
   return (
     <div
-      className={`h-full w-4/5 bg-gray-200 animate__animated animate__fadeInLeft animate__faster dark:bg-slate-700 z-80 fixed top-0 left-0 shadow-xl transition-all ease-in-out transform duration-300 ${
+      className={`h-full w-4/5 bg-gray-200 animate__animated animate__fadeInLeft animate__faster dark:bg-slate-700 z-50 fixed top-0 left-0 shadow-xl transition-all ease-in-out transform duration-300 ${
         isOpen == true ? "block translate-x-0" : "hidden -translate-x-full"
       }`}
     >
