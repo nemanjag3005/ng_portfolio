@@ -13,21 +13,20 @@ const AboutPage = () => {
             <div className="text-zinc-800 dark:text-gray-50 w-full relative rounded pb-8 grid grid-cols-1 sm:grid-cols-2 mb-24 md:mb-0">
               <div className="bg-blue-200 dark:bg-slate-700 rounded h-full w-full absolute top-0 left-0"></div>
               <div className="xs:mx-5 xs:-mb-0 -mb-4 relative flex items-center justify-center w-full h-full">
-                <h3 className="text-xl text-zinc-800 dark:text-gray-200 font-mono md:text-4xl font-bold mt-4">
+                <h3 className="text-xl text-zinc-800 dark:text-gray-200 font-mono md:text-4xl font-bold mt-4 mb-4 md:mb-0">
                   Nemanja Grujić
                   <span className="box-border inline-block w-1 h-8 ml-2 -mb-2 bg-zinc-800 dark:bg-gray-200 md:-mb-4 md:h-14 animate-cursor will-change"></span>
                 </h3>
               </div>
               <div className="relative w-full h-64 -mb-16">
-                <div className="bg-blue-600 dark:bg-primary-dark m-5 rounded h-48 w-48 xs:h-56 xs:w-56 absolute bottom-0 right-0">
+                <div className="bg-blue-600 dark:bg-primary-dark m-5 rounded h-48 w-48 xs:h-52 xs:w-52 md:h-56 md:w-56 absolute bottom-0 right-0">
                   <div className="w-full h-full relative">
-                    <div className="xs:h-64 xs:w-64 h-44 w-44 rounded absolute xs:left-4 xs:top-4 left-6 top-6">
-                      <img
-                        src="/IMG_1265.jpeg"
-                        className="object-cover xs:h-64 xs:w-64 h-48 w-48 rounded"
-                      ></img>
-                    </div>
-                    <div className="absolute animate__animated animate__fadeInUp top-0 left-0 w-12 h-12 mt-12 -ml-10 md:-ml-20">
+                    <img
+                      src="/Nemanja.png"
+                      className="object-cover object-left-top rounded absolute bottom-0"
+                    ></img>
+
+                    <div className="absolute animate__animated animate__fadeInUp top-0 left-0 w-12 h-12 mt-10 -ml-20 md:-ml-28">
                       <svg
                         version="1.1"
                         id="Capa_1"
@@ -57,7 +56,7 @@ const AboutPage = () => {
                         </g>
                       </svg>
                     </div>
-                    <div className="absolute animate__animated animate__fadeInUp top-0 left-0 mt-4 -ml-24 md:-ml-32 transform">
+                    <div className="absolute animate__animated animate__fadeInUp top-0 left-0 mt-3 -ml-32 md:-ml-40 transform">
                       <p className="text-2xl transform font-semibold -rotate-45">
                         Web Dev
                       </p>
