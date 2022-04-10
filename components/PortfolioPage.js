@@ -137,7 +137,7 @@ const PortfolioPage = () => {
                   </div>
                   <div className="flex-shrink">
                     <img
-                      src="/decision.png"
+                      src="/decision-3.png"
                       className="object-cover object-left-top w-full h-32 rounded shadow-lg"
                     ></img>
                   </div>
@@ -155,7 +155,7 @@ const PortfolioPage = () => {
               </div>
               <div className="flex space-x-2">
                 <a
-                  href="#"
+                  href="https://decision-frontend-eight.vercel.app"
                   target="_blank"
                   rel="noreferrer"
                   className="bg-blue-500 dark:bg-primary-dark dark:hover:bg-primary-darker hover:bg-blue-900 text-white px-3 py-2 text-lg rounded"
@@ -189,8 +189,8 @@ const PortfolioPage = () => {
                   </div>
                   <div className="flex-shrink">
                     <img
-                      src="/decision.png"
-                      className="object-cover object-left-top w-full h-32 rounded shadow-lg"
+                      src="/decision-3.png"
+                      className="object-cover object-top w-full h-32 rounded shadow-lg"
                     ></img>
                   </div>
                 </div>

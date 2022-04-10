@@ -211,7 +211,7 @@ const Hero = () => {
               className="group relative"
               target="_blank"
               rel="noopener noreferrer"
-              href="#"
+              href="https://decision-frontend-eight.vercel.app"
             >
               <div className="absolute top-0 left-0 w-full h-full p-5 hidden group-hover:flex flex-col z-20">
                 <p className=" font-bold text-xl">Where To?</p>
