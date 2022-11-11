@@ -1,9 +1,9 @@
 import React from "react";
 import Link from "next/link";
-import useTranslation from 'next-translate/useTranslation';
+import useTranslation from "next-translate/useTranslation";
 
 const Footer = () => {
-  let {t} = useTranslation();
+  let { t } = useTranslation();
   return (
     <div className="mx-0 relative z-20 bg-gray-50 dark:bg-slate-800 transition duration-500">
       <div className="mx-4">
@@ -13,21 +13,25 @@ const Footer = () => {
               <div className="-mx-4 flex flex-wrap justify-between">
                 <div className="px-2 my-4 w-full sm:w-auto max-w-md">
                   <h1 className="text-xl mb-3 font-bold">
-                  {t("common:footer-heading")}
+                    {t("common:footer-heading")}
                   </h1>
-                  <p className="text-sm mb-3">
-                  {t("common:footer-desc")}
-                  </p>
+                  <p className="text-sm mb-3">{t("common:footer-desc")}</p>
                   <Link href="/siteinfo">
                     <button className="bg-blue-500 dark:bg-primary-dark text-white rounded px-3 py-2">
-                    {t("common:footer-button")}
+                      {t("common:footer-button")}
                     </button>
                   </Link>
                 </div>
                 <div className="px-2 my-4 w-full sm:w-auto">
-                  <h4 className="text-xl mb-1 font-bold">{t("common:footer-contact")}</h4>
+                  <h4 className="text-xl mb-1 font-bold">
+                    {t("common:footer-contact")}
+                  </h4>
                   <div className="flex space-x-2 my-2 items-center text-zinc-800 dark:text-gray-50">
-                    <a href="https://twitter.com/nemke1031" target='_blank' rel="noopener noreferrer" >
+                    <a
+                      href="https://twitter.com/nemke1031"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <svg
                         viewBox="0 0 24 24"
                         className="fill-current h-6 w-6 hover:text-blue-500 dark:hover:text-primary-dark"
@@ -37,7 +41,11 @@ const Footer = () => {
                         </g>
                       </svg>
                     </a>
-                    <a href="https://www.linkedin.com/in/nemanja-grujic-5828a1213/" rel="noopener noreferrer" target='_blank'>
+                    <a
+                      href="https://www.linkedin.com/in/nemanja-grujic-5828a1213/"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
                       <svg
                         viewBox="0 0 34 34"
                         className="fill-current h-6 w-6 hover:text-blue-500 dark:hover:text-primary-dark"
@@ -57,6 +65,7 @@ const Footer = () => {
                   >
                     nemanjag3005@gmail.com
                   </a>
+                  <p className="text-sm">+1 825 733 6311</p>
                   <p className="text-sm">+381 63 203 012</p>
                 </div>
               </div>

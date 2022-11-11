@@ -6,6 +6,10 @@
   "button": "Poseti Sajt",
   "p2": "Da li vam je ikada dojadila količina vremena koja je neki put potrebna za planiranje mesta izlaska sa grupom prijatelja?",
   "p2-2": "Time to Decide je onlajn aplikacija uz pomoć koje možete smanjiti vreme potrebno za planiranje tako što ćete se lakše odlučiti za mesto izlaska. Aplikacija funkcioniše tako što vašoj grupi predlaže razne lokale na osnovu unetih preferenci. Vaši prijatelji onda jednostavno treba da glasaju za njihov omiljeni lokal i odluka će biti laka. Aplikacija je napravljena koristeći NextJS, ChakraUI i MongoDB. Google Places API je korišćen za preuzimanje predloženih lokacija.",
-  "p3": "",
-  "p3-2": ""
+  "p3": "Obuci.rs je prvi jedinstveni marketplace za polovnu odeću na Balkanu.",
+  "p3-2": "Šta ja započelo kao ideja mene i drugara ubrzo se pretvara u ozbiljan projekat. Obuci.rs će biti ozbiljan marketplace za trgovinu odećom. Gradi se uz pomoć najnovijih tehnologija kao što su Firebase i NextJS.",
+  "moreprojects": "Još Projekata.",
+  "mp-1": "Elegantna stranica za Flex Tim ekipu.",
+  "mp-2": "Kuvanje na lakši i zabavniji način!",
+  "mp-3": "Dobra stara igra. Potapanje brodova napravljeno koristeći React Native."
 }
