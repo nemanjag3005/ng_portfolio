@@ -1,5 +1,5 @@
 {
-    "about": "About This Site",
-    "p1": "This site is my corner of the internet. I use it to showcase projects I have worked on and document my front-end adventures.",
-    "p2": "The site has been redesigned and rebuilt many times. Its current tech stack uses NextJS and Tailwindcss. All UX design and code was completed by me with a little inspiration. "
+  "about": "About This Site",
+  "p1": "This site is my corner of the internet. I use it to showcase projects I have worked on and document my web dev adventures.",
+  "p2": "The site has been redesigned and rebuilt many times. Its current tech stack uses NextJS and Tailwindcss. All UX design and code was completed by me with a little inspiration. "
 }

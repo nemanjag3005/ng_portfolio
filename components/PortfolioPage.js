@@ -246,20 +246,20 @@ const PortfolioPage = () => {
               <div className="flex flex-col space-y-4">
                 <div className="w-full h-72">
                   <img
-                    src="/lan.png"
+                    src="/obuci1.png"
                     className="object-cover w-full h-full rounded shadow-lg"
                   ></img>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="flex-shrink">
                     <img
-                      src="/lan2.png"
+                      src="/obuci2.png"
                       className="object-cover w-full h-32 rounded shadow-lg"
                     ></img>
                   </div>
                   <div className="flex-shrink">
                     <img
-                      src="/lan3.png"
+                      src="/obuci3.png"
                       className="object-cover w-full h-32 rounded shadow-lg"
                     ></img>
                   </div>
@@ -300,18 +300,113 @@ const PortfolioPage = () => {
                   href="https://www.lan-digital.com"
                   target="_blank"
                   rel="noreferrer"
-                  className="bg-blue-500 dark:bg-primary-dark dark:hover:bg-primary-darker hover:bg-blue-900 text-white px-3 py-2 text-lg rounded"
+                  className="bg-gray-500 dark:bg-gray-500 cursor-not-allowed text-white px-3 py-2 text-lg rounded"
                 >
-                  {t("portfolio:button")}
+                  WIP
                 </a>
                 <a
-                  href="https://github.com/nemanjag3005/landigital"
+                  href="https://github.com/nemanjag3005/obucirs"
                   target="_blank"
                   rel="noreferrer"
                   className="border-2 border-black dark:border-gray-50 dark:hover:bg-primary-dark-light dark:text-gray-50 hover:bg-blue-300 text-black px-3 py-2 text-lg rounded"
                 >
                   GitHub
                 </a>
+              </div>
+            </div>
+          </div>
+          <h2 className="text-xl md:text-2xl font-bold mb-4 md:mb-8">
+            {t("portfolio:moreprojects")}
+          </h2>
+          <div className="grid md:grid-cols-2 gap-4">
+            <div>
+              <div className="flex space-x-3">
+                <div className="h-10 w-10 inline-block p-2 bg-blue-100 rounded">
+                  <div className="h-6 w-6 inline-block bg-blue-600 dark:bg-primary-dark p-2 rounded"></div>
+                </div>
+                <div className="w-full space-y-2">
+                  <a href="https://www.flexteam.rs/">
+                    <div className="flex items-center space-x-2 hover:text-blue-600 dark:hover:text-primary-dark">
+                      <h2 className="text-xl font-medium">Flex Team</h2>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        className="h-5 w-5"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                        ></path>
+                      </svg>
+                    </div>
+                    <p className="text-sm">{t("portfolio:mp-1")}</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div className="flex space-x-3">
+                <div className="h-10 w-10 inline-block p-2 bg-blue-100 rounded">
+                  <div className="h-6 w-6 inline-block bg-blue-600 dark:bg-primary-dark p-2 rounded"></div>
+                </div>
+                <div className="w-full space-y-2">
+                  <a href="https://github.com/techstartucalgary/EasyMeal">
+                    <div className="flex items-center space-x-2 hover:text-blue-600 dark:hover:text-primary-dark">
+                      <h2 className="text-xl font-medium">Easy Meal</h2>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        className="h-5 w-5"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                        ></path>
+                      </svg>
+                      <h2 className="text-gray-200 bg-gray-500 px-2 text-xs py-1 rounded-full">
+                        WIP
+                      </h2>
+                    </div>
+                    <p className="text-sm">{t("portfolio:mp-2")}</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div className="flex space-x-3">
+                <div className="h-10 w-10 inline-block p-2 bg-blue-100 rounded">
+                  <div className="h-6 w-6 inline-block bg-blue-600 dark:bg-primary-dark p-2 rounded"></div>
+                </div>
+                <div className="w-full space-y-2">
+                  <a href="https://github.com/nemanjag3005/battleship">
+                    <div className="flex items-center space-x-2 hover:text-blue-600 dark:hover:text-primary-dark">
+                      <h2 className="text-xl font-medium">Battleship</h2>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        className="h-5 w-5"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                        ></path>
+                      </svg>
+                    </div>
+                    <p className="text-sm">{t("portfolio:mp-3")}</p>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
