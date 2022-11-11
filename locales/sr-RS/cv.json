@@ -1,11 +1,11 @@
 {
   "button": "Preuzmi CV",
-  "intro": "Front-end programer sa dve godine iskustva u korišćenju ReactJS-a i Next-a za pravljenje perfomantnih, lepih i pristupačnih aplikacija. Tražim sledeći izazov radi učenja, usavršavanja i građenja karijere.",
+  "intro": "Veb programer sa dve godine iskustva u korišćenju ReactJS-a i Next-a za pravljenje perfomantnih, lepih i pristupačnih aplikacija. Tražim sledeći izazov radi učenja, usavršavanja i građenja karijere.",
   "intro-mobile": "Kreativan, prilagodljiv i uporan programer sa iskustvom u veb tehnologijama. U potrazi za sledećim izazovom radi učenja, usavršavanja i građenja karijere.",
   "technical-skills": "tehničke veštine",
   "skills": "veštine",
   "skill1": "Social Media Management",
-  "skill2": "Web Development",
+  "skill2": "Web/App Development",
   "skill4": "Komunikacija",
   "skill5": "Vođstvo",
   "experience": "iskustvo",
@@ -34,5 +34,10 @@
   "exp3-1": "Odgovoran za menadžment promocionih kampanja proizvoda u lokalima širom Beograda.",
   "exp3-2": "Zadužen za praćenje količine prodatih proizvoda kao i za promocioni materijal.",
   "exp3-3": "Bio sam odgovoran za i rukovodio promoterke i snabdevao ih promotivnim materijalima.",
-  "exp3-skills": "Management, Vođstvo, Time Management, Multitasking, Komunikacione Veštine, Microsoft Excel"
+  "exp3-skills": "Management, Vođstvo, Time Management, Multitasking, Komunikacione Veštine, Microsoft Excel",
+  "exp4-header": "Projektni Menadžer",
+  "exp4-1": "Upravljanje timom programera sa ciljom izrade jedinstvenog i razvijenog proizvoda.",
+  "exp4-2": "Mentorstvo i podrška grupi iskusnih kao i neiskusnih programera u sferi app development-a.",
+  "exp4-3": "Odgovoran za upravljanje ciljevima, zahtevima, rokovima kao i kreaciji pozitivnog i produktivnog okruženja za rad.",
+  "exp4-skills": "Project Management, Leadership, Agile, Typescript, React Native, Firebase, APIs"
 }
