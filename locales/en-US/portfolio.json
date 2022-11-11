@@ -1,11 +1,11 @@
 {
-    "my": "My",
-    "desc": "Projects I have worked on individually, as well as team projects.",
-    "p1": "LAN Digital is a digital marketing agency I have founded with two of my best friends, Aleksa and Luka.",
-    "p1-2": "Since this is my start-up, I put a lot of effort into crafting the website for our agency. It is a primarily static site, which I have made using React NextJS and styled-components for the CSS. The site features a Contact Form which uses nodemailer, and a blog section which uses data from a headless CMS - GraphCMS.",
-    "button": "Visit Site",
-    "p2": "Have you ever been tired of the amount of time it sometimes takes you and your group of friends to plan where to go on a friday evening?",
-    "p2-2": "Time to Decide aims to reduce the time it takes to plan where to go by making it easier to decide. The app works by suggesting locations and places to the friend group based on their preffered budget, interests and location. The members of the group are then promted to vote on their top pick, with the place with the most votes winning. The app was created using NextJS, ChakraUI and MongoDB. The Google Places API was used to get suggested locations.",
-    "p3": "",
-    "p3-2": ""
+  "my": "My",
+  "desc": "Projects I have worked on individually, as well as team projects.",
+  "p1": "LAN Digital is a digital marketing agency I have founded with two of my best friends, Aleksa and Luka.",
+  "p1-2": "Since this is my start-up, I put a lot of effort into crafting the website for our agency. It is a primarily static site, which I have made using React NextJS and styled-components for the CSS. The site features a Contact Form which uses nodemailer, and a blog section which uses data from a headless CMS - GraphCMS.",
+  "button": "Visit Site",
+  "p2": "Have you ever been tired of the amount of time it sometimes takes you and your group of friends to plan where to go on a friday evening?",
+  "p2-2": "Time to Decide aims to reduce planning time by making it easier to decide. The app works by suggesting places to the friend group based on their preferences. The members of the group are then promted to vote on their top pick, with the place with the most votes winning. The app was created using NextJS, ChakraUI and MongoDB. The Google Places API was used to get suggested locations.",
+  "p3": "Obuci.rs is the first dedicated second-hand clothing ecommerce website in the Balkans.",
+  "p3-2": "What started off as a brainchild of me and another friend, is quickly being developed into a refined marketplace for second-hand clothing, using newest technologies like NextJS and Firebase. The aim is to have a free-to-use marketplace where people can list any clothing or accessory item they wish to sell."
 }

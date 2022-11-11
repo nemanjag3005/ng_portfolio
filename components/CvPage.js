@@ -351,7 +351,7 @@ const CvPage = () => {
                         <p className="text-xs">NextJS</p>
                       </div>
                       <div className="pad-0">
-                        <p className="text-xs">GraphQL</p>
+                        <p className="text-xs">Assembly</p>
                       </div>
                       <div className="pad-0">
                         <p className="text-xs">Typescript</p>
@@ -370,6 +370,12 @@ const CvPage = () => {
                       </div>
                       <div className="pad-0">
                         <p className="text-xs">Gatsby</p>
+                      </div>
+                      <div className="pad-0">
+                        <p className="text-xs">C</p>
+                      </div>
+                      <div className="pad-0">
+                        <p className="text-xs">SQL</p>
                       </div>
                     </div>
                     <h5 className="border-light-grey uppercase border-t-2  mt-2 pt-2  flex items-center text-xs mb-1 text-blue font-semibold">
@@ -511,9 +517,30 @@ const CvPage = () => {
                   </h5>
 
                   <div className="mb-1">
+                    <h3 className="text-sm font-bold">{t("cv:exp4-header")}</h3>
+                    <h5 className="text-xs my-1 font-semibold">
+                      TechStart UCalgary, Calgary | 2022 - {t("cv:present")}
+                    </h5>
+                    <div className="text-xs flex">
+                      <p className="mr-1">-</p>
+                      <p className="m-0">{t("cv:exp4-1")}</p>
+                    </div>
+                    <div className="text-xs flex">
+                      <p className="mr-1">-</p>
+                      <p className="m-0">{t("cv:exp4-2")}</p>
+                    </div>
+                    <div className="text-xs flex">
+                      <p className="mr-1">-</p>
+                      <p className="m-0">{t("cv:exp4-3")}</p>
+                    </div>
+                    <p className="text-xs mt-1 ml-2 text-blue font-semibold">
+                      {t("cv:exp4-skills")}
+                    </p>
+                  </div>
+                  <div className="mb-1 border-light-grey border-t-2 mt-2 pt-2">
                     <h3 className="text-sm font-bold">{t("cv:exp1-header")}</h3>
                     <h5 className="text-xs my-1 font-semibold">
-                      TechStart UCalgary, Calgary | 2021 - {t("cv:present")}
+                      TechStart UCalgary, Calgary | 2021 - 2022
                     </h5>
                     <div className="text-xs flex">
                       <p className="mr-1">-</p>

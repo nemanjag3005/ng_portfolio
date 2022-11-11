@@ -1,11 +1,11 @@
 {
   "button": "Download CV/Resume",
-  "intro": "Motivated student working toward a Bachelor's in Bioinformatics and Computer Science. Front-end developer with two years experience using ReactJS and Next to build performant, beautiful and accessible applications. Possess experience in collaborative and fast-paced settings. Highly adaptable, good at aquiring new skills and looking for the next challenge to learn and improve myself.",
+  "intro": "Motivated student working toward a Bachelor's in Bioinformatics and Computer Science. Web developer with two years experience using ReactJS and Next to build performant, beautiful and accessible applications. Possess experience in collaborative and fast-paced settings. Highly adaptable, good at aquiring new skills and looking for the next challenge to learn and improve myself.",
   "intro-mobile": "Motivated student working toward a Bachelor's in Bioinformatics and Computer Science. Creative, collaborative and courageous developer with experience in web based technologies. Possess experience in team environments and fast-paced settings. Looking for the next challenge to learn and improve myself.",
   "technical-skills": "technical skills",
   "skills": "skills",
   "skill1": "Social Media Management",
-  "skill2": "Web Development",
+  "skill2": "Web/App Development",
   "skill4": "Communication Skills",
   "skill5": "Leadership",
   "experience": "experience",
@@ -34,5 +34,10 @@
   "exp3-1": "Responsible for managing product promotion campaigns in various stores across Belgrade.",
   "exp3-2": "Managed and kept track of product sales and promotional material.",
   "exp3-3": "Was responsible for and managed various promotion workers and supplied them with promotional material.",
-  "exp3-skills": "Product Management, Customer Communication, Time Management, Multitasking, Communication Skills, Microsoft Excel"
+  "exp3-skills": "Product Management, Customer Communication, Time Management, Multitasking, Communication Skills, Microsoft Excel",
+  "exp4-header": "Project Manager",
+  "exp4-1": "Leading a team of developers with the goal of creating a unique and sustainable product.",
+  "exp4-2": "Mentoring and guiding experienced as well as inexperienced students in app development using industry standard practices and technologies.",
+  "exp4-3": "Responsible for managing deadlines, setting goals and creating a positive and productive team environment.",
+  "exp4-skills": "Project Management, Leadership, Agile, Typescript, React Native, Firebase, APIs"
 }

@@ -90,6 +90,28 @@ const PortfolioPage = () => {
                 </div>
               </div>
               <div className="w-full h-full flex flex-col justify-center p-4 lg:p-6 rounded shadow-md bg-blue-100 dark:bg-slate-700">
+                <div>
+                  <div className="px-2 py-1 rounded-full bg-primary-dark text-gray-200 mb-2 inline-block">
+                    <div className="flex items-center space-x-1">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={1.5}
+                        stroke="currentColor"
+                        className="w-4 h-4"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z"
+                        />
+                      </svg>
+
+                      <p className="text-sm">Production</p>
+                    </div>
+                  </div>
+                </div>
                 <h2 className="text-3xl lg:text-5xl font-bold mb-2">
                   LAN Digital
                 </h2>
@@ -145,6 +167,28 @@ const PortfolioPage = () => {
               </div>
             </div>
             <div className="w-full h-full flex flex-col justify-center p-4 lg:p-6 rounded shadow-md bg-blue-100 dark:bg-slate-700">
+              <div>
+                <div className="px-2 py-1 rounded-full bg-primary-dark text-gray-200 mb-2 inline-block">
+                  <div className="flex items-center space-x-1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="currentColor"
+                      className="w-4 h-4"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z"
+                      />
+                    </svg>
+
+                    <p className="text-sm">Production</p>
+                  </div>
+                </div>
+              </div>
               <h2 className="text-3xl lg:text-5xl font-bold mb-2">
                 Time to Decide
               </h2>
@@ -194,6 +238,80 @@ const PortfolioPage = () => {
                     ></img>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+          <div className="grid gap-2 md:grid-cols-2 lg:-mx-12 xl:-mx-32 md:py-12 ">
+            <div>
+              <div className="flex flex-col space-y-4">
+                <div className="w-full h-72">
+                  <img
+                    src="/lan.png"
+                    className="object-cover w-full h-full rounded shadow-lg"
+                  ></img>
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="flex-shrink">
+                    <img
+                      src="/lan2.png"
+                      className="object-cover w-full h-32 rounded shadow-lg"
+                    ></img>
+                  </div>
+                  <div className="flex-shrink">
+                    <img
+                      src="/lan3.png"
+                      className="object-cover w-full h-32 rounded shadow-lg"
+                    ></img>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="w-full h-full flex flex-col justify-center p-4 lg:p-6 rounded shadow-md bg-blue-100 dark:bg-slate-700">
+              <div>
+                <div className="px-2 py-1 rounded-full bg-primary-dark text-gray-200 mb-2 inline-block">
+                  <div className="flex items-center space-x-1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="currentColor"
+                      className="w-4 h-4"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"
+                      />
+                    </svg>
+
+                    <p className="text-sm">Development</p>
+                  </div>
+                </div>
+              </div>
+              <h2 className="text-3xl lg:text-5xl font-bold mb-2">obuci.rs</h2>
+              <div className="w-full mb-4">
+                <p>{t("portfolio:p3")}</p>
+                <br />
+                {t("portfolio:p3-2")}
+              </div>
+              <div className="flex space-x-2">
+                <a
+                  href="https://www.lan-digital.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="bg-blue-500 dark:bg-primary-dark dark:hover:bg-primary-darker hover:bg-blue-900 text-white px-3 py-2 text-lg rounded"
+                >
+                  {t("portfolio:button")}
+                </a>
+                <a
+                  href="https://github.com/nemanjag3005/landigital"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="border-2 border-black dark:border-gray-50 dark:hover:bg-primary-dark-light dark:text-gray-50 hover:bg-blue-300 text-black px-3 py-2 text-lg rounded"
+                >
+                  GitHub
+                </a>
               </div>
             </div>
           </div>
