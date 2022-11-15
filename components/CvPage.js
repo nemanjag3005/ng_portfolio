@@ -112,7 +112,7 @@ const CvPage = () => {
                 <div className="m1-b  border-light-grey border-t-2 mt-2 pt-2 ">
                   <h3 className="text-sm font-bold">{t("cv:exp3-header")}</h3>
                   <h5 className="text-xs my-1 font-semibold">
-                    XYZ Communications, Belgrade | 2019
+                    Replai Inc., Lisbon | 2022
                   </h5>
                   <div className="text-xs flex">
                     <p className="mr-1">-</p>
@@ -613,7 +613,7 @@ const CvPage = () => {
                   <div className="mb-1  border-light-grey border-t-2 mt-2 pt-2 ">
                     <h3 className="text-sm font-bold">{t("cv:exp3-header")}</h3>
                     <h5 className="text-xs my-1 font-semibold">
-                      XYZ Communications, Belgrade | 2019
+                      Replai Inc., Lisbon | 2022
                     </h5>
                     <div className="text-xs flex">
                       <p className="mr-1">-</p>
