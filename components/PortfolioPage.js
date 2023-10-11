@@ -289,7 +289,7 @@ const PortfolioPage = () => {
                   </div>
                 </div>
               </div>
-              <h2 className="text-3xl lg:text-5xl font-bold mb-2">obuci.rs</h2>
+              <h2 className="text-3xl lg:text-5xl font-bold mb-2">Obuci.rs</h2>
               <div className="w-full mb-4">
                 <p>{t("portfolio:p3")}</p>
                 <br />
@@ -297,12 +297,12 @@ const PortfolioPage = () => {
               </div>
               <div className="flex space-x-2">
                 <a
-                  href="https://www.lan-digital.com"
+                  href="https://www.obuci.rs"
                   target="_blank"
                   rel="noreferrer"
-                  className="bg-gray-500 dark:bg-gray-500 cursor-not-allowed text-white px-3 py-2 text-lg rounded"
+                  className="bg-blue-500 dark:bg-primary-dark dark:hover:bg-primary-darker hover:bg-blue-900 text-white px-3 py-2 text-lg rounded"
                 >
-                  WIP
+                  {t("portfolio:button")}
                 </a>
                 <a
                   href="https://github.com/nemanjag3005/obucirs"
@@ -371,9 +371,6 @@ const PortfolioPage = () => {
                           d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
                         ></path>
                       </svg>
-                      <h2 className="text-gray-200 bg-gray-500 px-2 text-xs py-1 rounded-full">
-                        WIP
-                      </h2>
                     </div>
                     <p className="text-sm">{t("portfolio:mp-2")}</p>
                   </a>

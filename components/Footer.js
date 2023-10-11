@@ -75,7 +75,7 @@ const Footer = () => {
             <div className="mx-auto px-2">
               <div className="-mx-4 flex flex-wrap justify-between items-center space-y-2 md:space-y-0">
                 <div className="px-2 w-full text-center sm:w-auto sm:text-left text-sm opacity-75">
-                  Copyright © 2022 Nemanja Grujić. All Rights Reserved.
+                  Copyright © 2023 Nemanja Grujić. All Rights Reserved.
                 </div>
               </div>
             </div>
