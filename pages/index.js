@@ -10,8 +10,9 @@ export default function Home() {
   const toggle = () => {
     setIsOpen(!isOpen);
   };
+
   return (
-    <div>
+    <div className="transition-colors duration-300 bg-bgColor text-textPrimary">
       <Head>
         <title>Nemanja Grujić</title>
         <meta

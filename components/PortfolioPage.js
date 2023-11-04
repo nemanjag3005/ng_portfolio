@@ -5,19 +5,17 @@ import "animate.css";
 const PortfolioPage = () => {
   let { t } = useTranslation();
   return (
-    <div className="dark:bg-slate-800 bg-gray-50">
-      <div className="mx-4 relative transition-colors duration-100 text-zinc-800 dark:text-gray-50">
+    <div className="">
+      <div className="mx-4 relative transition-colors duration-200  ">
         <div className="max-w-4xl mx-auto py-6 md:py-12 overflow-x-hidden lg:overflow-x-visible">
           <div className="w-full space-y-4 mt-20">
             <div className="flex justify-between items-end">
               <div className="flex flex-col animate__animated animate__fadeInUp space-x-1">
                 <h1 className="text-4xl md:text-6xl font-bold">
                   {t("portfolio:my")}{" "}
-                  <span className="text-blue-500 dark:text-primary-dark">
-                    Portfolio.
-                  </span>
+                  <span className="text-primary ">Portfolio.</span>
                 </h1>
-                <p>{t("portfolio:desc")}</p>
+                <p className="font-light">{t("portfolio:desc")}</p>
               </div>
             </div>
             <div>
@@ -89,7 +87,7 @@ const PortfolioPage = () => {
                   </div>
                 </div>
               </div>
-              <div className="w-full h-full flex flex-col justify-center p-4 lg:p-6 rounded shadow-md bg-blue-100 dark:bg-slate-700">
+              <div className="w-full h-full flex flex-col justify-center p-4 lg:p-6 rounded shadow-md bg-bgLight ">
                 <div>
                   <div className="px-2 py-1 rounded-full bg-primary-dark text-gray-200 mb-2 inline-block">
                     <div className="flex items-center space-x-1">
@@ -125,7 +123,7 @@ const PortfolioPage = () => {
                     href="https://www.lan-digital.com"
                     target="_blank"
                     rel="noreferrer"
-                    className="bg-blue-500 dark:bg-primary-dark dark:hover:bg-primary-darker hover:bg-blue-900 text-white px-3 py-2 text-lg rounded"
+                    className="bg-primary dark:bg-primary-dark dark:hover:bg-primary-darker hover:bg-blue-900 text-white px-3 py-2 text-lg rounded"
                   >
                     {t("portfolio:button")}
                   </a>
@@ -133,7 +131,7 @@ const PortfolioPage = () => {
                     href="https://github.com/nemanjag3005/landigital"
                     target="_blank"
                     rel="noreferrer"
-                    className="border-2 border-black dark:border-gray-50 dark:hover:bg-primary-dark-light dark:text-gray-50 hover:bg-blue-300 text-black px-3 py-2 text-lg rounded"
+                    className="border-2 border-black dark:border-gray-50 dark:hover:bg-primary-dark-light  hover:bg-blue-300 text-black px-3 py-2 text-lg rounded"
                   >
                     GitHub
                   </a>
@@ -166,7 +164,7 @@ const PortfolioPage = () => {
                 </div>
               </div>
             </div>
-            <div className="w-full h-full flex flex-col justify-center p-4 lg:p-6 rounded shadow-md bg-blue-100 dark:bg-slate-700">
+            <div className="w-full h-full flex flex-col justify-center p-4 lg:p-6 rounded shadow-md bg-blue-100 ">
               <div>
                 <div className="px-2 py-1 rounded-full bg-primary-dark text-gray-200 mb-2 inline-block">
                   <div className="flex items-center space-x-1">
@@ -202,7 +200,7 @@ const PortfolioPage = () => {
                   href="https://decision-frontend-eight.vercel.app"
                   target="_blank"
                   rel="noreferrer"
-                  className="bg-blue-500 dark:bg-primary-dark dark:hover:bg-primary-darker hover:bg-blue-900 text-white px-3 py-2 text-lg rounded"
+                  className="bg-primary dark:bg-primary-dark dark:hover:bg-primary-darker hover:bg-blue-900 text-white px-3 py-2 text-lg rounded"
                 >
                   {t("portfolio:button")}
                 </a>
@@ -210,7 +208,7 @@ const PortfolioPage = () => {
                   href="https://github.com/Tech-Start-UCalgary/decision-frontend"
                   target="_blank"
                   rel="noreferrer"
-                  className="border-2 border-black hover:bg-blue-300 dark:border-gray-50 dark:hover:bg-primary-dark-light dark:text-gray-50 text-black px-3 py-2 text-lg rounded"
+                  className="border-2 border-black hover:bg-blue-300 dark:border-gray-50 dark:hover:bg-primary-dark-light  text-black px-3 py-2 text-lg rounded"
                 >
                   GitHub
                 </a>
@@ -266,7 +264,7 @@ const PortfolioPage = () => {
                 </div>
               </div>
             </div>
-            <div className="w-full h-full flex flex-col justify-center p-4 lg:p-6 rounded shadow-md bg-blue-100 dark:bg-slate-700">
+            <div className="w-full h-full flex flex-col justify-center p-4 lg:p-6 rounded shadow-md bg-blue-100 ">
               <div>
                 <div className="px-2 py-1 rounded-full bg-primary-dark text-gray-200 mb-2 inline-block">
                   <div className="flex items-center space-x-1">
@@ -300,7 +298,7 @@ const PortfolioPage = () => {
                   href="https://www.obuci.rs"
                   target="_blank"
                   rel="noreferrer"
-                  className="bg-blue-500 dark:bg-primary-dark dark:hover:bg-primary-darker hover:bg-blue-900 text-white px-3 py-2 text-lg rounded"
+                  className="bg-primary dark:bg-primary-dark dark:hover:bg-primary-darker hover:bg-blue-900 text-white px-3 py-2 text-lg rounded"
                 >
                   {t("portfolio:button")}
                 </a>
@@ -308,7 +306,7 @@ const PortfolioPage = () => {
                   href="https://github.com/nemanjag3005/obucirs"
                   target="_blank"
                   rel="noreferrer"
-                  className="border-2 border-black dark:border-gray-50 dark:hover:bg-primary-dark-light dark:text-gray-50 hover:bg-blue-300 text-black px-3 py-2 text-lg rounded"
+                  className="border-2 border-black dark:border-gray-50 dark:hover:bg-primary-dark-light  hover:bg-blue-300 text-black px-3 py-2 text-lg rounded"
                 >
                   GitHub
                 </a>

@@ -1,8 +1,10 @@
 {
-    "desc": "I am an undergraduate student pursuing a degree in Bioinformatics and Computer Science. In my free time, I am a self-taught Web Developer, with numerous projects under my belt.",
-    "aboutButton": "About Me",
-    "projects": "Featured Work",
-    "p1": "The official site of my digital marketing start-up.",
-    "p2": "A promotional site for the Flex Team betting organization.",
-    "p3": "An app that makes deciding where to go with a group of friends a little easier."
+  "desc": "I am an undergraduate student pursuing a degree in Bioinformatics and Computer Science. In my free time, I am a self-taught full-stack Web and App Developer, with numerous projects under my belt.",
+  "aboutButton": "About Me",
+  "competitions": "Competitions & Hackathons",
+  "projects": "Featured Work",
+  "furtherwork": "Further Work",
+  "p1": "The first online second-hand clothing marketplace in the Balkans.",
+  "p2": "A promotional site for the Flex Team betting organization.",
+  "p3": "The Duolingo of cooking: Meet EasyMeal, your all-in-one cooking companion app."
 }

@@ -1,43 +1,238 @@
 import Link from "next/link";
-import React, { useEffect } from "react";
-import useDarkMode from "../hooks/useDarkMode";
+import React, { useState } from "react";
 import { useRouter } from "next/router";
 import useTranslation from "next-translate/useTranslation";
 import Image from "next/image";
+import { useTheme } from "../context/ThemeContext";
 
 const Navbar = ({ toggle, isOpen }) => {
   let router = useRouter();
   let { t } = useTranslation();
   const lang =
     router.locale === "en-US" ? "eng" : router.locale === "sr-RS" ? "srb" : "";
-  const [colorTheme, setTheme] = useDarkMode();
+  const [themeMenuOpen, setThemeMenuOpen] = useState(false);
+  const { setThemeKey, themeKey } = useTheme();
   return (
-    <nav className="bg-gray-50 dark:bg-slate-800 transition duration-500">
+    <nav
+      className={"backdrop-blur-sm sticky top-0 z-50  transition duration-500"}
+    >
+      {themeMenuOpen && (
+        <div className="container px-4 pt-4 flex flex-nowrap xs:flex-wrap justify-between items-center mx-auto max-w-6xl">
+          <div className="space-x-4">
+            <button
+              onClick={() => setThemeKey("standard")}
+              className="bg-standard-light border-2 p-1.5 rounded-full border-standard-secondary group hover:bg-standard-primary"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-5 h-5 stroke-standard-dark group-hover:stroke-white"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+                />
+              </svg>
+            </button>
+            <button
+              onClick={() => setThemeKey("sunset")}
+              className="bg-sunset-light border-2 p-1.5 rounded-full border-sunset-secondary group hover:bg-sunset-primary"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-5 h-5 stroke-sunset-primary group-hover:stroke-white"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+                />
+              </svg>
+            </button>
+            <button
+              onClick={() => setThemeKey("lime")}
+              className="bg-lime-light border-2 p-1.5 rounded-full border-lime-secondary group hover:bg-lime-primary"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-5 h-5 stroke-lime-text group-hover:stroke-white"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+                />
+              </svg>
+            </button>
+            <button
+              onClick={() => setThemeKey("cosmo")}
+              className="bg-cosmo-light border-2 p-1.5 rounded-full border-cosmo-secondary group hover:bg-cosmo-primary"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-5 h-5 stroke-cosmo-dark group-hover:stroke-white"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+                />
+              </svg>
+            </button>
+            <button
+              onClick={() => setThemeKey("split")}
+              className="bg-split-light border-2 p-1.5 rounded-full border-split-secondary group hover:bg-split-primary"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-5 h-5 stroke-split-dark group-hover:stroke-white"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+                />
+              </svg>
+            </button>
+            <button
+              onClick={() => setThemeKey("dark-standard")}
+              className="bg-dark-standard-light border-2 p-1.5 rounded-full border-dark-standard-secondary group hover:bg-dark-standard-primary"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="w-5 h-5 fill-dark-standard-secondary-dark group-hover:fill-white"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </button>
+            <button
+              onClick={() => setThemeKey("dark-sunset")}
+              className="bg-dark-sunset-light border-2 p-1.5 rounded-full border-dark-sunset-secondary group hover:bg-dark-sunset-primary"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="w-5 h-5 fill-dark-sunset-secondary-dark group-hover:fill-white"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </button>
+            <button
+              onClick={() => setThemeKey("dark-lime")}
+              className="bg-dark-lime-light border-2 p-1.5 rounded-full border-dark-lime-secondary group hover:bg-dark-lime-primary"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="w-5 h-5 fill-dark-lime-secondary-dark group-hover:fill-white"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </button>
+            <button
+              onClick={() => setThemeKey("dark-cosmo")}
+              className="bg-dark-cosmo-light border-2 p-1.5 rounded-full border-dark-cosmo-secondary group hover:bg-dark-cosmo-primary"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="w-5 h-5 fill-dark-cosmo-secondary-dark group-hover:fill-white"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </button>
+            <button
+              onClick={() => setThemeKey("dark-split")}
+              className="bg-dark-split-light border-2 p-1.5 rounded-full border-dark-split-secondary group hover:bg-dark-split-primary"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="w-5 h-5 fill-dark-split-secondary-dark group-hover:fill-white"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+          <Link href="/themes">
+            <button className="flex h-8 items-center space-x-1 rounded-full bg-primary px-3 text-white hover:bg-dark">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="2"
+                stroke="currentColor"
+                aria-hidden="true"
+                className="h-5 w-5"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
+                ></path>
+              </svg>
+              <p className="font-light">Custom Theme</p>
+            </button>
+          </Link>
+        </div>
+      )}
       <div className="container px-4 py-4 md:py-6 flex flex-nowrap xs:flex-wrap justify-between border-b items-center mx-auto max-w-6xl">
         <Link href="/">
           <div className="rounded-lg">
             <div className="relative group rounded-lg">
               <button className="relative transform ease-in-out group transition duration-300 hover:scale-105 rounded-lg leading-none flex items-center ">
-                <svg
-                  version="1.1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlnsXlink="http://www.w3.org/1999/xlink"
-                  x="0px"
-                  y="0px"
-                  viewBox="0 0 1000 1000"
-                  className="w-8 h-8 fill-blue-600 dark:fill-primary-dark group-hover:-translate-y-1 group-hover:translate-x-1 transition duration-500 ease-in-out"
-                  enableBackground="new 0 0 1000 1000"
-                  xmlSpace="preserve"
-                >
-                  <g>
-                    <g>
-                      <path d="M683.8,71.3L377.5,377.5H193.8L10,622.5c0,0,194.7-54.2,308.2-28.8L10,990l403.8-314c56.3,128.9-36.3,314-36.3,314l245-183.8V622.5l306.3-306.3L990,10L683.8,71.3z" />
-                    </g>
-                  </g>
-                </svg>
-                <span className="font-bold text-zinc-800 dark:text-gray-200">
-                  NG
-                </span>
+                <Image src="/logo.png" height={40} width={40} />
               </button>
             </div>
           </div>
@@ -46,7 +241,7 @@ const Navbar = ({ toggle, isOpen }) => {
           href={router.asPath}
           locale={lang == "eng" ? "sr-RS" : lang == "srb" ? "en-US" : "en-US"}
         >
-          <button className="inline-flex hover:bg-gray-100 dark:hover:bg-slate-700 p-1 xxs:p-2 items-center ml-auto md:hidden text-sm text-zinc-800 rounded-lg  focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-200  dark:focus:ring-gray-600">
+          <button className="inline-flex  p-1 xxs:p-2 items-center ml-auto md:hidden text-sm  rounded-lg  focus:outline-none focus:ring-2 focus:ring-textPrimary ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"
@@ -63,47 +258,12 @@ const Navbar = ({ toggle, isOpen }) => {
             </svg>
           </button>
         </Link>
-        <button
-          className="inline-flex hover:bg-gray-100 dark:hover:bg-slate-700 xxs:p-2 p-1 items-center  md:hidden text-sm text-zinc-800 rounded-lg  focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-200  dark:focus:ring-gray-600"
-          onClick={() => setTheme(colorTheme)}
-        >
-          {colorTheme == "light" ? (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-6 h-6 hover:stroke-primary-dark"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor "
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
-              />
-            </svg>
-          ) : (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-6 h-6 hover:stroke-blue-500"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor "
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-              />
-            </svg>
-          )}
-        </button>
+
         <button
           data-collapse-toggle="mobile-menu"
           type="button"
           onClick={toggle}
-          className="inline-flex items-center xxs:p-2 p-1 text-sm text-zinc-800 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-200 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          className="inline-flex items-center xxs:p-2 p-1 text-sm  rounded-lg md:hidden  focus:outline-none focus:ring-2 focus:ring-textPrimary  "
           aria-controls="mobile-menu-2"
           aria-expanded="false"
         >
@@ -137,21 +297,21 @@ const Navbar = ({ toggle, isOpen }) => {
           <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
             <li>
               <Link href="/about">
-                <span className="block py-2 cursor-pointer nav dark:nav-dark pr-4 pl-3 text-zinc-800 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 dark:text-gray-200 md:dark:hover:primary-dark dark:hover:bg-slate-500 dark:hover:primary-dark md:dark:hover:bg-transparent dark:border-slate-500 text-lg">
+                <span className="block py-2 cursor-pointer nav dark:nav-dark pr-4 pl-3 border-b border-textPrimary hover:bg-textLight md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0       text-lg">
                   {t("common:nav1")}
                 </span>
               </Link>
             </li>
             <li>
               <Link href="/portfolio">
-                <span className="block py-2 cursor-pointer nav dark:nav-dark pr-4 pl-3 text-zinc-800 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 dark:text-gray-200 md:dark:hover:primary-dark dark:hover:bg-slate-500 dark:hover:primary-dark md:dark:hover:bg-transparent dark:border-slate-500 text-lg">
+                <span className="block py-2 cursor-pointer nav pr-4 pl-3 border-b border-textPrimary hover:bg-textLight md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0       text-lg">
                   Portfolio
                 </span>
               </Link>
             </li>
             <li>
               <Link href="/cv">
-                <span className="block py-2 cursor-pointer nav dark:nav-dark pr-4 pl-3 text-zinc-800 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 dark:text-gray-200 md:dark:hover:primary-dark dark:hover:bg-slate-500 dark:hover:primary-dark md:dark:hover:bg-transparent dark:border-slate-500 text-lg">
+                <span className="block py-2 cursor-pointer nav pr-4 pl-3 border-b border-textPrimary hover:bg-textLight md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0       text-lg">
                   Curriculum Vitae
                 </span>
               </Link>
@@ -163,10 +323,10 @@ const Navbar = ({ toggle, isOpen }) => {
                   lang == "eng" ? "sr-RS" : lang == "srb" ? "en-US" : "en-US"
                 }
               >
-                <button className="md:inline-flex items-center hidden text-sm text-zinc-800 rounded-lg  focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-200  dark:focus:ring-gray-600">
+                <button className="md:inline-flex items-center hidden text-sm  rounded-lg  focus:outline-none focus:ring-2 focus:ring-textPrimary  ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6 dark:hover:stroke-primary-dark hover:stroke-blue-500"
+                    className="h-6 w-6  hover:stroke-primary"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -183,37 +343,37 @@ const Navbar = ({ toggle, isOpen }) => {
             </li>
             <li>
               <button
-                className="inline-flex items-center text-sm text-zinc-800 rounded-lg  focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-200  dark:focus:ring-gray-600"
-                onClick={() => setTheme(colorTheme)}
+                className="inline-flex items-center text-sm  rounded-lg  focus:outline-none focus:ring-2 focus:ring-textPrimary "
+                onClick={() => setThemeMenuOpen(!themeMenuOpen)}
               >
-                {colorTheme == "light" ? (
+                {themeMenuOpen ? (
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6 hover:stroke-primary-dark"
-                    fill="none"
                     viewBox="0 0 24 24"
-                    stroke="currentColor "
+                    fill="currentColor"
+                    className="w-6 h-6 fill-primary"
                   >
                     <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                      fillRule="evenodd"
+                      d="M2.25 4.125c0-1.036.84-1.875 1.875-1.875h5.25c1.036 0 1.875.84 1.875 1.875V17.25a4.5 4.5 0 11-9 0V4.125zm4.5 14.25a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z"
+                      clipRule="evenodd"
                     />
+                    <path d="M10.719 21.75h9.156c1.036 0 1.875-.84 1.875-1.875v-5.25c0-1.036-.84-1.875-1.875-1.875h-.14l-8.742 8.743c-.09.089-.18.175-.274.257zM12.738 17.625l6.474-6.474a1.875 1.875 0 000-2.651L15.5 4.787a1.875 1.875 0 00-2.651 0l-.1.099V17.25c0 .126-.003.251-.01.375z" />
                   </svg>
                 ) : (
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6 hover:stroke-blue-500"
                     fill="none"
                     viewBox="0 0 24 24"
-                    stroke="currentColor "
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className={`w-6 h-6 hover:stroke-primary `}
                   >
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth="2"
-                      d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                      d="M4.098 19.902a3.75 3.75 0 005.304 0l6.401-6.402M6.75 21A3.75 3.75 0 013 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 003.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008z"
                     />
                   </svg>
                 )}

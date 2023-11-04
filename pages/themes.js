@@ -1,9 +1,9 @@
 import Head from "next/head";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import PortfolioPage from "../components/PortfolioPage";
 import Sidebar from "../components/Sidebar";
 import { useState } from "react";
+import CustomizeTheme from "../components/CustomizeTheme";
 
 export default function Portfolio() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,9 +11,9 @@ export default function Portfolio() {
     setIsOpen(!isOpen);
   };
   return (
-    <div className="transition-colors duration-300 bg-bgColor text-textPrimary">
+    <div>
       <Head>
-        <title>Nemanja Grujić | Portfolio</title>
+        <title>Nemanja Grujić | Customize Theme</title>
         <meta
           name="description"
           content="The official portfolio page of Nemanja Grujić"
@@ -22,7 +22,7 @@ export default function Portfolio() {
       </Head>
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} isOpen={isOpen} />
-      <PortfolioPage />
+      <CustomizeTheme />
       <Footer />
     </div>
   );
