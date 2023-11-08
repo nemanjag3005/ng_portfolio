@@ -70,6 +70,7 @@ module.exports = {
       },
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],
+        comic: ["var(--font-comic)"],
       },
       colors: {
         "primary-dark": "#0C3BAA",
@@ -185,6 +186,7 @@ module.exports = {
         textLight: "var(--text-light)",
         textDark: "var(--text-dark)",
         bgColor: "var(--bg)",
+        bgTrans: "var(--bg-trans)",
         bgLight: "var(--bg-light)",
         bgDark: "var(--bg-dark)",
         colorAccent1: "var(--color-accent-1)",
@@ -199,6 +201,9 @@ module.exports = {
         colorAccent4: "var(--color-accent-4)",
         colorAccent4Light: "var(--color-accent-4-light)",
         colorAccent4Dark: "var(--color-accent-4-dark)",
+      },
+      backdropBlur: {
+        xs: "2px",
       },
       screens: {
         xs: "23em",

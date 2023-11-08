@@ -76,6 +76,7 @@
   --text: #333;
   --text-light: #4d4d4d;
   --text-dark: #1a1a1a;
+  --bg-trans: #f4f4f48c;
   --bg: #f4f4f4;
   --bg-light: #fff;
   --bg-dark: #dadada;
@@ -105,6 +106,7 @@
   --text-light: #4c1371;
   --text-dark: #12051a;
   --bg: #fcedf2;
+  --bg-trans: #fcedf28c;
   --bg-light: #fff;
   --bg-dark: #f5c1d2;
   --color-accent-1: #973aa8;
@@ -127,6 +129,7 @@
   --text-light: #4d4d4d;
   --text-dark: #1a1a1a;
   --bg: #f4f4f4;
+  --bg-trans: #f4f4f48c;
   --bg-light: #fff;
   --bg-dark: #dadada;
   --primary: #208b3a;
@@ -155,6 +158,7 @@
   --text-light: #1a1a1a;
   --text-dark: #000;
   --bg: #f4f4f4;
+  --bg-trans: #f4f4f48c;
   --bg-light: #fff;
   --bg-dark: #dadada;
   --primary: #df8200;
@@ -183,6 +187,7 @@
   --text-light: #1a1a1a;
   --text-dark: #000;
   --bg: #f4f4f4;
+  --bg-trans: #f4f4f48c;
   --bg-light: #fff;
   --bg-dark: #dadada;
   --primary: #564787;
@@ -211,6 +216,7 @@
   --text-light: #fff;
   --text-dark: #dadada;
   --bg: #1f2937;
+  --bg-trans: #1f29378c;
   --bg-light: #314158;
   --bg-dark: #0d1116;
   --primary: #db2777;
@@ -239,6 +245,7 @@
   --text-light: #f096ae;
   --text-dark: #e43c68;
   --bg: #2f0c46;
+  --bg-trans: #2f0c468c;
   --bg-light: #4c1371;
   --bg-dark: #12051a;
   --primary: #c05299;
@@ -267,6 +274,7 @@
   --text-light: #fff;
   --text-dark: #dadada;
   --bg: #1f2937;
+  --bg-trans: #1f29378c;
   --bg-light: #314158;
   --bg-dark: #0d1116;
   --primary: #1fc180;
@@ -295,6 +303,7 @@
   --text-light: #fff;
   --text-dark: #dadada;
   --bg: #001b29;
+  --bg-trans: #001b298c;
   --bg-light: #003d5c;
   --bg-dark: #000;
   --primary: #ff9505;
@@ -323,6 +332,7 @@
   --text-light: #fff;
   --text-dark: #dadada;
   --bg: #2b2343;
+  --bg-trans: #2b23438c;
   --bg-light: #413564;
   --bg-dark: #161221;
   --primary: #f75590;
@@ -345,32 +355,83 @@
   --color-accent-4-dark: #c3094d;
 }
 
-.theme-custom {
-  --primary: #333333;
-    --light: #737373;
-    --dark: #000000;
-    --secondary: #333333;
-    --secondary-light: #737373;
-    --secondary-dark: #000000;
-    --color-accent-1: #333333;
-    --color-accent-1-light: #737373;
-    --color-accent-1-dark: #000000;
-    --color-accent-2: #333333;
-    --color-accent-2-light: #737373;
-    --color-accent-2-dark: #000000;
-    --color-accent-3: #333333;
-    --color-accent-3-light: #737373;
-    --color-accent-3-dark: #000000;
-    --color-accent-4: #333333;
-    --color-accent-4-light: #737373;
-    --color-accent-4-dark: #000000;
-    --bg: #f4f4f4;
-    --text: #111827;
-    --bg-light: #ffffff;
-    --text-light: #1a1a1a;
-    --bg-dark: #dadada;
-    --text-dark: #000000;
+@keyframes slideDown {
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+
+  80% {
+    transform: scaleY(1.05);
+  }
+
+  90% {
+    transform: scaleY(0.95);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
 }
+
+.fadeInUpAndExpand {
+  animation: slideDown 1s ease forwards;
+}
+
+.paper {
+  color: black;
+  background-color: #fff;
+  width: 210mm;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow:
+    /* The top layer shadow */
+    0 -1px 1px rgba(0, 0, 0, 0.15),
+
+    0 -10px 0 -5px #000,
+
+    0 -10px 1px -4px rgba(0, 0, 0, 0.15),
+
+    0 -20px 0 -10px #000,
+
+    0 -20px 1px -9px (0, 0, 0, 0.15);
+}
+
+.mobile-cv {
+  width: 230mm;
+
+  @media only screen and (min-width: 121px) {
+    transform: scale(0.3) translateY(-115%);
+  }
+
+  @media only screen and (min-width: 321px) {
+    transform: scale(0.3) translateY(-115%);
+  }
+
+  @media only screen and (min-width: 415px) {
+    transform: scale(0.4) translateY(-75%);
+  }
+
+  @media only screen and (min-width: 500px) {
+    transform: scale(0.5) translateY(-50%);
+  }
+
+  @media only screen and (min-width: 600px) {
+    transform: scale(0.6) translateY(-30%);
+  }
+
+  @media only screen and (min-width: 700px) {
+    transform: scale(0.7) translateY(-20%);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .paper {
+    position: absolute;
+    top: -3000px
+  }
+}
+
 
 @keyframes cursor {
 

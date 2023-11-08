@@ -33,7 +33,9 @@ const Navbar = ({
 
   return (
     <nav
-      className={"backdrop-blur-sm sticky top-0 z-50  transition duration-500"}
+      className={
+        "backdrop-blur-xs sticky top-0 z-50  transition duration-200 bg-bgTrans hover:backdrop-blur-none hover:bg-inherit"
+      }
     >
       {selectionMenuOpen == 1 ? (
         <div className="container px-4 pt-4 flex flex-nowrap xs:flex-wrap justify-between items-center mx-auto max-w-6xl">

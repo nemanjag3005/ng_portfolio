@@ -21,7 +21,34 @@ const themes = {
   "dark-lime": "theme-dark-lime",
   "dark-cosmo": "theme-dark-cosmo",
   "dark-split": "theme-dark-split",
-  custom: "theme-custom",
+  // custom: "theme-custom",
+};
+
+const defaultCustomThemeStyles = {
+  "--primary": "#333333",
+  "--light": "#737373",
+  "--dark": "#000000",
+  "--secondary": "#333333",
+  "--secondary-light": "#737373",
+  "--secondary-dark": "#000000",
+  "--color-accent-1": "#333333",
+  "--color-accent-1-light": "#737373",
+  "--color-accent-1-dark": "#000000",
+  "--color-accent-2": "#333333",
+  "--color-accent-2-light": "#737373",
+  "--color-accent-2-dark": "#000000",
+  "--color-accent-3": "#333333",
+  "--color-accent-3-light": "#737373",
+  "--color-accent-3-dark": "#000000",
+  "--color-accent-4": "#333333",
+  "--color-accent-4-light": "#737373",
+  "--color-accent-4-dark": "#000000",
+  "--bg": "#f4f4f4",
+  "--text": "#111827",
+  "--bg-light": "#ffffff",
+  "--text-light": "#1a1a1a",
+  "--bg-dark": "#dadada",
+  "--text-dark": "#000000",
 };
 
 const ThemeContext = createContext<ThemeContextType>({
@@ -124,7 +151,7 @@ export const ThemeProvider = ({ children }) => {
         // Handle the error as appropriate
       }
     } else if (customThemeChanges === null) {
-      setCustomThemeChanges({});
+      setCustomThemeChanges(defaultCustomThemeStyles);
     }
     if (themeKey === "custom" && customThemeChanges) {
       applyInlineStyles(customThemeChanges);
@@ -142,7 +169,7 @@ export const ThemeProvider = ({ children }) => {
       localStorage.setItem("custom-theme", JSON.stringify(customThemeChanges));
     }
   }, [themeKey, customThemeChanges]);
-  console.log(themes[themeKey]);
+
   return (
     <ThemeContext.Provider
       value={{
@@ -154,7 +181,7 @@ export const ThemeProvider = ({ children }) => {
         setDarkMode,
       }}
     >
-      <div className={themes[themeKey]}>{children}</div>
+      <div className={themes[themeKey] || ""}>{children}</div>
     </ThemeContext.Provider>
   );
 };

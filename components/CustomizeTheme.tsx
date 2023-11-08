@@ -116,8 +116,8 @@ const CustomizeTheme = () => {
                     checked={darkMode}
                     className="sr-only peer"
                   />
-                  <div className="w-20 h-11 bg-primary peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer  peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-10 after:w-10 after:transition-all  peer-checked:bg-blue-600"></div>
-                  <span className="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300"></span>
+                  <div className="w-20 h-11 bg-gray-300 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer  peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[4px] after:left-[4px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-9 after:w-9 after:transition-all  peer-checked:bg-primary"></div>
+                  <span className="ml-3 text-sm font-medium"></span>
                 </label>
                 <h3>2. Select a color you would like to change</h3>
                 <div className="grid grid-cols-3 md:grid-cols-6 gap-2">
@@ -242,7 +242,7 @@ const CustomizeTheme = () => {
                     <div
                       className={`w-7 h-7 mr-4 mb-4 ease-in-out transition duration-300 hover:scale-125 bg-[#64748b] cursor-pointer rounded-full ${
                         selectedColor === "#64748b"
-                          ? "shadow-lg shadow-[#64748b]"
+                          ? "shadow-md shadow-[#64748b]"
                           : ""
                       }`}
                     />
@@ -251,7 +251,7 @@ const CustomizeTheme = () => {
                     <div
                       className={`w-7 h-7 mr-4 mb-4 ease-in-out transition duration-300 hover:scale-125 bg-[#6b7280] cursor-pointer rounded-full ${
                         selectedColor === "#6b7280"
-                          ? "shadow-lg shadow-[#6b7280]"
+                          ? "shadow-md shadow-[#6b7280]"
                           : ""
                       }`}
                     />
@@ -260,7 +260,7 @@ const CustomizeTheme = () => {
                     <div
                       className={`w-7 h-7 mr-4 mb-4 ease-in-out transition duration-300 hover:scale-125 bg-[#475569] cursor-pointer rounded-full ${
                         selectedColor === "#475569"
-                          ? "shadow-lg shadow-[#475569]"
+                          ? "shadow-md shadow-[#475569]"
                           : ""
                       }`}
                     />
@@ -269,7 +269,7 @@ const CustomizeTheme = () => {
                     <div
                       className={`w-7 h-7 mr-4 mb-4 ease-in-out transition duration-300 hover:scale-125 bg-[#6b7280] cursor-pointer rounded-full ${
                         selectedColor === "#6b7280"
-                          ? "shadow-lg shadow-[#6b7280]"
+                          ? "shadow-md shadow-[#6b7280]"
                           : ""
                       }`}
                     />
@@ -278,7 +278,7 @@ const CustomizeTheme = () => {
                     <div
                       className={`w-7 h-7 mr-4 mb-4 ease-in-out transition duration-300 hover:scale-125 bg-[#4b5563] cursor-pointer rounded-full ${
                         selectedColor === "#4b5563"
-                          ? "shadow-lg shadow-[#4b5563]"
+                          ? "shadow-md shadow-[#4b5563]"
                           : ""
                       }`}
                     />
@@ -287,7 +287,7 @@ const CustomizeTheme = () => {
                     <div
                       className={`w-7 h-7 mr-4 mb-4 ease-in-out transition duration-300 hover:scale-125 bg-[#71717a] cursor-pointer rounded-full ${
                         selectedColor === "#71717a"
-                          ? "shadow-lg shadow-[#71717a]"
+                          ? "shadow-md shadow-[#71717a]"
                           : ""
                       }`}
                     />
@@ -296,7 +296,7 @@ const CustomizeTheme = () => {
                     <div
                       className={`w-7 h-7 mr-4 mb-4 ease-in-out transition duration-300 hover:scale-125 bg-[#52525b] cursor-pointer rounded-full ${
                         selectedColor === "#52525b"
-                          ? "shadow-lg shadow-[#52525b]"
+                          ? "shadow-md shadow-[#52525b]"
                           : ""
                       }`}
                     />
@@ -305,7 +305,7 @@ const CustomizeTheme = () => {
                     <div
                       className={`w-7 h-7 mr-4 mb-4 ease-in-out transition duration-300 hover:scale-125 bg-[#737373] cursor-pointer rounded-full ${
                         selectedColor === "#737373"
-                          ? "shadow-lg shadow-[#737373]"
+                          ? "shadow-md shadow-[#737373]"
                           : ""
                       }`}
                     />
@@ -314,7 +314,7 @@ const CustomizeTheme = () => {
                     <div
                       className={`w-7 h-7 mr-4 mb-4 ease-in-out transition duration-300 hover:scale-125 bg-[#525252] cursor-pointer rounded-full ${
                         selectedColor === "#525252"
-                          ? "shadow-lg shadow-[#525252]"
+                          ? "shadow-md shadow-[#525252]"
                           : ""
                       }`}
                     />
@@ -323,7 +323,7 @@ const CustomizeTheme = () => {
                     <div
                       className={`w-7 h-7 mr-4 mb-4 ease-in-out transition duration-300 hover:scale-125 bg-[#78716c] cursor-pointer rounded-full ${
                         selectedColor === "#78716c"
-                          ? "shadow-lg shadow-[#78716c]"
+                          ? "shadow-md shadow-[#78716c]"
                           : ""
                       }`}
                     />
@@ -332,7 +332,7 @@ const CustomizeTheme = () => {
                     <div
                       className={`w-7 h-7 mr-4 mb-4 ease-in-out transition duration-300 hover:scale-125 bg-[#57534e] cursor-pointer rounded-full ${
                         selectedColor === "#57534e"
-                          ? "shadow-lg shadow-[#57534e]"
+                          ? "shadow-md shadow-[#57534e]"
                           : ""
                       }`}
                     />
@@ -341,7 +341,7 @@ const CustomizeTheme = () => {
                     <div
                       className={`w-7 h-7 mr-4 mb-4 ease-in-out transition duration-300 hover:scale-125 bg-[#ef4444] cursor-pointer rounded-full ${
                         selectedColor === "#ef4444"
-                          ? "shadow-lg shadow-[#ef4444]"
+                          ? "shadow-md shadow-[#ef4444]"
                           : ""
                       }`}
                     />
@@ -350,7 +350,7 @@ const CustomizeTheme = () => {
                     <div
                       className={`w-7 h-7 mr-4 mb-4 ease-in-out transition duration-300 hover:scale-125 bg-[#dc2626] cursor-pointer rounded-full ${
                         selectedColor === "#dc2626"
-                          ? "shadow-lg shadow-[#dc2626]"
+                          ? "shadow-md shadow-[#dc2626]"
                           : ""
                       }`}
                     />
@@ -359,7 +359,7 @@ const CustomizeTheme = () => {
                     <div
                       className={`w-7 h-7 mr-4 mb-4 ease-in-out transition duration-300 hover:scale-125 bg-[#f97316] cursor-pointer rounded-full ${
                         selectedColor === "#f97316"
-                          ? "shadow-lg shadow-[#f97316]"
+                          ? "shadow-md shadow-[#f97316]"
                           : ""
                       }`}
                     />
@@ -368,7 +368,7 @@ const CustomizeTheme = () => {
                     <div
                       className={`w-7 h-7 mr-4 mb-4 ease-in-out transition duration-300 hover:scale-125 bg-[#ea580c] cursor-pointer rounded-full ${
                         selectedColor === "#ea580c"
-                          ? "shadow-lg shadow-[#ea580c]"
+                          ? "shadow-md shadow-[#ea580c]"
                           : ""
                       }`}
                     />
@@ -377,7 +377,7 @@ const CustomizeTheme = () => {
                     <div
                       className={`w-7 h-7 mr-4 mb-4 ease-in-out transition duration-300 hover:scale-125 bg-[#f59e0b] cursor-pointer rounded-full ${
                         selectedColor === "#f59e0b"
-                          ? "shadow-lg shadow-[#f59e0b]"
+                          ? "shadow-md shadow-[#f59e0b]"
                           : ""
                       }`}
                     />
@@ -386,7 +386,7 @@ const CustomizeTheme = () => {
                     <div
                       className={`w-7 h-7 mr-4 mb-4 ease-in-out transition duration-300 hover:scale-125 bg-[#d97706] cursor-pointer rounded-full ${
                         selectedColor === "#d97706"
-                          ? "shadow-lg shadow-[#d97706]"
+                          ? "shadow-md shadow-[#d97706]"
                           : ""
                       }`}
                     />
@@ -395,7 +395,7 @@ const CustomizeTheme = () => {
                     <div
                       className={`w-7 h-7 mr-4 mb-4 ease-in-out transition duration-300 hover:scale-125 bg-[#eab308] cursor-pointer rounded-full ${
                         selectedColor === "#eab308"
-                          ? "shadow-lg shadow-[#eab308]"
+                          ? "shadow-md shadow-[#eab308]"
                           : ""
                       }`}
                     />
@@ -404,7 +404,7 @@ const CustomizeTheme = () => {
                     <div
                       className={`w-7 h-7 mr-4 mb-4 ease-in-out transition duration-300 hover:scale-125 bg-[#ca8a04] cursor-pointer rounded-full ${
                         selectedColor === "#ca8a04"
-                          ? "shadow-lg shadow-[#ca8a04]"
+                          ? "shadow-md shadow-[#ca8a04]"
                           : ""
                       }`}
                     />
@@ -413,7 +413,7 @@ const CustomizeTheme = () => {
                     <div
                       className={`w-7 h-7 mr-4 mb-4 ease-in-out transition duration-300 hover:scale-125 bg-[#84cc16] cursor-pointer rounded-full ${
                         selectedColor === "#84cc16"
-                          ? "shadow-lg shadow-[#84cc16]"
+                          ? "shadow-md shadow-[#84cc16]"
                           : ""
                       }`}
                     />
@@ -422,7 +422,7 @@ const CustomizeTheme = () => {
                     <div
                       className={`w-7 h-7 mr-4 mb-4 ease-in-out transition duration-300 hover:scale-125 bg-[#65a30d] cursor-pointer rounded-full ${
                         selectedColor === "#65a30d"
-                          ? "shadow-lg shadow-[#65a30d]"
+                          ? "shadow-md shadow-[#65a30d]"
                           : ""
                       }`}
                     />
@@ -431,7 +431,7 @@ const CustomizeTheme = () => {
                     <div
                       className={`w-7 h-7 mr-4 mb-4 ease-in-out transition duration-300 hover:scale-125 bg-[#22c55e] cursor-pointer rounded-full ${
                         selectedColor === "#22c55e"
-                          ? "shadow-lg shadow-[#22c55e]"
+                          ? "shadow-md shadow-[#22c55e]"
                           : ""
                       }`}
                     />
@@ -440,7 +440,7 @@ const CustomizeTheme = () => {
                     <div
                       className={`w-7 h-7 mr-4 mb-4 ease-in-out transition duration-300 hover:scale-125 bg-[#16a34a] cursor-pointer rounded-full ${
                         selectedColor === "#16a34a"
-                          ? "shadow-lg shadow-[#16a34a]"
+                          ? "shadow-md shadow-[#16a34a]"
                           : ""
                       }`}
                     />
@@ -449,7 +449,7 @@ const CustomizeTheme = () => {
                     <div
                       className={`w-7 h-7 mr-4 mb-4 ease-in-out transition duration-300 hover:scale-125 bg-[#10b981] cursor-pointer rounded-full ${
                         selectedColor === "#10b981"
-                          ? "shadow-lg shadow-[#10b981]"
+                          ? "shadow-md shadow-[#10b981]"
                           : ""
                       }`}
                     />
@@ -458,7 +458,7 @@ const CustomizeTheme = () => {
                     <div
                       className={`w-7 h-7 mr-4 mb-4 ease-in-out transition duration-300 hover:scale-125 bg-[#059669] cursor-pointer rounded-full ${
                         selectedColor === "#059669"
-                          ? "shadow-lg shadow-[#059669]"
+                          ? "shadow-md shadow-[#059669]"
                           : ""
                       }`}
                     />
@@ -467,7 +467,7 @@ const CustomizeTheme = () => {
                     <div
                       className={`w-7 h-7 mr-4 mb-4 ease-in-out transition duration-300 hover:scale-125 bg-[#14b8a6] cursor-pointer rounded-full ${
                         selectedColor === "#14b8a6"
-                          ? "shadow-lg shadow-[#14b8a6]"
+                          ? "shadow-md shadow-[#14b8a6]"
                           : ""
                       }`}
                     />
@@ -476,7 +476,7 @@ const CustomizeTheme = () => {
                     <div
                       className={`w-7 h-7 mr-4 mb-4 ease-in-out transition duration-300 hover:scale-125 bg-[#0d9488] cursor-pointer rounded-full ${
                         selectedColor === "#0d9488"
-                          ? "shadow-lg shadow-[#0d9488]"
+                          ? "shadow-md shadow-[#0d9488]"
                           : ""
                       }`}
                     />
@@ -485,7 +485,7 @@ const CustomizeTheme = () => {
                     <div
                       className={`w-7 h-7 mr-4 mb-4 ease-in-out transition duration-300 hover:scale-125 bg-[#06b6d4] cursor-pointer rounded-full ${
                         selectedColor === "#06b6d4"
-                          ? "shadow-lg shadow-[#06b6d4]"
+                          ? "shadow-md shadow-[#06b6d4]"
                           : ""
                       }`}
                     />
@@ -494,7 +494,7 @@ const CustomizeTheme = () => {
                     <div
                       className={`w-7 h-7 mr-4 mb-4 ease-in-out transition duration-300 hover:scale-125 bg-[#0891b2] cursor-pointer rounded-full ${
                         selectedColor === "#0891b2"
-                          ? "shadow-lg shadow-[#0891b2]"
+                          ? "shadow-md shadow-[#0891b2]"
                           : ""
                       }`}
                     />
@@ -503,7 +503,7 @@ const CustomizeTheme = () => {
                     <div
                       className={`w-7 h-7 mr-4 mb-4 ease-in-out transition duration-300 hover:scale-125 bg-[#0ea5e9] cursor-pointer rounded-full ${
                         selectedColor === "#0ea5e9"
-                          ? "shadow-lg shadow-[#0ea5e9]"
+                          ? "shadow-md shadow-[#0ea5e9]"
                           : ""
                       }`}
                     />
@@ -512,7 +512,7 @@ const CustomizeTheme = () => {
                     <div
                       className={`w-7 h-7 mr-4 mb-4 ease-in-out transition duration-300 hover:scale-125 bg-[#0284c7] cursor-pointer rounded-full ${
                         selectedColor === "#0284c7"
-                          ? "shadow-lg shadow-[#0284c7]"
+                          ? "shadow-md shadow-[#0284c7]"
                           : ""
                       }`}
                     />
@@ -521,7 +521,7 @@ const CustomizeTheme = () => {
                     <div
                       className={`w-7 h-7 mr-4 mb-4 ease-in-out transition duration-300 hover:scale-125 bg-[#3b82f6] cursor-pointer rounded-full ${
                         selectedColor === "#3b82f6"
-                          ? "shadow-lg shadow-[#3b82f6]"
+                          ? "shadow-md shadow-[#3b82f6]"
                           : ""
                       }`}
                     />
@@ -530,7 +530,7 @@ const CustomizeTheme = () => {
                     <div
                       className={`w-7 h-7 mr-4 mb-4 ease-in-out transition duration-300 hover:scale-125 bg-[#2563eb] cursor-pointer rounded-full ${
                         selectedColor === "#2563eb"
-                          ? "shadow-lg shadow-[#2563eb]"
+                          ? "shadow-md shadow-[#2563eb]"
                           : ""
                       }`}
                     />
@@ -539,7 +539,7 @@ const CustomizeTheme = () => {
                     <div
                       className={`w-7 h-7 mr-4 mb-4 ease-in-out transition duration-300 hover:scale-125 bg-[#6366f1] cursor-pointer rounded-full ${
                         selectedColor === "#6366f1"
-                          ? "shadow-lg shadow-[#6366f1]"
+                          ? "shadow-md shadow-[#6366f1]"
                           : ""
                       }`}
                     />
@@ -548,7 +548,7 @@ const CustomizeTheme = () => {
                     <div
                       className={`w-7 h-7 mr-4 mb-4 ease-in-out transition duration-300 hover:scale-125 bg-[#4f46e5] cursor-pointer rounded-full ${
                         selectedColor === "#4f46e5"
-                          ? "shadow-lg shadow-[#4f46e5]"
+                          ? "shadow-md shadow-[#4f46e5]"
                           : ""
                       }`}
                     />
@@ -557,7 +557,7 @@ const CustomizeTheme = () => {
                     <div
                       className={`w-7 h-7 mr-4 mb-4 ease-in-out transition duration-300 hover:scale-125 bg-[#8b5cf6] cursor-pointer rounded-full ${
                         selectedColor === "#8b5cf6"
-                          ? "shadow-lg shadow-[#8b5cf6]"
+                          ? "shadow-md shadow-[#8b5cf6]"
                           : ""
                       }`}
                     />
@@ -566,7 +566,7 @@ const CustomizeTheme = () => {
                     <div
                       className={`w-7 h-7 mr-4 mb-4 ease-in-out transition duration-300 hover:scale-125 bg-[#7c3aed] cursor-pointer rounded-full ${
                         selectedColor === "#7c3aed"
-                          ? "shadow-lg shadow-[#7c3aed]"
+                          ? "shadow-md shadow-[#7c3aed]"
                           : ""
                       }`}
                     />
@@ -575,7 +575,7 @@ const CustomizeTheme = () => {
                     <div
                       className={`w-7 h-7 mr-4 mb-4 ease-in-out transition duration-300 hover:scale-125 bg-[#a855f7] cursor-pointer rounded-full ${
                         selectedColor === "#a855f7"
-                          ? "shadow-lg shadow-[#a855f7]"
+                          ? "shadow-md shadow-[#a855f7]"
                           : ""
                       }`}
                     />
@@ -584,7 +584,7 @@ const CustomizeTheme = () => {
                     <div
                       className={`w-7 h-7 mr-4 mb-4 ease-in-out transition duration-300 hover:scale-125 bg-[#9333ea] cursor-pointer rounded-full ${
                         selectedColor === "#9333ea"
-                          ? "shadow-lg shadow-[#9333ea]"
+                          ? "shadow-md shadow-[#9333ea]"
                           : ""
                       }`}
                     />
@@ -593,7 +593,7 @@ const CustomizeTheme = () => {
                     <div
                       className={`w-7 h-7 mr-4 mb-4 ease-in-out transition duration-300 hover:scale-125 bg-[#d946ef] cursor-pointer rounded-full ${
                         selectedColor === "#d946ef"
-                          ? "shadow-lg shadow-[#d946ef]"
+                          ? "shadow-md shadow-[#d946ef]"
                           : ""
                       }`}
                     />
@@ -602,7 +602,7 @@ const CustomizeTheme = () => {
                     <div
                       className={`w-7 h-7 mr-4 mb-4 ease-in-out transition duration-300 hover:scale-125 bg-[#c026d3] cursor-pointer rounded-full ${
                         selectedColor === "#c026d3"
-                          ? "shadow-lg shadow-[#c026d3]"
+                          ? "shadow-md shadow-[#c026d3]"
                           : ""
                       }`}
                     />
@@ -611,7 +611,7 @@ const CustomizeTheme = () => {
                     <div
                       className={`w-7 h-7 mr-4 mb-4 ease-in-out transition duration-300 hover:scale-125 bg-[#ec4899] cursor-pointer rounded-full ${
                         selectedColor === "#ec4899"
-                          ? "shadow-lg shadow-[#ec4899]"
+                          ? "shadow-md shadow-[#ec4899]"
                           : ""
                       }`}
                     />
@@ -620,7 +620,7 @@ const CustomizeTheme = () => {
                     <div
                       className={`w-7 h-7 mr-4 mb-4 ease-in-out transition duration-300 hover:scale-125 bg-[#db2777] cursor-pointer rounded-full ${
                         selectedColor === "#db2777"
-                          ? "shadow-lg shadow-[#db2777]"
+                          ? "shadow-md shadow-[#db2777]"
                           : ""
                       }`}
                     />
@@ -629,7 +629,7 @@ const CustomizeTheme = () => {
                     <div
                       className={`w-7 h-7 mr-4 mb-4 ease-in-out transition duration-300 hover:scale-125 bg-[#f43f5e] cursor-pointer rounded-full ${
                         selectedColor === "#f43f5e"
-                          ? "shadow-lg shadow-[#f43f5e]"
+                          ? "shadow-md shadow-[#f43f5e]"
                           : ""
                       }`}
                     />
@@ -638,7 +638,7 @@ const CustomizeTheme = () => {
                     <div
                       className={`w-7 h-7 mr-4 mb-4 ease-in-out transition duration-300 hover:scale-125 bg-[#e11d48] cursor-pointer rounded-full ${
                         selectedColor === "#e11d48"
-                          ? "shadow-lg shadow-[#e11d48]"
+                          ? "shadow-md shadow-[#e11d48]"
                           : ""
                       }`}
                     />

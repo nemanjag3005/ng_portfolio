@@ -1,8 +1,15 @@
 import Head from "next/head";
-import CvPage from "../../../components/CvPage";
+import CvPage from "../../../components/CV/CvPage";
 import React from "react";
+import { Locale } from "../../../i8n-config";
+import { getDictionary } from "../../../get-dictionary";
 
-export default function CV() {
+export default async function CVPage({
+  params: { lang },
+}: {
+  params: { lang: Locale };
+}) {
+  const dictionary = await getDictionary(lang);
   return (
     <div>
       <Head>
@@ -13,7 +20,7 @@ export default function CV() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <CvPage />
+      <CvPage dictionary={dictionary.cv} />
     </div>
   );
 }
