@@ -1,8 +1,15 @@
 import Head from "next/head";
-import PortfolioPage from "../../../components/PortfolioPage";
 import React from "react";
+import PersonalProjects from "../../../components/Projects/PersonalProjects";
+import { getDictionary } from "../../../get-dictionary";
+import { Locale } from "../../../i8n-config";
 
-export default function PersonalProjectsPage() {
+export default async function PersonalProjectsPage({
+  params: { lang },
+}: {
+  params: { lang: Locale };
+}) {
+  const dictionary = await getDictionary(lang);
   return (
     <div>
       <Head>
@@ -13,7 +20,7 @@ export default function PersonalProjectsPage() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <PortfolioPage />
+      <PersonalProjects dictionary={dictionary.projects} />
     </div>
   );
 }

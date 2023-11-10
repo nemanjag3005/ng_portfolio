@@ -206,7 +206,7 @@ module.exports = {
         xs: "2px",
       },
       screens: {
-        xs: "23em",
+        xs: "24em",
         xxs: "20em",
       },
       boxShadow: {

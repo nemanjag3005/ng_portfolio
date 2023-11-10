@@ -1,10 +1,10 @@
 import Head from "next/head";
-import AboutPage from "../../../components/AboutPage";
+import Portfolio from "../../../components/Projects/Portfolio";
 import React from "react";
 import { Locale } from "../../../i8n-config";
 import { getDictionary } from "../../../get-dictionary";
 
-export default async function About({
+export default async function PortfolioPage({
   params: { lang },
 }: {
   params: { lang: Locale };
@@ -13,14 +13,14 @@ export default async function About({
   return (
     <div>
       <Head>
-        <title>Nemanja Grujić | About</title>
+        <title>Nemanja Grujić | Portfolio</title>
         <meta
           name="description"
           content="The official portfolio page of Nemanja Grujić"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <AboutPage dictionary={dictionary.about} />
+      <Portfolio dictionary={dictionary.portfolio} />
     </div>
   );
 }

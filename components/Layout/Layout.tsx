@@ -2,10 +2,10 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import Sidebar from "./Sidebar";
 import { Locale } from "../../i8n-config";
 import { getDictionary } from "../../get-dictionary";
 import { useTheme } from "../../context/ThemeContext";
+import MobileNav from "./MobileNav";
 
 const Layout = ({
   children,
@@ -20,15 +20,10 @@ const Layout = ({
     "footer-contact": string;
   };
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const toggle = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
     <div className="transition-colors duration-200 bg-bgColor text-textPrimary">
-      <Sidebar isOpen={isOpen} toggle={toggle} />
-      <Navbar toggle={toggle} isOpen={isOpen} dictionary={dictionary} />
+      <Navbar dictionary={dictionary} />
+      <MobileNav dictionary={dictionary} />
       <>{children}</>
       <Footer dictionary={dictionary} />
     </div>

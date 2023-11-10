@@ -22,15 +22,17 @@
     "short": "Short",
     "longest": "Longest",
     "long": "Long",
-    "bio0": "Nemanja is a web developer and student.\n He loves what he does.",
-    "bio1": "Nemanja is an undergraduate Bioinformatics and Computer Science student at the University of Calgary. He is a self taught Web Developer and is adamant in creating web applications that are both efficient and beautiful.",
-    "bio2": "Nemanja is a third-year student pursuing a degree in Bioinformatics and Computer Sceince at the University of Calgary. He has a digital marketing start-up where he is focused on creating beautiful and perfomant websites and applications. Nemanja is most at home coding in React, Javascript, HTML/CSS & NextJS but is always open to learning something new. When coding he likes to ensure his code is accessible and efficient.",
-    "bio3": "Nemanja Grujić is currently a third-year student pursuing a major in Bioinformatics and a minor in Computer Science at the University of Calgary. He is from Serbia, and he finished the 13th Belgrade High School. He is a Project Manager at the University's entreprenurial Tech Start Club, where he uses his experience to solve problems and create interesting projects with the team he leads, using professional development tools and methodologies. \n Nemanja is also VP Marketing at the University's Research in Bioinformatics Club, where he strives to use his digital marketing skills to create an engaging and beautiful presence for the Club on the Web and Social Media.",
-    "bio3-2": "His passion for the web started in 2020, when he decided to teach himself how to code and create websites using HTML/CSS and Javascript. He quickly got into learning about JS Frameworks and focused on learning React. Since then, his passion has only grown as he has created multiple projects as a hobby or for clients. \n In 2021, he and two of his friends who are also passionate about the digital craft decided to create a digital marketing agency. Thus, LAN Digital was born, a start-up where Nemanja and his friends would put their skills to use to create a better web representation for Serbian businesses.",
-    "bio3-3": "When coding, he likes to ensure his code is accessible and perfomant. During his time at Tech Start, Nemanja has gained a lot of experience in working on software projects as part of a team and utilizing industry-standard coding practices. He enjoys leading and working together with people and is always looking for new challenges to gain experience and improve himself. His other hobbies include playing guitar, going to the gym and motorsport. He also has a plethora of interests, most notable of which is a deep interest in sport cars, rocket technology and the cosmos.",
+    "bio0": "I am a web developer and student.\n I love what I do.",
+    "bio1": "I am an undergraduate Bioinformatics and Computer Science student at the University of Calgary. I am a self taught full-stack Web and App Developer and my passion is creating web applications that are both efficient and beautiful.",
+    "bio2": "I am a third-year student pursuing a degree in Bioinformatics and Computer Science at the University of Calgary. I run two start-ups, in both of which I am commited to creating beautiful and perfomant websites and applications. I have experience in full-stack Web and App development, and I'm most at home coding in React (NextJS), Typescript & HTML/CSS, but I am always open to learning something new.",
+    "bio3": "I am currently a fourth-year student pursuing a major in Bioinformatics and a minor in Computer Science at the University of Calgary. I am from Serbia, where I finished the 13th Belgrade High School. I have vast experience building projects and pitching start-up business ideas, as I used to be part of teams both as Project Manager and Lead Frontend Developer at the University's entreprenurial Tech Start Club, where I used my experience to solve problems and create interesting projects working with various teams, using professional development tools and methodologies and winning various awards as a result. \n I am currently also VP Marketing at the University's Research in Bioinformatics Club, where I strive to use my digital marketing skills to create an engaging and beautiful presence for the Club on the Web and Social Media.",
+    "bio3-2": "My passion for web-development started in 2020, when I decided to teach myself how to code and create websites using HTML/CSS and Javascript. I quickly got into learning about JS Frameworks and focused on learning React. Since then, my passion has only grown as I have become proficient in full-stack web and app development, having worked on countless projects as a hobby or for clients. \n In 2021, me and two of my friends who are also passionate about the digital craft decided to create a digital marketing agency. Thus, LAN Digital was born, a start-up where me and my friends would put our skills to use to create a better web representation for Serbian businesses. Since then we also developed our second business idea for the Serbian market - Obuci.rs, a second-hand clothing web platform, the likes of which has not yet existed in the region.",
+    "bio3-3": " During my time at Tech Start, I have gained a lot of experience in working on software projects as part of a team and utilizing industry-standard coding practices. I enjoy leading a team and working together with people and I am always looking for new challenges to gain experience and improve myself. My other hobbies and passions include tennis, travel, personal fitness and motorsport.",
     "the": "the",
     "numbers": "numbers",
-    "numbers-desc": "Since the start of the year Nemanja has contributed 255 times to 13 different projects. He has worked on large as well as small projects."
+    "numbers-desc": "In the last year I have contributed",
+    "times-to": "times to",
+    "numbers-desc2": " different projects."
   },
   "cv": {
     "button": "Download CV/Resume",
@@ -75,9 +77,9 @@
     "exp4-3": "Responsible for managing deadlines, setting goals and creating a positive and productive team environment.",
     "exp4-skills": "Project Management, Leadership, Agile, Typescript, React Native, Firebase, APIs"
   },
-  "portfolio": {
+  "projects": {
     "my": "My",
-    "desc": "Projects I have worked on individually, as well as team projects.",
+    "desc": "Projects I have worked on as part of competitions and pitches as well as passion projects.",
     "p1": "LAN Digital is a digital marketing agency I have founded with two of my best friends, Aleksa and Luka.",
     "p1-2": "Since this is my start-up, I put a lot of effort into crafting the website for our agency. It is a primarily static site, which I have made using React NextJS and styled-components for the CSS. The site features a Contact Form which uses nodemailer, and a blog section which uses data from a headless CMS - GraphCMS.",
     "button": "Visit Site",
@@ -89,6 +91,9 @@
     "mp-1": "Sleek website for the Flex Team betting organization.",
     "mp-2": "Your all in one cooking curation app!",
     "mp-3": "The classic. Battleship game built using React Native."
+  },
+  "portfolio": {
+    "desc": "Here you'll find lots of my info on my startups, work for clients and other serious projects I've worked on. Many have links so I encourage you to check them out and have a go."
   },
   "siteinfo": {
     "about": "About This Site",

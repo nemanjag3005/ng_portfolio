@@ -83,8 +83,11 @@ const Footer = ({
           <div className="py-4  ">
             <div className="mx-auto px-2">
               <div className="-mx-4 flex flex-wrap justify-between items-center space-y-2 md:space-y-0">
-                <div className="px-2 w-full text-center sm:w-auto sm:text-left text-sm opacity-75">
-                  Copyright © 2023 Nemanja Grujić. All Rights Reserved.
+                <div className="px-2 flex flex-col w-full text-center sm:w-auto sm:text-left text-sm opacity-75">
+                  <span>
+                    Copyright © 2023 Nemanja Grujić. All Rights Reserved.
+                  </span>
+                  <span>Next.js v14.0.1 | TailwindCSS v3.0.18</span>
                 </div>
               </div>
             </div>
