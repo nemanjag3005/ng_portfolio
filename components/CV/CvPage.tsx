@@ -5,50 +5,7 @@ import SmallCV from "./SmallCV";
 import CV from "./CV";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
-
-export interface CVContent {
-  button: string;
-  intro: string;
-  "intro-mobile": string;
-  "technical-skills": string;
-  skills: string;
-  skill1: string;
-  skill2: string;
-  skill4: string;
-  skill5: string;
-  experience: string;
-  education: string;
-  "high-school": string;
-  codedin: string;
-  interests: string;
-  languages: string;
-  lang1: string;
-  lang2: string;
-  lang3: string;
-  native: string;
-  "exp1-header": string;
-  present: string;
-  "exp1-1": string;
-  "exp1-2": string;
-  "exp1-3": string;
-  "exp1-skills": string;
-  "exp2-header": string;
-  "exp2-1": string;
-  "exp2-2": string;
-  "exp2-3": string;
-  "exp2-4": string;
-  "exp2-skills": string;
-  "exp3-header": string;
-  "exp3-1": string;
-  "exp3-2": string;
-  "exp3-3": string;
-  "exp3-skills": string;
-  "exp4-header": string;
-  "exp4-1": string;
-  "exp4-2": string;
-  "exp4-3": string;
-  "exp4-skills": string;
-}
+import { animated, useSpring, useTransition, config } from "@react-spring/web";
 
 const CvPage = ({
   dictionary,
@@ -128,6 +85,26 @@ const CvPage = ({
     }
   };
 
+  const transition = useTransition(customization, {
+    config: { tension: 300, friction: 20 },
+    from: { height: 0 },
+    enter: {
+      height: 150,
+    },
+    leave: {
+      height: 0,
+      border: 0,
+    },
+  });
+  const slideIn = useSpring({
+    from: { opacity: 0, height: 0 },
+    delay: 4,
+    to: {
+      opacity: 1,
+      height: 60,
+    },
+    config: { tension: 300, friction: 12 },
+  });
   return (
     <div className="bg-bgColor pt-6">
       <div className="mx-4 relative h-full ">
@@ -135,7 +112,12 @@ const CvPage = ({
           <div className="relative w-full overflow-hidden h-16">
             <div className="flex justify-end">
               <div className="flex flex-col mr-3">
-                <p className="font-comic text-xl uppercase">Customize my CV</p>
+                <p
+                  style={{ fontFamily: "__comicNew_e75989" }}
+                  className=" text-2xl uppercase"
+                >
+                  Customize my CV
+                </p>
               </div>
               <svg
                 version="1.1"
@@ -161,6 +143,7 @@ const CvPage = ({
               </svg>
             </div>
           </div>
+
           <div className="flex items-center space-x-1 justify-end px-4 md:px-2">
             <button
               onClick={saveFile}
@@ -170,7 +153,7 @@ const CvPage = ({
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke-width="2"
+                strokeWidth="2"
                 stroke="currentColor"
                 aria-hidden="true"
                 className="h-5 w-5"
@@ -191,7 +174,7 @@ const CvPage = ({
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke-width="2"
+                strokeWidth="2"
                 stroke="currentColor"
                 aria-hidden="true"
                 className="h-5 w-5"
@@ -206,98 +189,117 @@ const CvPage = ({
             </button>
           </div>
         </div>
-        <div
-          className={`w-full bg-colorAccent4Light animate__animated animate__fadeIn rounded-t border-b-2 border-colorAccent4 max-w-[210mm] mx-auto ${
-            customization ? "block" : "hidden"
-          }`}
-        >
-          <div className="text-colorAccent4Dark w-full p-5 space-y-4 flex items-center justify-center">
-            <div className="grid grid-cols-2 gap-4">
-              <div className="flex items-center">
-                <input
-                  id="checked-checkbox"
-                  type="checkbox"
-                  className="w-4 h-4 accent-colorAccent4Dark bg-white ring-colorAccent4Dark rounded focus:ring-colorAccent4 cursor-pointer"
-                  checked={showIcons}
-                  onChange={() => setShowIcons(!showIcons)}
-                />
-                <label htmlFor="checked-checkbox" className="ml-2 text-sm ">
-                  Show Section Icons
-                </label>
-              </div>
-              <div className="flex items-center">
-                <input
-                  id="checked-checkbox"
-                  type="checkbox"
-                  className="w-4 h-4 accent-colorAccent4Dark bg-white ring-colorAccent4Dark rounded focus:ring-colorAccent4 cursor-pointer"
-                  checked={showColor}
-                  onChange={() => setShowColor(!showColor)}
-                />
-                <label htmlFor="checked-checkbox" className="ml-2 text-sm ">
-                  Add A Splash of Color
-                </label>
-              </div>
-              <div className="flex items-center">
-                <input
-                  id="checked-checkbox"
-                  type="checkbox"
-                  className="w-4 h-4 accent-colorAccent4Dark bg-white ring-colorAccent4Dark rounded focus:ring-colorAccent4 cursor-pointer"
-                  checked={showHeadshot}
-                  onChange={() => setShowHeadshot(!showHeadshot)}
-                />
-                <label htmlFor="checked-checkbox" className="ml-2 text-sm ">
-                  Show My Headshot
-                </label>
-              </div>
-              <div className="flex items-center">
-                <input
-                  id="checked-checkbox"
-                  type="checkbox"
-                  className="w-4 h-4 accent-colorAccent4Dark bg-white ring-colorAccent4Dark rounded focus:ring-colorAccent4 cursor-pointer"
-                  checked={showVisualizations}
-                  onChange={() => setShowVisualizations(!showVisualizations)}
-                />
-                <label htmlFor="checked-checkbox" className="ml-2 text-sm ">
-                  Visualizations
-                </label>
-              </div>
-              <div className="col-span-2">
-                <button
-                  onClick={() => {
-                    setShowColor(false);
-                    setShowHeadshot(false);
-                    setShowVisualizations(false);
-                    setShowIcons(true);
-                  }}
-                  className="border-colorAccent4 border-2 rounded w-full px-3 py-1 flex items-center justify-center space-x-2"
-                >
-                  <div>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      aria-hidden="true"
-                      className="h-5 w-5"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
-                      ></path>
-                    </svg>
+        {transition(
+          (style, item) =>
+            item && (
+              <animated.div
+                style={style}
+                className="w-full  bg-colorAccent4Light overflow-hidden rounded-t border-b-2 border-colorAccent4 max-w-[210mm] mx-auto"
+              >
+                <div className="text-colorAccent4Dark w-full p-5 space-y-4 overflow-hidden flex items-center justify-center">
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="flex items-center">
+                      <input
+                        id="checked-checkbox"
+                        type="checkbox"
+                        className="w-4 h-4 accent-colorAccent4Dark bg-white ring-colorAccent4Dark rounded focus:ring-colorAccent4 cursor-pointer"
+                        checked={showIcons}
+                        onChange={() => setShowIcons(!showIcons)}
+                      />
+                      <label
+                        htmlFor="checked-checkbox"
+                        className="ml-2 text-sm "
+                      >
+                        Show Section Icons
+                      </label>
+                    </div>
+                    <div className="flex items-center">
+                      <input
+                        id="checked-checkbox"
+                        type="checkbox"
+                        className="w-4 h-4 accent-colorAccent4Dark bg-white ring-colorAccent4Dark rounded focus:ring-colorAccent4 cursor-pointer"
+                        checked={showColor}
+                        onChange={() => setShowColor(!showColor)}
+                      />
+                      <label
+                        htmlFor="checked-checkbox"
+                        className="ml-2 text-sm "
+                      >
+                        Add A Splash of Color
+                      </label>
+                    </div>
+                    <div className="flex items-center">
+                      <input
+                        id="checked-checkbox"
+                        type="checkbox"
+                        className="w-4 h-4 accent-colorAccent4Dark bg-white ring-colorAccent4Dark rounded focus:ring-colorAccent4 cursor-pointer"
+                        checked={showHeadshot}
+                        onChange={() => setShowHeadshot(!showHeadshot)}
+                      />
+                      <label
+                        htmlFor="checked-checkbox"
+                        className="ml-2 text-sm "
+                      >
+                        Show My Headshot
+                      </label>
+                    </div>
+                    <div className="flex items-center">
+                      <input
+                        id="checked-checkbox"
+                        type="checkbox"
+                        className="w-4 h-4 accent-colorAccent4Dark bg-white ring-colorAccent4Dark rounded focus:ring-colorAccent4 cursor-pointer"
+                        checked={showVisualizations}
+                        onChange={() =>
+                          setShowVisualizations(!showVisualizations)
+                        }
+                      />
+                      <label
+                        htmlFor="checked-checkbox"
+                        className="ml-2 text-sm "
+                      >
+                        Visualizations
+                      </label>
+                    </div>
+                    <div className="col-span-2">
+                      <button
+                        onClick={() => {
+                          setShowColor(false);
+                          setShowHeadshot(false);
+                          setShowVisualizations(false);
+                          setShowIcons(true);
+                        }}
+                        className="border-colorAccent4 border-2 rounded w-full px-3 py-1 flex items-center justify-center space-x-2"
+                      >
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            strokeWidth="2"
+                            stroke="currentColor"
+                            aria-hidden="true"
+                            className="h-5 w-5"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                            ></path>
+                          </svg>
+                        </div>
+                        <p>Reset</p>
+                      </button>
+                    </div>
                   </div>
-                  <p>Reset</p>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
+                </div>
+              </animated.div>
+            )
+        )}
+
         <div className="block md:hidden shadow-lg">
           <SmallCV dictionary={dictionary} />
         </div>
-        <div className="max-w-[210mm] mb-12 mx-auto  hidden md:block shadow-lg">
+        <div className="max-w-[210mm] mb-12 mx-auto z-30 hidden md:block shadow-lg">
           <CV
             dictionary={dictionary}
             ref={printRef}

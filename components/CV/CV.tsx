@@ -12,6 +12,7 @@ import {
   Legend,
   Cell,
 } from "recharts";
+import { animated, useSpring, useTransition, config } from "@react-spring/web";
 
 const data = [
   {
@@ -43,6 +44,12 @@ const data = [
     value: 75, // Least skilled
   },
 ];
+
+function getRandomColor() {
+  const colors = ["#ec4899", "#16a34a", "#3b82f6"]; // Replace with your preferred colors
+  const randomIndex = Math.floor(Math.random() * colors.length);
+  return colors[randomIndex];
+}
 
 const pieData = [
   { name: "Front-End", value: 400 },
@@ -149,26 +156,65 @@ const CV = forwardRef<HTMLDivElement, CVProps>((props, ref) => {
     setShowVisualizations,
     setShowIcons,
   } = props;
+  const transition = useTransition(showHeadshot, {
+    config: { tension: 300, friction: 20 },
+    from: { width: 0, height: 0, opacity: 0 },
+    enter: {
+      width: 115,
+      height: 115,
+      opacity: 1,
+    },
+    leave: {
+      width: 0,
+      height: 0,
+      opacity: 0,
+    },
+  });
+
+  const transitionIcons = useTransition(showIcons, {
+    config: { tension: 200, friction: 14 },
+    from: { width: 0, opacity: 0 },
+    enter: {
+      width: 12,
+
+      opacity: 1,
+    },
+    leave: {
+      width: 0,
+
+      opacity: 0,
+    },
+  });
+
   return (
-    <div className="bg-white text-black font-light" ref={ref}>
+    <div className="bg-white text-black font-light z-50" ref={ref}>
       <div className="p-5">
         <div className="flex border-light-grey border-b-2 pb-3 mb-3">
-          {showHeadshot && (
-            <div className="relative animate__animated animate__zoomIn animate__faster h-28 w-28 aspect-square object-cover rounded-md mr-2">
-              <Image
-                alt="Nemanja"
-                src="/IMG_1281.jpeg"
-                className="rounded-md object-top object-cover"
-                fill
-              />
-            </div>
+          {transition(
+            (style, item) =>
+              item && (
+                <animated.div
+                  style={style}
+                  className="relative h-28 w-28 aspect-square object-cover rounded-md mr-2"
+                >
+                  <Image
+                    alt="Nemanja"
+                    src="/IMG_1281.jpeg"
+                    className="rounded-md object-top object-cover"
+                    fill
+                  />
+                </animated.div>
+              )
           )}
-          <div>
+          <div className="flex-grow">
             <h1 className="text-2xl font-bold">Nemanja Grujić</h1>
             <h3 className="text-sm font-semibold">
               www.nemanja.grujic.rs | nemanjag3005@gmail.com
             </h3>
-            <p className={`text-xs ${showColor && "text-blue-500"}`}>
+            <p
+              style={{ color: `${showColor ? getRandomColor() : "black"}` }}
+              className={`text-xs `}
+            >
               {dictionary.intro}
             </p>
           </div>
@@ -177,156 +223,274 @@ const CV = forwardRef<HTMLDivElement, CVProps>((props, ref) => {
           <div className="col-span-1">
             <div className="col-span-1">
               <h5 className=" mt-0 uppercase flex items-center text-xs mb-1 text-blue font-semibold">
-                {showIcons && (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    aria-hidden="true"
-                    className="mr-1 h-3 animate__animated animate__fadeIn"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
-                      clipRule="evenodd"
-                    ></path>
-                  </svg>
+                {transitionIcons(
+                  (style, item) =>
+                    item && (
+                      <animated.div className="mr-1" style={style}>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          aria-hidden="true"
+                          className=" h-3 w-3 "
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
+                            clipRule="evenodd"
+                          ></path>
+                        </svg>
+                      </animated.div>
+                    )
                 )}
                 {dictionary["technical-skills"]}
               </h5>
               <div className="grid grid-cols-2 gap-1">
                 <div className="pad-0">
-                  <p className={`text-xs ${showColor && "text-pink-500"}`}>
+                  <p
+                    style={{
+                      color: `${showColor ? getRandomColor() : "black"}`,
+                    }}
+                    className={`text-xs`}
+                  >
                     JavaScript
                   </p>
                 </div>
                 <div className="pad-0">
-                  <p className={`text-xs ${showColor && "text-green-600"}`}>
+                  <p
+                    className={`text-xs `}
+                    style={{
+                      color: `${showColor ? getRandomColor() : "black"}`,
+                    }}
+                  >
                     HTML
                   </p>
                 </div>
                 <div className="pad-0">
-                  <p className={`text-xs ${showColor && "text-pink-500"}`}>
+                  <p
+                    className={`text-xs `}
+                    style={{
+                      color: `${showColor ? getRandomColor() : "black"}`,
+                    }}
+                  >
                     CSS
                   </p>
                 </div>
                 <div className="pad-0">
-                  <p className={`text-xs ${showColor && "text-pink-500"}`}>
+                  <p
+                    className={`text-xs `}
+                    style={{
+                      color: `${showColor ? getRandomColor() : "black"}`,
+                    }}
+                  >
                     Node
                   </p>
                 </div>
                 <div className="pad-0">
-                  <p className={`text-xs ${showColor && "text-blue-500"}`}>
+                  <p
+                    className={`text-xs `}
+                    style={{
+                      color: `${showColor ? getRandomColor() : "black"}`,
+                    }}
+                  >
                     ReactJS
                   </p>
                 </div>
                 <div className="pad-0">
-                  <p className={`text-xs ${showColor && "text-pink-500"}`}>
+                  <p
+                    className={`text-xs `}
+                    style={{
+                      color: `${showColor ? getRandomColor() : "black"}`,
+                    }}
+                  >
                     Redux
                   </p>
                 </div>
                 <div className="pad-0">
-                  <p className={`text-xs ${showColor && "text-blue-500"}`}>
+                  <p
+                    className={`text-xs `}
+                    style={{
+                      color: `${showColor ? getRandomColor() : "black"}`,
+                    }}
+                  >
                     NextJS
                   </p>
                 </div>
                 <div className="pad-0">
-                  <p className={`text-xs ${showColor && "text-green-600"}`}>
+                  <p
+                    className={`text-xs `}
+                    style={{
+                      color: `${showColor ? getRandomColor() : "black"}`,
+                    }}
+                  >
                     Assembly
                   </p>
                 </div>
                 <div className="pad-0">
-                  <p className={`text-xs ${showColor && "text-blue-500"}`}>
+                  <p
+                    className={`text-xs `}
+                    style={{
+                      color: `${showColor ? getRandomColor() : "black"}`,
+                    }}
+                  >
                     Typescript
                   </p>
                 </div>
                 <div className="pad-0">
-                  <p className={`text-xs ${showColor && "text-blue-500"}`}>
+                  <p
+                    className={`text-xs `}
+                    style={{
+                      color: `${showColor ? getRandomColor() : "black"}`,
+                    }}
+                  >
                     Java
                   </p>
                 </div>
                 <div className="pad-0">
-                  <p className={`text-xs ${showColor && "text-pink-500"}`}>
+                  <p
+                    className={`text-xs `}
+                    style={{
+                      color: `${showColor ? getRandomColor() : "black"}`,
+                    }}
+                  >
                     TailwindCSS
                   </p>
                 </div>
                 <div className="pad-0">
-                  <p className={`text-xs ${showColor && "text-blue-500"}`}>
+                  <p
+                    className={`text-xs `}
+                    style={{
+                      color: `${showColor ? getRandomColor() : "black"}`,
+                    }}
+                  >
                     Python
                   </p>
                 </div>
                 <div className="pad-0">
-                  <p className={`text-xs ${showColor && "text-pink-500"}`}>
+                  <p
+                    className={`text-xs `}
+                    style={{
+                      color: `${showColor ? getRandomColor() : "black"}`,
+                    }}
+                  >
                     React Native
                   </p>
                 </div>
                 <div className="pad-0">
-                  <p className={`text-xs ${showColor && "text-pink-500"}`}>
+                  <p
+                    className={`text-xs `}
+                    style={{
+                      color: `${showColor ? getRandomColor() : "black"}`,
+                    }}
+                  >
                     Gatsby
                   </p>
                 </div>
                 <div className="pad-0">
-                  <p className={`text-xs ${showColor && "text-blue-500"}`}>C</p>
+                  <p
+                    className={`text-xs `}
+                    style={{
+                      color: `${showColor ? getRandomColor() : "black"}`,
+                    }}
+                  >
+                    C
+                  </p>
                 </div>
                 <div className="pad-0">
-                  <p className={`text-xs ${showColor && "text-blue-500"}`}>
+                  <p
+                    className={`text-xs `}
+                    style={{
+                      color: `${showColor ? getRandomColor() : "black"}`,
+                    }}
+                  >
                     SQL
                   </p>
                 </div>
               </div>
               <h5 className="border-light-grey uppercase border-t-2  mt-2 pt-2  flex items-center text-xs mb-1 text-blue font-semibold">
-                {showIcons && (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    aria-hidden="true"
-                    className="mr-1 h-3 animate__animated
-                    animate__fadeIn"
-                  >
-                    <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"></path>
-                  </svg>
+                {transitionIcons(
+                  (style, item) =>
+                    item && (
+                      <animated.div className="mr-1" style={style}>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          aria-hidden="true"
+                          className="w-3 h-3 
+                    "
+                        >
+                          <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"></path>
+                        </svg>
+                      </animated.div>
+                    )
                 )}
+
                 {dictionary.skills}
               </h5>
               <div className="grid grid-cols-1 gap-1">
                 <div className="pad-0">
-                  <p className={`text-xs ${showColor && "text-pink-500"}`}>
+                  <p
+                    className={`text-xs `}
+                    style={{
+                      color: `${showColor ? getRandomColor() : "black"}`,
+                    }}
+                  >
                     {dictionary.skill1}
                   </p>
                 </div>
                 <div className="pad-0">
-                  <p className={`text-xs ${showColor && "text-pink-500"}`}>
+                  <p
+                    className={`text-xs `}
+                    style={{
+                      color: `${showColor ? getRandomColor() : "black"}`,
+                    }}
+                  >
                     {dictionary.skill2}
                   </p>
                 </div>
                 <div className="pad-0">
-                  <p className={`text-xs ${showColor && "text-blue-500"}`}>
+                  <p
+                    className={`text-xs `}
+                    style={{
+                      color: `${showColor ? getRandomColor() : "black"}`,
+                    }}
+                  >
                     {dictionary.skill4}
                   </p>
                 </div>
                 <div className="pad-0">
-                  <p className={`text-xs ${showColor && "text-blue-500"}`}>
+                  <p
+                    className={`text-xs `}
+                    style={{
+                      color: `${showColor ? getRandomColor() : "black"}`,
+                    }}
+                  >
                     {dictionary.skill5}
                   </p>
                 </div>
               </div>
               <h5 className="border-light-grey uppercase border-t-2  mt-2 pt-2  flex items-center text-xs mb-1 text-blue font-semibold">
-                {showIcons && (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-3 mr-1 animate__animated animate__fadeIn"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"
-                    />
-                  </svg>
+                {transitionIcons(
+                  (style, item) =>
+                    item && (
+                      <animated.div className="mr-1" style={style}>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-3 w-3"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"
+                          />
+                        </svg>
+                      </animated.div>
+                    )
                 )}
                 {dictionary.languages}
               </h5>
@@ -351,16 +515,21 @@ const CV = forwardRef<HTMLDivElement, CVProps>((props, ref) => {
                 </div>
               </div>
               <h5 className="border-light-grey uppercase border-t-2  mt-2 pt-2 flex items-center text-xs mb-1 text-blue font-semibold">
-                {showIcons && (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    aria-hidden="true"
-                    className="mr-1 h-3 animate__animated animate__fadeIn"
-                  >
-                    <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z"></path>
-                  </svg>
+                {transitionIcons(
+                  (style, item) =>
+                    item && (
+                      <animated.div className="mr-1" style={style}>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          aria-hidden="true"
+                          className="h-3 w-3"
+                        >
+                          <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z"></path>
+                        </svg>
+                      </animated.div>
+                    )
                 )}
                 {dictionary.education}
               </h5>
@@ -422,24 +591,29 @@ const CV = forwardRef<HTMLDivElement, CVProps>((props, ref) => {
             {showVisualizations && (
               <div>
                 <h5 className="flex items-center uppercase text-xs mb-1 text-blue font-semibold">
-                  {showIcons && (
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      className="mr-1 h-3 animate__animated animate__fadeIn"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M2.25 13.5a8.25 8.25 0 018.25-8.25.75.75 0 01.75.75v6.75H18a.75.75 0 01.75.75 8.25 8.25 0 01-16.5 0z"
-                        clipRule="evenodd"
-                      />
-                      <path
-                        fillRule="evenodd"
-                        d="M12.75 3a.75.75 0 01.75-.75 8.25 8.25 0 018.25 8.25.75.75 0 01-.75.75h-7.5a.75.75 0 01-.75-.75V3z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
+                  {transitionIcons(
+                    (style, item) =>
+                      item && (
+                        <animated.div className="mr-1" style={style}>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            className=" h-3 w-3"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              d="M2.25 13.5a8.25 8.25 0 018.25-8.25.75.75 0 01.75.75v6.75H18a.75.75 0 01.75.75 8.25 8.25 0 01-16.5 0z"
+                              clipRule="evenodd"
+                            />
+                            <path
+                              fillRule="evenodd"
+                              d="M12.75 3a.75.75 0 01.75-.75 8.25 8.25 0 018.25 8.25.75.75 0 01-.75.75h-7.5a.75.75 0 01-.75-.75V3z"
+                              clipRule="evenodd"
+                            />
+                          </svg>
+                        </animated.div>
+                      )
                   )}
                   Visualizations
                 </h5>
@@ -485,17 +659,22 @@ const CV = forwardRef<HTMLDivElement, CVProps>((props, ref) => {
               </div>
             )}
             <h5 className="flex items-center uppercase text-xs mb-1 text-blue font-semibold">
-              {showIcons && (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                  className="mr-1 h-3 animate__animated animate__fadeIn"
-                >
-                  <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
-                  <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
-                </svg>
+              {transitionIcons(
+                (style, item) =>
+                  item && (
+                    <animated.div className="mr-1" style={style}>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        aria-hidden="true"
+                        className=" h-3 w-3"
+                      >
+                        <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
+                        <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
+                      </svg>
+                    </animated.div>
+                  )
               )}
               {dictionary.experience}
             </h5>
@@ -528,8 +707,11 @@ const CV = forwardRef<HTMLDivElement, CVProps>((props, ref) => {
             <div className="mb-1 border-light-grey border-t-2 mt-2 pt-2">
               <h3 className="text-sm font-bold">{dictionary["exp1-header"]}</h3>
               <h5
+                style={{
+                  color: `${showColor ? getRandomColor() : "black"}`,
+                }}
                 className={`text-xs my-1 font-semibold ${
-                  showColor && "text-pink-500 font-base"
+                  showColor && " font-base"
                 }`}
               >
                 TechStart UCalgary, Calgary | 2021 - 2022
@@ -553,8 +735,11 @@ const CV = forwardRef<HTMLDivElement, CVProps>((props, ref) => {
             <div className="mb-1  border-light-grey border-t-2 mt-2 pt-2 ">
               <h3 className="text-sm font-bold">{dictionary["exp2-header"]}</h3>
               <h5
+                style={{
+                  color: `${showColor ? getRandomColor() : "black"}`,
+                }}
                 className={`text-xs my-1 font-semibold ${
-                  showColor && "text-green-600 font-base"
+                  showColor && " font-base"
                 }`}
               >
                 LAN Digital, Belgrade | 2021 - {dictionary.present}
@@ -582,8 +767,11 @@ const CV = forwardRef<HTMLDivElement, CVProps>((props, ref) => {
             <div className="mb-1  border-light-grey border-t-2 mt-2 pt-2 ">
               <h3 className="text-sm font-bold">{dictionary["exp3-header"]}</h3>
               <h5
+                style={{
+                  color: `${showColor ? getRandomColor() : "black"}`,
+                }}
                 className={`text-xs my-1 font-semibold ${
-                  showColor && "text-blue-500 font-base"
+                  showColor && " font-base"
                 }`}
               >
                 Replai Inc., Lisbon | 2022

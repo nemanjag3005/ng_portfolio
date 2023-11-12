@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import "animate.css";
 import Image from "next/image";
+import { animated, config, useSpring } from "@react-spring/web";
 
 const AboutPage = ({
   dictionary,
@@ -28,6 +29,12 @@ const AboutPage = ({
   const [length, setLength] = useState(2);
   const [contributions, setContributions] = useState(0);
   const [repositoryCount, setRepositoryCount] = useState(0);
+
+  const springs = useSpring({
+    delay: 12,
+    from: { x: -30, opacity: 0 },
+    to: { x: 0, opacity: 1 },
+  });
 
   useEffect(() => {
     async function getContributions() {
@@ -82,13 +89,15 @@ const AboutPage = ({
             <div className=" w-full relative rounded pb-8 grid grid-cols-1 sm:grid-cols-2 mb-24 md:mb-0">
               <div className="bg-secondaryLight opacity-25 rounded h-full w-full absolute top-0 left-0"></div>
               <div className="xs:mx-5 xs:-mb-0 -mb-4 relative flex items-center justify-center w-full h-full">
-                <h3 className="text-xl  font-mono md:text-4xl font-bold mt-4 mb-4 md:mb-0">
-                  Web Developer
-                  <span className="box-border inline-block w-1 h-8 ml-2 -mb-2  md:-mb-4 md:h-14 animate-cursor will-change"></span>
+                <h3 className="text-3xl  md:text-5xl font-bold mt-4 mr-8 md:mr-0 mb-4 md:mb-0">
+                  Nemanja Grujić
                 </h3>
               </div>
               <div className="relative w-full h-64 -mb-16">
-                <div className="bg-secondary m-5 rounded h-48 w-48 xs:h-52 xs:w-52 md:h-56 md:w-56 absolute flex items-center justify-center bottom-0 right-0">
+                <animated.div
+                  style={springs}
+                  className="bg-secondary m-5 rounded h-48 w-48 xs:h-52 xs:w-52 md:h-56 md:w-56 absolute flex items-center justify-center bottom-0 right-0"
+                >
                   <div className="w-[90%] h-[90%] relative ">
                     <Image
                       src="/IMG_0056.jpeg"
@@ -97,7 +106,7 @@ const AboutPage = ({
                       alt=""
                     />
                   </div>
-                </div>
+                </animated.div>
               </div>
             </div>
             <p className="text-sm text-center uppercase font-semibold mb-3 opacity-75 ">

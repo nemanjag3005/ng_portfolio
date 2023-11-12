@@ -16,6 +16,9 @@ const Hero = ({
     p1: string;
     p2: string;
     p3: string;
+    "personal-projects": string;
+    "pp-desc": string;
+    "port-desc": string;
   };
 }) => {
   return (
@@ -24,7 +27,7 @@ const Hero = ({
         <div className="max-w-6xl mx-auto py-6 overflow-hidden">
           <div className="w-full text-dark bg-light z-40 mt-16 md:mt-0 lg:mt-12 p-6 md:p-12 rounded-t-xl relative">
             <div className="grid md:grid-cols-5 w-full ">
-              <div className="flex flex-col space-y-5 animate__animated animate__fadeInUp md:col-span-3">
+              <div className="flex flex-col space-y-5 md:col-span-3">
                 <div className="flex flex-col space-y-5 md:col-span-3">
                   <div className="flex items-center">
                     <h1 className="text-2xl sm:text-4xl md:text-6xl font-bold mr-2">
@@ -156,6 +159,7 @@ const Hero = ({
               ></path>
             </g>
           </svg>
+
           <div className="relative rounded-b-lg w-full md:h-96 h-32 sm:h-48 -mt-8 xs:-mt-10 md:-mt-32 bg-speaker bg-cover bg-top z-10 mb-12">
             <svg
               viewBox="0 0 900 238"
@@ -262,55 +266,47 @@ const Hero = ({
             {dictionary.furtherwork}
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4  mb-12 md:mb-16">
-            <Link passHref href="/portfolio">
+            <Link passHref href="/personal-projects">
               <div className=" rounded-md px-8 py-8 flex items-center text-colorAccent4Dark bg-colorAccent4Light border-4 border-transparent hover:border-colorAccent4 hover:text-gray-800 cursor-pointer ">
                 <div>
                   <h1 className="text-2xl md:text-5xl font-bold">
-                    Personal Projects
+                    {dictionary["personal-projects"]}
                   </h1>
-                  <p>
-                    The projects I've worked on as part of Competitions and
-                    Passion Projects
-                  </p>
+                  <p>{dictionary["pp-desc"]}</p>
                 </div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
                   viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-16 h-16 ml-4"
+                  fill="currentColor"
+                  className="w-16 h-16 ml-1"
                 >
                   <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"
+                    fillRule="evenodd"
+                    d="M9.315 7.584C12.195 3.883 16.695 1.5 21.75 1.5a.75.75 0 01.75.75c0 5.056-2.383 9.555-6.084 12.436A6.75 6.75 0 019.75 22.5a.75.75 0 01-.75-.75v-4.131A15.838 15.838 0 016.382 15H2.25a.75.75 0 01-.75-.75 6.75 6.75 0 017.815-6.666zM15 6.75a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z"
+                    clipRule="evenodd"
                   />
+                  <path d="M5.26 17.242a.75.75 0 10-.897-1.203 5.243 5.243 0 00-2.05 5.022.75.75 0 00.625.627 5.243 5.243 0 005.022-2.051.75.75 0 10-1.202-.897 3.744 3.744 0 01-3.008 1.51c0-1.23.592-2.323 1.51-3.008z" />
                 </svg>
               </div>
             </Link>
             <Link passHref href="/portfolio">
               <div className=" rounded-md px-8 py-8 flex items-center text-colorAccent4Dark bg-colorAccent4Light border-4 border-transparent hover:border-colorAccent4 hover:text-gray-800 cursor-pointer ">
                 <div>
-                  <h1 className="text-2xl md:text-5xl font-bold">Startups</h1>
-                  <p>
-                    Serious projects for clients and business ideas I've worked
-                    on that take months.
-                  </p>
+                  <h1 className="text-2xl md:text-5xl font-bold">Portfolio</h1>
+                  <p>{dictionary["port-desc"]}</p>
                 </div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
                   viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
+                  fill="currentColor"
                   className="w-16 h-16 ml-4"
                 >
                   <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605"
+                    fillRule="evenodd"
+                    d="M7.5 5.25a3 3 0 013-3h3a3 3 0 013 3v.205c.933.085 1.857.197 2.774.334 1.454.218 2.476 1.483 2.476 2.917v3.033c0 1.211-.734 2.352-1.936 2.752A24.726 24.726 0 0112 15.75c-2.73 0-5.357-.442-7.814-1.259-1.202-.4-1.936-1.541-1.936-2.752V8.706c0-1.434 1.022-2.7 2.476-2.917A48.814 48.814 0 017.5 5.455V5.25zm7.5 0v.09a49.488 49.488 0 00-6 0v-.09a1.5 1.5 0 011.5-1.5h3a1.5 1.5 0 011.5 1.5zm-3 8.25a.75.75 0 100-1.5.75.75 0 000 1.5z"
+                    clipRule="evenodd"
                   />
+                  <path d="M3 18.4v-2.796a4.3 4.3 0 00.713.31A26.226 26.226 0 0012 17.25c2.892 0 5.68-.468 8.287-1.335.252-.084.49-.189.713-.311V18.4c0 1.452-1.047 2.728-2.523 2.923-2.12.282-4.282.427-6.477.427a49.19 49.19 0 01-6.477-.427C4.047 21.128 3 19.852 3 18.4z" />
                 </svg>
               </div>
             </Link>

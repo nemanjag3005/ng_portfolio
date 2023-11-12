@@ -1,5 +1,5 @@
+"use client";
 import React from "react";
-import useTranslation from "next-translate/useTranslation";
 import "animate.css";
 import Image from "next/image";
 
@@ -80,7 +80,8 @@ const PersonalProjects = ({
                 </g>
               </svg>
             </div>
-            <div className="grid gap-2 md:grid-cols-2 lg:-mx-12 xl:-mx-32 md:py-12 ">
+
+            <div className="grid gap-2 animate__animated animate__fadeInUp md:grid-cols-2 lg:-mx-12 xl:-mx-32 md:py-12 ">
               <div className="w-full h-full flex flex-col justify-center p-4 lg:p-6 rounded shadow-md bg-bgLight ">
                 <div>
                   <div className="px-2 py-1 rounded-full bg-secondaryLight text-secondaryDark mb-2 inline-block">
@@ -160,6 +161,7 @@ const PersonalProjects = ({
                 </div>
               </div>
             </div>
+
             <div className="grid gap-2 md:grid-cols-2 lg:-mx-12 xl:-mx-32 md:py-12 ">
               <div>
                 <div className="flex flex-col space-y-4">

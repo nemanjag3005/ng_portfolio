@@ -18,6 +18,24 @@ const Layout = ({
     "footer-button": string;
     "footer-desc": string;
     "footer-contact": string;
+    projects: string;
+    "custom-theme": string;
+    settings: string;
+    back: string;
+    changeLanguage: string;
+    pickTheme: string;
+    themeMachine: string;
+    "personal-projects": string;
+    "pp-desc": string;
+    "port-desc": string;
+    "project-collections": string;
+    "helpful-resources": string;
+    "site-stats": string;
+    "site-info": string;
+    uses: string;
+    resources: string;
+    proj: string;
+    "uses-desc": string;
   };
 }) => {
   return (
