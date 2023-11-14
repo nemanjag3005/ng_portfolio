@@ -78,6 +78,7 @@ export const ThemeProvider = ({ children }) => {
   // };
   const applyInlineStyles = (customChanges) => {
     for (const [property, value] of Object.entries(customChanges)) {
+      //@ts-ignore
       document.documentElement.style.setProperty(property, value);
     }
   };
