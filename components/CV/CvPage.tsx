@@ -13,7 +13,6 @@ const CvPage = ({
   dictionary: {
     button: string;
     intro: string;
-    "intro-mobile": string;
     "technical-skills": string;
     skills: string;
     skill1: string;
@@ -52,6 +51,13 @@ const CvPage = ({
     "exp4-2": string;
     "exp4-3": string;
     "exp4-skills": string;
+    "customize-cv": string;
+    customize: string;
+    "show-icons": string;
+    "show-color": string;
+    "show-headshot": string;
+    visualizations: string;
+    reset: string;
   };
 }) => {
   // const saveFile = () => {
@@ -116,7 +122,7 @@ const CvPage = ({
                   style={{ fontFamily: "__comicNew_e75989" }}
                   className=" text-2xl uppercase"
                 >
-                  Customize my CV
+                  {dictionary["customize-cv"]}
                 </p>
               </div>
               <svg
@@ -164,7 +170,7 @@ const CvPage = ({
                   d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
                 ></path>
               </svg>
-              <p>Download</p>
+              <p>{dictionary.button}</p>
             </button>
             <button
               onClick={() => setCustomization(!customization)}
@@ -185,7 +191,7 @@ const CvPage = ({
                   d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
                 ></path>
               </svg>
-              <p>Customize</p>
+              <p>{dictionary.customize}</p>
             </button>
           </div>
         </div>
@@ -210,7 +216,7 @@ const CvPage = ({
                         htmlFor="checked-checkbox"
                         className="ml-2 text-sm "
                       >
-                        Show Section Icons
+                        {dictionary["show-icons"]}
                       </label>
                     </div>
                     <div className="flex items-center">
@@ -225,7 +231,7 @@ const CvPage = ({
                         htmlFor="checked-checkbox"
                         className="ml-2 text-sm "
                       >
-                        Add A Splash of Color
+                        {dictionary["show-color"]}
                       </label>
                     </div>
                     <div className="flex items-center">
@@ -240,7 +246,7 @@ const CvPage = ({
                         htmlFor="checked-checkbox"
                         className="ml-2 text-sm "
                       >
-                        Show My Headshot
+                        {dictionary["show-headshot"]}
                       </label>
                     </div>
                     <div className="flex items-center">
@@ -257,7 +263,7 @@ const CvPage = ({
                         htmlFor="checked-checkbox"
                         className="ml-2 text-sm "
                       >
-                        Visualizations
+                        {dictionary.visualizations}
                       </label>
                     </div>
                     <div className="col-span-2">
@@ -287,7 +293,7 @@ const CvPage = ({
                             ></path>
                           </svg>
                         </div>
-                        <p>Reset</p>
+                        <p>{dictionary.reset}</p>
                       </button>
                     </div>
                   </div>
@@ -297,7 +303,17 @@ const CvPage = ({
         )}
 
         <div className="block md:hidden shadow-lg">
-          <SmallCV dictionary={dictionary} />
+          <SmallCV
+            dictionary={dictionary}
+            showIcons={showIcons}
+            showColor={showColor}
+            showHeadshot={showHeadshot}
+            showVisualizations={showVisualizations}
+            setShowColor={setShowColor}
+            setShowHeadshot={setShowHeadshot}
+            setShowIcons={setShowIcons}
+            setShowVisualizations={setShowVisualizations}
+          />
         </div>
         <div className="max-w-[210mm] mb-12 mx-auto z-30 hidden md:block shadow-lg">
           <CV

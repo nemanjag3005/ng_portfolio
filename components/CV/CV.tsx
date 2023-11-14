@@ -94,7 +94,6 @@ interface CVProps {
   dictionary: {
     button: string;
     intro: string;
-    "intro-mobile": string;
     "technical-skills": string;
     skills: string;
     skill1: string;
@@ -133,6 +132,13 @@ interface CVProps {
     "exp4-2": string;
     "exp4-3": string;
     "exp4-skills": string;
+    "customize-cv": string;
+    customize: string;
+    "show-icons": string;
+    "show-color": string;
+    "show-headshot": string;
+    visualizations: string;
+    reset: string;
   };
   showIcons: boolean;
   showHeadshot: boolean;
@@ -199,7 +205,7 @@ const CV = forwardRef<HTMLDivElement, CVProps>((props, ref) => {
                 >
                   <Image
                     alt="Nemanja"
-                    src="/IMG_1281.jpeg"
+                    src="/IMG_9334.jpeg"
                     className="rounded-md object-top object-cover"
                     fill
                   />
@@ -383,7 +389,7 @@ const CV = forwardRef<HTMLDivElement, CVProps>((props, ref) => {
                       color: `${showColor ? getRandomColor() : "black"}`,
                     }}
                   >
-                    Gatsby
+                    Express
                   </p>
                 </div>
                 <div className="pad-0">
@@ -393,7 +399,7 @@ const CV = forwardRef<HTMLDivElement, CVProps>((props, ref) => {
                       color: `${showColor ? getRandomColor() : "black"}`,
                     }}
                   >
-                    C
+                    C/C++
                   </p>
                 </div>
                 <div className="pad-0">
@@ -543,7 +549,7 @@ const CV = forwardRef<HTMLDivElement, CVProps>((props, ref) => {
                   University of Calgary
                 </h4>
                 <p className="text-xs">2020-2024</p>
-                <p className="text-xs">- Dean's List Year One</p>
+                <p className="text-xs">- Dean's List 2021, 2023</p>
               </div>
               <div className="mt-1">
                 <h4 className="text-xs font-bold">
@@ -615,7 +621,7 @@ const CV = forwardRef<HTMLDivElement, CVProps>((props, ref) => {
                         </animated.div>
                       )
                   )}
-                  Visualizations
+                  {dictionary.visualizations}
                 </h5>
                 <div className="grid sm:grid-cols-2 gap-4 py-2">
                   <ResponsiveContainer width="100%" height={200}>
@@ -680,59 +686,6 @@ const CV = forwardRef<HTMLDivElement, CVProps>((props, ref) => {
             </h5>
 
             <div className="mb-1">
-              <h3 className="text-sm font-bold">{dictionary["exp4-header"]}</h3>
-              <h5
-                className={`text-xs my-1 font-semibold ${
-                  showColor && "text-blue-500 font-base"
-                }`}
-              >
-                TechStart UCalgary, Calgary | 2022 - 2023
-              </h5>
-              <div className="text-xs flex">
-                <p className="mr-1">-</p>
-                <p className="m-0">{dictionary["exp4-1"]}</p>
-              </div>
-              <div className="text-xs flex">
-                <p className="mr-1">-</p>
-                <p className="m-0">{dictionary["exp4-2"]}</p>
-              </div>
-              <div className="text-xs flex">
-                <p className="mr-1">-</p>
-                <p className="m-0">{dictionary["exp4-3"]}</p>
-              </div>
-              <p className="text-xs mt-1 ml-2 text-blue font-semibold">
-                {dictionary["exp4-skills"]}
-              </p>
-            </div>
-            <div className="mb-1 border-light-grey border-t-2 mt-2 pt-2">
-              <h3 className="text-sm font-bold">{dictionary["exp1-header"]}</h3>
-              <h5
-                style={{
-                  color: `${showColor ? getRandomColor() : "black"}`,
-                }}
-                className={`text-xs my-1 font-semibold ${
-                  showColor && " font-base"
-                }`}
-              >
-                TechStart UCalgary, Calgary | 2021 - 2022
-              </h5>
-              <div className="text-xs flex">
-                <p className="mr-1">-</p>
-                <p className="m-0">{dictionary["exp1-1"]}</p>
-              </div>
-              <div className="text-xs flex">
-                <p className="mr-1">-</p>
-                <p className="m-0">{dictionary["exp1-2"]}</p>
-              </div>
-              <div className="text-xs flex">
-                <p className="mr-1">-</p>
-                <p className="m-0">{dictionary["exp1-3"]}</p>
-              </div>
-              <p className="text-xs mt-1 ml-2 text-blue font-semibold">
-                {dictionary["exp1-skills"]}
-              </p>
-            </div>
-            <div className="mb-1  border-light-grey border-t-2 mt-2 pt-2 ">
               <h3 className="text-sm font-bold">{dictionary["exp2-header"]}</h3>
               <h5
                 style={{
@@ -764,6 +717,34 @@ const CV = forwardRef<HTMLDivElement, CVProps>((props, ref) => {
                 {dictionary["exp2-skills"]}
               </p>
             </div>
+            <div className="mb-1 border-light-grey border-t-2 mt-2 pt-2">
+              <h3 className="text-sm font-bold">{dictionary["exp4-header"]}</h3>
+              <h5
+                style={{
+                  color: `${showColor ? getRandomColor() : "black"}`,
+                }}
+                className={`text-xs my-1 font-semibold ${
+                  showColor && " font-base"
+                }`}
+              >
+                TechStart UCalgary, Calgary | 2022 - 2023
+              </h5>
+              <div className="text-xs flex">
+                <p className="mr-1">-</p>
+                <p className="m-0">{dictionary["exp4-1"]}</p>
+              </div>
+              <div className="text-xs flex">
+                <p className="mr-1">-</p>
+                <p className="m-0">{dictionary["exp4-2"]}</p>
+              </div>
+              <div className="text-xs flex">
+                <p className="mr-1">-</p>
+                <p className="m-0">{dictionary["exp4-3"]}</p>
+              </div>
+              <p className="text-xs mt-1 ml-2 text-blue font-semibold">
+                {dictionary["exp4-skills"]}
+              </p>
+            </div>
             <div className="mb-1  border-light-grey border-t-2 mt-2 pt-2 ">
               <h3 className="text-sm font-bold">{dictionary["exp3-header"]}</h3>
               <h5
@@ -788,8 +769,37 @@ const CV = forwardRef<HTMLDivElement, CVProps>((props, ref) => {
                 <p className="mr-1">-</p>
                 <p className="m-0">{dictionary["exp3-3"]}</p>
               </div>
+
               <p className="text-xs mt-1 ml-2 text-blue font-semibold">
                 {dictionary["exp3-skills"]}
+              </p>
+            </div>
+            <div className="mb-1  border-light-grey border-t-2 mt-2 pt-2 ">
+              <h3 className="text-sm font-bold">{dictionary["exp1-header"]}</h3>
+              <h5
+                style={{
+                  color: `${showColor ? getRandomColor() : "black"}`,
+                }}
+                className={`text-xs my-1 font-semibold ${
+                  showColor && " font-base"
+                }`}
+              >
+                TechStart UCalgary, Calgary | 2021 - 2022
+              </h5>
+              <div className="text-xs flex">
+                <p className="mr-1">-</p>
+                <p className="m-0">{dictionary["exp1-1"]}</p>
+              </div>
+              <div className="text-xs flex">
+                <p className="mr-1">-</p>
+                <p className="m-0">{dictionary["exp1-2"]}</p>
+              </div>
+              <div className="text-xs flex">
+                <p className="mr-1">-</p>
+                <p className="m-0">{dictionary["exp1-3"]}</p>
+              </div>
+              <p className="text-xs mt-1 ml-2 text-blue font-semibold">
+                {dictionary["exp1-skills"]}
               </p>
             </div>
           </div>

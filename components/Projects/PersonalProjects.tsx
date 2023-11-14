@@ -8,6 +8,7 @@ const PersonalProjects = ({
 }: {
   dictionary: {
     my: string;
+    projects: string;
     desc: string;
     p1: string;
     "p1-2": string;
@@ -20,6 +21,7 @@ const PersonalProjects = ({
     "mp-1": string;
     "mp-2": string;
     "mp-3": string;
+    "active-development": string;
   };
 }) => {
   return (
@@ -31,7 +33,7 @@ const PersonalProjects = ({
               <div className="flex flex-col animate__animated animate__fadeInUp space-x-1">
                 <h1 className="text-4xl md:text-6xl font-bold">
                   {dictionary.my}{" "}
-                  <span className="text-primary ">Projects.</span>
+                  <span className="text-primary ">{dictionary.projects}.</span>
                 </h1>
                 <p className="font-light">{dictionary.desc}</p>
               </div>
@@ -82,7 +84,37 @@ const PersonalProjects = ({
             </div>
 
             <div className="grid gap-2 animate__animated animate__fadeInUp md:grid-cols-2 lg:-mx-12 xl:-mx-32 md:py-12 ">
-              <div className="w-full h-full flex flex-col justify-center p-4 lg:p-6 rounded shadow-md bg-bgLight ">
+              <div className="md:hidden">
+                <div className="flex flex-col space-y-4">
+                  <div className="w-full h-72 relative">
+                    <Image
+                      src="/easymeal1.png"
+                      fill
+                      alt="Easy Meal."
+                      className="object-cover w-full h-full rounded shadow-lg"
+                    />
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className=" relative h-32 w-full">
+                      <Image
+                        alt="Unique value proposition."
+                        src="/easymeal2.png"
+                        fill
+                        className="object-cover object-top w-full h-32 rounded shadow-lg"
+                      />
+                    </div>
+                    <div className=" relative h-32 w-full">
+                      <Image
+                        alt="Victory."
+                        src="/victory.jpeg"
+                        fill
+                        className="object-cover w-full h-32 object-top rounded shadow-lg"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="w-full h-full flex flex-col justify-center p-4 lg:p-6 rounded shadow-md bg-bgLight">
                 <div>
                   <div className="px-2 py-1 rounded-full bg-secondaryLight text-secondaryDark mb-2 inline-block">
                     <div className="flex items-center space-x-1">
@@ -107,13 +139,13 @@ const PersonalProjects = ({
                   Easy Meal
                 </h2>
                 <div className="w-full mb-4 font-light">
-                  <p>{dictionary.p3}</p>
+                  <p>{dictionary.p1}</p>
                   <br />
-                  {dictionary["p3-2"]}
+                  {dictionary["p1-2"]}
                 </div>
                 <div className="flex space-x-2">
                   <a
-                    href="https://www.obuci.rs"
+                    href="https://www.linkedin.com/feed/update/urn:li:activity:7058573838405550080/?utm_source=share&utm_medium=member_desktop"
                     target="_blank"
                     rel="noreferrer"
                     className="bg-primary hover:bg-dark text-white px-3 py-2 text-lg rounded"
@@ -121,7 +153,7 @@ const PersonalProjects = ({
                     {dictionary.button}
                   </a>
                   <a
-                    href="https://github.com/nemanjag3005/obucirs"
+                    href="https://github.com/techstartucalgary/EasyMeal"
                     target="_blank"
                     rel="noreferrer"
                     className="border-2 border-textColor text-textColor hover:bg-light px-3 py-2 text-lg rounded"
@@ -130,20 +162,20 @@ const PersonalProjects = ({
                   </a>
                 </div>
               </div>
-              <div>
+              <div className="hidden md:block">
                 <div className="flex flex-col space-y-4">
                   <div className="w-full h-72 relative">
                     <Image
                       src="/easymeal1.png"
                       fill
-                      alt="Obuci.rs home page."
+                      alt="Easy Meal."
                       className="object-cover w-full h-full rounded shadow-lg"
                     />
                   </div>
                   <div className="grid grid-cols-2 gap-4">
                     <div className=" relative h-32 w-full">
                       <Image
-                        alt="Obuci.rs profile page."
+                        alt="Unique value proposition."
                         src="/easymeal2.png"
                         fill
                         className="object-cover object-top w-full h-32 rounded shadow-lg"
@@ -151,7 +183,7 @@ const PersonalProjects = ({
                     </div>
                     <div className=" relative h-32 w-full">
                       <Image
-                        alt="Obuci.rs store."
+                        alt="Victory."
                         src="/victory.jpeg"
                         fill
                         className="object-cover w-full h-32 object-top rounded shadow-lg"
@@ -162,12 +194,12 @@ const PersonalProjects = ({
               </div>
             </div>
 
-            <div className="grid gap-2 md:grid-cols-2 lg:-mx-12 xl:-mx-32 md:py-12 ">
+            <div className="grid gap-2 md:grid-cols-2 lg:-mx-12 xl:-mx-32 md:py-12">
               <div>
                 <div className="flex flex-col space-y-4">
                   <div className="w-full h-72 relative">
                     <Image
-                      alt="LAN Digital website"
+                      alt="Where To?"
                       src="/decision.png"
                       fill
                       className="object-cover w-full h-full rounded shadow-lg"
@@ -176,16 +208,16 @@ const PersonalProjects = ({
                   <div className="grid grid-cols-2 gap-4">
                     <div className=" relative h-32 w-full">
                       <Image
-                        alt="About Us page."
-                        src="/decision-2.png"
+                        alt="Where To? Team."
+                        src="/decision-victory.png"
                         fill
                         className="object-cover w-full h-32 rounded shadow-lg"
                       />
                     </div>
                     <div className=" relative h-32 w-full">
                       <Image
-                        alt="Our team page."
-                        src="/decision-3.png"
+                        alt="Unique value proposition for where to?."
+                        src="/uvp-decision.png"
                         fill
                         className="object-cover w-full h-32 rounded shadow-lg"
                       />
@@ -215,16 +247,16 @@ const PersonalProjects = ({
                   </div>
                 </div>
                 <h2 className="text-3xl lg:text-5xl font-bold mb-2">
-                  Time to Decide
+                  Where To?
                 </h2>
                 <div className="w-full mb-4 font-light">
-                  <p>{dictionary.p1}</p>
+                  <p>{dictionary.p2}</p>
                   <br />
-                  {dictionary["p1-2"]}
+                  {dictionary["p2-2"]}
                 </div>
                 <div className="flex space-x-2">
                   <a
-                    href="https://www.lan-digital.com"
+                    href="https://www.where-to-app.com/"
                     target="_blank"
                     rel="noreferrer"
                     className="bg-primary hover:bg-dark text-white px-3 py-2 text-lg rounded"
@@ -232,7 +264,7 @@ const PersonalProjects = ({
                     {dictionary.button}
                   </a>
                   <a
-                    href="https://github.com/nemanjag3005/landigital"
+                    href="https://github.com/techstartucalgary/decision-frontend#where-to"
                     target="_blank"
                     rel="noreferrer"
                     className="border-2 border-textColor text-textColor hover:bg-light px-3 py-2 text-lg rounded"
@@ -246,24 +278,54 @@ const PersonalProjects = ({
           <div className="grid gap-2 md:grid-cols-2 lg:-mx-12 xl:-mx-32 md:py-12 mt-12 md:mt-0">
             <div className="md:hidden">
               <div className="flex flex-col space-y-4">
-                <div className="w-full h-72">
-                  <img
-                    src="/decision-2.png"
-                    className="object-cover w-full h-full rounded shadow-lg"
-                  ></img>
+                <div className="w-full h-72 relative flex items-center justify-center bg-bgLight rounded shadow-lg">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-10 h-10"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"
+                    />
+                  </svg>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="flex-shrink">
-                    <img
-                      src="/decision.png"
-                      className="object-cover object-left-top w-full h-32 rounded shadow-lg"
-                    ></img>
+                  <div className=" relative h-44 w-full rounded shadow-lg flex items-center justify-center bg-bgLight">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="currentColor"
+                      className="w-6 h-6"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"
+                      />
+                    </svg>
                   </div>
-                  <div className="flex-shrink">
-                    <img
-                      src="/decision-3.png"
-                      className="object-cover object-left-top w-full h-32 rounded shadow-lg"
-                    ></img>
+                  <div className=" relative h-44 w-full rounded shadow-lg flex items-center justify-center bg-bgLight">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="currentColor"
+                      className="w-6 h-6"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"
+                      />
+                    </svg>
                   </div>
                 </div>
               </div>
@@ -285,57 +347,82 @@ const PersonalProjects = ({
                       />
                     </svg>
 
-                    <p className="text-sm">Active Development</p>
+                    <p className="text-sm">
+                      {dictionary["active-development"]}
+                    </p>
                   </div>
                 </div>
               </div>
               <h2 className="text-3xl lg:text-5xl font-bold mb-2">
-                Nomad Planner
+                ProdajAuto
               </h2>
               <div className="w-full mb-4 font-light">
-                <p>{dictionary.p2}</p>
+                <p>{dictionary.p3}</p>
                 <br />
-                {dictionary["p2-2"]}
+                {dictionary["p3-2"]}
               </div>
               <div className="flex space-x-2">
-                <a
-                  href="https://decision-frontend-eight.vercel.app"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="bg-primary hover:bg-dark text-white px-3 py-2 text-lg rounded"
+                <button
+                  disabled
+                  className="bg-primary cursor-not-allowed hover:bg-dark text-white px-3 py-2 text-lg rounded"
                 >
                   {dictionary.button}
-                </a>
-                <a
-                  href="https://github.com/Tech-Start-UCalgary/decision-frontend"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="border-2 border-textColor text-textColor hover:bg-light px-3 py-2 text-lg rounded"
-                >
+                </button>
+                <button className="border-2 cursor-not-allowed border-textColor text-textColor hover:bg-light px-3 py-2 text-lg rounded">
                   GitHub
-                </a>
+                </button>
               </div>
             </div>
             <div className="hidden md:block">
               <div className="flex flex-col space-y-4">
-                <div className="w-full h-72">
-                  <img
-                    src="/decision-2.png"
-                    className="object-cover w-full h-full rounded shadow-lg"
-                  ></img>
+                <div className="w-full h-72 relative flex items-center justify-center bg-bgLight rounded shadow-lg">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-10 h-10"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"
+                    />
+                  </svg>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="flex-shrink">
-                    <img
-                      src="/decision.png"
-                      className="object-cover object-left-top w-full h-32 rounded shadow-lg"
-                    ></img>
+                  <div className=" relative h-44 w-full rounded shadow-lg flex items-center justify-center bg-bgLight">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="currentColor"
+                      className="w-6 h-6"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"
+                      />
+                    </svg>
                   </div>
-                  <div className="flex-shrink">
-                    <img
-                      src="/decision-3.png"
-                      className="object-cover object-top w-full h-32 rounded shadow-lg"
-                    ></img>
+                  <div className=" relative h-44 w-full rounded shadow-lg flex items-center justify-center bg-bgLight">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="currentColor"
+                      className="w-6 h-6"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"
+                      />
+                    </svg>
                   </div>
                 </div>
               </div>
@@ -365,7 +452,11 @@ const PersonalProjects = ({
                   </svg>
                 </div>
                 <div className="w-full space-y-2">
-                  <a href="https://www.flexteam.rs/">
+                  <a
+                    href="https://www.flexteam.rs/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <div className="flex items-center space-x-2 hover:text-secondary">
                       <h2 className="text-xl font-medium">Flex Team</h2>
                       <svg
@@ -402,7 +493,11 @@ const PersonalProjects = ({
                   </svg>
                 </div>
                 <div className="w-full space-y-2">
-                  <a href="https://github.com/nemanjag3005/battleship">
+                  <a
+                    href="https://github.com/nemanjag3005/battleship"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <div className="flex items-center space-x-2 hover:text-secondary">
                       <h2 className="text-xl font-medium">Battleship</h2>
                       <svg

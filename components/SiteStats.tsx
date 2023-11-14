@@ -242,7 +242,11 @@ const SiteStats = ({
                         <span className="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
                         <span className="animate-ping absolute inline-flex h-3 w-3 rounded-full bg-light opacity-75"></span>
                       </span>
-                      <p className="text-2xl font-bold mb-2">0 Persons </p>
+                      <p className="text-2xl font-bold mb-2">
+                        {/*
+      // @ts-ignore */}
+                        0 Persons{" "}
+                      </p>
                       <p>Visiting Right Now!</p>
                     </div>
                     <div className="rounded bg-bgLight h-32 relative flex flex-col px-4 justify-center">
@@ -326,6 +330,8 @@ const SiteStats = ({
                       <div className="text-center">
                         <p>Cumulative Layout Shift</p>
                         <p className="text-2xl font-bold mb-2">
+                          {/*
+      // @ts-ignore */}
                           {cls.value ? cls.value + " ms" : "-"}
                         </p>
                         <a
@@ -342,6 +348,8 @@ const SiteStats = ({
                     <div className="md:col-span-3 rounded bg-bgLight h-32 relative flex flex-col items-center justify-center">
                       <p>First Contentful Paint</p>
                       <p className="text-2xl font-bold mb-2">
+                        {/*
+      // @ts-ignore */}
                         {fcp.value ? fcp.value + " ms" : "-"}
                       </p>
 
@@ -358,6 +366,8 @@ const SiteStats = ({
                     <div className="md:col-span-2 rounded bg-bgLight h-32 relative flex flex-col items-center justify-center">
                       <p>First Input Delay</p>
                       <p className="text-2xl font-bold mb-2">
+                        {/*
+      // @ts-ignore */}
                         {fid.value ? fid.value + " ms" : "-"}
                       </p>
                       <a
@@ -374,6 +384,8 @@ const SiteStats = ({
                       <div className="flex flex-col items-center ">
                         <p>Largest Contentful Paint</p>
                         <p className="text-2xl font-bold mb-2">
+                          {/*
+      // @ts-ignore */}
                           {lcp.value ? lcp.value + " ms" : "-"}
                         </p>
                         <div
@@ -389,6 +401,8 @@ const SiteStats = ({
                     <div className="md:col-span-2 rounded bg-bgLight h-32 relative flex flex-col items-center justify-center">
                       <p>Time to first byte</p>
                       <p className="text-2xl font-bold mb-2">
+                        {/*
+      // @ts-ignore */}
                         {ttfb.value ? ttfb.value + " ms" : "-"}
                       </p>
                       <a

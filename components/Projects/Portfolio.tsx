@@ -7,6 +7,11 @@ const Portfolio = ({
 }: {
   dictionary: {
     desc: string;
+    "p1-desc": string;
+    "p2-desc": string;
+    "p3-desc": string;
+    "p4-desc": string;
+    "p5-desc": string;
   };
 }) => {
   return (
@@ -29,10 +34,7 @@ const Portfolio = ({
               </div>
               <div className="p-5 pb-16">
                 <h2 className="text-2xl font-semibold">Obuci.rs</h2>
-                <p>
-                  Obuci.rs is the first dedicated second-hand clothing ecommerce
-                  website in the Balkans.
-                </p>
+                <p>{dictionary["p1-desc"]}</p>
                 <div className="absolute bottom-0">
                   <div className="flex flex-wrap mb-5 text-xs space-x-2 text-light">
                     <div>NEXT</div>
@@ -57,10 +59,7 @@ const Portfolio = ({
               </div>
               <div className="p-5 pb-16">
                 <h2 className="text-2xl font-semibold">LAN Digital</h2>
-                <p>
-                  LAN Digital is a digital marketing agency I have founded with
-                  two of my best friends, Aleksa and Luka.
-                </p>
+                <p>{dictionary["p2-desc"]}</p>
                 <div className="absolute bottom-0">
                   <div className="flex flex-wrap mb-5 text-xs space-x-2 text-light">
                     <div>REACT</div>
@@ -85,10 +84,7 @@ const Portfolio = ({
               </div>
               <div className="p-5 pb-16">
                 <h2 className="text-2xl font-semibold">Flex Team</h2>
-                <p>
-                  LAN Digital is a digital marketing agency I have founded with
-                  two of my best friends, Aleksa and Luka.
-                </p>
+                <p>{dictionary["p3-desc"]}</p>
                 <div className="absolute bottom-0">
                   <div className="flex flex-wrap mb-5 text-xs space-x-2 text-light">
                     <div>NEXT</div>
@@ -105,7 +101,7 @@ const Portfolio = ({
             <div className="bg-bgLight shadow-lg h-full rounded-lg">
               <div className="h-48 w-full relative mb-5">
                 <Image
-                  src="/flex.png"
+                  src="/obuci-app.png"
                   fill
                   alt="Obuci.rs"
                   className="rounded-t-lg object-cover"
@@ -113,10 +109,7 @@ const Portfolio = ({
               </div>
               <div className="p-5 pb-16">
                 <h2 className="text-2xl font-semibold">Obuci App</h2>
-                <p>
-                  LAN Digital is a digital marketing agency I have founded with
-                  two of my best friends, Aleksa and Luka.
-                </p>
+                <p>{dictionary["p4-desc"]}</p>
                 <div className="absolute bottom-0">
                   <div className="flex flex-wrap mb-5 text-xs space-x-2 text-light">
                     <div>REACT NATIVE</div>
@@ -133,18 +126,15 @@ const Portfolio = ({
             <div className="bg-bgLight shadow-lg h-full rounded-lg">
               <div className="h-48 w-full relative mb-5">
                 <Image
-                  src="/flex.png"
+                  src="/PKS.png"
                   fill
-                  alt="Obuci.rs"
+                  alt="Porsche Club Serbia"
                   className="rounded-t-lg object-cover"
                 />
               </div>
               <div className="p-5 pb-16">
                 <h2 className="text-2xl font-semibold">Porsche Club Serbia</h2>
-                <p>
-                  LAN Digital is a digital marketing agency I have founded with
-                  two of my best friends, Aleksa and Luka.
-                </p>
+                <p>{dictionary["p5-desc"]}</p>
                 <div className="absolute bottom-0">
                   <div className="flex flex-wrap mb-5 text-xs space-x-2 text-light">
                     <div>CMS</div>
