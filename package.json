@@ -12,8 +12,6 @@
     "@react-spring/web": "^9.7.3",
     "animate.css": "^4.1.1",
     "file-saver": "^2.0.5",
-    "html2canvas": "^1.4.1",
-    "jspdf": "^2.5.1",
     "negotiator": "^0.6.3",
     "next": "^14.0.1",
     "node": "^18.17.0",
