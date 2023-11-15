@@ -33,9 +33,14 @@ const Hero = ({
                     <h1 className="text-2xl sm:text-4xl md:text-6xl font-bold mr-2">
                       Nemanja Grujić
                     </h1>
-                    <div className="absolute xs:-top-24 xs:right-0 -right-2 -top-16 shadow-xl rounded-full">
+                    <div className="absolute xs:-top-20 xs:right-0 -right-2 -top-16 shadow-xl rounded-full">
                       <div className="md:hidden relative w-28 h-28 xs:w-36 xs:h-36">
-                        <Image alt="logo" src="/IMG_1281-modified.png" fill />
+                        <Image
+                          alt="logo"
+                          src="/IMG_9334.jpeg"
+                          className="rounded-full align-middle object-cover object-center"
+                          fill
+                        />
                       </div>
                     </div>
                   </div>
