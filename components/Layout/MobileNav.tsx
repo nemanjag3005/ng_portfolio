@@ -8,6 +8,7 @@ import { animated, useSpring, useTransition } from "@react-spring/web";
 
 const MobileNav = ({
   dictionary,
+  lang,
 }: {
   dictionary: {
     nav1: string;
@@ -34,6 +35,7 @@ const MobileNav = ({
     proj: string;
     "uses-desc": string;
   };
+  lang: "en" | "sr" | "de" | "it" | "fr";
 }) => {
   const { setThemeKey, themeKey } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
@@ -72,7 +74,7 @@ const MobileNav = ({
     >
       <div className="max-w-6xl mx-auto py-3 border-b px-4">
         <div className="flex justify-between items-center">
-          <Link passHref href="/">
+          <Link passHref href={`/${lang}/`}>
             <div className="rounded-lg">
               <div className="relative group rounded-lg">
                 <button className="relative transform ease-in-out group transition duration-300 hover:scale-105 rounded-lg leading-none flex items-center ">
@@ -124,7 +126,7 @@ const MobileNav = ({
           }`}
               >
                 <div className="flex justify-between items-center py-3 px-4">
-                  <Link passHref href="/">
+                  <Link passHref href={`/${lang}/`}>
                     <div className="rounded-lg">
                       <div className="relative group rounded-lg">
                         <button
@@ -177,7 +179,7 @@ const MobileNav = ({
                     {menuSelection == 0 ? (
                       <>
                         <div className="col-span-2">
-                          <Link href="/about" className="w-full">
+                          <Link href={`/${lang}/about`} className="w-full">
                             <button
                               onClick={toggle}
                               className=" justify-between w-full border-2 border-white text-white flex items-center space-x-4 rounded py-2 px-4"
@@ -241,7 +243,7 @@ const MobileNav = ({
                           </svg>
                         </button>
                         <div className="col-span-2">
-                          <Link href="/cv" className="w-full">
+                          <Link href={`/${lang}/cv`} className="w-full">
                             <button
                               onClick={toggle}
                               className=" justify-between w-full border-2 border-white text-white flex items-center space-x-4 rounded py-2 px-4"
@@ -308,7 +310,7 @@ const MobileNav = ({
                           {dictionary.back}
                         </button>
                         <div className="col-span-2">
-                          <Link href="/personal-projects">
+                          <Link href={`/${lang}/personal-projects`}>
                             <button
                               onClick={toggle}
                               className="w-full border-2 border-white text-left text-white flex items-center space-x-4 rounded py-2 px-4 h-full"
@@ -341,7 +343,7 @@ const MobileNav = ({
                           </Link>
                         </div>
                         <div className="col-span-2">
-                          <Link href="/portfolio">
+                          <Link href={`/${lang}/portfolio`}>
                             <button
                               onClick={toggle}
                               className="w-full border-2 border-white text-left text-white flex items-center space-x-4 rounded py-2 px-4 h-full"
@@ -634,7 +636,7 @@ const MobileNav = ({
                         </div>
 
                         <div className="col-span-2">
-                          <Link href="/themes">
+                          <Link href={`/${lang}/themes`}>
                             <button
                               onClick={() => {
                                 setThemeKey("custom");
@@ -691,7 +693,7 @@ const MobileNav = ({
                           {dictionary.back}
                         </button>
                         <div className="col-span-2">
-                          <Link href="/uses" className="w-full">
+                          <Link href={`/${lang}/uses`} className="w-full">
                             <button
                               onClick={toggle}
                               className="w-full border-2 border-white text-white flex items-center space-x-4 rounded py-2 px-4 h-full text-left"
@@ -722,7 +724,7 @@ const MobileNav = ({
                           </Link>
                         </div>
                         <div className="col-span-1">
-                          <Link href="/site-stats" className="w-full">
+                          <Link href={`/${lang}/site-stats`} className="w-full">
                             <button
                               onClick={toggle}
                               className="w-full border-2 border-white text-white flex items-center space-x-4 rounded py-2 px-4 h-full"
@@ -753,7 +755,7 @@ const MobileNav = ({
                           </Link>
                         </div>
                         <div className="col-span-1">
-                          <Link href="/siteinfo" className="w-full">
+                          <Link href={`/${lang}/siteinfo`} className="w-full">
                             <button
                               onClick={toggle}
                               className="w-full border-2 border-white text-white flex items-center space-x-4 rounded py-2 px-4 h-full"

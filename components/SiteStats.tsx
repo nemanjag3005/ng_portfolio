@@ -167,7 +167,7 @@ const SiteStats = ({
   return (
     <div className="bg-bgColor">
       <section className=" md:py-12 w-full max-w-6xl py-8 mx-auto">
-        <div className="grid md:grid-cols-6 gap-2">
+        <div className="grid md:grid-cols-6 gap-2 px-4 md:px-0">
           <div className="space-y-2">
             <p className="text-sm uppercase">{dictionary.general}</p>
             <div className="grid grid-cols-2 gap-2 my-2 md:flex md:flex-col md:space-y-0.5">

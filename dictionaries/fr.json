@@ -222,5 +222,23 @@
     "next": "Un générateur de site statique basé sur React propulsé par GraphQL.",
     "tailwind": "Un framework CSS axé sur l'utilitaire pour construire rapidement des designs personnalisés.",
     "vercel": "Une plateforme cloud pour sites statiques et Fonctions Sans Serveur."
+  },
+  "themes": {
+    "h1": "Créateur de Thèmes Personnalisés",
+    "experimental": "Expérimental",
+    "desc": "Ici, vous pouvez créer votre propre thème personnalisé pour le site en suivant les étapes. Cette fonctionnalité est en version bêta et peut ne pas fonctionner parfaitement.",
+    "lord": "Mode clair ou mode sombre ?",
+    "select-color": "Sélectionnez une couleur que vous souhaitez changer",
+    "primary": "Primaire",
+    "secondary": "Secondaire",
+    "accent1": "accent 1",
+    "accent2": "accent 2",
+    "accent3": "accent 3",
+    "accent4": "accent 4",
+    "replace": "Remplacez-le par l'un de ceux-ci :",
+    "review": "Revoyez l'aperçu à droite. Heureux ? Naviguez sur le site avec votre nouveau thème. Je m'en souviendrai pour vos futures visites.",
+    "preview": "Aperçu du Site",
+    "link": "Un lien ressemblera à ",
+    "this": "ça!"
   }
 }

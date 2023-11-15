@@ -4,6 +4,7 @@ import Link from "next/link";
 
 const Footer = ({
   dictionary,
+  lang,
 }: {
   dictionary: {
     nav1: string;
@@ -30,6 +31,7 @@ const Footer = ({
     proj: string;
     "uses-desc": string;
   };
+  lang: "en" | "sr" | "de" | "it" | "fr";
 }) => {
   return (
     <div className="mx-0 relative z-20   transition duration-500">
@@ -43,7 +45,7 @@ const Footer = ({
                     {dictionary["footer-heading"]}
                   </h1>
                   <p className="text-sm mb-3">{dictionary["footer-desc"]}</p>
-                  <Link passHref href="/siteinfo">
+                  <Link passHref href={`/${lang}/siteinfo`}>
                     <button className="bg-primary text-white rounded px-3 py-2">
                       {dictionary["footer-button"]}
                     </button>

@@ -429,7 +429,7 @@ const PersonalProjects = ({
             </div>
           </div>
 
-          <h2 className="text-xl md:text-2xl font-bold mb-4 md:mb-8">
+          <h2 className="text-xl md:text-2xl font-bold mb-4 md:mb-8 mt-12 md:mt-0">
             {dictionary.moreprojects}
           </h2>
           <div className="grid md:grid-cols-2 gap-4">

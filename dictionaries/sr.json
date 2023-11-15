@@ -222,5 +222,23 @@
     "next": "Generator statičkih sajtova zasnovan na React-u pokretan GraphQL-om.",
     "tailwind": "Utility-first CSS framework za brzu izgradnju dizajnova.",
     "vercel": "Cloud platforma za statičke sajtove i Serverless funkcije."
+  },
+  "themes": {
+    "h1": "Kreator Palete Boja",
+    "experimental": "Eksperimentalno",
+    "desc": "Ovde možete napraviti svoju temu za sajt prateći korake. Ova funkcija je u beta verziji i možda neće raditi savršeno.",
+    "lord": "Svetli ili tamni režim?",
+    "select-color": "Izaberite boju koju želite da promenite",
+    "primary": "Primarna",
+    "secondary": "Sekundarna",
+    "accent1": "akcenat 1",
+    "accent2": "akcenat 2",
+    "accent3": "akcenat 3",
+    "accent4": "akcenat 4",
+    "replace": "Zamenite je sa jednom od ovih:",
+    "review": "Pregledajte pregled sa desne strane. Zadovoljni? Navigirajte sajtom sa vašom novom temom. Zapamtiću je za vaše buduće posete.",
+    "preview": "Pregled Sajta",
+    "link": "Link će izgledati ",
+    "this": "ovako!"
   }
 }

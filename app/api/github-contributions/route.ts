@@ -6,7 +6,7 @@ export async function POST(request: NextRequest) {
     "userName": "nemanjag3005"
   }
 `;
-  const TOKEN = process.env.GITHUB_TOKEN;
+  const TOKEN = process.env.NEXT_PUBLIC_GITHUB_TOKEN;
   const query = `
   query($userName:String!) {
     user(login: $userName){

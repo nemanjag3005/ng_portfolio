@@ -10,6 +10,7 @@ import MobileNav from "./MobileNav";
 const Layout = ({
   children,
   dictionary,
+  lang,
 }: {
   children: React.ReactNode;
   dictionary: {
@@ -37,13 +38,14 @@ const Layout = ({
     proj: string;
     "uses-desc": string;
   };
+  lang: "en" | "sr" | "de" | "it" | "fr";
 }) => {
   return (
     <div className="transition-colors duration-200 bg-bgColor text-textPrimary">
-      <Navbar dictionary={dictionary} />
-      <MobileNav dictionary={dictionary} />
+      <Navbar dictionary={dictionary} lang={lang} />
+      <MobileNav dictionary={dictionary} lang={lang} />
       <>{children}</>
-      <Footer dictionary={dictionary} />
+      <Footer dictionary={dictionary} lang={lang} />
     </div>
   );
 };

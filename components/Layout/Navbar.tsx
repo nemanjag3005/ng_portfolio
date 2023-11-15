@@ -9,6 +9,7 @@ import { animated, useSpring, useTransition } from "@react-spring/web";
 
 const Navbar = ({
   dictionary,
+  lang,
 }: {
   dictionary: {
     nav1: string;
@@ -35,6 +36,7 @@ const Navbar = ({
     proj: string;
     "uses-desc": string;
   };
+  lang: "en" | "sr" | "de" | "it" | "fr";
 }) => {
   const [selectionMenuOpen, setSelectionMenuOpen] = useState(-1);
   const [showDropdown, setShowDropdown] = useState(false);
@@ -271,7 +273,7 @@ const Navbar = ({
                 </svg>
               </button>
             </div>
-            <Link passHref href="/themes">
+            <Link passHref href={`/${lang}/themes`}>
               <button
                 onClick={() => {
                   setThemeKey("custom");
@@ -332,7 +334,7 @@ const Navbar = ({
         onMouseLeave={() => setShowDropdown(false)}
         className="container  relative px-4 py-6 flex flex-nowrap xs:flex-wrap justify-between border-b items-center mx-auto max-w-6xl"
       >
-        <Link passHref href="/">
+        <Link passHref href={`/${lang}`}>
           <div className="rounded-lg">
             <div className="relative group rounded-lg">
               <button className="relative transform ease-in-out group transition duration-300  rounded-lg leading-none flex items-center ">
@@ -356,7 +358,7 @@ const Navbar = ({
         <div className="hidden w-full md:block md:w-auto" id="mobile-menu">
           <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
             <li>
-              <Link passHref href="/about">
+              <Link passHref href={`/${lang}/about`}>
                 <animated.div
                   style={about}
                   className="block cursor-pointer nav dark:nav-dark pr-4 pl-3 border-b border-textPrimary hover:bg-textLight md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0 text-base"
@@ -401,7 +403,7 @@ const Navbar = ({
                           </div>
                           <div className="col-span-2 row-span-3">
                             <div className="grid grid-cols-2 w-full h-full gap-2">
-                              <Link href="/personal-projects">
+                              <Link href={`/${lang}/personal-projects`}>
                                 <button className="relative group text-left w-full h-full border-2 border-primary hover:text-white hover:bg-primary text-primary flex flex-col rounded py-2 px-4">
                                   <div className="mb-2 w-full border-b-2 border-primary pb-1 group-hover:border-white">
                                     <p className="font-medium">
@@ -427,7 +429,7 @@ const Navbar = ({
                                   </svg>
                                 </button>
                               </Link>
-                              <Link href="/portfolio">
+                              <Link href={`/${lang}/portfolio`}>
                                 <button className="relative group text-left w-full h-full border-2 border-primary hover:text-white hover:bg-primary text-primary flex flex-col rounded py-2 px-4">
                                   <div className="mb-2 w-full border-b-2 border-primary pb-1 group-hover:border-white">
                                     <p className="font-medium">Portfolio</p>
@@ -453,7 +455,7 @@ const Navbar = ({
                               </Link>
                             </div>
                           </div>
-                          <Link href="/site-stats">
+                          <Link href={`/${lang}/site-stats`}>
                             <button className="w-full border-2 border-primary hover:bg-primary hover:text-white text-primary flex items-center rounded py-2 px-4">
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -472,7 +474,7 @@ const Navbar = ({
                               {dictionary["site-stats"]}
                             </button>
                           </Link>
-                          <Link href="/siteinfo">
+                          <Link href={`/${lang}/siteinfo`}>
                             <button className="w-full border-2 border-primary hover:bg-primary hover:text-white text-primary flex items-center rounded py-2 px-4">
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -491,7 +493,7 @@ const Navbar = ({
                               {dictionary["site-info"]}
                             </button>
                           </Link>
-                          <Link href="/uses">
+                          <Link href={`/${lang}/uses`}>
                             <button className="w-full border-2 border-primary hover:bg-primary hover:text-white text-primary flex items-center rounded py-2 px-4">
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -518,7 +520,7 @@ const Navbar = ({
               )}
             </li>
             <li>
-              <Link passHref href="/cv">
+              <Link passHref href={`/${lang}/cv`}>
                 <animated.div
                   style={cv}
                   className="block cursor-pointer nav pr-4 pl-3 border-b border-textPrimary hover:bg-textLight md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0 text-base"

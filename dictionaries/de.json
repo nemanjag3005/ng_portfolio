@@ -222,5 +222,23 @@
     "next": "Ein auf React basierender statischer Site-Generator, angetrieben von GraphQL.",
     "tailwind": "Ein Utility-first CSS-Framework für den schnellen Aufbau von benutzerdefinierten Designs.",
     "vercel": "Eine Cloud-Plattform für statische Websites und Serverlose Funktionen."
+  },
+  "themes": {
+    "h1": "Eigene Themen-Ersteller",
+    "experimental": "Experimentell",
+    "desc": "Hier können Sie Ihr eigenes benutzerdefiniertes Thema für die Website erstellen, indem Sie den Schritten folgen. Diese Funktion ist in der Beta-Version und funktioniert möglicherweise nicht perfekt.",
+    "lord": "Heller Modus oder Dunkler Modus?",
+    "select-color": "Wählen Sie eine Farbe aus, die Sie ändern möchten",
+    "primary": "Primär",
+    "secondary": "Sekundär",
+    "accent1": "Akzent 1",
+    "accent2": "Akzent 2",
+    "accent3": "Akzent 3",
+    "accent4": "Akzent 4",
+    "replace": "Ersetzen Sie es durch eine dieser:",
+    "review": "Überprüfen Sie die Vorschau auf der rechten Seite. Zufrieden? Navigieren Sie mit Ihrem neuen Thema durch die Website. Ich werde es mir für Ihre zukünftigen Besuche merken.",
+    "preview": "Website-Vorschau",
+    "link": "Ein Link wird aussehen ",
+    "this": "so!"
   }
 }

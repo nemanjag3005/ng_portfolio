@@ -6,6 +6,7 @@ import Image from "next/image";
 
 const Hero = ({
   dictionary,
+  lang,
 }: {
   dictionary: {
     desc: string;
@@ -20,6 +21,7 @@ const Hero = ({
     "pp-desc": string;
     "port-desc": string;
   };
+  lang: "en" | "sr" | "de" | "it" | "fr";
 }) => {
   return (
     <div className="transition duration-500">
@@ -49,13 +51,20 @@ const Hero = ({
                   </p>
                   <div className="grid grid-cols-1 gap-2 space-y-1 lg:space-y-0 md:flex md:space-x-3 items-center w-full">
                     <div className="flex items-center space-x-2 w-full">
-                      <button className="w-full text-center text-light hover:bg-primary hover:text-white bg-dark shadow hover:shadow-lg px-3 py-2 rounded text-lg md:text-2xl">
-                        <Link href="/portfolio">Portfolio</Link>
-                      </button>
-
-                      <button className="w-full min-w-fit whitespace-nowrap border-dark text-dark bg-light text-center shadow border-2 hover:shadow-lg px-3 py-1.5 rounded text-lg md:text-2xl">
-                        <Link href="/about">{dictionary.aboutButton}</Link>
-                      </button>
+                      <div className="w-full min-w-fit">
+                        <Link href={`/${lang}/portfolio`}>
+                          <button className="w-full text-center text-light hover:bg-primary hover:text-white bg-dark shadow hover:shadow-lg px-3 py-2 rounded text-lg md:text-2xl">
+                            Portfolio
+                          </button>
+                        </Link>
+                      </div>
+                      <div className="w-full min-w-fit">
+                        <Link href={`/${lang}/about`}>
+                          <button className=" whitespace-nowrap border-dark text-dark bg-light text-center shadow border-2 hover:shadow-lg px-6 py-1.5 rounded text-lg md:text-2xl">
+                            {dictionary.aboutButton}
+                          </button>
+                        </Link>
+                      </div>
                     </div>
                     <div className="flex items-center space-x-2 w-full">
                       <a
@@ -201,7 +210,9 @@ const Hero = ({
               </g>
             </svg>
             <h1 className="bottom-4 text-xl md:text-3xl text-light hover:text-secondaryLight font-semibold  left-6 absolute">
-              <Link href="/personal-projects">{dictionary.competitions}</Link>
+              <Link href={`/${lang}/personal-projects`}>
+                {dictionary.competitions}
+              </Link>
             </h1>
           </div>
 
@@ -271,7 +282,7 @@ const Hero = ({
             {dictionary.furtherwork}
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4  mb-12 md:mb-16">
-            <Link passHref href="/personal-projects">
+            <Link passHref href={`/${lang}/personal-projects`}>
               <div className=" rounded-md px-8 py-8 flex items-center text-colorAccent4Dark bg-colorAccent4Light border-4 border-transparent hover:border-colorAccent4 hover:text-gray-800 cursor-pointer ">
                 <div>
                   <h1 className="text-2xl md:text-5xl font-bold">
@@ -294,7 +305,7 @@ const Hero = ({
                 </svg>
               </div>
             </Link>
-            <Link passHref href="/portfolio">
+            <Link passHref href={`${lang}/portfolio`}>
               <div className=" rounded-md px-8 py-8 flex items-center text-colorAccent4Dark bg-colorAccent4Light border-4 border-transparent hover:border-colorAccent4 hover:text-gray-800 cursor-pointer ">
                 <div>
                   <h1 className="text-2xl md:text-5xl font-bold">Portfolio</h1>

@@ -41,7 +41,7 @@ export default async function IndexPage({
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
-      <Hero dictionary={dictionary.home} />
+      <Hero dictionary={dictionary.home} lang={lang} />
     </div>
   );
 }

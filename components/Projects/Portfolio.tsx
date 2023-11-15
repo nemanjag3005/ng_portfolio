@@ -4,6 +4,7 @@ import React from "react";
 
 const Portfolio = ({
   dictionary,
+  lang,
 }: {
   dictionary: {
     desc: string;
@@ -13,6 +14,7 @@ const Portfolio = ({
     "p4-desc": string;
     "p5-desc": string;
   };
+  lang: "en" | "sr" | "de" | "it" | "fr";
 }) => {
   return (
     <div className="flex-1 w-full max-w-6xl text-textPrimary px-4 py-8 mx-auto md:px-8 md:pb-16">
@@ -21,7 +23,7 @@ const Portfolio = ({
         <p className="font-light mt-6 text-textLight">{dictionary.desc}</p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        <Link href="/portfolio/obuci">
+        <Link href={`/${lang}/portfolio/obuci`}>
           <div className="w-full h-full relative mb-3 dutation-500 ease-in-out transition hover:scale-105">
             <div className="bg-bgLight shadow-lg h-full rounded-lg">
               <div className="h-48 w-full relative mb-5">
@@ -46,7 +48,7 @@ const Portfolio = ({
             </div>
           </div>
         </Link>
-        <Link href="/portfolio/lan-digital">
+        <Link href={`/${lang}/portfolio/lan-digital`}>
           <div className="w-full h-full relative mb-3 dutation-500 ease-in-out transition hover:scale-105">
             <div className="bg-bgLight shadow-lg h-full rounded-lg">
               <div className="h-48 w-full relative mb-5">
@@ -70,7 +72,7 @@ const Portfolio = ({
             </div>
           </div>
         </Link>
-        <Link href="/portfolio/flex-team">
+        <Link href={`/${lang}/portfolio/flex-team`}>
           <div className="w-full h-full relative mb-3 dutation-500 ease-in-out transition hover:scale-105">
             <div className="bg-bgLight shadow-lg h-full rounded-lg">
               <div className="h-48 w-full relative mb-5">
@@ -95,7 +97,7 @@ const Portfolio = ({
             </div>
           </div>
         </Link>
-        <Link href="/portfolio/obuci-app">
+        <Link href={`/${lang}/portfolio/obuci-app`}>
           <div className="w-full h-full relative mb-3 dutation-500 ease-in-out transition hover:scale-105">
             <div className="bg-bgLight shadow-lg h-full rounded-lg">
               <div className="h-48 w-full relative mb-5">
@@ -120,7 +122,7 @@ const Portfolio = ({
             </div>
           </div>
         </Link>
-        <Link href="/portfolio/porsche-club-serbia">
+        <Link href={`/${lang}/portfolio/porsche-club-serbia`}>
           <div className="w-full h-full relative mb-3 dutation-500 ease-in-out transition hover:scale-105">
             <div className="bg-bgLight shadow-lg h-full rounded-lg">
               <div className="h-48 w-full relative mb-5">

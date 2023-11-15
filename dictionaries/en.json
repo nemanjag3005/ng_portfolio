@@ -222,5 +222,23 @@
     "next": "A React based static site generator powered by GraphQL.",
     "tailwind": "A utility-first CSS framework for rapidly building custom designs.",
     "vercel": "A cloud platform for static sites and Serverless Functions."
+  },
+  "themes": {
+    "h1": "Custom Theme Maker",
+    "experimental": "Experimental",
+    "desc": "Here you can make your own custom theme for the site by following the steps. This feature is in beta and may not work perfectly.",
+    "lord": "Light Mode or Dark Mode?",
+    "select-color": "Select a color you would like to change",
+    "primary": "Primary",
+    "secondary": "Secondary",
+    "accent1": "accent 1",
+    "accent2": "accent 2",
+    "accent3": "accent 3",
+    "accent4": "accent 4",
+    "replace": "Replace it with one of these:",
+    "review": "Review the preview on the right. Happy? Navigate around the site with your new theme. I'll remember it for your future visits.",
+    "preview": "Site Preview",
+    "link": "A link will look like ",
+    "this": "this!"
   }
 }

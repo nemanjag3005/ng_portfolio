@@ -1,8 +1,15 @@
 import Head from "next/head";
 import CustomizeTheme from "../../../components/CustomizeTheme";
 import React from "react";
+import { Locale } from "../../../i8n-config";
+import { getDictionary } from "../../../get-dictionary";
 
-export default function Themes() {
+export default async function Themes({
+  params: { lang },
+}: {
+  params: { lang: Locale };
+}) {
+  const dictionary = await getDictionary(lang);
   return (
     <div>
       <Head>
@@ -13,7 +20,7 @@ export default function Themes() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <CustomizeTheme />
+      <CustomizeTheme dictionary={dictionary.themes} />
     </div>
   );
 }

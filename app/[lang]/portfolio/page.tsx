@@ -20,7 +20,7 @@ export default async function PortfolioPage({
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Portfolio dictionary={dictionary.portfolio} />
+      <Portfolio dictionary={dictionary.portfolio} lang={lang} />
     </div>
   );
 }

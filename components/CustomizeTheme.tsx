@@ -3,7 +3,28 @@ import React, { useState, useEffect } from "react";
 import { useTheme } from "../context/ThemeContext";
 import { colorMap } from "../misc/colorMap";
 
-const CustomizeTheme = () => {
+const CustomizeTheme = ({
+  dictionary,
+}: {
+  dictionary: {
+    h1: string;
+    experimental: string;
+    desc: string;
+    lord: string;
+    "select-color": string;
+    primary: string;
+    secondary: string;
+    accent1: string;
+    accent2: string;
+    accent3: string;
+    accent4: string;
+    replace: string;
+    review: string;
+    preview: string;
+    link: string;
+    this: string;
+  };
+}) => {
   const {
     themeKey,
     customThemeChanges,
@@ -82,7 +103,7 @@ const CustomizeTheme = () => {
         <div className="mx-4 ">
           <div className="max-w-6xl mx-auto py-6 md:py-12 w-full space-y-4">
             <div className="flex items-center space-x-1">
-              <p className="text-2xl font-bold mr-2">Custom Theme Maker</p>
+              <p className="text-2xl font-bold mr-2">{dictionary.h1}</p>
               <div className="px-2 rounded-full flex items-center text-center text-white space-x-1 bg-primary ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -99,14 +120,11 @@ const CustomizeTheme = () => {
                   />
                 </svg>
 
-                <p>Experimental</p>
+                <p>{dictionary.experimental}</p>
               </div>
             </div>
-            <p>
-              Here you can make your own custom theme for the site by following
-              the steps. This feature is in beta and may not work perfectly.
-            </p>
-            <h3>1. Light mode or Dark Mode?</h3>
+            <p>{dictionary.desc}</p>
+            <h3>1. {dictionary.lord}</h3>
             <div className="grid lg:grid-cols-4 gap-4">
               <div className="space-y-6 lg:col-span-3">
                 <label className="relative inline-flex items-center cursor-pointer">
@@ -119,10 +137,10 @@ const CustomizeTheme = () => {
                   <div className="w-20 h-11 bg-gray-300 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer  peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[4px] after:left-[4px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-9 after:w-9 after:transition-all  peer-checked:bg-primary"></div>
                   <span className="ml-3 text-sm font-medium"></span>
                 </label>
-                <h3>2. Select a color you would like to change</h3>
+                <h3>2. {dictionary["select-color"]}</h3>
                 <div className="grid grid-cols-3 md:grid-cols-6 gap-2">
                   <div className="space-y-2">
-                    <p className="uppercase text-xs">primary</p>
+                    <p className="uppercase text-xs">{dictionary.primary}</p>
                     <div className="flex items-center justify-center">
                       <button
                         onClick={() => setSelectedVariant(0)}
@@ -141,7 +159,7 @@ const CustomizeTheme = () => {
                     )}
                   </div>
                   <div className="space-y-2">
-                    <p className="uppercase text-xs">secondary</p>
+                    <p className="uppercase text-xs">{dictionary.secondary}</p>
                     <div className="flex items-center justify-center">
                       <button
                         onClick={() => setSelectedVariant(1)}
@@ -160,7 +178,7 @@ const CustomizeTheme = () => {
                     )}
                   </div>
                   <div className="space-y-2">
-                    <p className="uppercase text-xs">accent 1</p>
+                    <p className="uppercase text-xs">{dictionary.accent1}</p>
                     <div className="flex items-center justify-center">
                       <button
                         onClick={() => setSelectedVariant(2)}
@@ -179,7 +197,7 @@ const CustomizeTheme = () => {
                     )}
                   </div>
                   <div className="space-y-2">
-                    <p className="uppercase text-xs">accent 2</p>
+                    <p className="uppercase text-xs">{dictionary.accent2}</p>
                     <div className="flex items-center justify-center">
                       <button
                         onClick={() => setSelectedVariant(3)}
@@ -198,7 +216,7 @@ const CustomizeTheme = () => {
                     )}
                   </div>
                   <div className="space-y-2">
-                    <p className="uppercase text-xs">accent 3</p>
+                    <p className="uppercase text-xs">{dictionary.accent3}</p>
                     <div className="flex items-center justify-center">
                       <button
                         onClick={() => setSelectedVariant(4)}
@@ -217,7 +235,7 @@ const CustomizeTheme = () => {
                     )}
                   </div>
                   <div className="space-y-2">
-                    <p className="uppercase text-xs">accent 4</p>
+                    <p className="uppercase text-xs">{dictionary.accent4}</p>
                     <div className="flex items-center justify-center">
                       <button
                         onClick={() => setSelectedVariant(5)}
@@ -236,7 +254,7 @@ const CustomizeTheme = () => {
                     )}
                   </div>
                 </div>
-                <h3>3. Replace it with one of these:</h3>
+                <h3>3. {dictionary.replace}</h3>
                 <div className="w-full flex flex-wrap">
                   <button onClick={handleColorChange} title="#64748b">
                     <div
@@ -653,11 +671,7 @@ const CustomizeTheme = () => {
                     />
                   </button>
                 </div>
-                <h3>
-                  4. Review the preview on the right. Happy? Navigate around the
-                  site with your new theme. I'll remember it for your future
-                  visits.
-                </h3>
+                <h3>4. {dictionary.review}</h3>
               </div>
               <div>
                 <div className="py-1 px-2 w-full bg-dark rounded-t">
@@ -690,25 +704,25 @@ const CustomizeTheme = () => {
                         <div className="h-2 w-6 rounded-full bg-textPrimary opacity-50"></div>
                       </div>
                     </div>
-                    <p className="font-bold text-lg">Site Preview</p>
+                    <p className="font-bold text-lg">{dictionary.preview}</p>
                     <div className="flex space-x-1">
                       <button
                         disabled
                         className="rounded bg-primary hover:bg-primary-light p-1"
                       >
-                        Primary
+                        {dictionary.primary}
                       </button>
                       <button
                         disabled
                         className="rounded bg-secondary hover:bg-secondary-light p-1"
                       >
-                        Secondary
+                        {dictionary.secondary}
                       </button>
                     </div>
                     <p className="text-sm">
-                      A link will look like{" "}
+                      {dictionary.link}{" "}
                       <span className="inline-link text-primary cursor-pointer hover:underline">
-                        this!
+                        {dictionary.this}
                       </span>
                     </p>
                   </div>

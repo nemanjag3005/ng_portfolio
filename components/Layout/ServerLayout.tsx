@@ -11,7 +11,11 @@ const ServerLayout = async ({
   params: { lang: Locale };
 }) => {
   const dictionary = await getDictionary(lang);
-  return <Layout dictionary={dictionary.common}>{children}</Layout>;
+  return (
+    <Layout dictionary={dictionary.common} lang={lang}>
+      {children}
+    </Layout>
+  );
 };
 
 export default ServerLayout;
