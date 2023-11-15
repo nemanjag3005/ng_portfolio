@@ -196,7 +196,7 @@ const Hero = ({
               </g>
             </svg>
             <h1 className="bottom-4 text-xl md:text-3xl text-light hover:text-secondaryLight font-semibold  left-6 absolute">
-              <Link href="/portfolio">{dictionary.competitions}</Link>
+              <Link href="/personal-projects">{dictionary.competitions}</Link>
             </h1>
           </div>
 

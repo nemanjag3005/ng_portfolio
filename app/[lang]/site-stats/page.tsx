@@ -20,7 +20,7 @@ export default async function SiteStatsPage({
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <SiteStats dictionary={dictionary.siteinfo} />
+      <SiteStats dictionary={dictionary.sitestats} />
     </div>
   );
 }

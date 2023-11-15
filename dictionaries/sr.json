@@ -129,9 +129,98 @@
     "p4-desc": "Multiplatformska aplikacija koja se razvija za Obuci.rs",
     "p5-desc": "CMS veb-sajt kreiran za Porsche Club u Srbiji."
   },
+  "project1": {
+    "desc": "Jedinstveno online tržište second-hand odeće na Balkanu.",
+    "h1": "Pravi dizajn",
+    "desc1": "Obuci.rs stoji kao svedočanstvo minimalističkih, elegantnih i modernih principa dizajna. Moj fokus bio je da stvorim korisnički interfejs koji nije samo vizuelno privlačan, već izuzetno intuitivan i jednostavan za korišćenje. Prioritet je bio čitljivost i lakoća navigacije, želeo sam da veb-sajt bude znatno profinjeniji i pristupačniji od sličnih platformi u Srbiji. Proces dizajna uključivao je opsežno wireframing i detaljan dizajn u Figma. Koristeći TailwindCSS, uspeo sam ovaj dizajn oživeti, nudeći korisnicima besprekoran i privlačan online doživljaj kupovine.",
+    "h2": "Sve funkcije",
+    "desc2": "Obuci.rs se ističe svojim korisničkim funkcijama. Pojednostavljuje proces postavljanja i kupovine polovne odeće, uparen sa naprednom funkcijom četa za besprekornu komunikaciju prodavaca i kupaca. Platforma osigurava glatko iskustvo kupovine sa praćenjem narudžbi, blagovremenim obaveštenjima i efikasnim naprednim filtriranjem. Dodatno, korisnici mogu uživati u personalizovanom iskustvu kroz obimne mogućnosti prilagođavanja profila. Ove funkcije, među mnogim drugima, čine Obuci.rs svestranom i korisnički orijentisanom tržištem.",
+    "h3": "Efikasan tech-stack",
+    "desc3": "Izborom NextJS i Firebase za tehnološki skup Obuci.rs-a doneti su brojni prednosti u performansama i funkcionalne prednosti. Mogućnosti server-side renderinga u NextJS-u značajno su poboljšale vreme učitavanja sajta i SEO, što je ključno za vidljivost i angažman korisnika online tržišta. U međuvremenu, Firebase je pružio robustno rešenje za back-end, nudeći sigurnu autentifikaciju, ažuriranja baze podataka u realnom vremenu i skalabilno hosting. Ova kombinacija osigurala je glatko, odzivno korisničko iskustvo i lakoću održavanja i ažuriranja."
+  },
+  "project2": {
+    "desc": "Agencija za digitalni marketing koju sam osnovao sa dvojicom svojih najboljih prijatelja 2021. godine.",
+    "h1": "Elegantan i jednostavan dizajn",
+    "desc1": "Dizajn veb-sajta moje digitalne marketinške agencije namerno je kreiran da odražava jednostavnost, eleganciju i modernu estetiku. Svaki element je izabran kako bi se stvorio čist i nenatrpan interfejs, odražavajući napredno i profesionalno razmišljanje agencije. Paleta boja, tipografija i raspored su pažljivo odabrani kako bi sajt preneo osećaj sofisticiranosti i savremenog stila, čineći ga ne samo vizuelno privlačnim, već i jednostavnim i prijatnim za navigaciju našim klijentima.",
+    "h2": "Filozofija i vrednosti",
+    "desc2": "Primarni fokus bio je na pristupačnosti i jasnoći informacija. Dali smo prioritet tome da klijentima bude izuzetno lako da nas kontaktiraju, osiguravajući da su svi kanali komunikacije jasno prikazani i jednostavni za korišćenje. Istovremeno, struktuirali smo veb-sajt tako da prezentuje sve neophodne informacije na sažet i dobro organizovan način, omogućavajući posetiocima da brzo shvate naše usluge i vrednosti bez preopterećenja suvišnim detaljima.",
+    "h3": "Perfomant stack",
+    "desc3": ""
+  },
+  "project3": {
+    "desc": "Elegantan i efikasan promotivni veb-sajt za tipstersku grupu Flex Team.",
+    "h1": "Privlačenje pažnje",
+    "desc1": "Prilikom razvoja ovog veb-sajta, moja vizija je bila da stvorim dizajn koji zaista privlači i zadržava pažnju. To sam postigao uključivanjem niza upečatljivih, dinamičnih elemenata - od privlačnih animacija do svetlucavih komponenata korisničkog interfejsa. Ovi dizajnerski izbori ne samo da daju veb-sajtu premijum osećaj, već osiguravaju da se on jasno ističe od onih drugih organizacija. Svaki aspekt sajta, od kolor šeme do interaktivnih funkcija, je kreiran da napravi smeo izraz i angažuje posetioce čim stignu na stranicu.",
+    "h2": "Transparentnost",
+    "desc2": "Centralna tema u dizajnu je transparentnost. Prepoznajući važnost poverenja u sektoru savetovanja za klađenje, uključio sam istaknutu, u realnom vremenu ažuriranu tabelu profita na njihovoj veb-stranici. Ova tabela transparentno pokazuje dobitke i gubitke za svaki savet za klađenje po mesecima, omogućavajući korisnicima da nezavisno provere rezultate. Ova funkcija ne samo da naglašava posvećenost Flex Team-a transparentnosti, već i značajno poboljšava njihovu verodostojnost i reputaciju za poštenje u očima njihovih klijenata.",
+    "h3": "Performanse",
+    "desc3": "Veliki uspeh u ovom projektu bio je značajno smanjenje vremena učitavanja i optimizacija različitih performansi metrika. Implementiranjem efikasnih praksi kodiranja, kompresijom sredstava i korišćenjem statičkog i server-side renderinga, osigurao sam da veb-sajt ne samo da radi glatko, već i pruža brzo, besprekorno iskustvo za sve korisnike."
+  },
+  "project4": {
+    "desc": "Multiplatformska aplikacija koja se razvija za Obuci.rs.",
+    "h1": "Pravi tech-stack",
+    "desc1": "Za aplikaciju Obuci.rs, izbor pravog tehnološkog skupa bio je ključan, sa mnogim opcijama na raspolaganju. Odlučili smo se za multiplatformski pristup i konačno odabrali Expo za React Native, oslanjajući se na naše jake osnove u React-u. Ovaj izbor je omogućio glatko, ujednačeno iskustvo razvoja. Za back-end, uskladili smo se sa postavkom veb-sajta nastavljajući sa Firebase-om, osiguravajući konzistentnost i efikasnost na obema veb i mobilnim platformama.",
+    "h2": "Bolje funkcije",
+    "desc2": "Naš cilj je bio da unapredimo korisničko iskustvo iznad onoga što veb-sajt nudi, fokusirajući se na stvaranje glatkijeg, intuitivnijeg interfejsa. Zamišljali smo aplikaciju kao primarnu tačku pristupa Obuci.rs u budućnosti, optimizujući je za lakoću korišćenja i besprekornu navigaciju. Poboljšavajući funkcionalnost i korisničko iskustvo aplikacije, ciljali smo da podstaknemo korisnike da preferiraju aplikaciju za svoje interakcije sa Obuci.rs.",
+    "h3": "Prilika za učenje",
+    "desc3": "Rad na aplikaciji Obuci.rs je put neprekidnog učenja za mene. Kao neko ko je relativno nov u razvoju aplikacija, korišćenje React Native-a je i izazovno i nagrađujuće. Ovaj projekat nije samo o poboljšanju platforme; to je dragocena prilika za mene da unapredim svoje veštine u praktičnom okruženju. Dok se aplikacija još uvek razvija, svaki korak u njenom razvoju uči me više o izgradnji korisnički orijentisanih, efikasnih aplikacija."
+  },
+  "project5": {
+    "desc": "CMS veb-sajt kreiran za Porsche Club u Srbiji.",
+    "h1": "Ograničene opcije",
+    "desc1": "Rad na veb-sajtu Porsche Club-a Srbija, mom prvom projektu veb-sajta, bio je pravo iskustvo učenja. Hostovan na zvaničnom CMS-u Porsche-a, suočio sam se sa izazovom njegove ograničene fleksibilnosti, jer je nudio minimalno prostora za prilagođavanje. Uprkos ovim ograničenjima, dao sam sve od sebe da radim unutar okvira CMS-a, težeći da kreiram vizuelno privlačan i funkcionalan sajt. Ovaj projekat me je mnogo naučio o prilagođavanju manje-idealnim okolnostima i maksimalnom iskorišćavanju dostupnih alata.",
+    "h2": "Fokus na SEO",
+    "desc2": "Unutar ograničenja CMS-a za veb-sajt Porsche Club-a Srbija, pronašao sam pozitivnu stranu u prilici da učim o SEO. Ograničenja u prilagođavanju su mi pomogla da se fokusiram na optimizaciju sajta za pretraživače. Bilo je to praktično iskustvo učenja, gde sam stekao praktično znanje o SEO-u, pomažući da poboljšam online vidljivost sajta. Ovaj projekat je bio dragocena lekcija u iskorišćavanju dostupnih prilika i unapređenju mog razumevanja ključnih tehnika veb optimizacije.",
+    "h3": "Perfomant stack",
+    "desc3": ""
+  },
   "siteinfo": {
     "about": "O Ovom Sajtu",
-    "p1": "Ovaj sajt je moj ćošak na internetu. Koristim ga kako vi se hvalio o projektima na kojima sam radio i beležio moju front-end karijeru.",
+    "p1": "Ovaj sajt je moj ćošak na internetu. Koristim ga kako bi se hvalio o projektima na kojima sam radio i beležio moju front-end karijeru.",
     "p2": "Sajt je redizajniran i ponovo izgrađen mnogo puta. Napravljen je koristeći NextJS i TailwindCSS. Sav UX dizajn i kod je moj, mada poslužila je i inspiracija. "
+  },
+  "sitestats": {
+    "general": "Opšte",
+    "overview": "Pregled",
+    "code": "Kod",
+    "experimental": "Eksperimentalno",
+    "relatime-stats": "Statistike Uživo",
+    "person": "Osoba",
+    "visiting-right-now": "Posećuje trenutno!",
+    "stats-stats-over-time": "Statistike sajta tokom vremena",
+    "popular-pages": "Popularne stranice među posetiocima",
+    "page-views": "Pregledi stranica",
+    "sessions": "Sesije",
+    "avg-duration": "pros. trajanje",
+    "bounce-rate": "bounce rate",
+    "wip": "Work In Progress",
+    "site-lines": "linije sajta po jeziku",
+    "totals": "ukupno",
+    "files": "Fajlovi",
+    "lines-of-code": "Linije koda",
+    "comments": "Komentari",
+    "blank-lines": "Prazne linije",
+    "your": "vaši",
+    "average": "prosečni",
+    "waiting-for-reading": "Čeka se čitanje",
+    "good": "Dobro",
+    "needs-improvement": "Potrebno unapređenje",
+    "poor": "Loše"
+  },
+  "uses": {
+    "h1": "Softver koji koristim i druge stvari koje preporučujem.",
+    "editor": "Editor",
+    "vscode": "Visual Studio Code je besplatan editor izvornog koda koji je napravio Microsoft za Windows, Linux i macOS.",
+    "browser": "Pretraživač",
+    "firefox": "Koristim Firefox zbog njegovih izvanrednih funkcija za veb razvoj u poređenju sa drugim pretraživačima.",
+    "design-inspiration": "Inspiracija za dizajn",
+    "dribble": "Moglo bi se reći da je dom dizajnera na internetu.",
+    "pages": "Dvorana slavnih za jednostavno prelepe veb-sajtove.",
+    "uplabs": "Odlično mesto za dizajnove zajedno sa njihovim originalnim fajlovima za preuzimanje. Većina je besplatna.",
+    "workstation": "Setup",
+    "site-stack": "Tech-stack sajta",
+    "next": "Generator statičkih sajtova zasnovan na React-u pokretan GraphQL-om.",
+    "tailwind": "Utility-first CSS framework za brzu izgradnju dizajnova.",
+    "vercel": "Cloud platforma za statičke sajtove i Serverless funkcije."
   }
 }

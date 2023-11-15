@@ -18,10 +18,10 @@ const Portfolio = ({
     <div className="flex-1 w-full max-w-6xl text-textPrimary px-4 py-8 mx-auto md:px-8 md:pb-16">
       <div className=" mb-4 max-w-6xl">
         <h1 className="text-4xl font-bold">Portfolio</h1>
-        <p className="font-light mt-6">{dictionary.desc}</p>
+        <p className="font-light mt-6 text-textLight">{dictionary.desc}</p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        <Link href="#">
+        <Link href="/portfolio/obuci">
           <div className="w-full h-full relative mb-3 dutation-500 ease-in-out transition hover:scale-105">
             <div className="bg-bgLight shadow-lg h-full rounded-lg">
               <div className="h-48 w-full relative mb-5">
@@ -34,7 +34,7 @@ const Portfolio = ({
               </div>
               <div className="p-5 pb-16">
                 <h2 className="text-2xl font-semibold">Obuci.rs</h2>
-                <p>{dictionary["p1-desc"]}</p>
+                <p className="text-textLight">{dictionary["p1-desc"]}</p>
                 <div className="absolute bottom-0">
                   <div className="flex flex-wrap mb-5 text-xs space-x-2 text-light">
                     <div>NEXT</div>
@@ -46,7 +46,7 @@ const Portfolio = ({
             </div>
           </div>
         </Link>
-        <Link href="#">
+        <Link href="/portfolio/lan-digital">
           <div className="w-full h-full relative mb-3 dutation-500 ease-in-out transition hover:scale-105">
             <div className="bg-bgLight shadow-lg h-full rounded-lg">
               <div className="h-48 w-full relative mb-5">
@@ -59,11 +59,10 @@ const Portfolio = ({
               </div>
               <div className="p-5 pb-16">
                 <h2 className="text-2xl font-semibold">LAN Digital</h2>
-                <p>{dictionary["p2-desc"]}</p>
+                <p className="text-textLight">{dictionary["p2-desc"]}</p>
                 <div className="absolute bottom-0">
                   <div className="flex flex-wrap mb-5 text-xs space-x-2 text-light">
                     <div>REACT</div>
-
                     <div>TAILWIND</div>
                   </div>
                 </div>
@@ -71,7 +70,7 @@ const Portfolio = ({
             </div>
           </div>
         </Link>
-        <Link href="#">
+        <Link href="/portfolio/flex-team">
           <div className="w-full h-full relative mb-3 dutation-500 ease-in-out transition hover:scale-105">
             <div className="bg-bgLight shadow-lg h-full rounded-lg">
               <div className="h-48 w-full relative mb-5">
@@ -84,7 +83,7 @@ const Portfolio = ({
               </div>
               <div className="p-5 pb-16">
                 <h2 className="text-2xl font-semibold">Flex Team</h2>
-                <p>{dictionary["p3-desc"]}</p>
+                <p className="text-textLight">{dictionary["p3-desc"]}</p>
                 <div className="absolute bottom-0">
                   <div className="flex flex-wrap mb-5 text-xs space-x-2 text-light">
                     <div>NEXT</div>
@@ -96,20 +95,20 @@ const Portfolio = ({
             </div>
           </div>
         </Link>
-        <Link href="#">
+        <Link href="/portfolio/obuci-app">
           <div className="w-full h-full relative mb-3 dutation-500 ease-in-out transition hover:scale-105">
             <div className="bg-bgLight shadow-lg h-full rounded-lg">
               <div className="h-48 w-full relative mb-5">
                 <Image
                   src="/obuci-app.png"
                   fill
-                  alt="Obuci.rs"
+                  alt="Obuci App"
                   className="rounded-t-lg object-cover"
                 />
               </div>
               <div className="p-5 pb-16">
                 <h2 className="text-2xl font-semibold">Obuci App</h2>
-                <p>{dictionary["p4-desc"]}</p>
+                <p className="text-textLight">{dictionary["p4-desc"]}</p>
                 <div className="absolute bottom-0">
                   <div className="flex flex-wrap mb-5 text-xs space-x-2 text-light">
                     <div>REACT NATIVE</div>
@@ -121,7 +120,7 @@ const Portfolio = ({
             </div>
           </div>
         </Link>
-        <Link href="#">
+        <Link href="/portfolio/porsche-club-serbia">
           <div className="w-full h-full relative mb-3 dutation-500 ease-in-out transition hover:scale-105">
             <div className="bg-bgLight shadow-lg h-full rounded-lg">
               <div className="h-48 w-full relative mb-5">
@@ -134,7 +133,7 @@ const Portfolio = ({
               </div>
               <div className="p-5 pb-16">
                 <h2 className="text-2xl font-semibold">Porsche Club Serbia</h2>
-                <p>{dictionary["p5-desc"]}</p>
+                <p className="text-textLight">{dictionary["p5-desc"]}</p>
                 <div className="absolute bottom-0">
                   <div className="flex flex-wrap mb-5 text-xs space-x-2 text-light">
                     <div>CMS</div>

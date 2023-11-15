@@ -1,11 +1,9 @@
 "use client";
 import React, { useRef, useState } from "react";
-import { saveAs } from "file-saver";
 import SmallCV from "./SmallCV";
 import CV from "./CV";
-import html2canvas from "html2canvas";
-import jsPDF from "jspdf";
 import { animated, useSpring, useTransition, config } from "@react-spring/web";
+import { useReactToPrint } from "react-to-print";
 
 const CvPage = ({
   dictionary,
@@ -60,36 +58,30 @@ const CvPage = ({
     reset: string;
   };
 }) => {
-  // const saveFile = () => {
-  //   saveAs("https://www.nemanja.grujic.rs/cv.pdf", "NemanjaGrujicCV.pdf");
-  // };
   const [customization, setCustomization] = useState(false);
   const [showIcons, setShowIcons] = useState(true);
   const [showHeadshot, setShowHeadshot] = useState(false);
   const [showColor, setShowColor] = useState(false);
   const [showVisualizations, setShowVisualizations] = useState(false);
+
   const printRef = useRef();
-  const saveFile = () => {
-    if (printRef.current) {
-      html2canvas(printRef.current, {
-        scale: 2, // Increasing the scale factor to enhance resolution; you can increase this value further
-        useCORS: true, // This is to handle the loading of images from external domains, if any
-        onclone: (document) => {
-          // Any specific styles or class changes that need to be applied before rendering the canvas can go here
-        },
-      }).then((canvas) => {
-        const imgData = canvas.toDataURL("image/png");
-        const pdf = new jsPDF({
-          orientation: "portrait",
-        });
-        const imgProps = pdf.getImageProperties(imgData);
-        const pdfWidth = pdf.internal.pageSize.getWidth();
-        const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
-        pdf.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight);
-        pdf.save("CV-Nemanja_Grujic.pdf");
-      });
-    }
-  };
+
+  const handlePrint = useReactToPrint({
+    content: () => printRef.current,
+    // removeAfterPrint: true,
+    // print: async (printIframe: HTMLIFrameElement) => {
+    //   const document = printIframe.contentDocument;
+    //   if (document) {
+    //     const html = document.getElementsByTagName("html")[0];
+    //     console.log(html);
+    //     let options = { format: "A4" };
+    //     let file = { content: html };
+    //     html_to_pdf.generatePdf(file, options).then((pdfBuffer) => {
+    //       console.log("PDF Buffer:-", pdfBuffer);
+    //     });
+    //   }
+    // },
+  });
 
   const transition = useTransition(customization, {
     config: { tension: 300, friction: 20 },
@@ -101,15 +93,6 @@ const CvPage = ({
       height: 0,
       border: 0,
     },
-  });
-  const slideIn = useSpring({
-    from: { opacity: 0, height: 0 },
-    delay: 4,
-    to: {
-      opacity: 1,
-      height: 60,
-    },
-    config: { tension: 300, friction: 12 },
   });
   return (
     <div className="bg-bgColor pt-6">
@@ -152,7 +135,7 @@ const CvPage = ({
 
           <div className="flex items-center space-x-1 justify-end px-4 md:px-2">
             <button
-              onClick={saveFile}
+              onClick={handlePrint}
               className="bg-colorAccent2Light hover:bg-colorAccent2 text-colorAccent2Dark hover:text-white rounded-t flex items-center space-x-1 px-2 py-1 text-sm"
             >
               <svg
@@ -317,8 +300,8 @@ const CvPage = ({
         </div>
         <div className="max-w-[210mm] mb-12 mx-auto z-30 hidden md:block shadow-lg">
           <CV
-            dictionary={dictionary}
             ref={printRef}
+            dictionary={dictionary}
             showIcons={showIcons}
             showColor={showColor}
             showHeadshot={showHeadshot}

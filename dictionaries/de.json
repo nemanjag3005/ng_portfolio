@@ -129,9 +129,98 @@
     "p4-desc": "Cross-Plattform-App, die für Obuci.rs entwickelt wird.",
     "p5-desc": "CMS-Clubwebseite, erstellt für den Porsche Club in Serbien."
   },
+  "project1": {
+    "desc": "Der erste spezialisierte Online-Marktplatz für Second-Hand-Kleidung auf dem Balkan.",
+    "h1": "Das richtige Design",
+    "desc1": "Obuci.rs steht als Zeugnis für minimalistische, elegante und moderne Designprinzipien. Mein Fokus lag darauf, eine Benutzeroberfläche zu schaffen, die nicht nur optisch ansprechend ist, sondern auch außergewöhnlich intuitiv und benutzerfreundlich. Mit Priorität auf Lesbarkeit und einfacher Navigation wollte ich, dass die Website deutlich raffinierter und zugänglicher ist als vergleichbare Plattformen in Serbien. Der Designprozess umfasste umfangreiches Wireframing und detaillierte Designarbeit in Figma. Durch die Nutzung von TailwindCSS konnte ich dieses Design zum Leben erwecken und den Nutzern ein nahtloses und ansprechendes Online-Einkaufserlebnis bieten.",
+    "h2": "Alle Funktionen",
+    "desc2": "Obuci.rs sticht mit seinen benutzerzentrierten Funktionen heraus. Es vereinfacht den Prozess des Auflistens und Kaufens von Second-Hand-Kleidung, gepaart mit einer fortschrittlichen Chat-Funktion für nahtlose Kommunikation zwischen Verkäufer und Käufer. Die Plattform sorgt für ein reibungsloses Einkaufserlebnis mit Bestellverfolgung, zeitnahen Benachrichtigungen und effizienter erweiterter Filterung. Zusätzlich können die Benutzer durch umfangreiche Anpassungsoptionen für Profile ein personalisiertes Erlebnis genießen. Diese Funktionen machen Obuci.rs zu einem vielseitigen und benutzerzentrierten Marktplatz.",
+    "h3": "Leistungsstarker Tech-Stack",
+    "desc3": "Die Wahl von NextJS und Firebase für den Tech-Stack von Obuci.rs brachte zahlreiche Leistungs- und Funktionsvorteile. Die serverseitigen Rendering-Fähigkeiten von NextJS verbesserten die Ladezeiten der Website und SEO erheblich, was für die Sichtbarkeit und das Engagement der Nutzer auf einem Online-Marktplatz entscheidend ist. In der Zwischenzeit bot Firebase eine robuste Backend-Lösung, die sichere Authentifizierung, Echtzeit-Datenbankaktualisierungen und skalierbares Hosting bietet. Diese Kombination sorgte für ein reibungsloses, reaktionsfähiges Benutzererlebnis sowie einfache Wartung und Aktualisierungen."
+  },
+  "project2": {
+    "desc": "Eine digitale Marketingagentur, die ich 2021 mit zwei meiner besten Freunde gegründet habe.",
+    "h1": "Elegantes und einfaches Design",
+    "desc1": "Das Design der Website meiner digitalen Marketingagentur wurde bewusst so gestaltet, dass es Einfachheit, Schlankheit und eine moderne Ästhetik verkörpert. Jedes Element wurde ausgewählt, um eine saubere und übersichtliche Benutzeroberfläche zu schaffen, die den zukunftsorientierten und professionellen Ansatz der Agentur widerspiegelt. Farbpalette, Typografie und Layout wurden alle so ausgewählt, dass die Website ein Gefühl von Raffinesse und zeitgenössischem Stil vermittelt, was sie nicht nur optisch ansprechend, sondern auch einfach und angenehm zu navigieren für unsere Kunden macht.",
+    "h2": "Philosophie und Werte",
+    "desc2": "Der primäre Fokus lag auf Zugänglichkeit und Klarheit der Informationen. Wir haben es zur Priorität gemacht, es für Kunden außergewöhnlich einfach zu machen, uns zu kontaktieren, indem wir sicherstellen, dass alle Kommunikationskanäle deutlich sichtbar und benutzerfreundlich sind. Gleichzeitig strukturierten wir die Website so, dass alle notwendigen Informationen auf eine prägnante, gut organisierte Weise präsentiert werden, sodass Besucher schnell unsere Dienstleistungen und Werte erfassen können, ohne von übermäßigen Details überwältigt zu werden.",
+    "h3": "Perfomant stack",
+    "desc3": ""
+  },
+  "project3": {
+    "desc": "Elegante und leistungsstarke Werbeseite für die Wettorganisation Flex Team.",
+    "h1": "Aufmerksamkeit erregen",
+    "desc1": "Bei der Entwicklung dieser Website war meine Vision, ein Design zu schaffen, das wirklich fesselt und die Aufmerksamkeit auf sich zieht. Dies erreichte ich durch die Einbeziehung einer Reihe von auffälligen, dynamischen Elementen - von augenfälligen Animationen bis hin zu leuchtenden UI-Komponenten. Diese Designentscheidungen verleihen der Website nicht nur ein Premium-Gefühl, sondern stellen auch sicher, dass sie sich deutlich von denen anderer Organisationen abhebt. Jeder Aspekt der Seite, von der Farbpalette bis zu interaktiven Funktionen, ist darauf ausgelegt, eine kühne Aussage zu treffen und Besucher in dem Moment zu engagieren, in dem sie auf die Seite kommen.",
+    "h2": "Transparenz",
+    "desc2": "Ein zentrales Thema im Design ist Transparenz. In Anerkennung der Bedeutung von Vertrauen im Wettberatungssektor habe ich eine prominent angezeigte, in Echtzeit aktualisierte Gewinntabelle auf ihrer Website integriert. Diese Tabelle zeigt transparent die Gewinne und Verluste für jeden Wett-Tipp nach Monat an und ermöglicht es den Benutzern, die Ergebnisse unabhängig zu überprüfen. Diese Funktion betont nicht nur die Hingabe von Flex Team zur Transparenz, sondern erhöht auch signifikant ihre Glaubwürdigkeit und ihren Ruf für Ehrlichkeit in den Augen ihrer Kunden.",
+    "h3": "Leistung",
+    "desc3": "Ein großer Erfolg in diesem Projekt war die deutliche Reduzierung der Ladezeiten und die Optimierung verschiedener Leistungsmetriken. Durch die Implementierung effizienter Kodierungspraktiken, Komprimierung von Assets und Nutzung von statischem und serverseitigem Rendering habe ich sichergestellt, dass die Website nicht nur reibungslos läuft, sondern auch ein schnelles, nahtloses Erlebnis für alle Benutzer bietet."
+  },
+  "project4": {
+    "desc": "Cross-Plattform-App, die für Obuci.rs entwickelt wird.",
+    "h1": "Der richtige Technologie-Stack",
+    "desc1": "Bei der Entwicklung der Obuci.rs-App war die Auswahl des richtigen Technologie-Stacks entscheidend, mit vielen Optionen zur Auswahl. Wir entschieden uns für einen plattformübergreifenden Ansatz und wählten letztendlich Expo für React Native, basierend auf unserer starken Erfahrung mit React. Diese Wahl ermöglichte eine reibungslose, einheitliche Entwicklungserfahrung. Für das Backend stimmten wir mit der Einrichtung der Website überein, indem wir weiterhin Firebase verwendeten, um Konsistenz und Effizienz sowohl auf Web- als auch auf mobilen Plattformen sicherzustellen.",
+    "h2": "Bessere Funktionen",
+    "desc2": "Unser Ziel war es, das Benutzererlebnis über das hinaus zu verbessern, was die Website bot, indem wir uns auf die Schaffung einer flüssigeren, intuitiveren Schnittstelle konzentrierten. Wir sahen die App als den primären Zugangspunkt für Obuci.rs in der Zukunft, optimiert für Benutzerfreundlichkeit und nahtlose Navigation. Durch die Verbesserung der Funktionalität und des Benutzererlebnisses der App wollten wir die Benutzer dazu ermutigen, die App für ihre Interaktionen mit Obuci.rs zu bevorzugen.",
+    "h3": "Lernkurve",
+    "desc3": "Ein großer Erfolg in diesem Projekt war die erhebliche Reduzierung der Ladezeiten und die Optimierung verschiedener Leistungsmetriken. Durch die Implementierung effizienter Kodierungspraktiken, die Komprimierung von Assets und die Nutzung von statischem und serverseitigem Rendering habe ich sichergestellt, dass die Website nicht nur reibungslos funktioniert, sondern auch ein schnelles, nahtloses Erlebnis für alle Benutzer bietet."
+  },
+  "project5": {
+    "desc": "CMS-Clubwebseite, erstellt für den Porsche Club in Serbien.",
+    "h1": "Begrenzte Optionen",
+    "desc1": "Die Arbeit an der Webseite des Porsche Clubs Serbien, meinem ersten Webseitenprojekt, war eine echte Lernerfahrung. Gehostet auf dem offiziellen CMS von Porsche, stand ich vor der Herausforderung seiner begrenzten Flexibilität, da es nur minimalen Spielraum für Anpassungen bot. Trotz dieser Einschränkungen habe ich mein Bestes gegeben, um innerhalb des Rahmens des CMS zu arbeiten, und strebte danach, eine visuell ansprechende und funktionale Seite zu erstellen. Dieses Projekt hat mich viel über die Anpassung an weniger als ideale Umstände und die bestmögliche Nutzung der verfügbaren Werkzeuge gelehrt.",
+    "h2": "Ein Fokus auf SEO",
+    "desc2": "Innerhalb der Beschränkungen des CMS für die Webseite des Porsche Clubs Serbien fand ich einen Silberstreifen in der Chance, über SEO zu lernen. Die Einschränkungen bei der Anpassung verschoben meinen Fokus auf die Optimierung der Suchmaschinenleistung der Website. Es war eine praktische Lernerfahrung, bei der ich praktisches Wissen in SEO gewann und half, die Online-Sichtbarkeit der Website zu verbessern. Dieses Projekt war eine wertvolle Lektion, um das Beste aus den verfügbaren Möglichkeiten zu machen und mein Verständnis von wesentlichen Web-Optimierungstechniken zu verbessern.",
+    "h3": "Perfomant stack",
+    "desc3": ""
+  },
   "siteinfo": {
     "about": "Über diese Seite",
     "p1": "Diese Seite ist meine Ecke des Internets. Ich nutze sie, um Projekte, an denen ich gearbeitet habe, zu präsentieren und meine Webentwicklungsabenteuer zu dokumentieren.",
     "p2": "Die Seite wurde mehrfach überarbeitet und neu aufgebaut. Der aktuelle Technologie-Stack verwendet NextJS und Tailwindcss. Alle UX-Designs und Codes wurden von mir erstellt, mit ein wenig Inspiration."
+  },
+  "sitestats": {
+    "general": "Allgemein",
+    "overview": "Übersicht",
+    "code": "Code",
+    "experimental": "Experimentell",
+    "relatime-stats": "Echtzeitstatistiken",
+    "person": "Person",
+    "visiting-right-now": "Besucht jetzt!",
+    "stats-stats-over-time": "Webseitenstatistiken über die Zeit",
+    "popular-pages": "Beliebte Seiten bei Besuchern",
+    "page-views": "Seitenaufrufe",
+    "sessions": "Sitzungen",
+    "avg-duration": "durchschn. Dauer",
+    "bounce-rate": "bounce rate",
+    "wip": "In Bearbeitung",
+    "site-lines": "Webseitenlinien nach Sprache",
+    "totals": "Gesamt",
+    "files": "Dateien",
+    "lines-of-code": "Codezeilen",
+    "comments": "Kommentare",
+    "blank-lines": "Leerzeilen",
+    "your": "Ihre",
+    "average": "durchschnittlich",
+    "waiting-for-reading": "Warten auf Lesen",
+    "good": "Gut",
+    "needs-improvement": "Verbesserungsbedürftig",
+    "poor": "Schlecht"
+  },
+  "uses": {
+    "h1": "Software, den ich verwende, und andere Dinge, die ich empfehle.",
+    "editor": "Editor",
+    "vscode": "Visual Studio Code ist ein kostenloser Quellcode-Editor von Microsoft für Windows, Linux und macOS.",
+    "browser": "Browser",
+    "firefox": "Ich verwende Firefox wegen seiner hervorragenden Webentwicklungsfunktionen im Vergleich zu anderen Browsern.",
+    "design-inspiration": "Design Inspiration",
+    "dribble": "Arg wohl das Zuhause der Designer online.",
+    "pages": "Eine Ruhmeshalle für einfach schöne Webseiten.",
+    "uplabs": "Ein großartiger Ort für Designs zusammen mit ihren Originaldateien zum Herunterladen. Die meisten davon sind kostenlos.",
+    "workstation": "Arbeitsstation",
+    "site-stack": "Site Tech Stack",
+    "next": "Ein auf React basierender statischer Site-Generator, angetrieben von GraphQL.",
+    "tailwind": "Ein Utility-first CSS-Framework für den schnellen Aufbau von benutzerdefinierten Designs.",
+    "vercel": "Eine Cloud-Plattform für statische Websites und Serverlose Funktionen."
   }
 }

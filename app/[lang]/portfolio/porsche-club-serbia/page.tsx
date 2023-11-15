@@ -1,10 +1,10 @@
 import Head from "next/head";
 import React from "react";
-import { Locale } from "../../../i8n-config";
-import { getDictionary } from "../../../get-dictionary";
-import Uses from "../../../components/Uses";
+import { Locale } from "../../../../i8n-config";
+import { getDictionary } from "../../../../get-dictionary";
+import Project5 from "../../../../components/Projects/Project5";
 
-export default async function SiteUsesPage({
+export default async function Project5Page({
   params: { lang },
 }: {
   params: { lang: Locale };
@@ -13,14 +13,14 @@ export default async function SiteUsesPage({
   return (
     <div>
       <Head>
-        <title>Nemanja Grujić | Uses</title>
+        <title>Project - Porsche Club Serbia</title>
         <meta
           name="description"
           content="The official portfolio page of Nemanja Grujić"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Uses dictionary={dictionary.uses} />
+      <Project5 dictionary={dictionary.project5} />
     </div>
   );
 }

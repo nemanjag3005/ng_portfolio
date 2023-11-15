@@ -7,9 +7,32 @@ const SiteStats = ({
   dictionary,
 }: {
   dictionary: {
-    about: string;
-    p1: string;
-    p2: string;
+    general: string;
+    overview: string;
+    code: string;
+    experimental: string;
+    "relatime-stats": string;
+    person: string;
+    "visiting-right-now": string;
+    "stats-stats-over-time": string;
+    "popular-pages": string;
+    "page-views": string;
+    sessions: string;
+    "avg-duration": string;
+    "bounce-rate": string;
+    wip: string;
+    "site-lines": string;
+    totals: string;
+    files: string;
+    "lines-of-code": string;
+    comments: string;
+    "blank-lines": string;
+    your: string;
+    average: string;
+    "waiting-for-reading": string;
+    good: string;
+    "needs-improvement": string;
+    poor: string;
   };
 }) => {
   const [selected, setSelected] = useState(0);
@@ -61,7 +84,7 @@ const SiteStats = ({
       case "good":
         return {
           className: "bg-green-400",
-          text: "Good",
+          text: dictionary.good,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +105,7 @@ const SiteStats = ({
       case "needs-improvement":
         return {
           className: "bg-yellow-400",
-          text: "Needs Improvement",
+          text: dictionary["needs-improvement"],
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -101,7 +124,7 @@ const SiteStats = ({
       case "poor":
         return {
           className: "bg-red-400",
-          text: "Poor",
+          text: dictionary.poor,
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -120,7 +143,7 @@ const SiteStats = ({
       default:
         return {
           className: "bg-yellow-400",
-          text: "Waiting for Reading",
+          text: dictionary["waiting-for-reading"],
           icon: (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -146,7 +169,7 @@ const SiteStats = ({
       <section className=" md:py-12 w-full max-w-6xl py-8 mx-auto">
         <div className="grid md:grid-cols-6 gap-2">
           <div className="space-y-2">
-            <p className="text-sm uppercase">General</p>
+            <p className="text-sm uppercase">{dictionary.general}</p>
             <div className="grid grid-cols-2 gap-2 my-2 md:flex md:flex-col md:space-y-0.5">
               <button
                 onClick={() => setSelected(0)}
@@ -169,7 +192,7 @@ const SiteStats = ({
                   />
                 </svg>
 
-                <p>Overview</p>
+                <p>{dictionary.overview}</p>
               </button>
               <button
                 onClick={() => setSelected(1)}
@@ -192,10 +215,10 @@ const SiteStats = ({
                   />
                 </svg>
 
-                <p>Code</p>
+                <p>{dictionary.code}</p>
               </button>
             </div>
-            <p className="text-sm uppercase">Experimental</p>
+            <p className="text-sm uppercase">{dictionary.experimental}</p>
             <div className="grid grid-cols-2 gap-2 my-2 md:flex md:flex-col md:space-y-0.5">
               <button
                 onClick={() => setSelected(2)}
@@ -229,10 +252,10 @@ const SiteStats = ({
                 <div className="md:flex md:justify-between md:items-center">
                   <p className="text-sm uppercase">
                     {selected == 0
-                      ? "realtime stats"
+                      ? dictionary["relatime-stats"]
                       : selected == 1
-                      ? "site lines by language"
-                      : "your web vitals"}
+                      ? dictionary["site-lines"]
+                      : dictionary.your + " web vitals"}
                   </p>
                 </div>
                 {selected == 0 ? (
@@ -245,12 +268,12 @@ const SiteStats = ({
                       <p className="text-2xl font-bold mb-2">
                         {/*
       // @ts-ignore */}
-                        0 Persons{" "}
+                        1 {dictionary.person}{" "}
                       </p>
-                      <p>Visiting Right Now!</p>
+                      <p>{dictionary["visiting-right-now"]}</p>
                     </div>
                     <div className="rounded bg-bgLight h-32 relative flex flex-col px-4 justify-center">
-                      <p className="mb-2">Popular pages among visitors</p>
+                      <p className="mb-2">{dictionary["popular-pages"]}</p>
                       <div className="flex flex-col space-y-1 text-xs opacity-50">
                         <div className="rounded bg-bgColor px-2 py-1">/</div>
                         <div className="rounded bg-bgColor px-2 py-1">/cv</div>
@@ -422,10 +445,10 @@ const SiteStats = ({
                 <div className="md:flex md:justify-between md:items-center">
                   <p className="text-sm uppercase">
                     {selected == 0
-                      ? "site stats over time"
+                      ? dictionary["stats-stats-over-time"]
                       : selected == 1
-                      ? "totals"
-                      : "average web vitals"}
+                      ? dictionary.totals
+                      : dictionary.average + " web vitals"}
                   </p>
                 </div>
                 {selected == 0 ? (
@@ -433,7 +456,7 @@ const SiteStats = ({
                     <div className="rounded bg-bgLight h-32 relative overflow-x-hidden">
                       <div className="absolute top-0 left-0 p-2 flex w-full justify-between">
                         <p className="text-xs uppercase text-site-text opacity-75">
-                          Page Views
+                          {dictionary["page-views"]}
                         </p>
                         <p className="text-2xl font-bold text-site-text"></p>
                       </div>
@@ -453,14 +476,14 @@ const SiteStats = ({
                               d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"
                             />
                           </svg>
-                          <p>Work In Progress</p>
+                          <p>{dictionary.wip}</p>
                         </div>
                       </div>
                     </div>
                     <div className="rounded bg-bgLight h-32 relative overflow-x-hidden">
                       <div className="absolute top-0 left-0 p-2 flex w-full justify-between">
                         <p className="text-xs uppercase text-site-text opacity-75">
-                          Sessions
+                          {dictionary.sessions}
                         </p>
                         <p className="text-2xl font-bold text-site-text"></p>
                       </div>
@@ -480,14 +503,14 @@ const SiteStats = ({
                               d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"
                             />
                           </svg>
-                          <p>Work In Progress</p>
+                          <p>{dictionary.wip}</p>
                         </div>
                       </div>
                     </div>
                     <div className="rounded bg-bgLight h-32 relative overflow-x-hidden">
                       <div className="absolute top-0 left-0 p-2 flex w-full justify-between">
                         <p className="text-xs uppercase text-site-text opacity-75">
-                          Avg. Duration
+                          {dictionary["avg-duration"]}
                         </p>
                         <p className="text-2xl font-bold text-site-text"></p>
                       </div>
@@ -507,14 +530,14 @@ const SiteStats = ({
                               d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"
                             />
                           </svg>
-                          <p>Work In Progress</p>
+                          <p>{dictionary.wip}</p>
                         </div>
                       </div>
                     </div>
                     <div className="rounded bg-bgLight h-32 relative overflow-x-hidden">
                       <div className="absolute top-0 left-0 p-2 flex w-full justify-between">
                         <p className="text-xs uppercase text-site-text opacity-75">
-                          Bounce Rate
+                          {dictionary["bounce-rate"]}
                         </p>
                         <p className="text-2xl font-bold text-site-text"></p>
                       </div>
@@ -534,7 +557,7 @@ const SiteStats = ({
                               d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"
                             />
                           </svg>
-                          <p>Work In Progress</p>
+                          <p>{dictionary.wip}</p>
                         </div>
                       </div>
                     </div>
@@ -552,7 +575,7 @@ const SiteStats = ({
                       </svg>
 
                       <p className="text-xl font-bold">
-                        {statistics.files} Files
+                        {statistics.files} {dictionary.files}
                       </p>
                     </div>
                     <div className=" rounded bg-bgLight h-16 relative flex space-x-1 items-center justify-center">
@@ -570,7 +593,7 @@ const SiteStats = ({
                       </svg>
 
                       <p className="text-xl font-bold">
-                        {statistics.totalLines} Lines of Code
+                        {statistics.totalLines} {dictionary["lines-of-code"]}
                       </p>
                     </div>
                     <div className=" rounded bg-bgLight h-16 relative flex space-x-1 items-center justify-center">
@@ -588,7 +611,7 @@ const SiteStats = ({
                       </svg>
 
                       <p className="text-xl font-bold">
-                        {statistics.comments} Comments
+                        {statistics.comments} {dictionary.comments}
                       </p>
                     </div>
                     <div className=" rounded bg-bgLight h-16 relative flex space-x-1 items-center justify-center">
@@ -606,7 +629,7 @@ const SiteStats = ({
                       </svg>
 
                       <p className="text-xl font-bold">
-                        {statistics.blankLines} Blank Lines
+                        {statistics.blankLines} {dictionary["blank-lines"]}
                       </p>
                     </div>
                   </div>
@@ -627,7 +650,7 @@ const SiteStats = ({
                           d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"
                         />
                       </svg>
-                      <p>Work In Progress</p>
+                      <p>{dictionary.wip}</p>
                     </div>
                   </div>
                 )}

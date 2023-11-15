@@ -129,9 +129,98 @@
     "p4-desc": "Flagship cross-platform app being developed for Obuci.rs",
     "p5-desc": "CMS club website created for the Porsche Club in Serbia."
   },
+  "project1": {
+    "desc": "The first dedicated online second-hand clothing marketplace in the Balkans.",
+    "h1": "The right design",
+    "desc1": "Obuci.rs stands as a testament to minimalist, sleek, and modern design principles. My focus was to create a user interface that is not only visually appealing but also exceptionally intuitive and user-friendly. Prioritizing readability and ease of navigation, I wanted the website to be significantly more refined and accessible than comparable platforms in Serbia. The design process involved extensive wireframing and detailed design work in Figma. By leveraging TailwindCSS, I was able to bring this design to life, offering users a seamless and engaging online shopping experience.",
+    "h2": "All the features",
+    "desc2": "Obuci.rs stands out with its user-centric features. It streamlines the process of listing and purchasing second-hand clothing, coupled with an advanced chat feature for seamless seller-buyer communication. The platform ensures a smooth shopping experience with order tracking, timely notifications, and efficient advanced filtering. Additionally, users can enjoy a personalized experience through extensive profile customization options. These features, among many others, make Obuci.rs a versatile and user-centric marketplace.",
+    "h3": "Perfomant stack",
+    "desc3": "Choosing NextJS and Firebase for Obuci.rs's tech stack brought numerous performance benefits and functional advantages. NextJS's server-side rendering capabilities significantly enhanced the site's load times and SEO, crucial for an online marketplace's visibility and user engagement. Meanwhile, Firebase provided a robust backend solution, offering secure authentication, real-time database updates, and scalable hosting. This combination ensured a smooth, responsive user experience and ease of maintenance and updates"
+  },
+  "project2": {
+    "desc": "A digital marketing agency I have founded with two of my best friends in 2021.",
+    "h1": "Sleek and simple design",
+    "desc1": "The design of my digital marketing agency website was intentionally crafted to embody simplicity, sleekness, and a modern aesthetic. Every element was chosen to create a clean and uncluttered interface, reflecting the agency’s forward-thinking and professional approach. The color palette, typography, and layout were all selected to ensure the site conveys a sense of sophistication and contemporary style, making it not only visually appealing but also easy and enjoyable to navigate for our clients.",
+    "h2": "Philosophy and values",
+    "desc2": "The primary focus was on accessibility and clarity of information. We prioritized making it exceptionally easy for clients to contact us, ensuring that all communication channels are prominently displayed and user-friendly. Simultaneously, we structured the website to present all necessary information in a concise, well-organized manner, allowing visitors to quickly grasp our services and values without being overwhelmed by excessive details.",
+    "h3": "",
+    "desc3": ""
+  },
+  "project3": {
+    "desc": "Sleek and perfomant promotional website for the Flex Team betting organization.",
+    "h1": "Capturing Attention",
+    "desc1": "When developing this website, my vision was to create a design that truly captivates and holds attention. I achieved this by incorporating a series of flashy, dynamic elements - from eye-catching animations to glowing UI components. These design choices not give the website a premium feel but also ensure it distinctly stands out from those of other organizations. Every aspect of the site, from the color scheme to interactive features, is crafted to make a bold statement and engage visitors the moment they land on the page.",
+    "h2": "Transparency",
+    "desc2": "A central theme in the design is transparency. Recognizing the importance of trust in the betting advisory sector, I incorporated a prominently displayed, real-time updated profit table on their website. This table transparently shows the winnings and losses for each betting tip by month, allowing users to independently verify the results. This feature not only emphasizes Flex Team's dedication to transparency but also significantly enhances their credibility and reputation for honesty in the eyes of their customers.",
+    "h3": "Perfomance",
+    "desc3": "A major accomplishment in this project was significantly reducing load times and optimizing various performance metrics. By implementing efficient coding practices, compressing assets, and utilizing static and server-side rendering, I ensured that the website not only runs smoothly but also provides a swift, seamless experience for all users."
+  },
+  "project4": {
+    "desc": "Flagship cross-platform app being developed for Obuci.rs.",
+    "h1": "The right tech-stack",
+    "desc1": "For the Obuci.rs app, choosing the right tech stack was crucial, with many options on the table. We opted for a cross-platform approach and ultimately selected Expo for React Native, drawing on our strong background in React. This choice allowed for a smooth, unified development experience. For the backend, we aligned with the website's setup by continuing with Firebase, ensuring consistency and efficiency across both web and mobile platforms.",
+    "h2": "Better features",
+    "desc2": "Our goal was to elevate the user experience beyond what the website offered, focusing on creating a smoother, more intuitive interface. We envisioned the app as the primary access point for Obuci.rs going forward, optimizing it for ease of use and seamless navigation. By enhancing the app's functionality and user experience, we aimed to encourage users to prefer the app for their interactions with Obuci.rs.",
+    "h3": "Learning curve",
+    "desc3": "Working on the Obuci.rs app is a journey of continuous learning for me. As someone relatively new to app development, using React Native is both challenging and rewarding. This project is not just about improving the platform; it's a valuable chance for me to grow my skills in a practical setting. While the app is still evolving, each step in its development is teaching me more about building user-focused, efficient applications."
+  },
+  "project5": {
+    "desc": "CMS club website created for the Porsche Club in Serbia.",
+    "h1": "Limited options",
+    "desc1": "Working on the Porsche Club Serbia website, my first website project, was a real learning experience. Hosted on Porsche's official CMS, I faced the challenge of its limited flexibility, as it offered minimal room for customization. Despite these constraints, I did my best to work within the CMS's framework, striving to create a visually appealing and functional site. This project taught me a lot about adapting to less-than-ideal circumstances and making the most of the tools at hand.",
+    "h2": "A focus on SEO",
+    "desc2": "Within the constraints of the CMS for the Porsche Club Serbia website, I found a silver lining in the chance to learn about SEO. The limitations in customization shifted my focus towards optimizing the site's search engine performance. It was a hands-on learning experience, where I gained practical knowledge in SEO, helping to improve the site's online visibility. This project was a valuable lesson in making the most of available opportunities and enhancing my understanding of essential web optimization techniques.",
+    "h3": "Perfomant stack",
+    "desc3": ""
+  },
   "siteinfo": {
     "about": "About This Site",
-    "p1": "This site is my corner of the internet. I use it to showcase projects I have worked on and document my web dev adventures.",
+    "p1": "This site is my corner of the internet. I use it to showcase projects I have worked on and document my web development journey.",
     "p2": "The site has been redesigned and rebuilt many times. Its current tech stack uses NextJS and Tailwindcss. All UX design and code was completed by me with a little inspiration. "
+  },
+  "sitestats": {
+    "general": "General",
+    "overview": "Overview",
+    "code": "Code",
+    "experimental": "Experimental",
+    "relatime-stats": "Realtime stats",
+    "person": "Person",
+    "visiting-right-now": "Visiting Right Now!",
+    "stats-stats-over-time": "Site stats over time",
+    "popular-pages": "Popular pages among visitors",
+    "page-views": "Page Views",
+    "sessions": "Sessions",
+    "avg-duration": "avg. duration",
+    "bounce-rate": "bounce rate",
+    "wip": "Work In Progress",
+    "site-lines": "site lines by language",
+    "totals": "totals",
+    "files": "Files",
+    "lines-of-code": "Lines of Code",
+    "comments": "Comments",
+    "blank-lines": "Blank Lines",
+    "your": "your",
+    "average": "average",
+    "waiting-for-reading": "Waiting for Reading",
+    "good": "Good",
+    "needs-improvement": "Needs Improvement",
+    "poor": "Poor"
+  },
+  "uses": {
+    "h1": "Software I use, and other things I recommend.",
+    "editor": "Editor",
+    "vscode": "Visual Studio Code is a free source-code editor made by Microsoft for Windows, Linux and macOS.",
+    "browser": "Browser",
+    "firefox": "I use firefox because of its superb web development features compared to other browsers.",
+    "design-inspiration": "Design Inspiration",
+    "dribble": "Arguably the home of designers online.",
+    "pages": "A hall of fame for simply beautiful websites.",
+    "uplabs": "A great place for designs along with their original files for download. Most of them are free.",
+    "workstation": "Workstation",
+    "site-stack": "Site Tech Stack",
+    "next": "A React based static site generator powered by GraphQL.",
+    "tailwind": "A utility-first CSS framework for rapidly building custom designs.",
+    "vercel": "A cloud platform for static sites and Serverless Functions."
   }
 }

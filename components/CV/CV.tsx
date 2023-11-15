@@ -157,6 +157,7 @@ const CV = forwardRef<HTMLDivElement, CVProps>((props, ref) => {
     showHeadshot,
     showColor,
     showVisualizations,
+
     setShowColor,
     setShowHeadshot,
     setShowVisualizations,
