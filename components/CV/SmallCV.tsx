@@ -94,6 +94,7 @@ interface CVProps {
   dictionary: {
     button: string;
     intro: string;
+    "intro-binf": string;
     "technical-skills": string;
     skills: string;
     skill1: string;
@@ -116,6 +117,11 @@ interface CVProps {
     "exp1-2": string;
     "exp1-3": string;
     "exp1-skills": string;
+    "exp1-binf-1": string;
+    "exp1-binf-2": string;
+    "exp1-binf-3": string;
+    "exp1-binf-4": string;
+    "exp1-binf-skills": string;
     "exp2-header": string;
     "exp2-1": string;
     "exp2-2": string;
@@ -140,6 +146,7 @@ interface CVProps {
     visualizations: string;
     reset: string;
   };
+  sliderValue: Number;
   showIcons: boolean;
   showHeadshot: boolean;
   showColor: boolean;
@@ -157,10 +164,7 @@ const SmallCV = (props: CVProps) => {
     showHeadshot,
     showColor,
     showVisualizations,
-    setShowColor,
-    setShowHeadshot,
-    setShowVisualizations,
-    setShowIcons,
+    sliderValue,
   } = props;
   const transition = useTransition(showHeadshot, {
     config: { tension: 300, friction: 20 },

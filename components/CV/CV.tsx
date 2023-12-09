@@ -94,6 +94,7 @@ interface CVProps {
   dictionary: {
     button: string;
     intro: string;
+    "intro-binf": string;
     "technical-skills": string;
     skills: string;
     skill1: string;
@@ -116,6 +117,11 @@ interface CVProps {
     "exp1-2": string;
     "exp1-3": string;
     "exp1-skills": string;
+    "exp1-binf-1": string;
+    "exp1-binf-2": string;
+    "exp1-binf-3": string;
+    "exp1-binf-4": string;
+    "exp1-binf-skills": string;
     "exp2-header": string;
     "exp2-1": string;
     "exp2-2": string;
@@ -148,6 +154,7 @@ interface CVProps {
   setShowHeadshot: Dispatch<SetStateAction<boolean>>;
   setShowVisualizations: Dispatch<SetStateAction<boolean>>;
   setShowIcons: Dispatch<SetStateAction<boolean>>;
+  sliderValue: Number;
 }
 
 const CV = forwardRef<HTMLDivElement, CVProps>((props, ref) => {
@@ -157,7 +164,7 @@ const CV = forwardRef<HTMLDivElement, CVProps>((props, ref) => {
     showHeadshot,
     showColor,
     showVisualizations,
-
+    sliderValue,
     setShowColor,
     setShowHeadshot,
     setShowVisualizations,
@@ -222,7 +229,9 @@ const CV = forwardRef<HTMLDivElement, CVProps>((props, ref) => {
               style={{ color: `${showColor ? getRandomColor() : "black"}` }}
               className={`text-xs `}
             >
-              {dictionary.intro}
+              {sliderValue == 0
+                ? dictionary["intro"]
+                : dictionary["intro-binf"]}
             </p>
           </div>
         </div>
@@ -390,7 +399,7 @@ const CV = forwardRef<HTMLDivElement, CVProps>((props, ref) => {
                       color: `${showColor ? getRandomColor() : "black"}`,
                     }}
                   >
-                    Express
+                    R
                   </p>
                 </div>
                 <div className="pad-0">
@@ -687,7 +696,11 @@ const CV = forwardRef<HTMLDivElement, CVProps>((props, ref) => {
             </h5>
 
             <div className="mb-1">
-              <h3 className="text-sm font-bold">{dictionary["exp2-header"]}</h3>
+              <h3 className="text-sm font-bold">
+                {sliderValue == 0
+                  ? dictionary["exp2-header"]
+                  : dictionary["exp1-binf-header"]}
+              </h3>
               <h5
                 style={{
                   color: `${showColor ? getRandomColor() : "black"}`,
@@ -696,26 +709,46 @@ const CV = forwardRef<HTMLDivElement, CVProps>((props, ref) => {
                   showColor && " font-base"
                 }`}
               >
-                LAN Digital, Belgrade | 2021 - {dictionary.present}
+                {sliderValue == 0
+                  ? `LAN Digital, Belgrade | 2021 - ${dictionary.present}`
+                  : `Riabowol Lab, Calgary | 2023 - ${dictionary.present}`}
               </h5>
               <div className="text-xs flex">
                 <p className="mr-1">-</p>
-                <p className="m-0">{dictionary["exp2-1"]}</p>
+                <p className="m-0">
+                  {sliderValue == 0
+                    ? dictionary["exp2-1"]
+                    : dictionary["exp1-binf-1"]}
+                </p>
               </div>
               <div className="text-xs flex">
                 <p className="mr-1">-</p>
-                <p className="m-0">{dictionary["exp2-2"]}</p>
+                <p className="m-0">
+                  {sliderValue == 0
+                    ? dictionary["exp2-2"]
+                    : dictionary["exp1-binf-2"]}
+                </p>
               </div>
               <div className="text-xs flex">
                 <p className="mr-1">-</p>
-                <p className="m-0">{dictionary["exp2-3"]}</p>
+                <p className="m-0">
+                  {sliderValue == 0
+                    ? dictionary["exp2-3"]
+                    : dictionary["exp1-binf-3"]}
+                </p>
               </div>
               <div className="text-xs flex">
                 <p className="mr-1">-</p>
-                <p className="m-0">{dictionary["exp2-4"]}</p>
+                <p className="m-0">
+                  {sliderValue == 0
+                    ? dictionary["exp2-4"]
+                    : dictionary["exp1-binf-4"]}
+                </p>
               </div>
               <p className="text-xs mt-1 ml-2 text-blue font-semibold">
-                {dictionary["exp2-skills"]}
+                {sliderValue == 0
+                  ? dictionary["exp2-skills"]
+                  : dictionary["exp1-binf-skills"]}
               </p>
             </div>
             <div className="mb-1 border-light-grey border-t-2 mt-2 pt-2">
