@@ -759,12 +759,23 @@ const SmallCV = (props: CVProps) => {
                 showColor && "text-pink-500 font-semibold"
               }`}
             >
+              MSc in Bioinformatics - Imperial College London
+            </h4>
+            <p className="text-xs">2024-2025</p>
+          </div>
+          <div className="mt-1">
+            <h4
+              className={`text-xs font-bold ${
+                showColor && "text-pink-500 font-semibold"
+              }`}
+            >
               BHSC Honors - Bioinformatics major, Computer Science Minor -
               University of Calgary
             </h4>
             <p className="text-xs">2020-2024</p>
             <p className="text-xs">- Dean's List 2021, 2023</p>
           </div>
+
           <div className="mt-1">
             <h4 className="text-xs font-bold">{dictionary["high-school"]}</h4>
             <p className="text-xs">2016-2020</p>

@@ -555,11 +555,21 @@ const CV = forwardRef<HTMLDivElement, CVProps>((props, ref) => {
                     showColor && "text-pink-500 font-semibold"
                   }`}
                 >
-                  BHSC Honors - Bioinformatics Major, Computer Science Minor -
-                  University of Calgary
+                  MSc in Bioinformatics - Imperial College London
+                </h4>
+                <p className="text-xs">2024-2025</p>
+              </div>
+              <div className="mt-1">
+                <h4
+                  className={`text-xs font-bold ${
+                    showColor && "text-pink-500 font-semibold"
+                  }`}
+                >
+                  BHSC Honors (With Distinction) - Bioinformatics Major,
+                  Computer Science Minor - University of Calgary
                 </h4>
                 <p className="text-xs">2020-2024</p>
-                <p className="text-xs">- Dean's List 2021, 2023</p>
+                <p className="text-xs">- Dean's List 2020 - 2024</p>
               </div>
               <div className="mt-1">
                 <h4 className="text-xs font-bold">
