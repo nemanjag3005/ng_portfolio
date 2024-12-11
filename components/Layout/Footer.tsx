@@ -94,7 +94,7 @@ const Footer = ({
                   >
                     nemanjag3005@gmail.com
                   </a>
-                  <p className="text-sm">+1 825 733 6311</p>
+                  <p className="text-sm">+44 07425617676</p>
                   <p className="text-sm">+381 63 203 012</p>
                 </div>
               </div>
@@ -105,7 +105,8 @@ const Footer = ({
               <div className="-mx-4 flex flex-wrap justify-between items-center space-y-2 md:space-y-0">
                 <div className="px-2 flex flex-col w-full text-center sm:w-auto sm:text-left text-sm opacity-75">
                   <span>
-                    Copyright © 2023 Nemanja Grujić. All Rights Reserved.
+                    Copyright © {new Date().getFullYear()} Nemanja Grujić. All
+                    Rights Reserved.
                   </span>
                   <span>Next.js v14.0.1 | TailwindCSS v3.0.18</span>
                 </div>

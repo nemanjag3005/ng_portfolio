@@ -216,7 +216,7 @@ const Hero = ({
               </Link>
             </h1>
           </div>
-          <div className="bg-gray-900 border-gray-600 hover:border-primary-dark-light group border-4 h-48 md:h-96 w-full rounded-lg mt-6">
+          <div className="bg-gray-900 border-gray-600 hover:border-light group border-4 h-48 md:h-96 w-full rounded-lg mt-6">
             <a href="https://nomad-planner.com">
               <div className="flex items-center justify-center relative h-full w-full overflow-hidden">
                 <WorldMap
@@ -238,15 +238,19 @@ const Hero = ({
                     },
                     {
                       start: { lat: -15.7975, lng: -47.8919 }, // Brazil (Brasília)
-                      end: { lat: 38.7223, lng: -9.1393 }, // Lisbon
+                      end: { lat: 26.7223, lng: -9.1393 }, // Lisbon
                     },
                     {
-                      start: { lat: 51.5074, lng: -0.1278 }, // London
-                      end: { lat: 28.6139, lng: 77.209 }, // New Delhi
+                      start: { lat: 44.5074, lng: -1.0 }, // London
+                      end: { lat: 34.6139, lng: 21.209 }, // Belgrade
                     },
                     {
-                      start: { lat: 28.6139, lng: 77.209 }, // New Delhi
+                      start: { lat: 28.6139, lng: 77.209 }, // Dubai
                       end: { lat: 43.1332, lng: 131.9113 }, // Vladivostok
+                    },
+                    {
+                      start: { lat: 28.6139, lng: 77.209 }, // Dubai
+                      end: { lat: -48.1332, lng: 131.9113 }, // Melbourne
                     },
                     {
                       start: { lat: 28.6139, lng: 77.209 }, // New Delhi
@@ -262,7 +266,7 @@ const Hero = ({
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
                     stroke="currentColor"
-                    className="text-primary-dark-light transition-colors duration-500 w-12 md:w-16 group-hover:text-white"
+                    className="text-light transition-colors duration-500 w-12 md:w-16 group-hover:text-white"
                   >
                     <path
                       strokeLinecap="round"
@@ -300,15 +304,34 @@ const Hero = ({
               className="group relative"
               target="_blank"
               rel="noopener noreferrer"
+              href="https://www.wearelandigital.com/"
+            >
+              <div className="absolute top-0 left-0 w-full h-full p-5 hidden group-hover:flex flex-col z-20">
+                <p className=" font-bold text-xl">LAN Digital</p>
+                <p>{dictionary.p2}</p>
+              </div>
+              <div className="relative rounded h-48 w-full object-cover group-hover:opacity-10">
+                <Image
+                  alt="Project 1"
+                  src="/lan.png"
+                  className="rounded object-cover"
+                  fill
+                />
+              </div>
+            </a>
+            <a
+              className="group relative"
+              target="_blank"
+              rel="noopener noreferrer"
               href="https://obucirs.vercel.app/"
             >
               <div className="absolute top-0 left-0 w-full h-full p-5 hidden group-hover:flex flex-col z-20">
                 <p className=" font-bold text-xl">Obuci.rs</p>
                 <p>{dictionary.p1}</p>
               </div>
-              <div className="relative rounded h-48 w-full object-cover group-hover:opacity-25">
+              <div className="relative rounded h-48 w-full object-cover group-hover:opacity-10">
                 <Image
-                  alt="Project 1"
+                  alt="Project 2"
                   src="/obuci1.png"
                   className="rounded object-cover"
                   fill
@@ -325,29 +348,10 @@ const Hero = ({
                 <p className=" font-bold text-xl">EasyMeal</p>
                 <p>{dictionary.p3}</p>
               </div>
-              <div className="relative rounded h-48 w-full object-cover group-hover:opacity-25">
-                <Image
-                  alt="Project 2"
-                  src="/easymeal1.png"
-                  className="rounded object-cover"
-                  fill
-                />
-              </div>
-            </a>
-            <a
-              className="group relative"
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://flexteam.rs"
-            >
-              <div className="absolute top-0 left-0 w-full h-full p-5 hidden group-hover:flex flex-col z-20">
-                <p className=" font-bold text-xl">Flex Team</p>
-                <p>{dictionary.p2}</p>
-              </div>
-              <div className="relative rounded h-48 w-full object-cover group-hover:opacity-25">
+              <div className="relative rounded h-48 w-full object-cover group-hover:opacity-10">
                 <Image
                   alt="Project 3"
-                  src="/flex.png"
+                  src="/easymeal1.png"
                   className="rounded object-cover"
                   fill
                 />
