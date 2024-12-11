@@ -721,7 +721,7 @@ const CV = forwardRef<HTMLDivElement, CVProps>((props, ref) => {
               >
                 {sliderValue == 0
                   ? `LAN Digital, Belgrade | 2021 - ${dictionary.present}`
-                  : `Riabowol Lab, Calgary | 2023 - ${dictionary.present}`}
+                  : `Arnie Charbonneau Cancer Institute, Calgary | 2023 - 2024`}
               </h5>
               <div className="text-xs flex">
                 <p className="mr-1">-</p>
