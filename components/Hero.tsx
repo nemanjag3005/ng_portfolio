@@ -3,6 +3,7 @@ import React from "react";
 import Link from "next/link";
 import "animate.css";
 import Image from "next/image";
+import { WorldMap } from "./ui/world-map";
 
 const Hero = ({
   dictionary,
@@ -215,7 +216,82 @@ const Hero = ({
               </Link>
             </h1>
           </div>
+          <div className="bg-gray-900 border-gray-600 hover:border-primary-dark-light group border-4 h-48 md:h-96 w-full rounded-lg mt-6">
+            <a href="https://nomad-planner.com">
+              <div className="flex items-center justify-center relative h-full w-full overflow-hidden">
+                <WorldMap
+                  lineColor="var(--light)"
+                  dots={[
+                    {
+                      start: {
+                        lat: 64.2008,
+                        lng: -149.4937,
+                      }, // Alaska (Fairbanks)
+                      end: {
+                        lat: 34.0522,
+                        lng: -118.2437,
+                      }, // Los Angeles
+                    },
+                    {
+                      start: { lat: 64.2008, lng: -149.4937 }, // Alaska (Fairbanks)
+                      end: { lat: -15.7975, lng: -47.8919 }, // Brazil (Brasília)
+                    },
+                    {
+                      start: { lat: -15.7975, lng: -47.8919 }, // Brazil (Brasília)
+                      end: { lat: 38.7223, lng: -9.1393 }, // Lisbon
+                    },
+                    {
+                      start: { lat: 51.5074, lng: -0.1278 }, // London
+                      end: { lat: 28.6139, lng: 77.209 }, // New Delhi
+                    },
+                    {
+                      start: { lat: 28.6139, lng: 77.209 }, // New Delhi
+                      end: { lat: 43.1332, lng: 131.9113 }, // Vladivostok
+                    },
+                    {
+                      start: { lat: 28.6139, lng: 77.209 }, // New Delhi
+                      end: { lat: -1.2921, lng: 36.8219 }, // Nairobi
+                    },
+                  ]}
+                />
 
+                <div className="flex flex-col absolute space-y-2 items-center transform transition-transform  group-hover:scale-125 duration-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="text-primary-dark-light transition-colors duration-500 w-12 md:w-16 group-hover:text-white"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"
+                    />
+                  </svg>
+
+                  <div className="relative font-bold text-3xl md:text-7xl w-full text-center flex">
+                    <p className="text-white absolute top-0 z-[5]">
+                      NomadPlanner
+                    </p>
+                    <p className="text-accent-1 absolute top-0 z-[4] left-0 group-hover:left-[2px] transition-all duration-200">
+                      NomadPlanner
+                    </p>
+                    <p className="text-accent-2 absolute top-0 z-[3] left-0 group-hover:left-[3px] transition-all duration-200">
+                      NomadPlanner
+                    </p>
+                    <p className="text-secondary absolute top-0 z-[2] left-0 group-hover:left-[5px] transition-all duration-200">
+                      NomadPlanner
+                    </p>
+                    <p className="text-primary relative left-0 group-hover:left-[7px] transition-all duration-200">
+                      NomadPlanner
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
           <h2 className="text-2xl md:text-3xl font-bold my-3 mt-8 ">
             {dictionary.projects}
           </h2>
