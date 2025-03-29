@@ -116,6 +116,7 @@ interface CVProps {
     "exp1-1": string;
     "exp1-2": string;
     "exp1-3": string;
+    "exp1-4": string;
     "exp1-skills": string;
     "exp1-binf-1": string;
     "exp1-binf-2": string;
@@ -137,6 +138,7 @@ interface CVProps {
     "exp4-1": string;
     "exp4-2": string;
     "exp4-3": string;
+    "exp4-4": string;
     "exp4-skills": string;
     "customize-cv": string;
     customize: string;
@@ -347,7 +349,7 @@ const SmallCV = (props: CVProps) => {
               <p className="m-0">{dictionary["exp2-4"]}</p>
             </div>
             <p className="text-xs mt-1 ml-2 text-blue font-semibold">
-              {dictionary["exp2-skills"]}
+              Key technologies: {dictionary["exp2-skills"]}
             </p>
           </div>
           <div className="m1-b  border-light-grey border-t-2 mt-2 pt-2 ">
@@ -374,8 +376,12 @@ const SmallCV = (props: CVProps) => {
               <p className="mr-1">-</p>
               <p className="m-0">{dictionary["exp4-3"]}</p>
             </div>
+            <div className="text-xs flex">
+              <p className="mr-1">-</p>
+              <p className="m-0">{dictionary["exp4-4"]}</p>
+            </div>
             <p className="text-xs mt-1 ml-2 text-blue font-semibold">
-              {dictionary["exp4-skills"]}
+              Key technologies: {dictionary["exp4-skills"]}
             </p>
           </div>
           <div className="m1-b  border-light-grey border-t-2 mt-2 pt-2 ">
@@ -404,7 +410,7 @@ const SmallCV = (props: CVProps) => {
             </div>
 
             <p className="text-xs mt-1 ml-2 text-blue font-semibold">
-              {dictionary["exp3-skills"]}
+              Key technologies: {dictionary["exp3-skills"]}
             </p>
           </div>
           <div className="m1-b border-light-grey border-t-2 mt-2 pt-2">
@@ -431,8 +437,12 @@ const SmallCV = (props: CVProps) => {
               <p className="mr-1">-</p>
               <p className="m-0">{dictionary["exp1-3"]}</p>
             </div>
+            <div className="text-xs flex">
+              <p className="mr-1">-</p>
+              <p className="m-0">{dictionary["exp1-4"]}</p>
+            </div>
             <p className="text-xs mt-1 ml-2 text-blue font-semibold">
-              {dictionary["exp1-skills"]}
+              Key technologies: {dictionary["exp1-skills"]}
             </p>
           </div>
         </div>
@@ -478,97 +488,7 @@ const SmallCV = (props: CVProps) => {
                 }}
                 className={`text-xs`}
               >
-                HTML
-              </p>
-            </div>
-            <div className="pad-0">
-              <p
-                style={{
-                  color: `${showColor ? getRandomColor() : "black"}`,
-                }}
-                className={`text-xs`}
-              >
-                CSS
-              </p>
-            </div>
-            <div className="pad-0">
-              <p
-                style={{
-                  color: `${showColor ? getRandomColor() : "black"}`,
-                }}
-                className={`text-xs`}
-              >
-                Node
-              </p>
-            </div>
-            <div className="pad-0">
-              <p
-                style={{
-                  color: `${showColor ? getRandomColor() : "black"}`,
-                }}
-                className={`text-xs`}
-              >
-                ReactJS
-              </p>
-            </div>
-            <div className="pad-0">
-              <p
-                style={{
-                  color: `${showColor ? getRandomColor() : "black"}`,
-                }}
-                className={`text-xs`}
-              >
-                Redux
-              </p>
-            </div>
-            <div className="pad-0">
-              <p
-                style={{
-                  color: `${showColor ? getRandomColor() : "black"}`,
-                }}
-                className={`text-xs`}
-              >
-                NextJS
-              </p>
-            </div>
-            <div className="pad-0">
-              <p
-                style={{
-                  color: `${showColor ? getRandomColor() : "black"}`,
-                }}
-                className={`text-xs`}
-              >
-                Assembly
-              </p>
-            </div>
-            <div className="pad-0">
-              <p
-                style={{
-                  color: `${showColor ? getRandomColor() : "black"}`,
-                }}
-                className={`text-xs`}
-              >
-                Typescript
-              </p>
-            </div>
-            <div className="pad-0">
-              <p
-                style={{
-                  color: `${showColor ? getRandomColor() : "black"}`,
-                }}
-                className={`text-xs`}
-              >
-                Java
-              </p>
-            </div>
-            <div className="pad-0">
-              <p
-                style={{
-                  color: `${showColor ? getRandomColor() : "black"}`,
-                }}
-                className={`text-xs`}
-              >
-                TailwindCSS
+                TypeScript
               </p>
             </div>
             <div className="pad-0">
@@ -588,6 +508,26 @@ const SmallCV = (props: CVProps) => {
                 }}
                 className={`text-xs`}
               >
+                HTML/CSS
+              </p>
+            </div>
+            <div className="pad-0">
+              <p
+                style={{
+                  color: `${showColor ? getRandomColor() : "black"}`,
+                }}
+                className={`text-xs`}
+              >
+                React/NextJS
+              </p>
+            </div>
+            <div className="pad-0">
+              <p
+                style={{
+                  color: `${showColor ? getRandomColor() : "black"}`,
+                }}
+                className={`text-xs`}
+              >
                 React Native
               </p>
             </div>
@@ -598,7 +538,17 @@ const SmallCV = (props: CVProps) => {
                 }}
                 className={`text-xs`}
               >
-                Express
+                SQL
+              </p>
+            </div>
+            <div className="pad-0">
+              <p
+                style={{
+                  color: `${showColor ? getRandomColor() : "black"}`,
+                }}
+                className={`text-xs`}
+              >
+                R
               </p>
             </div>
             <div className="pad-0">
@@ -618,7 +568,7 @@ const SmallCV = (props: CVProps) => {
                 }}
                 className={`text-xs`}
               >
-                SQL
+                Firebase
               </p>
             </div>
           </div>

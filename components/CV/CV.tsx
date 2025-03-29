@@ -116,6 +116,7 @@ interface CVProps {
     "exp1-1": string;
     "exp1-2": string;
     "exp1-3": string;
+    "exp1-4": string;
     "exp1-skills": string;
     "exp1-binf-1": string;
     "exp1-binf-2": string;
@@ -137,6 +138,7 @@ interface CVProps {
     "exp4-1": string;
     "exp4-2": string;
     "exp4-3": string;
+    "exp4-4": string;
     "exp4-skills": string;
     "customize-cv": string;
     customize: string;
@@ -279,97 +281,7 @@ const CV = forwardRef<HTMLDivElement, CVProps>((props, ref) => {
                       color: `${showColor ? getRandomColor() : "black"}`,
                     }}
                   >
-                    HTML
-                  </p>
-                </div>
-                <div className="pad-0">
-                  <p
-                    className={`text-xs `}
-                    style={{
-                      color: `${showColor ? getRandomColor() : "black"}`,
-                    }}
-                  >
-                    CSS
-                  </p>
-                </div>
-                <div className="pad-0">
-                  <p
-                    className={`text-xs `}
-                    style={{
-                      color: `${showColor ? getRandomColor() : "black"}`,
-                    }}
-                  >
-                    Node
-                  </p>
-                </div>
-                <div className="pad-0">
-                  <p
-                    className={`text-xs `}
-                    style={{
-                      color: `${showColor ? getRandomColor() : "black"}`,
-                    }}
-                  >
-                    ReactJS
-                  </p>
-                </div>
-                <div className="pad-0">
-                  <p
-                    className={`text-xs `}
-                    style={{
-                      color: `${showColor ? getRandomColor() : "black"}`,
-                    }}
-                  >
-                    Redux
-                  </p>
-                </div>
-                <div className="pad-0">
-                  <p
-                    className={`text-xs `}
-                    style={{
-                      color: `${showColor ? getRandomColor() : "black"}`,
-                    }}
-                  >
-                    NextJS
-                  </p>
-                </div>
-                <div className="pad-0">
-                  <p
-                    className={`text-xs `}
-                    style={{
-                      color: `${showColor ? getRandomColor() : "black"}`,
-                    }}
-                  >
-                    Assembly
-                  </p>
-                </div>
-                <div className="pad-0">
-                  <p
-                    className={`text-xs `}
-                    style={{
-                      color: `${showColor ? getRandomColor() : "black"}`,
-                    }}
-                  >
-                    Typescript
-                  </p>
-                </div>
-                <div className="pad-0">
-                  <p
-                    className={`text-xs `}
-                    style={{
-                      color: `${showColor ? getRandomColor() : "black"}`,
-                    }}
-                  >
-                    Java
-                  </p>
-                </div>
-                <div className="pad-0">
-                  <p
-                    className={`text-xs `}
-                    style={{
-                      color: `${showColor ? getRandomColor() : "black"}`,
-                    }}
-                  >
-                    TailwindCSS
+                    TypeScript
                   </p>
                 </div>
                 <div className="pad-0">
@@ -389,7 +301,37 @@ const CV = forwardRef<HTMLDivElement, CVProps>((props, ref) => {
                       color: `${showColor ? getRandomColor() : "black"}`,
                     }}
                   >
+                    HTML/CSS
+                  </p>
+                </div>
+                <div className="pad-0">
+                  <p
+                    className={`text-xs `}
+                    style={{
+                      color: `${showColor ? getRandomColor() : "black"}`,
+                    }}
+                  >
+                    React/NextJS
+                  </p>
+                </div>
+                <div className="pad-0">
+                  <p
+                    className={`text-xs `}
+                    style={{
+                      color: `${showColor ? getRandomColor() : "black"}`,
+                    }}
+                  >
                     React Native
+                  </p>
+                </div>
+                <div className="pad-0">
+                  <p
+                    className={`text-xs `}
+                    style={{
+                      color: `${showColor ? getRandomColor() : "black"}`,
+                    }}
+                  >
+                    SQL
                   </p>
                 </div>
                 <div className="pad-0">
@@ -419,7 +361,7 @@ const CV = forwardRef<HTMLDivElement, CVProps>((props, ref) => {
                       color: `${showColor ? getRandomColor() : "black"}`,
                     }}
                   >
-                    SQL
+                    Firebase
                   </p>
                 </div>
               </div>
@@ -473,16 +415,6 @@ const CV = forwardRef<HTMLDivElement, CVProps>((props, ref) => {
                     }}
                   >
                     {dictionary.skill4}
-                  </p>
-                </div>
-                <div className="pad-0">
-                  <p
-                    className={`text-xs `}
-                    style={{
-                      color: `${showColor ? getRandomColor() : "black"}`,
-                    }}
-                  >
-                    {dictionary.skill5}
                   </p>
                 </div>
               </div>
@@ -756,6 +688,7 @@ const CV = forwardRef<HTMLDivElement, CVProps>((props, ref) => {
                 </p>
               </div>
               <p className="text-xs mt-1 ml-2 text-blue font-semibold">
+                Key technologies:{" "}
                 {sliderValue == 0
                   ? dictionary["exp2-skills"]
                   : dictionary["exp1-binf-skills"]}
@@ -785,8 +718,12 @@ const CV = forwardRef<HTMLDivElement, CVProps>((props, ref) => {
                 <p className="mr-1">-</p>
                 <p className="m-0">{dictionary["exp4-3"]}</p>
               </div>
+              <div className="text-xs flex">
+                <p className="mr-1">-</p>
+                <p className="m-0">{dictionary["exp4-4"]}</p>
+              </div>
               <p className="text-xs mt-1 ml-2 text-blue font-semibold">
-                {dictionary["exp4-skills"]}
+                Key technologies: {dictionary["exp4-skills"]}
               </p>
             </div>
             <div className="mb-1  border-light-grey border-t-2 mt-2 pt-2 ">
@@ -815,7 +752,7 @@ const CV = forwardRef<HTMLDivElement, CVProps>((props, ref) => {
               </div>
 
               <p className="text-xs mt-1 ml-2 text-blue font-semibold">
-                {dictionary["exp3-skills"]}
+                Key technologies: {dictionary["exp3-skills"]}
               </p>
             </div>
             <div className="mb-1  border-light-grey border-t-2 mt-2 pt-2 ">
@@ -842,8 +779,12 @@ const CV = forwardRef<HTMLDivElement, CVProps>((props, ref) => {
                 <p className="mr-1">-</p>
                 <p className="m-0">{dictionary["exp1-3"]}</p>
               </div>
+              <div className="text-xs flex">
+                <p className="mr-1">-</p>
+                <p className="m-0">{dictionary["exp1-4"]}</p>
+              </div>
               <p className="text-xs mt-1 ml-2 text-blue font-semibold">
-                {dictionary["exp1-skills"]}
+                Key technologies: {dictionary["exp1-skills"]}
               </p>
             </div>
           </div>
