@@ -34,6 +34,7 @@ const CvPage = ({
     "exp1-1": string;
     "exp1-2": string;
     "exp1-3": string;
+    "exp1-4": string;
     "exp1-skills": string;
     "exp1-binf-1": string;
     "exp1-binf-2": string;
@@ -55,6 +56,7 @@ const CvPage = ({
     "exp4-1": string;
     "exp4-2": string;
     "exp4-3": string;
+    "exp4-4": string;
     "exp4-skills": string;
     "customize-cv": string;
     customize: string;
