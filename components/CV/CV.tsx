@@ -361,7 +361,7 @@ const CV = forwardRef<HTMLDivElement, CVProps>((props, ref) => {
                       color: `${showColor ? getRandomColor() : "black"}`,
                     }}
                   >
-                    Firebase
+                    Angular
                   </p>
                 </div>
               </div>
@@ -636,8 +636,40 @@ const CV = forwardRef<HTMLDivElement, CVProps>((props, ref) => {
               )}
               {dictionary.experience}
             </h5>
+            <div className="mb-1  ">
+              <h3 className="text-sm font-bold">{dictionary["exp1-header"]}</h3>
+              <h5
+                style={{
+                  color: `${showColor ? getRandomColor() : "black"}`,
+                }}
+                className={`text-xs my-1 font-semibold ${
+                  showColor && " font-base"
+                }`}
+              >
+                S-Cube, London | 2025 - Present
+              </h5>
+              <div className="text-xs flex">
+                <p className="mr-1">-</p>
+                <p className="m-0">{dictionary["exp1-1"]}</p>
+              </div>
+              <div className="text-xs flex">
+                <p className="mr-1">-</p>
+                <p className="m-0">{dictionary["exp1-2"]}</p>
+              </div>
+              <div className="text-xs flex">
+                <p className="mr-1">-</p>
+                <p className="m-0">{dictionary["exp1-3"]}</p>
+              </div>
+              <div className="text-xs flex">
+                <p className="mr-1">-</p>
+                <p className="m-0">{dictionary["exp1-4"]}</p>
+              </div>
+              <p className="text-xs mt-1 ml-2 text-blue font-semibold">
+                Key technologies: {dictionary["exp1-skills"]}
+              </p>
+            </div>
 
-            <div className="mb-1">
+            <div className="mb-1 border-light-grey border-t-2 mt-2 pt-2 ">
               <h3 className="text-sm font-bold">
                 {sliderValue == 0
                   ? dictionary["exp2-header"]
@@ -652,7 +684,7 @@ const CV = forwardRef<HTMLDivElement, CVProps>((props, ref) => {
                 }`}
               >
                 {sliderValue == 0
-                  ? `LAN Digital, Belgrade | 2021 - ${dictionary.present}`
+                  ? `LAN Digital, Belgrade | 2021 - 2025`
                   : `Arnie Charbonneau Cancer Institute, Calgary | 2023 - 2024`}
               </h5>
               <div className="text-xs flex">
@@ -755,38 +787,7 @@ const CV = forwardRef<HTMLDivElement, CVProps>((props, ref) => {
                 Key technologies: {dictionary["exp3-skills"]}
               </p>
             </div>
-            <div className="mb-1  border-light-grey border-t-2 mt-2 pt-2 ">
-              <h3 className="text-sm font-bold">{dictionary["exp1-header"]}</h3>
-              <h5
-                style={{
-                  color: `${showColor ? getRandomColor() : "black"}`,
-                }}
-                className={`text-xs my-1 font-semibold ${
-                  showColor && " font-base"
-                }`}
-              >
-                TechStart UCalgary, Calgary | 2021 - 2022
-              </h5>
-              <div className="text-xs flex">
-                <p className="mr-1">-</p>
-                <p className="m-0">{dictionary["exp1-1"]}</p>
-              </div>
-              <div className="text-xs flex">
-                <p className="mr-1">-</p>
-                <p className="m-0">{dictionary["exp1-2"]}</p>
-              </div>
-              <div className="text-xs flex">
-                <p className="mr-1">-</p>
-                <p className="m-0">{dictionary["exp1-3"]}</p>
-              </div>
-              <div className="text-xs flex">
-                <p className="mr-1">-</p>
-                <p className="m-0">{dictionary["exp1-4"]}</p>
-              </div>
-              <p className="text-xs mt-1 ml-2 text-blue font-semibold">
-                Key technologies: {dictionary["exp1-skills"]}
-              </p>
-            </div>
+            
           </div>
         </div>
       </div>
