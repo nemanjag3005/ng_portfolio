@@ -49,10 +49,7 @@ const Hero = ({
                   </div>
                   <p className="text-xl md:text-2xl md:pr-10">
                     {/* {dictionary.desc} */}
-                    I’m a graduate student at Imperial College London working at
-                    the intersection of biology and computation. On the side, I
-                    build full-stack software projects — systems that are clean,
-                    performant, and human-centric.
+                   I'm a Bioinformatics grad student at Imperial, but I’ve spent the past few years deep in the startup world, working across a wide range of tech. I like taking ideas from scratch and turning them into real, working things.
                   </p>
                   <div className="grid grid-cols-1 gap-2 space-y-1 lg:space-y-0 md:flex md:space-x-3 items-center w-full">
                     <div className="flex items-center space-x-2 w-full">
